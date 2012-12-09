@@ -1,0 +1,139 @@
+#!/usr/bin/perl
+
+use Data::Dumper;
+use IMDBparser;
+use warnings;
+
+my $db_entry="";
+my $ETX=chr(0x3);
+my $EOT=chr(0x4);
+my $ACK=chr(0x6);
+my $movie_ref=(IR::IMDB::Parser::find_movie($ARGV[0]));
+my %movie=%$movie_ref;
+my $temp;
+
+open(my $fh, '>', 'NonConfirmedEntry');
+
+#actors
+$temp=$movie{'actors'}{'item'};
+foreach(@$temp){
+	$db_entry.=$_.$ETX;	
+}
+$db_entry.=$EOT;
+
+#also_known_as
+$temp=$movie{'also_known_as'}{'item'};
+foreach(@$temp){
+	$db_entry.=$_.$ETX;	
+}
+$db_entry.=$EOT;
+
+#country
+$temp=$movie{'country'}{'item'};
+foreach(@$temp){
+	$db_entry.=$_.$ETX;	
+}
+$db_entry.=$EOT;
+
+#directors
+$temp=$movie{'directors'}{'item'};
+foreach(@$temp){
+	$db_entry.=$_.$ETX;	
+}
+$db_entry.=$EOT;
+
+#episodes
+$temp=$movie{'episodes'}{'item'};
+foreach(@$temp){
+	$db_entry.=$_.$ETX;	
+}
+$db_entry.=$EOT;
+
+#film_locations
+$temp=$movie{'film_locations'}{'item'};
+foreach(@$temp){
+	$db_entry.=$_.$ETX;	
+}
+$db_entry.=$EOT;
+
+#genres
+$temp=$movie{'genres'}{'item'};
+foreach(@$temp){
+	$db_entry.=$_.$ETX;	
+}
+$db_entry.=$EOT;
+
+#imdb_id
+if($movie{'imdb_id'}){
+	$db_entry.=$movie{'imdb_id'}.$EOT;
+}
+
+#imdb_url
+if($movie{'imdb_url'}){
+	$db_entry.=$movie{'imdb_url'}.$EOT;
+}
+
+#language
+$temp=$movie{'language'}{'item'};
+foreach(@$temp){
+	$db_entry.=$_.$ETX;	
+}
+$db_entry.=$EOT;
+
+#plot
+if($movie{'plot'}){
+	$db_entry.=$movie{'plot'}.$EOT;
+}
+
+#poster
+if($movie{'poster'}){
+	$db_entry.=$movie{'poster'}.$EOT;
+}
+
+#rated
+if($movie{'rated'}){
+	$db_entry.=$movie{'rated'}.$EOT;
+}
+
+#rating
+if($movie{'rating'}){
+	$db_entry.=$movie{'rating'}.$EOT;
+}
+
+#release_date
+if($movie{'release_date'}){
+	$db_entry.=$movie{'release_date'}.$EOT;
+}
+
+#runtime
+$temp=$movie{'runtime'}{'item'};
+for(@$temp){
+	$db_entry.=$_.$ETX;
+}
+$db_entry.=$EOT;
+
+#title
+if($movie{'title'}){
+	$db_entry.=$movie{'title'}.$EOT;
+}
+
+#type
+if($movie{'type'}){
+	$db_entry.=$movie{'type'}.$EOT;
+}
+
+#writers
+$temp=$movie{'writers'}{'item'};
+foreach(@$temp){
+	$db_entry.=$_.$ETX;	
+}
+$db_entry.=$EOT;
+
+#year
+if($movie{'year'}){
+	$db_entry.=$movie{'year'}.$EOT;
+}
+
+$db_entry.=$ACK;
+print $fh $db_entry;
+
