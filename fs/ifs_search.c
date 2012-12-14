@@ -53,6 +53,7 @@ struct ifs_search *new_search(const char *hay, char type, FILE* needlestack){
 				while(search_data->results[i]>=0)i++;
 				search_data->results[i]=start;
 				running_cmps=0;
+	fprintf(stderr, "\n\n!!!!!!!\n%s..%d\n!!!!!!!!!\n", hay, section_cnt);
 				_next_entry_:
 					buf=fgetc(needlestack);
 					if(buf==ACK) goto _ack_;
