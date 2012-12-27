@@ -21,9 +21,8 @@ while True:
 	try:
 		tmp, adresse = s.accept()	
 		
-		print "HALLO"
-		
 		ftppi.connect("192.168.55.1")
+
 		ftppi.login()
 		ftppi.retrbinary("RETR RPI.CMD", cat)
 		ftppi.quit()
@@ -45,8 +44,6 @@ while True:
 			elif frags[0] == "UPDATE":
 				pass
 			elif frags[0] == "ADD":
-				
-				print "EXEC PERL:"
 				system("cd imdb; perl CreatetempDbEntry.pl `./dvd_name`")
 				
 				ftppi.connect("192.168.55.1")
