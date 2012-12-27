@@ -10,7 +10,7 @@ This program can be distributed under the terms of the GNU GPLv3.
 
 
 struct ifs_search *new_search(const char *hay, char type, FILE* needlestack){
-	struct ifs_search *search_data=malloc(sizeof(struct ifs_search));
+	struct ifs_search *search_data=calloc(1,sizeof(struct ifs_search));
 	char section_cnt=0, buf;
 	int start=0, ctu=0,i,n;
 	unsigned char cmp[256]={0}, running_cmps=0;
@@ -20,8 +20,6 @@ struct ifs_search *new_search(const char *hay, char type, FILE* needlestack){
 	for(i=0;hay[i]!='/'&&hay[i]!='\\';i++)search_data->hay[i]=hay[i];
 
 	hay=search_data->hay;	
-
-	for(i=0;i<256;i++)search_data->results[i]=-1;
 
 	search_data->type=type;
 
@@ -49,6 +47,7 @@ struct ifs_search *new_search(const char *hay, char type, FILE* needlestack){
 
 		for(i=0;i<running_cmps;i++){
 			if(hay[++cmp[i]]==0){
+	fprintf(stderr, "\n\n!!!!!!!\n%s..%d\n!!!!!!!!!\n", hay, section_cnt);
 				i=0;
 				while(search_data->results[i]>=0)i++;
 				search_data->results[i]=start;
@@ -69,7 +68,6 @@ struct ifs_search *new_search(const char *hay, char type, FILE* needlestack){
 		}
 		if(buf==hay[0]){
 			cmp[running_cmps]=0;
-	fprintf(stderr, "\n\n!!!!!!!\n%s..%d\n!!!!!!!!!\n", hay, section_cnt);
 			if((RIGHT(type, section_cnt)) )
 				running_cmps++;
 		}

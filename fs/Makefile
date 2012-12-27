@@ -20,3 +20,7 @@ clean:
 
 distclean: clean
 	rm -f $(TARGET)
+
+test:
+	$(CC) ifs_search.c searchtest.c -o searchtest
+	

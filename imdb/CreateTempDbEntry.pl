@@ -65,13 +65,15 @@ $db_entry.=$EOT;
 
 #imdb_id
 if($movie{'imdb_id'}){
-	$db_entry.=$movie{'imdb_id'}.$EOT;
+	$db_entry.=$movie{'imdb_id'};
 }
+$db_entry.=$EOT;
 
 #imdb_url
 if($movie{'imdb_url'}){
-	$db_entry.=$movie{'imdb_url'}.$EOT;
+	$db_entry.=$movie{'imdb_url'};
 }
+$db_entry.=$EOT;
 
 #language
 $temp=$movie{'language'}{'item'};
@@ -82,28 +84,33 @@ $db_entry.=$EOT;
 
 #plot
 if($movie{'plot'}){
-	$db_entry.=$movie{'plot'}.$EOT;
+	$db_entry.=$movie{'plot'};
 }
+$db_entry.=$EOT;
 
 #poster
 if($movie{'poster'}){
-	$db_entry.=$movie{'poster'}.$EOT;
+	$db_entry.=$movie{'poster'};
 }
+$db_entry.=$EOT;
 
 #rated
 if($movie{'rated'}){
-	$db_entry.=$movie{'rated'}.$EOT;
+	$db_entry.=$movie{'rated'};
 }
+$db_entry.=$EOT;
 
 #rating
 if($movie{'rating'}){
-	$db_entry.=$movie{'rating'}.$EOT;
+	$db_entry.=$movie{'rating'};
 }
+$db_entry.=$EOT;
 
 #release_date
 if($movie{'release_date'}){
-	$db_entry.=$movie{'release_date'}.$EOT;
+	$db_entry.=$movie{'release_date'};
 }
+$db_entry.=$EOT;
 
 #runtime
 $temp=$movie{'runtime'}{'item'};
@@ -114,13 +121,15 @@ $db_entry.=$EOT;
 
 #title
 if($movie{'title'}){
-	$db_entry.=$movie{'title'}.$EOT;
+	$db_entry.=$movie{'title'};
 }
+$db_entry.=$EOT;
 
 #type
 if($movie{'type'}){
-	$db_entry.=$movie{'type'}.$EOT;
+	$db_entry.=$movie{'type'};
 }
+$db_entry.=$EOT;
 
 #writers
 $temp=$movie{'writers'}{'item'};
@@ -131,8 +140,9 @@ $db_entry.=$EOT;
 
 #year
 if($movie{'year'}){
-	$db_entry.=$movie{'year'}.$EOT;
+	$db_entry.=$movie{'year'};
 }
+$db_entry.=$EOT;
 
 $db_entry.=$ACK;
 print $fh $db_entry;
