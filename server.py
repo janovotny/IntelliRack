@@ -21,14 +21,16 @@ while True:
 	try:
 		tmp, adresse = s.accept()	
 		
-		ftppi.connect("ftp://192.168.55.1")
+		ftppi.connect("192.168.55.1")
+		print ftppi.getwelcome()
+		
 		ftppi.login()
 		ftppi.retrbinary("RETR RPI.CMD", cat)
 		ftppi.quit()
 		
 		tmp.close()
 		
-		lines = data.split(chr(0x03)
+		lines = data.split(chr(0x03))
 		for line in lines:
 			frags = line.split(" ", 1)
 			if frags[0] == "INSERT":
@@ -42,7 +44,7 @@ while True:
 			elif frags[0] == "ADD":
 				system("perl imdb/CreatetempDbEntry.pl")
 				
-				ftppi.connect("ftp://192.168.55.1")
+				ftppi.connect("192.168.55.1")
 				ftppi.login()
 				entry = open("NonConfirmedEntry", "rb")
 				ftppi.storbinary("STOR NonConfirmedEntry", entry)
