@@ -12,7 +12,7 @@ all: $(REQ)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-mount: all
+mount: distclean all
 	(umount mnt && ./ifs.bin -d ../imdb/NonConfirmedEntry mnt/)||./ifs.bin -d ../imdb/NonConfirmedEntry mnt/
 
 clean:
