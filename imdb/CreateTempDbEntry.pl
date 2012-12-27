@@ -145,5 +145,15 @@ if($movie{'year'}){
 $db_entry.=$EOT;
 
 $db_entry.=$ACK;
+
+my $browser = LWP::UserAgent->new();
+$browser->agent('Mozilla/5.0 (X11; U; FreeBSD i386; en-US; rv:9.9.9.9) Gecko/20079999 Firefox/5.0.0.1');
+my $req = $browser->get($movie{'poster'})
+	or die "Unable to get document: $!";
+$req=$req->content;
+
+open(my $img ,">0.jpg");
+
+print $img $req;
 print $fh $db_entry;
 

@@ -31,7 +31,16 @@ sub ducky_search($){
 
 	my $fail_counter=0;
 	my $ret="";
-	my $req = $browser->get("http://duckduckgo.com/?q=".urlencode("site:imdb.com " . $_[0] ." !"))
+	
+	my $discname=$_[0];
+
+#FILTER CRAP
+	$discname=~s/_/+/g;
+	$discname=~s/SE+.*$//;
+	$discname=~s/DISC+.*$//;
+
+	
+	my $req = $browser->get("http://duckduckgo.com/?q=".urlencode("site:imdb.com " . $discname ." !"))
 		or die "Unable to get document: $!";
 
 	$req=$req->content;
