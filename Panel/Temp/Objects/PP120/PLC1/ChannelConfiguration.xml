@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<?AutomationRuntimeIOSystem Version = 2.5.0.7?>
+<ChannelConfiguration xmlns="http://www.br-automation.com/AR/IO"><Module ID="$root" Hardware="4PP120.0571-21"><LegacyAddressInfo><Parameter ID="PLCFamily" Value="4" Type="UDINT"/><Parameter ID="ModuleAddress" Value="0" Type="UDINT"/></LegacyAddressInfo><Channel ID="TemperatureCPU" Position="1" FromVersion="B2.85" Description-de="Temperatur CPU [1/10C]" Description-en="Temperature CPU [1/10C]" Ext="/HW" Address="0" Direction="IN" Type="UINT" ChannelType="Temp" Ordinal="1">
+		</Channel>
+		<Channel ID="TemperatureENV" Position="2" FromVersion="B2.85" Description-de="Temperatur Kuehlblech [1/10C]" Description-en="Temperature cooling plate [1/10C]" Ext="/HW" Address="1" Direction="IN" Type="UINT" ChannelType="Temp" Ordinal="2">
+		</Channel>
+		<Channel ID="SystemTime" Position="3" FromVersion="I2.90" Description-de="Systemzeit beim Start des aktuellen Taskklassenzyklus [us]" Description-en="System time at the start of the current task cycle [us]" Ext="/HW" Address="9" Direction="IN" Type="DINT" ChannelType="SystemTime">
+		</Channel>
+		<Channel ID="IF5.NodeSwitch" Position="1" FromVersion="B2.85" Description-de="Node Schalter" Description-en="Node switch" Ext="/HW" Address="2" Direction="IN" Type="USINT" ChannelType="Node" Device="PCI.IF5">
+		</Channel>
+	</Module></ChannelConfiguration>

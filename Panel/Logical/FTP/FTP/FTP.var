@@ -1,0 +1,13 @@
+(********************************************************************
+ * COPYRIGHT -- Bernecker + Rainer
+ ********************************************************************
+ * Program: NwFileSystem
+ * File: NwFileSystem.var
+ * Author: Bernecker + Rainer
+ * Created: April 21, 2009
+ ********************************************************************
+ * Local variables of program NwFileSystem
+ ********************************************************************)
+VAR
+	Network : Network_typ; (*Global structure*)
+END_VAR

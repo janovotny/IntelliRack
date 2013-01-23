@@ -1,0 +1,1 @@
+<% ReadPLC(WebPrint("VAR")); %>

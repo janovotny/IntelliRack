@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationRuntimeIOSystem Version="1.0"?>
+<IO xmlns="http://www.br-automation.com/AR/IO">
+<Links>
+<LN ID="%IW.TemperatureCPU" Type="UINT">
+<Prod Device="$root" DPName="TemperatureCPU" Kind="io"/>
+</LN>
+<LN ID="%IW.TemperatureENV" Type="UINT">
+<Prod Device="$root" DPName="TemperatureENV" Kind="io"/>
+</LN>
+<LN ID="%ID.SystemTime" Type="DINT">
+<Prod Device="$root" DPName="SystemTime" Kind="io"/>
+</LN>
+<LN ID="%IB.IF5.NodeSwitch" Type="USINT">
+<Prod Device="$root" DPName="IF5.NodeSwitch" Kind="io"/>
+</LN>
+</Links></IO>

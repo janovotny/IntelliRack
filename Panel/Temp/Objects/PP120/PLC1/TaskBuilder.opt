@@ -1,0 +1,2 @@
+handler	"$(AS_CPU_PATH)/handler/handler.ox" -o "$(AS_CPU_PATH)/handler.br" -v V1.00.0 -f "$(AS_CPU_PATH)/Global.ofs" -T SG4  -B V3.08 -extConstants -r Cyclic2 -p 2 -s handler --$$$newFormat$$$
+FTP	"$(AS_CPU_PATH)/FTP/FTP.ox" -o "$(AS_CPU_PATH)/FTP.br" -v V1.00.0 -f "$(AS_CPU_PATH)/Global.ofs" -T SG4  -B V3.08 -extConstants -d "runtime: V* - V*,asieccon: V* - V*" -r Cyclic3 -p 2 -s FTP.FTP --$$$newFormat$$$

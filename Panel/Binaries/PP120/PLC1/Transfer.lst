@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0?>
+<Transfer xmlns="http://br-automation.co.at/AS/Transfer">
+  <OperatingSystem Version="V3.08"/>
+  <Hardware Target="SG4"/>
+  <Operation Delete="FTP.br"/>
+  <Operation Delete="Visu.br"/>
+  <Operation Delete="vccshape.br"/>
+  <Operation Delete="vccline.br"/>
+  <Operation Delete="vcchspot.br"/>
+  <Operation Delete="AsTCP.br"/>
+  <Operation Delete="vcctext.br"/>
+  <Operation Delete="vccovl.br"/>
+  <Operation Delete="vcdsloc.br"/>
+  <Operation Delete="vcfntttf.br"/>
+  <Operation Delete="vcptham.br"/>
+  <Operation Delete="vcbclass.br"/>
+  <Operation Delete="vcfile.br"/>
+  <Operation Delete="vcdsint.br"/>
+  <Operation Delete="vcpfpp.br"/>
+  <Operation Delete="vcrt.br"/>
+  <Operation Delete="vccstr.br"/>
+  <Operation Delete="vcclbox.br"/>
+  <Operation Delete="vcpdsw.br"/>
+  <Operation Delete="vctcal.br"/>
+  <Operation Delete="vccbtn.br"/>
+  <Operation Delete="vccbmp.br"/>
+  <Operation Delete="vcalarm.br"/>
+  <Operation Delete="vcmgr.br"/>
+  <Operation Delete="AsARCfg.br"/>
+  <Operation Delete="AsIecCon.br"/>
+  <Operation Delete="vcshared.br"/>
+  <Operation Delete="arial.br"/>
+  <Operation Delete="arialbd.br"/>
+  <Operation Delete="Visu03.br"/>
+  <Operation Delete="Visu02.br"/>
+  <Operation Delete="Visu01.br"/>
+  <Operation Delete="AsTime.br"/>
+  <Operation Delete="vcgclass.br"/>
+  <Operation Delete="FileIO.br"/>
+  <Operation Delete="dataobj.br"/>
+  <Operation Delete="ashw.br"/>
+  <Operation Delete="vcpdcx55.br"/>
+  <Operation Download="asfw.br" Memory="SystemROM"/>
+  <Operation Download="ashwd.br" Memory="SystemROM"/>
+  <Operation Download="arconfig.br" Memory="SystemROM"/>
+  <Operation Download="sysconf.br" Memory="SystemROM"/>
+  <Operation Restart="warm"/>
+  <Operation Download="vcresman.br" Memory="UserROM"/>
+  <Operation Download="vcpdcx55.br" Memory="UserROM"/>
+  <Operation Restart="warm"/>
+  <Operation Download="iomap.br" Memory="UserROM"/>
+  <Operation Download="Operator.br" Memory="UserROM"/>
+  <Operation Download="Runtime.br" Memory="UserROM"/>
+  <Operation Download="asstring.br" Memory="UserROM"/>
+  <Operation Download="ashw.br" Memory="UserROM"/>
+  <Operation Download="dataobj.br" Memory="UserROM"/>
+  <Operation Download="FileIO.br" Memory="UserROM"/>
+  <Operation Download="vcgclass.br" Memory="UserROM"/>
+  <Operation Download="AsTime.br" Memory="UserROM"/>
+  <Operation Download="Visu01.br" Memory="UserROM"/>
+  <Operation Download="Visu02.br" Memory="UserROM"/>
+  <Operation Download="Visu03.br" Memory="UserROM"/>
+  <Operation Download="arialbd.br" Memory="UserROM"/>
+  <Operation Download="arial.br" Memory="UserROM"/>
+  <Operation Download="vcshared.br" Memory="UserROM"/>
+  <Operation Download="AsIecCon.br" Memory="UserROM"/>
+  <Operation Download="AsARCfg.br" Memory="UserROM"/>
+  <Operation Download="vcmgr.br" Memory="UserROM"/>
+  <Operation Download="vcalarm.br" Memory="UserROM"/>
+  <Operation Download="vccbmp.br" Memory="UserROM"/>
+  <Operation Download="vccbtn.br" Memory="UserROM"/>
+  <Operation Download="vctcal.br" Memory="UserROM"/>
+  <Operation Download="vcpdsw.br" Memory="UserROM"/>
+  <Operation Download="vcclbox.br" Memory="UserROM"/>
+  <Operation Download="vccstr.br" Memory="UserROM"/>
+  <Operation Download="vcrt.br" Memory="UserROM"/>
+  <Operation Download="vcpfpp.br" Memory="UserROM"/>
+  <Operation Download="vcdsint.br" Memory="UserROM"/>
+  <Operation Download="vcfile.br" Memory="UserROM"/>
+  <Operation Download="vcbclass.br" Memory="UserROM"/>
+  <Operation Download="vcptham.br" Memory="UserROM"/>
+  <Operation Download="vcfntttf.br" Memory="UserROM"/>
+  <Operation Download="vcdsloc.br" Memory="UserROM"/>
+  <Operation Download="vccovl.br" Memory="UserROM"/>
+  <Operation Download="vcctext.br" Memory="UserROM"/>
+  <Operation Download="AsTCP.br" Memory="UserROM"/>
+  <Operation Download="vcchspot.br" Memory="UserROM"/>
+  <Operation Download="vccline.br" Memory="UserROM"/>
+  <Operation Download="vccshape.br" Memory="UserROM"/>
+  <Operation Download="Visu.br" Memory="UserROM"/>
+  <Operation Download="handler.br" Memory="UserROM"/>
+  <Operation Download="FTP.br" Memory="UserROM"/>
+</Transfer>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.22 SP04"?>
+<Layer xmlns="http://br-automation.co.at/AS/VC/Project" Name="globalArea">
+  <Property Name="BackColor" Value="15"/>
+  <Property Name="Description" Value="Header &amp; Navigation"/>
+  <Property Name="Height" Value="240"/>
+  <Property Name="Left" Value="0"/>
+  <Property Name="StatusDatapoint" Value="None"/>
+  <Property Name="Top" Value="0"/>
+  <Property Name="Width" Value="320"/>
+  <TextGroup>
+    <TextLayer LanguageId="en"/>
+    <TextLayer LanguageId="de"/>
+    <IndexMap/>
+  </TextGroup>
+  <Controls>
+    <Control ClassId="0x00001005" Name="bmpAreaUpside">
+      <Property Name="BitmapGroup" Value="Source[local].BitmapGroup[GlobalArea]"/>
+      <Property Name="BitmapIndex" Value="1"/>
+      <Property Name="BitmapSource" Value="BitmapGroup"/>
+      <Property Name="ControlID" Value="0"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="19"/>
+      <Property Name="IndexDatapoint" Value="None"/>
+      <Property Name="Left" Value="0"/>
+      <Property Name="SimulationValue" Value="0"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+      <Property Name="Top" Value="0"/>
+      <Property Name="Width" Value="320"/>
+    </Control>
+    <Control ClassId="0x00001005" Name="bmpAreaDownside">
+      <Property Name="BitmapGroup" Value="Source[local].BitmapGroup[GlobalArea]"/>
+      <Property Name="BitmapIndex" Value="0"/>
+      <Property Name="BitmapSource" Value="BitmapGroup"/>
+      <Property Name="ControlID" Value="0"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="21"/>
+      <Property Name="IndexDatapoint" Value="None"/>
+      <Property Name="Left" Value="0"/>
+      <Property Name="SimulationValue" Value="0"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+      <Property Name="Top" Value="219"/>
+      <Property Name="Width" Value="320"/>
+    </Control>
+    <Control ClassId="0x00001001" Name="shpUpFrame">
+      <Property Name="BackColor" Value="255"/>
+      <Property Name="ControlID" Value="0"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="ForeColor" Value="255"/>
+      <Property Name="Height" Value="9"/>
+      <Property Name="Left" Value="0"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+      <Property Name="Top" Value="16"/>
+      <Property Name="Width" Value="320"/>
+    </Control>
+    <Control ClassId="0x00001004" Name="txtHeaderText">
+      <Property Name="ControlID" Value="0"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="22"/>
+      <Property Name="Left" Value="14"/>
+      <Property Name="SimulationValue" Value="0"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Header]"/>
+      <Property Name="TextGroup" Value="Source[local].TextGroup[HeaderBar]"/>
+      <Property Name="TextIndexOffset" Value="0"/>
+      <Property Name="TextSource" Value="SingleText"/>
+      <Property Name="Top" Value="4"/>
+      <Property Name="Width" Value="170"/>
+    </Control>
+    <Control ClassId="0x00001004" Name="txtPageName">
+      <Property Name="ControlID" Value="0"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="22"/>
+      <Property Name="IndexDatapoint" Value="None"/>
+      <Property Name="Left" Value="190"/>
+      <Property Name="SimulationValue" Value="0"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Header]"/>
+      <Property Name="TextGroup" Value="Source[local].TextGroup[PageNames]"/>
+      <Property Name="TextIndexOffset" Value="0"/>
+      <Property Name="TextSource" Value="MultipleTexts"/>
+      <Property Name="Top" Value="5"/>
+      <Property Name="Width" Value="130"/>
+    </Control>
+    <Control ClassId="0x00001001" Name="shpLowFrame">
+      <Property Name="BackColor" Value="255"/>
+      <Property Name="ControlID" Value="0"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="ForeColor" Value="255"/>
+      <Property Name="Height" Value="31"/>
+      <Property Name="Left" Value="0"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+      <Property Name="Top" Value="209"/>
+      <Property Name="Width" Value="320"/>
+    </Control>
+    <Control ClassId="0x00001001" Name="shpLeftFrame">
+      <Property Name="BackColor" Value="255"/>
+      <Property Name="ControlID" Value="0"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="ForeColor" Value="255"/>
+      <Property Name="Height" Value="184"/>
+      <Property Name="Left" Value="0"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+      <Property Name="Top" Value="25"/>
+      <Property Name="Width" Value="10"/>
+    </Control>
+    <Control ClassId="0x00001001" Name="shpRightFrame">
+      <Property Name="BackColor" Value="255"/>
+      <Property Name="ControlID" Value="0"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="ForeColor" Value="255"/>
+      <Property Name="Height" Value="184"/>
+      <Property Name="Left" Value="310"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+      <Property Name="Top" Value="25"/>
+      <Property Name="Width" Value="10"/>
+    </Control>
+    <Control ClassId="0x0000100D" Name="lineLeftArea">
+      <Property Name="ControlID" Value="0"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="EndX" Value="10"/>
+      <Property Name="EndY" Value="208"/>
+      <Property Name="StartX" Value="10"/>
+      <Property Name="StartY" Value="25"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+    </Control>
+    <Control ClassId="0x0000100D" Name="lineTopArea">
+      <Property Name="ControlID" Value="0"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="EndX" Value="309"/>
+      <Property Name="EndY" Value="25"/>
+      <Property Name="StartX" Value="10"/>
+      <Property Name="StartY" Value="25"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+    </Control>
+    <Control ClassId="0x00001002" Name="cmdSetupPage">
+      <Property Name="BitmapIndexDatapoint" Value="None"/>
+      <Property Name="BitmapSource" Value="None"/>
+      <Property Name="ControlID" Value="0"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="25"/>
+      <Property Name="KeyMatrixOffset" Value="None"/>
+      <Property Name="Left" Value="259"/>
+      <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
+      <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[GlobalAreaButton]"/>
+      <Property Name="TextGroup" Value="Source[local].TextGroup[Buttons_PageTexts]"/>
+      <Property Name="TextIndex" Value="2"/>
+      <Property Name="TextIndexDatapoint" Value="None"/>
+      <Property Name="TextSimulationValue" Value="0"/>
+      <Property Name="TextSource" Value="SingleText"/>
+      <Property Name="Top" Value="213"/>
+      <Property Name="VirtualKey" Value="Source[local].VirtualKey[pageSetup]"/>
+      <Property Name="Width" Value="51"/>
+    </Control>
+    <Control ClassId="0x00001002" Name="cmdServicePage">
+      <Property Name="BitmapIndexDatapoint" Value="None"/>
+      <Property Name="BitmapSource" Value="None"/>
+      <Property Name="ControlID" Value="0"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="25"/>
+      <Property Name="KeyMatrixOffset" Value="None"/>
+      <Property Name="Left" Value="10"/>
+      <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
+      <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[GlobalAreaButton]"/>
+      <Property Name="TextGroup" Value="Source[local].TextGroup[Buttons_PageTexts]"/>
+      <Property Name="TextIndex" Value="1"/>
+      <Property Name="TextIndexDatapoint" Value="None"/>
+      <Property Name="TextSimulationValue" Value="0"/>
+      <Property Name="TextSource" Value="SingleText"/>
+      <Property Name="Top" Value="213"/>
+      <Property Name="VirtualKey" Value="Source[local].VirtualKey[pageHome]"/>
+      <Property Name="Width" Value="51"/>
+    </Control>
+    <Control ClassId="0x00001002" Name="cmdTrendPage">
+      <Property Name="BitmapIndexDatapoint" Value="None"/>
+      <Property Name="BitmapSource" Value="None"/>
+      <Property Name="ControlID" Value="0"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="25"/>
+      <Property Name="KeyMatrixOffset" Value="None"/>
+      <Property Name="Left" Value="63"/>
+      <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
+      <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[GlobalAreaButton]"/>
+      <Property Name="TextGroup" Value="Source[local].TextGroup[Buttons_PageTexts]"/>
+      <Property Name="TextIndex" Value="3"/>
+      <Property Name="TextIndexDatapoint" Value="None"/>
+      <Property Name="TextSimulationValue" Value="0"/>
+      <Property Name="TextSource" Value="SingleText"/>
+      <Property Name="Top" Value="213"/>
+      <Property Name="VirtualKey" Value="Source[local].VirtualKey[pageTrend]"/>
+      <Property Name="Width" Value="51"/>
+    </Control>
+    <Control ClassId="0x00001002" Name="cmdAlarmPage">
+      <Property Name="BitmapIndexDatapoint" Value="None"/>
+      <Property Name="BitmapSource" Value="None"/>
+      <Property Name="ControlID" Value="0"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="25"/>
+      <Property Name="KeyMatrixOffset" Value="None"/>
+      <Property Name="Left" Value="116"/>
+      <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
+      <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[GlobalAreaButton]"/>
+      <Property Name="TextGroup" Value="Source[local].TextGroup[Buttons_PageTexts]"/>
+      <Property Name="TextIndex" Value="5"/>
+      <Property Name="TextIndexDatapoint" Value="None"/>
+      <Property Name="TextSimulationValue" Value="0"/>
+      <Property Name="TextSource" Value="SingleText"/>
+      <Property Name="Top" Value="213"/>
+      <Property Name="VirtualKey" Value="Source[local].VirtualKey[pageAlarm]"/>
+      <Property Name="Width" Value="51"/>
+    </Control>
+    <Control ClassId="0x00001003" Name="hspotSdmPage">
+      <Property Name="ControlID" Value="0"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="26"/>
+      <Property Name="KeyMatrixOffset" Value="None"/>
+      <Property Name="Left" Value="10"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+      <Property Name="Top" Value="3"/>
+      <Property Name="VirtualKey" Value="Source[local].VirtualKey[pageSDM]"/>
+      <Property Name="Width" Value="135"/>
+    </Control>
+  </Controls>
+  <KeyMapping>
+    <VirtualKey Name="pageAlarm">
+      <Property Name="Description" Value=""/>
+      <Property Name="VirtualKey_LED" Value="False"/>
+      <KeyActions>
+        <KeyAction ClassId="0x00000160">
+          <Property Name="Description" Value=""/>
+          <Property Name="Locking" Value="Never"/>
+          <Property Name="Name" Value="Action_0"/>
+          <Property Name="Page" Value="None"/>
+          <Property Name="Target" Value="Page"/>
+        </KeyAction>
+      </KeyActions>
+    </VirtualKey>
+    <VirtualKey Name="pageHome">
+      <Property Name="Description" Value=""/>
+      <Property Name="VirtualKey_LED" Value="False"/>
+      <KeyActions>
+        <KeyAction ClassId="0x00000160">
+          <Property Name="Description" Value=""/>
+          <Property Name="Locking" Value="Never"/>
+          <Property Name="Name" Value="Action_0"/>
+          <Property Name="Page" Value="None"/>
+          <Property Name="Target" Value="Page"/>
+        </KeyAction>
+      </KeyActions>
+    </VirtualKey>
+    <VirtualKey Name="pageSDM">
+      <Property Name="Description" Value=""/>
+      <Property Name="VirtualKey_LED" Value="False"/>
+      <KeyActions>
+        <KeyAction ClassId="0x00000160">
+          <Property Name="Description" Value=""/>
+          <Property Name="Locking" Value="Never"/>
+          <Property Name="Name" Value="Action_0"/>
+          <Property Name="Page" Value="None"/>
+          <Property Name="Target" Value="Page"/>
+        </KeyAction>
+      </KeyActions>
+    </VirtualKey>
+    <VirtualKey Name="pageSetup">
+      <Property Name="Description" Value=""/>
+      <Property Name="VirtualKey_LED" Value="False"/>
+      <KeyActions>
+        <KeyAction ClassId="0x00000160">
+          <Property Name="Description" Value=""/>
+          <Property Name="Locking" Value="Never"/>
+          <Property Name="Name" Value="Action_0"/>
+          <Property Name="Page" Value="None"/>
+          <Property Name="Target" Value="Page"/>
+        </KeyAction>
+      </KeyActions>
+    </VirtualKey>
+    <VirtualKey Name="pageTrend">
+      <Property Name="Description" Value=""/>
+      <Property Name="VirtualKey_LED" Value="False"/>
+      <KeyActions>
+        <KeyAction ClassId="0x00000160">
+          <Property Name="Description" Value=""/>
+          <Property Name="Locking" Value="Never"/>
+          <Property Name="Name" Value="Action_0"/>
+          <Property Name="Page" Value="None"/>
+          <Property Name="Target" Value="Page"/>
+        </KeyAction>
+      </KeyActions>
+    </VirtualKey>
+  </KeyMapping>
+</Layer>

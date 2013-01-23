@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0?>
+<Intermediate xmlns="http://br.automation.co.at/AS/VC/Intermediate">
+  <Folder Name="Bitmaps">
+    <Folder Name="POBJ">
+      <Object Name="Slider_BallGray" ClsId="0x306" Version="1" TargetIndex="450" Type="GFX" RefString="Source[local].Bitmap[Slider_BallGray]">
+        <UInt16 Name="Width">32</UInt16>
+        <UInt16 Name="Height">32</UInt16>
+        <UInt32 Name="BitsPerPixel">8</UInt32>
+        <Byte Name="Transparency">0</Byte>
+        <Byte Name="TargetFormat">1</Byte>
+        <UInt16 Name="Reserved">0</UInt16>
+        <Int32 Name="TransparentColor">0</Int32>
+        <Int32 Name="FillAreas">0</Int32>
+        <Binary Name="BitmapData" Encoding="Base64">AAAAAAAAAAAAAA/8+/k7Ozs7+vv8DwAAAAAAAAAAAAAAAAAAAAAAAA/8+js7Ozs7Ozs7Bwc7+fwAAAAAAAAAAAAAAAAAAA/8+vr6+vr6+vr6Ozs7BwcHB/kPAAAAAAAAAAAAAAAP+/r5+/v8/Pz8+/v7+js7OwcHBzv8AAAAAAAAAAAAD/n6+fv8/PwPDw8P/Pz8+Ts7BwcHBzv8AAAAAAAAAA/5+vv8/A8PDw8PDw8PD/z8+Ts7Owc7Ozv8AAAAAAAP+/r7/A8PDw8PDw8PDw8PD/z7+Ts7Ozv6OzsPAAAAAPz6+fv8Dw8PDw8PDw8PDw8PD/z7+js7O/r5O/sAAAAP+vr7/A8PDw8PDw8PDw8PDw8P/Pv5Ozs7+vv7+vwAAPs7+fv8Dw8PDw8PDw8PDw8PDw/8/Pk7Ozv6+/v7/AAPOzv5/A8PDw8PDw8PDw8PDw8PD/z8+fo7O/r7/Pz7D/w7O/n8Dw8PDw8PDw8PDw8PDw8P/Pz7+js7+vv8/Pv7+Ts7+fwPDw8PDw8PDw8PDw8PDw/8/Pv6Ozs7+/z8/Ps7Xzv5+w8PDw8PDw8PDw8PDw8P/Pz8+/o7Ozv7/Pz7+ztgO/r7/A8PDw8PDw8PDw8PDw/8/Pv5+js7O/v8/Pz7B2A7O/n8/A8PDw8PDw8PDw8PD/z8+/n6Ozs7+/z8+/sHYF87+vv8Dw8PDw8PDw8PDw/8/Pz7+fo7O/r7/Pz7+2BgYDs7+fv8/PwPDw8PD/z8/Pz8+/v6Ozs7+vv8+/v7B2BgOzs7+vv8/Pz8/Pz8/Pz8/Pv7+Ts7Ozv6+/z7+/s7ZmBgOzv6+fv7/Pz8/Pz8/Pz7+/n6Ozs7O/n8/Pv7+/lmZmBfOzv6+vn7+/v7+/v7+/v5+js7Ozv6+/z8+/v5D2CKYGAHOzs7+vr5+fn5+fn5+js7Ozs7O/v8/Ps7B/wAO2ZmYAcHOzs7O/r6+vr6+js7OztfOzv5/Pz8+wc7AAD8ZmZmYAcHBzs7Ozs7Ozs7OzsHB187+fz8/Pw7B/wAAAA7ZmZmZgcHBwcHOzs7BwcHBwcHO/n8/Pz8+gc7AAAAAA8HZmZmZgcHBwcHBwcHBwcHBzv5/Pz8/PkHB/wAAAAAAPwHZmZmZmZmZmZmZgcHBzv6+/z8/Pz5B2b8AAAAAAAAAPwHB2ZmZmZmZgcHBzs7+fv7+/v7O2Bm+wAAAAAAAAAAAA87BwcHBwcHBwc7O/r5+fn6OwdmZvwAAAAAAAAAAAAAAA/5OwcHBwcHBzs7Ozs7BwdmCAcPAAAAAAAAAAAAAAAAAAD8+gdmZmZmZmZmZgj/CAf8AAAAAAAAAAAAAAAAAAAAAAAAD/s7Zgj///9mB/r8AAAAAAAAAAAAAA==</Binary>
+      </Object>
+    </Folder>
+  </Folder>
+</Intermediate>

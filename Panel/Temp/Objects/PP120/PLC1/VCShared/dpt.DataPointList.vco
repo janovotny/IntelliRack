@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0?>
+<Intermediate xmlns="http://br.automation.co.at/AS/VC/Intermediate">
+  <Folder Name="DPV">
+    <Folder Name="POBJ">
+      <Object Name="DataSource.GetPage" ClsId="0x0" Version="0" TargetIndex="0" Type="DP" RefString="Source[global].Variable[DataSource.GetPage]" />
+      <Object Name="DataSource.SetPage" ClsId="0x0" Version="0" TargetIndex="1" Type="DP" RefString="Source[global].Variable[DataSource.SetPage]" />
+      <Object Name="DataSource.Strings" ClsId="0x0" Version="0" TargetIndex="2" Type="DP" RefString="Source[global].Variable[DataSource.Strings]" />
+      <Object Name="DataSource.Action" ClsId="0x0" Version="0" TargetIndex="3" Type="DP" RefString="Source[global].Variable[DataSource.Action]" />
+      <Object Name="DataSource.Search" ClsId="0x0" Version="0" TargetIndex="4" Type="DP" RefString="Source[global].Variable[DataSource.Search]" />
+      <Object Name="DataSource.Selection" ClsId="0x0" Version="0" TargetIndex="5" Type="DP" RefString="Source[global].Variable[DataSource.Selection]" />
+      <Object Name="DataSource.Limit" ClsId="0x0" Version="0" TargetIndex="6" Type="DP" RefString="Source[global].Variable[DataSource.Limit]" />
+      <Object Name="Internal.Display.Brightness" ClsId="0x0" Version="0" TargetIndex="7" Type="DP" RefString="Source[global].Variable[Internal.Display.Brightness]" />
+      <Object Name="Internal.Display.Contrast" ClsId="0x0" Version="0" TargetIndex="8" Type="DP" RefString="Source[global].Variable[Internal.Display.Contrast]" />
+      <Object Name="Internal.Temperature.CPU" ClsId="0x0" Version="0" TargetIndex="9" Type="DP" RefString="Source[global].Variable[Internal.Temperature.CPU]" />
+      <Object Name="Internal.Temperature.Room" ClsId="0x0" Version="0" TargetIndex="10" Type="DP" RefString="Source[global].Variable[Internal.Temperature.Room]" />
+      <Object Name="DPV" ClsId="0x100" Version="1" Type="DPM" RefString="Source[global].DPV[]">
+        <Byte Name="TaskPrior">200</Byte>
+        <Byte Name="Reserved">0</Byte>
+        <UInt16 Name="Reserved">0</UInt16>
+        <UInt32 Name="DPCount">11</UInt32>
+        <Group Name="GetPage">
+          <UInt32 Name="DPID">0</UInt32>
+          <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
+          <UInt16 Name="UpdtTime">200</UInt16>
+          <UInt16 Name="PVID">0</UInt16>
+          <Reference Name="UG" Type="UG">none</Reference>
+          <Reference Name="UGPLC" Type="UNIT">none</Reference>
+          <UInt32 Name="Limit">4294967295</UInt32>
+          <UInt16 Name="UserID">65535</UInt16>
+          <UInt16 Name="ConnectionCount">1</UInt16>
+        </Group>
+        <Group Name="SetPage">
+          <UInt32 Name="DPID">1</UInt32>
+          <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
+          <UInt16 Name="UpdtTime">200</UInt16>
+          <UInt16 Name="PVID">1</UInt16>
+          <Reference Name="UG" Type="UG">none</Reference>
+          <Reference Name="UGPLC" Type="UNIT">none</Reference>
+          <UInt32 Name="Limit">4294967295</UInt32>
+          <UInt16 Name="UserID">65535</UInt16>
+          <UInt16 Name="ConnectionCount">1</UInt16>
+        </Group>
+        <Group Name="Strings">
+          <UInt32 Name="DPID">2</UInt32>
+          <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
+          <UInt16 Name="UpdtTime">200</UInt16>
+          <UInt16 Name="PVID">2</UInt16>
+          <Reference Name="UG" Type="UG">none</Reference>
+          <Reference Name="UGPLC" Type="UNIT">none</Reference>
+          <UInt32 Name="Limit">4294967295</UInt32>
+          <UInt16 Name="UserID">65535</UInt16>
+          <UInt16 Name="ConnectionCount">1</UInt16>
+        </Group>
+        <Group Name="Action">
+          <UInt32 Name="DPID">3</UInt32>
+          <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
+          <UInt16 Name="UpdtTime">200</UInt16>
+          <UInt16 Name="PVID">3</UInt16>
+          <Reference Name="UG" Type="UG">none</Reference>
+          <Reference Name="UGPLC" Type="UNIT">none</Reference>
+          <UInt32 Name="Limit">4294967295</UInt32>
+          <UInt16 Name="UserID">65535</UInt16>
+          <UInt16 Name="ConnectionCount">1</UInt16>
+        </Group>
+        <Group Name="Search">
+          <UInt32 Name="DPID">4</UInt32>
+          <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
+          <UInt16 Name="UpdtTime">200</UInt16>
+          <UInt16 Name="PVID">4</UInt16>
+          <Reference Name="UG" Type="UG">none</Reference>
+          <Reference Name="UGPLC" Type="UNIT">none</Reference>
+          <UInt32 Name="Limit">4294967295</UInt32>
+          <UInt16 Name="UserID">65535</UInt16>
+          <UInt16 Name="ConnectionCount">1</UInt16>
+        </Group>
+        <Group Name="Selection">
+          <UInt32 Name="DPID">5</UInt32>
+          <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
+          <UInt16 Name="UpdtTime">200</UInt16>
+          <UInt16 Name="PVID">5</UInt16>
+          <Reference Name="UG" Type="UG">none</Reference>
+          <Reference Name="UGPLC" Type="UNIT">none</Reference>
+          <UInt32 Name="Limit">4294967295</UInt32>
+          <UInt16 Name="UserID">65535</UInt16>
+          <UInt16 Name="ConnectionCount">1</UInt16>
+        </Group>
+        <Group Name="Limit">
+          <UInt32 Name="DPID">6</UInt32>
+          <Reference Name="DS" Type="DS">Source[global].DataSource[DataSource]</Reference>
+          <UInt16 Name="UpdtTime">200</UInt16>
+          <UInt16 Name="PVID">6</UInt16>
+          <Reference Name="UG" Type="UG">none</Reference>
+          <Reference Name="UGPLC" Type="UNIT">none</Reference>
+          <UInt32 Name="Limit">4294967295</UInt32>
+          <UInt16 Name="UserID">65535</UInt16>
+          <UInt16 Name="ConnectionCount">1</UInt16>
+        </Group>
+        <Group Name="Display.Brightness">
+          <UInt32 Name="DPID">7</UInt32>
+          <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
+          <UInt16 Name="UpdtTime">200</UInt16>
+          <UInt16 Name="PVID">0</UInt16>
+          <Reference Name="UG" Type="UG">none</Reference>
+          <Reference Name="UGPLC" Type="UNIT">none</Reference>
+          <UInt32 Name="Limit">4294967295</UInt32>
+          <UInt16 Name="UserID">65535</UInt16>
+          <UInt16 Name="ConnectionCount">1</UInt16>
+        </Group>
+        <Group Name="Display.Contrast">
+          <UInt32 Name="DPID">8</UInt32>
+          <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
+          <UInt16 Name="UpdtTime">200</UInt16>
+          <UInt16 Name="PVID">1</UInt16>
+          <Reference Name="UG" Type="UG">none</Reference>
+          <Reference Name="UGPLC" Type="UNIT">none</Reference>
+          <UInt32 Name="Limit">4294967295</UInt32>
+          <UInt16 Name="UserID">65535</UInt16>
+          <UInt16 Name="ConnectionCount">1</UInt16>
+        </Group>
+        <Group Name="Temperature.CPU">
+          <UInt32 Name="DPID">9</UInt32>
+          <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
+          <UInt16 Name="UpdtTime">200</UInt16>
+          <UInt16 Name="PVID">2</UInt16>
+          <Reference Name="UG" Type="UG">Source[global].UnitGroup[Temperatures]</Reference>
+          <Reference Name="UGPLC" Type="UNIT">Source[global].UnitGroup[Temperatures].Unit[$default]</Reference>
+          <UInt32 Name="Limit">4294967295</UInt32>
+          <UInt16 Name="UserID">65535</UInt16>
+          <UInt16 Name="ConnectionCount">1</UInt16>
+        </Group>
+        <Group Name="Temperature.Room">
+          <UInt32 Name="DPID">10</UInt32>
+          <Reference Name="DS" Type="DS">Source[global].DataSource[Internal]</Reference>
+          <UInt16 Name="UpdtTime">200</UInt16>
+          <UInt16 Name="PVID">3</UInt16>
+          <Reference Name="UG" Type="UG">Source[global].UnitGroup[Temperatures]</Reference>
+          <Reference Name="UGPLC" Type="UNIT">Source[global].UnitGroup[Temperatures].Unit[$default]</Reference>
+          <UInt32 Name="Limit">4294967295</UInt32>
+          <UInt16 Name="UserID">65535</UInt16>
+          <UInt16 Name="ConnectionCount">1</UInt16>
+        </Group>
+      </Object>
+    </Folder>
+  </Folder>
+</Intermediate>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0?>
+<Intermediate xmlns="http://br.automation.co.at/AS/VC/Intermediate">
+  <Folder Name="Bitmaps">
+    <Folder Name="POBJ">
+      <Object Name="Slider_ArrowUpGray" ClsId="0x306" Version="1" TargetIndex="453" Type="GFX" RefString="Source[local].Bitmap[Slider_ArrowUpGray]">
+        <UInt16 Name="Width">20</UInt16>
+        <UInt16 Name="Height">23</UInt16>
+        <UInt32 Name="BitsPerPixel">8</UInt32>
+        <Byte Name="Transparency">0</Byte>
+        <Byte Name="TargetFormat">1</Byte>
+        <UInt16 Name="Reserved">0</UInt16>
+        <Int32 Name="TransparentColor">0</Int32>
+        <Int32 Name="FillAreas">0</Int32>
+        <Binary Name="BitmapData" Encoding="Base64">AAAAAAAAAAA7Bwf6AAAAAAAAAAAAAAAAAAAAO2aR/2b6AAAAAAAAAAAAAAAAADsI/2ZmCGY7AAAAAAAAAAAAAAA7CP8HO/oHCGY7AAAAAAAAAAAAOwj/B/r6+fkHCGY7AAAAAAAA+QcI/wf6+fr6+/s7CGY7AAAAAPkHCAg7+fn6+vn7/Ps7Zgg7+QD5B/8IO/v7+fr6+fv8/Pw7Zgg7+TsIZjv8/Pv5+fr5+/v8/Pz6ZmY7Bwg7D/z7+/n5+vn7+/z8/A87CDtmZvkP/Pv7+fn6+fv8/Pz8D/lmZmYI+Q/8+/v5+fr5+/z8/PwP+QhmZgj5D/z7+/n5+vn7+/z8/A/5ZmZmZvkP/Pv7+fr6+fv7/Pz8D/lmZmZm+Q/8+/v5+vr5+/v8/PwP+WZmZgj5D/z7+/n6+vn7+/z8/A/5ZmZmZvoP/Pv7+fr6+fv7/Pz8D/lmZgcI+g/7+/n6+vr5+/v7/PwP+mY7B/8H/Pv7+fr6+vn7+/v8/Pw7CDs7CAg7+fr6Ozs7O/r5+fn7O2ZmO/kHCP8ICAgICAgICAgIZgj/Zjv5APk7ZmZmZmZmZmZmZmZmZmY7AAAAAPv5+vr6+vr6+vr6+vr5+QAAAA==</Binary>
+      </Object>
+    </Folder>
+  </Folder>
+</Intermediate>

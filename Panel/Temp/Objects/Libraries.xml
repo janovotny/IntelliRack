@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.90.22 SP04?>
+<LibraryInfos>
+  <Library Name="AsARCfg" IsDeployed="true" IsStatic="false" />
+  <Library Name="AsIecCon" IsDeployed="true" IsStatic="false" />
+  <Library Name="asstring" IsDeployed="true" IsStatic="false" />
+  <Library Name="AsTCP" IsDeployed="true" IsStatic="false" />
+  <Library Name="AsTime" IsDeployed="true" IsStatic="false" />
+  <Library Name="FileIO" IsDeployed="true" IsStatic="false" />
+  <Library Name="Operator" IsDeployed="true" IsStatic="false" />
+  <Library Name="Runtime" IsDeployed="true" IsStatic="false" />
+</LibraryInfos>

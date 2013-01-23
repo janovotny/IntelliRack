@@ -1,0 +1,5 @@
+$(AS_PROJECT_PATH)/Logical/Libraries/AsARCfg/AsARCfg.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/AsARCfg/AsARCfg.var
+$(AS_PROJECT_PATH)/Logical/FTP/FTP/FTP.var
+$(AS_PROJECT_PATH)/Logical/FTP/FTP/FTP.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/Runtime/runtime.var

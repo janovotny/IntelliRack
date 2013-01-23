@@ -1,0 +1,18 @@
+(********************************************************************
+ * COPYRIGHT --  
+ ********************************************************************
+ * File: Global.var
+ * Author: florian
+ * Created: November 16, 2012
+ ********************************************************************
+ * Global variables of project CANOpenMaster
+ ********************************************************************)
+VAR
+	GetPage : INT;
+	SetPage : INT;
+	Strings : ARRAY[0..99] OF STRING[42];
+	Action : UDINT;
+	Selection : UDINT;
+	Search : STRING[80];
+	Limit : UDINT;
+END_VAR

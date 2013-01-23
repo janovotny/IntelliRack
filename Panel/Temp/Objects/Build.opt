@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.90.22 SP04?>
+<BuildOptions>
+  <Project>
+    <IECNamingConvention>true</IECNamingConvention>
+    <IecKeywordsAsStructureMembers>false</IecKeywordsAsStructureMembers>
+    <IecExtendedConstants>true</IecExtendedConstants>
+    <ProjectLogicalDirectory>C:\Users\florian\Google Drive\Schule\Projekt\Software\own\Panel\Logical\</ProjectLogicalDirectory>
+    <ProjectTempDirectory>C:\Users\florian\Google Drive\Schule\Projekt\Software\own\Panel\Temp\</ProjectTempDirectory>
+    <ASVersion>3.0.90.22 SP04</ASVersion>
+    <Edition>Standard</Edition>
+    <CrossReference>false</CrossReference>
+    <ActiveConfiguration>PP120</ActiveConfiguration>
+    <CreateAnsiCDeclarations>false</CreateAnsiCDeclarations>
+    <GccVersion>V4.1.2</GccVersion>
+  </Project>
+  <Config Name="PP120">
+    <Target>SG4</Target>
+    <PermanentAnalogMemory>0</PermanentAnalogMemory>
+    <PermanentDigitalMemory>0</PermanentDigitalMemory>
+    <GccVersion>V4.1.2</GccVersion>
+    <SaveSourceOnTarget>false</SaveSourceOnTarget>
+    <ActivateSdm>false</ActivateSdm>
+    <WebServer>false</WebServer>
+  </Config>
+  <Config Name="CP570">
+    <Target>SG4</Target>
+    <PermanentAnalogMemory>0</PermanentAnalogMemory>
+    <PermanentDigitalMemory>0</PermanentDigitalMemory>
+    <GccVersion>V4.1.2</GccVersion>
+    <SaveSourceOnTarget>false</SaveSourceOnTarget>
+    <ActivateSdm>false</ActivateSdm>
+    <WebServer>false</WebServer>
+  </Config>
+  <Config Name="Config3">
+    <Target>SG4</Target>
+    <PermanentAnalogMemory>0</PermanentAnalogMemory>
+    <PermanentDigitalMemory>0</PermanentDigitalMemory>
+    <GccVersion>V4.1.2</GccVersion>
+    <SaveSourceOnTarget>false</SaveSourceOnTarget>
+    <ActivateSdm>false</ActivateSdm>
+    <WebServer>false</WebServer>
+  </Config>
+  <CiR />
+</BuildOptions>
