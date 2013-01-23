@@ -3,7 +3,7 @@
 #include <string.h>
 
 char title[56]={0};
-char *dvd_device="/dev/dvd";
+char *dvd_device="/dev/sr0";
 
 int main(){
 	FILE *filehandle = 0;
