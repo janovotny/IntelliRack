@@ -7,7 +7,22 @@
 
 #include "intelli-utils.h"
 
-char* DVDName(){
+/****h* IntelliRack/Utils
+* NAME
+* 	Utils -- Collection of functions 
+* FUNCTION
+* 	This module provides multiple functions
+*
+*****
+
+/****f* IntelliRack/Utils/DVDName
+* FUNCTION
+* 	This function reads out the DVD label
+* OUTPUT
+* 	- Pointer to DVD-name
+* SOURCE
+*/ 
+  char* DVDName(){
 	FILE *filehandle = NULL;
 	static char title[56]={0};
 	char *dvd_device="/dev/dvd";
@@ -41,6 +56,7 @@ char* DVDName(){
 	
 	return title;
 }
+/*****/ 
 
 
 FILE* system_out(char *command){

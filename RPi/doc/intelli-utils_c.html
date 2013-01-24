@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="./robodoc.css" type="text/css" />
+<title>./intelli-utils.c</title>
+<!-- Source: ./intelli-utils.c -->
+<!-- Generated with ROBODoc Version 5.0.0 (Jan 24 2013) -->
+</head>
+<body>
+<div id="logo">
+<a name="robo_top_of_doc"></a>
+</div> <!-- logo -->
+<div id="navigation">
+<a class="menuitem" href="./toc_index.html#top">Table of Contents</a>
+<a class="menuitem" href="./robo_sourcefiles.html#top">Sourcefiles</a>
+<a class="menuitem" href="./masterindex.html#top">Index</a>
+<a class="menuitem" href="./robo_functions.html#top">Functions</a>
+<a class="menuitem" href="./robo_modules.html#top">Modules</a>
+</div> <!-- navigation -->
+<div id="content">
+<hr />
+<a name="IntelliRack2fUtils"></a>
+<a name="robo0"></a><h2>IntelliRack/Utils [ Modules ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_modules.html#robo_top_of_doc">Modules</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>       <strong>Utils</strong> -- Collection of functions 
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>       This module provides multiple functions
+</pre>
+
+<hr />
+<a name="IntelliRack2fUtils2fDVDName"></a>
+<a name="robo1"></a><h2>IntelliRack/Utils/DVDName [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre>       This function reads out the DVD label
+</pre>
+<p class="item_name">OUTPUT</p>
+<pre>       - Pointer to DVD-name
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">  char* DVDName(){
+        FILE *filehandle = NULL;
+        static char title[56]={0};
+        char *dvd_device="/dev/dvd";
+
+        int  i;
+
+        if (! (filehandle = fopen(dvd_device, "r"))) {
+                fprintf(stderr, "Couldn't open %s for title\n", dvd_device);
+                strcpy(title, "unknown");
+        }
+
+        if ( fseek(filehandle, 32808, SEEK_SET )) {
+                fclose(filehandle);
+                fprintf(stderr, "Couldn't seek in %s for title\n", dvd_device);
+                strcpy(title, "unknown");
+        }
+
+        if ( 32 != (i = fread(title, 1, 32, filehandle)) ) {
+                fclose(filehandle);
+                fprintf(stderr, "Couldn't read enough bytes for title.\n");
+                strcpy(title, "unknown");
+        }
+
+        fclose (filehandle);
+
+        title[32] = '\0';
+        while(i-- &gt; 2)
+        if(title[i] == ' ') title[i] = '\0';
+
+        printf("%s", title);
+        
+        return title;
+}
+</pre>
+
+</div> <!-- content -->
+<div id="footer">
+<p>Generated from ./intelli-utils.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V5.0.0 on Thu Jan 24 2013 22:21:27
+</p>
+</div> <!-- footer -->
+</body>
+</html>
