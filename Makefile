@@ -5,7 +5,6 @@ OBJS=$(patsubst %.c,%.o,$(wildcard *.c))
 SUB=RPi
 
 all: failsafe doc $(SUB) $(OBJS)
-	$(CC) $(CFLAGS) $(LDFLAGS) -o intellirack
 
 failsafe:
 	git add .
@@ -25,7 +24,8 @@ RPi:
 	cd RPi && make
 
 doc: .git/HEAD
-	robodoc --src ../IntelliRack/ --doc ./doc/ --multidoc --cmode --footless --toc --syntaxcolors --source_line_numbers  --html
+	rm -rvf ./doc
+	robodoc --src ../IntelliRack/ --doc ./doc/ --multidoc --html --cmode --no_subdirectories --footless --index --toc --syntaxcolors --sectionnameonly --sections --source_line_numbers
 
 com:
 	git rebase --autosquash -i HEAD~`git status | sed -n -e 's/.*by \([0-9]*\).*/\1/p'`
