@@ -10,6 +10,7 @@ failsafe:
 	git add .
 	git commit -a -m"build" || :
 	git checkout makebuild
+	git checkout c53430c1bd
 	git merge --ff master
 	rm -rf doc
 	echo "doc/">>.gitignore
