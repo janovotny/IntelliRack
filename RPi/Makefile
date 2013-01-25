@@ -8,9 +8,6 @@ all: $(OBJS)
 
 %.o:%.c
 	$(CC) $(CFLAGS) $(LDFLAGS) $< -c -o $@ 
-	
-clean:
-	rm -rf $(OBJS)	
 
-doc:*
-	robodoc --src . --doc ./doc/ --multidoc --index --html
+clean:
+	rm -rf $(OBJS)

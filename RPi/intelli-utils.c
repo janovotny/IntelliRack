@@ -7,7 +7,7 @@
 
 #include "intelli-utils.h"
 
-/****h* IntelliRack/Utils
+/****h* RPi/utils
 * NAME
 * 	Utils -- Collection of functions 
 * FUNCTION
@@ -15,17 +15,17 @@
 *
 *****
 
-/****f* IntelliRack/Utils/DVDName
+/****f* RPi/dvd_name
 * FUNCTION
 * 	This function reads out the DVD label
 * OUTPUT
-* 	- Pointer to DVD-name
+* 	- Pointer to the dvd's name
 * SOURCE
 */ 
-  char* DVDName(){
+ char* dvd_name(){
 	FILE *filehandle = NULL;
 	static char title[56]={0};
-	char *dvd_device="/dev/dvd";
+	char *dvd_device="/dev/sr0";
 
 	int  i;
 
@@ -58,7 +58,16 @@
 }
 /*****/ 
 
-
+       
+/****f* RPi/system_out
+* FUNCTION
+* 	Executes a shell command
+* INPUTS
+*	char *command - Command to execute
+* OUTPUT
+*	- Pointer to tmpfile containing the command's stdout
+* SOURCE
+*/
 FILE* system_out(char *command){
 	
 	int sout1;
@@ -92,4 +101,4 @@ FILE* system_out(char *command){
 	rewind(tmp_file);
 	return tmp_file;
 }
-
+/*****/

@@ -1,0 +1,33 @@
+CC=gcc
+CFLAGS=-g
+LDFLAGS=-lm
+OBJS=$(patsubst %.c,%.o,$(wildcard *.c))
+SUB=RPi
+
+all: failsafe doc $(SUB) $(OBJS)
+	$(CC) $(CFLAGS) $(LDFLAGS) -o intellirack
+
+failsafe:
+	git add .
+	git commit -a -m"build" || :
+	git checkout makebuild
+	git merge --ff master
+	rm -rf doc
+	echo "doc/">>.gitignore
+
+%.o:%.c
+	$(CC) $(CFLAGS) $(LDFLAGS) $< -c -o $@ 
+	
+clean:
+	git checkout -f master
+
+RPi:
+	cd RPi && make
+
+doc: .git/HEAD
+	robodoc --src ../IntelliRack/ --doc ./doc/ --multidoc --cmode --footless --toc --syntaxcolors --source_line_numbers  --html
+
+com:
+	git rebase --autosquash -i HEAD~`git status | sed -n -e 's/.*by \([0-9]*\).*/\1/p'`
+	git commit -a --amend
+	git push
