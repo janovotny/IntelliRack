@@ -11,13 +11,13 @@
 * NAME
 * 	Utils -- Collection of functions 
 * FUNCTION
-* 	This module provides multiple functions
+* 	This module provides multiple functions.
 *
 *****
 
 /****f* RPi/dvd_name
 * FUNCTION
-* 	This function reads out the DVD label
+* 	This function reads out the DVD label.
 * OUTPUT
 * 	- Pointer to the dvd's name
 * SOURCE
@@ -61,11 +61,11 @@
        
 /****f* RPi/system_out
 * FUNCTION
-* 	Executes a shell command
+* 	Executes a shell command.
 * INPUTS
 *	char *command - Command to execute
 * OUTPUT
-*	- Pointer to tmpfile containing the command's stdout
+*	Pointer to tmpfile containing the command's stdout.
 * SOURCE
 */
 FILE* system_out(char *command){
@@ -77,7 +77,6 @@ FILE* system_out(char *command){
 
 	tmp_file=tmpfile();
 
-	printf("stdout, ");
 	fflush(stdout);
 
 	fgetpos(stdout, &pos);
@@ -86,16 +85,13 @@ FILE* system_out(char *command){
 	tmp_file=fopen(buffer, "wb+");
 	dup2(fileno(tmp_file), 1);
 
-	system("echo Hallo XD");
-
-	fclose(tmp_file);
+	system(command);
 
 	dup2(sout1, 1);
 	close(sout1);
 
 	fsetpos(stdout, &pos);
 	
-	printf("stdout again\n");
 	fflush(stdout);
 	getc(stdin);
 	rewind(tmp_file);

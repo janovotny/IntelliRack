@@ -4,9 +4,10 @@ LDFLAGS=-lm
 OBJS=$(patsubst %.c,%.o,$(wildcard *.c))
 SUB=RPi
 
-all: failsafe doc $(SUB) $(OBJS)
+all: failsafe doc $(OBJS)
+	$(foreach var,$(SUB),cd $(var)&&make;)
 
-failsafe:
+failsafe: .git/HEAD
 	git add .
 	git commit -a -m"build" || :
 	git checkout makebuild
@@ -18,17 +19,14 @@ failsafe:
 %.o:%.c
 	$(CC) $(CFLAGS) $(LDFLAGS) $< -c -o $@ 
 	
-clean:
+clean: .git/HEAD
 	git checkout -f master
-
-RPi:
-	cd RPi && make
 
 doc: .git/HEAD
 	rm -rvf ./doc
 	robodoc --src ../IntelliRack/ --doc ./doc/ --multidoc --html --cmode --no_subdirectories --footless --index --toc --syntaxcolors --sectionnameonly --sections --source_line_numbers
 
-com:
+com: .git/HEAD
 	git rebase --autosquash -i HEAD~`git status | sed -n -e 's/.*by \([0-9]*\).*/\1/p'`
 	git commit -a --amend
 	git push
