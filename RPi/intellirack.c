@@ -5,7 +5,7 @@
 
 /****h* RPi/IntelliRack
 * NAME
-* 	Main
+* 	Mainfile
 * FUNCTION
 * 	This module contains the sequence control.
 *
