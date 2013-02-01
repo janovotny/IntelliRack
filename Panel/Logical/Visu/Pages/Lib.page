@@ -64,7 +64,7 @@
           <Property Name="OptionDatapoint" Value="None"/>
           <Property Name="RightBitmap" Value="None"/>
           <Property Name="RightTextGroup" Value="None"/>
-          <Property Name="SimulationValue" Value="tzhfdgh"/>
+          <Property Name="SimulationValue" Value="Resultat"/>
           <Property Name="SingleTouchSelection" Value="True"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextDatapoint" Value="Source[global].Variable[DataSource.Strings]"/>
@@ -88,7 +88,7 @@
           <Property Name="InputTabSize" Value="0"/>
           <Property Name="InputTouchpad" Value="Source[local].TouchPad[AlphaPad_QVGA]"/>
           <Property Name="Left" Value="10"/>
-          <Property Name="SimulationValue" Value="fweafefasdv"/>
+          <Property Name="SimulationValue" Value="Suche"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="Top" Value="10"/>
           <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Search]"/>
