@@ -13,7 +13,7 @@ $(AS_TEMP_PATH)/Includes/asstring.h
 $(AS_TEMP_PATH)/Includes/AsARCfg.h
 $(AS_TEMP_PATH)/Includes/FileIO.h
 $(AS_TEMP_PATH)/Includes/AsTCP.h
+$(AS_TEMP_PATH)/Includes/visapi.h
 $(AS_TEMP_PATH)/Includes/globalTYP.h
 $(AS_TEMP_PATH)/Includes/globalVAR.h
-$(AS_TEMP_PATH)/Includes/handler/handlerTYP.h
 $(AS_TEMP_PATH)/Includes/handler/handlerVAR.h

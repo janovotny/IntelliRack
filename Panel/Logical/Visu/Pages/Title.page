@@ -26,17 +26,14 @@
       <Property Name="Z-Order" Value="0"/>
       <TextGroup>
         <TextLayer LanguageId="en">
-          <Text ID="95102" Value=""/>
           <Text ID="95105" Value="Back"/>
           <Text ID="95107" Value="Next"/>
         </TextLayer>
         <TextLayer LanguageId="de">
-          <Text ID="95102" Value=""/>
           <Text ID="95105" Value="Zurück"/>
           <Text ID="95107" Value="Weiter"/>
         </TextLayer>
         <IndexMap>
-          <Index ID="95102" Value="0"/>
           <Index ID="95105" Value="3"/>
           <Index ID="95107" Value="5"/>
         </IndexMap>
@@ -46,7 +43,7 @@
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Button]"/>
-          <Property Name="Height" Value="40"/>
+          <Property Name="Height" Value="20"/>
           <Property Name="Left" Value="10"/>
           <Property Name="SimulationValue" Value="asdfwefoahnsdof"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
@@ -111,7 +108,7 @@
               <Property Name="Description" Value=""/>
               <Property Name="Locking" Value="Never"/>
               <Property Name="Name" Value="Action_0"/>
-              <Property Name="SetValue" Value="1"/>
+              <Property Name="SetValue" Value="0"/>
               <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.SetPage]"/>
             </KeyAction>
           </KeyActions>

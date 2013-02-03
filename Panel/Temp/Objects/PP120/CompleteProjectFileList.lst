@@ -26,6 +26,10 @@
 /Logical/Libraries/AsTCP/AsTCP.typ
 /Logical/Libraries/AsTCP/AsTCP.fun
 /Logical/Libraries/AsTCP
+/Logical/Libraries/visapi/Visapi.typ
+/Logical/Libraries/visapi/Visapi.fun
+/Logical/Libraries/visapi/Visapi.var
+/Logical/Libraries/visapi
 /Logical/Libraries
 /Logical/FTP/FTP/FTP.st
 /Logical/FTP/FTP/FTP.typ
@@ -33,7 +37,6 @@
 /Logical/FTP/FTP
 /Logical/FTP
 /Logical/handler/handlerCyclic.c
-/Logical/handler/handler.typ
 /Logical/handler/handler.var
 /Logical/handler
 /Logical/Visu/VCObject.vc

@@ -1,1 +1,5 @@
+$(AS_PROJECT_PATH)/Logical/Libraries/visapi/Visapi.fun
 $(AS_PROJECT_PATH)/Logical/Global.var
+$(AS_PROJECT_PATH)/Logical/Global.typ
+$(AS_PROJECT_PATH)/Logical/handler/handler.var
+$(AS_PROJECT_PATH)/Logical/Libraries/visapi/Visapi.typ

@@ -9,4 +9,5 @@
   <Library Name="FileIO" IsDeployed="true" IsStatic="false" />
   <Library Name="Operator" IsDeployed="true" IsStatic="false" />
   <Library Name="Runtime" IsDeployed="true" IsStatic="false" />
+  <Library Name="visapi" IsDeployed="false" IsStatic="false" />
 </LibraryInfos>

@@ -1,8 +1,8 @@
 export AS_PLC := PLC1
 export AS_CPU_PATH := $(AS_TEMP_PATH)/Objects/$(AS_CONFIGURATION)/$(AS_PLC)
-export AS_CPU_PATH_2 := C:/Users/florian/Google Drive/Schule/Projekt/Software/own/Panel/Temp//Objects/$(AS_CONFIGURATION)/$(AS_PLC)
+export AS_CPU_PATH_2 := C:/Users/florian/Google Drive/Schule/Projekt/Software/own/IntelliRack/Panel/Temp//Objects/$(AS_CONFIGURATION)/$(AS_PLC)
 export AS_ACTIVE_CONFIG_PATH := $(AS_PROJECT_PATH)/Physical/$(AS_CONFIGURATION)/$(AS_PLC)
-export AS_STATIC_ARCHIVES_PATH := C:/Users/florian/Google Drive/Schule/Projekt/Software/own/Panel/Temp//Archives/$(AS_CONFIGURATION)/$(AS_PLC)
+export AS_STATIC_ARCHIVES_PATH := C:/Users/florian/Google Drive/Schule/Projekt/Software/own/IntelliRack/Panel/Temp//Archives/$(AS_CONFIGURATION)/$(AS_PLC)
 export WIN32_AS_CPU_PATH := $(WIN32_AS_TEMP_PATH)\Objects\$(AS_CONFIGURATION)\$(AS_PLC)
 export WIN32_AS_ACTIVE_CONFIG_PATH := $(WIN32_AS_PROJECT_PATH)\Physical\$(AS_CONFIGURATION)\$(AS_PLC)
 

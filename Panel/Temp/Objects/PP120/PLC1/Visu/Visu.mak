@@ -156,7 +156,8 @@ BMGRP_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/GlobalArea.bmgrp
 PAGE_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Pages/PleaseWait.page \
 	$(AS_PROJECT_PATH)/Logical/Visu/Pages/Home.page \
 	$(AS_PROJECT_PATH)/Logical/Visu/Pages/Lib.page \
-	$(AS_PROJECT_PATH)/Logical/Visu/Pages/Page_1.page 
+	$(AS_PROJECT_PATH)/Logical/Visu/Pages/Title.page \
+	$(AS_PROJECT_PATH)/Logical/Visu/Pages/InfoIG.page 
 
 LAYER_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Layers/msgBox.layer \
 	$(AS_PROJECT_PATH)/Logical/Visu/Layers/globalArea.layer \
@@ -231,7 +232,7 @@ VCR_SOURCE_Visu=$(SRC_PATH_Visu)/package.vcp
 
 #Panel Hardware
 $(PANEL_HW_OBJECT_Visu): $(PANEL_HW_SOURCE_Visu) $(PALFILE_Visu) $(VC_LIBRARY_LIST_Visu) $(KEYMAP_SOURCES_Visu)
-	$(VCHWPP) -f '$<' -o '$(subst .vco,.vci,$@)' -n Visu -d Visu -m '$(AS_PROJECT_PATH)/Physical/$(AS_CONFIGURATION)/$(AS_PLC)/Visual.vcm' -pal '$(PALFILE_Visu)' -c '$(AS_CONFIGURATION)' -p '$(AS_PLC)' -B V3.08.0 -L '' -verbose 'False' -profile 'False' -hw '$(CPUHWC)' -warninglevel 2 -so $(VC_STATIC_OPTIONS_Visu) -sfas
+	$(VCHWPP) -f '$<' -o '$(subst .vco,.vci,$@)' -n Visu -d Visu -m '$(AS_PROJECT_PATH)/Physical/$(AS_CONFIGURATION)/$(AS_PLC)/Visual.vcm' -pal '$(PALFILE_Visu)' -c '$(AS_CONFIGURATION)' -p '$(AS_PLC)' -B V3.08.0 -L ' visapi: V*' -verbose 'False' -profile 'False' -hw '$(CPUHWC)' -warninglevel 2 -so $(VC_STATIC_OPTIONS_Visu) -sfas
 	$(VCC) -f '$(subst .vco,.vci,$@)' -o '$@' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -k '$(VCVK_SOURCES_Visu)' $(VCCFLAGS_Visu) -p Visu
 
 
@@ -250,7 +251,11 @@ $(TEMP_PATH_Visu)/page.Lib.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/Lib.page $
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 3950
 
 
-$(TEMP_PATH_Visu)/page.Page_1.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/Page_1.page $(VC_LANGUAGES_Visu)
+$(TEMP_PATH_Visu)/page.Title.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/Title.page $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 3950
+
+
+$(TEMP_PATH_Visu)/page.InfoIG.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/InfoIG.page $(VC_LANGUAGES_Visu)
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 3950
 
 

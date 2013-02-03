@@ -11,8 +11,9 @@ VAR
 	GetPage : INT;
 	SetPage : INT;
 	Strings : ARRAY[0..99] OF STRING[42];
-	Action : UDINT;
-	Selection : UDINT;
+	Action : UINT;
+	Selection : UINT;
 	Search : STRING[80];
-	Limit : UDINT;
+	Limit : UINT;
+	state : LibVisapi5_ST_state_type; (*State variables of VISAPI commands*)
 END_VAR

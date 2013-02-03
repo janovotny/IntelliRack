@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="./robodoc.css" type="text/css" />
+<title>./../IntelliRack/RPi/utils/IMDBparser.pm</title>
+<!-- Source: ./../IntelliRack/RPi/utils/IMDBparser.pm -->
+<!-- Generated with ROBODoc Version 4.99.41 (Feb  6 2011) -->
+</head>
+<body>
+<div id="logo">
+<a name="robo_top_of_doc"></a>
+</div> <!-- logo -->
+<div id="navigation">
+<a class="menuitem" href="./toc_index.html#top">Table of Contents</a>
+<a class="menuitem" href="./robo_sourcefiles.html#top">Sourcefiles</a>
+<a class="menuitem" href="./masterindex.html#top">Index</a>
+<a class="menuitem" href="./robo_functions.html#top">Functions</a>
+<a class="menuitem" href="./robo_modules.html#top">Modules</a>
+</div> <!-- navigation -->
+<div id="content">
+<h3>TABLE OF CONTENTS</h3>
+<ul>
+<li><a href="#robo1">IMDButils</a></li>
+<li><a href="#robo4">ducky_search</a></li>
+<li><a href="#robo6">find_movie</a></li>
+<li><a href="#robo12">urldecode</a></li>
+<li><a href="#robo13">urlencode</a></li>
+</ul>
+<hr />
+<a name="RPi2fIMDButils"></a>
+<a name="robo1"></a><h2>IMDButils</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_modules.html#robo_top_of_doc">Modules</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>       IMDBparser -- Functions to get movie data 
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>       This module provides multiple functions.
+</pre>
+
+<hr />
+<a name="RPi2fducky5fsearch"></a>
+<a name="robo4"></a><h2>ducky_search</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre>       This function calls the websites to grab the movie information.
+</pre>
+<p class="item_name">OUTPUT</p>
+<pre>       - Data string
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="line_number"> 69 </span>sub <strong>ducky_search</strong><span class="sign">(</span><span class="sign">$</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number"> 70 </span>        my <span class="sign">$</span>browser <span class="sign">=</span> LWP<span class="sign">:</span><span class="sign">:</span>UserAgent<span class="sign">-</span><span class="sign">&gt;</span>new<span class="sign">(</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number"> 71 </span>        <span class="sign">$</span>browser<span class="sign">-</span><span class="sign">&gt;</span>agent<span class="sign">(</span><span class="squote">'Mozilla/5.0 (X11; U; FreeBSD i386; en-US; rv:9.9.9.9) Gecko/20079999 Firefox/5.0.0.1'</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number"> 72 </span>
+<span class="line_number"> 73 </span>        my <span class="sign">$</span>fail_counter<span class="sign">=</span>0<span class="sign">;</span>
+<span class="line_number"> 74 </span>        my <span class="sign">$</span>ret<span class="sign">=</span><span class="quote">""</span><span class="sign">;</span>
+<span class="line_number"> 75 </span>        
+<span class="line_number"> 76 </span>        my <span class="sign">$</span>discname<span class="sign">=</span><span class="sign">$</span>_<span class="sign">[</span>0<span class="sign">]</span><span class="sign">;</span>
+<span class="line_number"> 77 </span>
+<span class="line_number"> 78 </span>        <span class="sign">#</span>FILTER CRAP
+<span class="line_number"> 79 </span>        <span class="sign">$</span>discname<span class="sign">=</span><span class="sign">~</span>s<span class="sign">/</span>_<span class="sign">/</span><span class="sign">+</span><span class="sign">/</span>g<span class="sign">;</span>
+<span class="line_number"> 80 </span>        <span class="sign">$</span>discname<span class="sign">=</span><span class="sign">~</span>s<span class="sign">/</span>SE<span class="sign">+</span><span class="sign">.</span><span class="sign">*</span><span class="sign">$</span><span class="comment">//;</span>
+<span class="line_number"> 81 </span>        <span class="sign">$</span>discname<span class="sign">=</span><span class="sign">~</span>s<span class="sign">/</span>DISC<span class="sign">+</span><span class="sign">.</span><span class="sign">*</span><span class="sign">$</span><span class="comment">//;</span>
+<span class="line_number"> 82 </span>
+<span class="line_number"> 83 </span>        
+<span class="line_number"> 84 </span>        my <span class="sign">$</span>req <span class="sign">=</span> <span class="sign">$</span>browser<span class="sign">-</span><span class="sign">&gt;</span>get<span class="sign">(</span><span class="quote">"http://duckduckgo.com/?q="</span><span class="sign">.</span><a href="#robo13">urlencode</a><span class="sign">(</span><span class="quote">"site:imdb.com "</span> <span class="sign">.</span> <span class="sign">$</span>discname <span class="sign">.</span><span class="quote">" !"</span><span class="sign">)</span><span class="sign">)</span>
+<span class="line_number"> 85 </span>                or die <span class="quote">"Unable to get document: $!"</span><span class="sign">;</span>
+<span class="line_number"> 86 </span>
+<span class="line_number"> 87 </span>        <span class="sign">$</span>req<span class="sign">=</span><span class="sign">$</span>req<span class="sign">-</span><span class="sign">&gt;</span>content<span class="sign">;</span>
+<span class="line_number"> 88 </span>
+<span class="line_number"> 89 </span>        <span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>req<span class="sign">=</span><span class="sign">~</span><span class="sign">/</span>www<span class="sign">\</span><span class="sign">.</span>imdb<span class="sign">\</span><span class="sign">.</span>com<span class="sign">/</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number"> 90 </span>                <span class="sign">$</span>req<span class="sign">=</span><span class="sign">~</span>s<span class="sign">/</span>title<span class="sign">\</span><span class="sign">?</span><span class="sign">/</span>tt<span class="sign">/</span>ig<span class="sign">;</span>
+<span class="line_number"> 91 </span>                <span class="sign">$</span>req<span class="sign">=</span><span class="sign">~</span>s<span class="sign">/</span><span class="sign">^</span><span class="sign">.</span><span class="sign">*</span><span class="sign">(</span>tt<span class="sign">[</span>0<span class="sign">-</span>9<span class="sign">]</span><span class="sign">+</span><span class="sign">)</span><span class="sign">.</span><span class="sign">*</span><span class="sign">$</span><span class="sign">/</span><span class="sign">$</span>1<span class="sign">/</span><span class="sign">;</span>
+<span class="line_number"> 92 </span>                print <span class="quote">"Found imdb id: "</span><span class="sign">.</span><span class="sign">$</span>req<span class="sign">.</span><span class="quote">"\n"</span><span class="sign">;</span>
+<span class="line_number"> 93 </span>
+<span class="line_number"> 94 </span>                <span class="keyword">while</span><span class="sign">(</span><span class="sign">$</span>fail_counter<span class="sign">&lt;</span>3<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number"> 95 </span>                        <span class="sign">$</span>fail_counter<span class="sign">+</span><span class="sign">+</span><span class="sign">;</span>
+<span class="line_number"> 96 </span>                        <span class="sign">(</span><span class="sign">$</span>ret<span class="sign">=</span><span class="sign">$</span>browser<span class="sign">-</span><span class="sign">&gt;</span>get<span class="sign">(</span><span class="quote">"http://imdbapi.org/?type=xml&amp;plot=full&amp;episode=0&amp;id="</span><span class="sign">.</span><span class="sign">$</span>req<span class="sign">)</span><span class="sign">)</span> and <span class="sign">$</span>fail_counter<span class="sign">=</span>4<span class="sign">;</span>
+<span class="line_number"> 97 </span>                        <span class="sign">#</span>print <span class="quote">"http://imdbapi.org/?type=xml&amp;plot=full&amp;episode=0&amp;id="</span><span class="sign">.</span><span class="sign">$</span>req<span class="sign">;</span>
+<span class="line_number"> 98 </span>                <span class="sign">}</span>
+<span class="line_number"> 99 </span>        <span class="sign">}</span>
+<span class="line_number">100 </span>        <span class="sign">$</span>ret<span class="sign">=</span><span class="sign">$</span>ret<span class="sign">-</span><span class="sign">&gt;</span>content<span class="sign">;</span>
+<span class="line_number">101 </span>        <span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>fail_counter<span class="sign">!</span><span class="sign">=</span>4<span class="sign">)</span><span class="sign">{</span> print <span class="quote">"\nFAILED TO LOAD DATA\n"</span><span class="sign">;</span> exit <span class="sign">-</span>1<span class="sign">;</span> <span class="sign">}</span>
+<span class="line_number">102 </span>        <span class="keyword">return</span> <span class="sign">$</span>ret<span class="sign">;</span>
+<span class="line_number">103 </span><span class="sign">}</span>
+</pre>
+
+<hr />
+<a name="RPi2ffind5fmovie"></a>
+<a name="robo6"></a><h2>find_movie</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre>       This function initalizes the online search.
+</pre>
+<p class="item_name">OUTPUT</p>
+<pre>       - Movie data in XML form
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="line_number">51 </span>sub <strong>find_movie</strong><span class="sign">(</span><span class="sign">$</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">52 </span>
+<span class="line_number">53 </span>        my <span class="sign">$</span>search_string<span class="sign">=</span><span class="sign">$</span>_<span class="sign">[</span>0<span class="sign">]</span><span class="sign">;</span>        
+<span class="line_number">54 </span>        my <span class="sign">$</span>xml_data<span class="sign">=</span><a href="#robo4">ducky_search</a><span class="sign">(</span><span class="sign">$</span>search_string<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">55 </span>
+<span class="line_number">56 </span>        <span class="keyword">if</span><span class="sign">(</span>length<span class="sign">(</span><span class="sign">$</span>xml_data<span class="sign">)</span> <span class="sign">&gt;</span> 0<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">57 </span>                <span class="keyword">return</span> XMLin<span class="sign">(</span><span class="sign">$</span>xml_data<span class="sign">,</span> ForceArray<span class="sign">=</span><span class="sign">&gt;</span><span class="sign">[</span><span class="squote">'item'</span><span class="sign">]</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">58 </span>        <span class="sign">}</span>
+<span class="line_number">59 </span><span class="sign">}</span>
+</pre>
+
+<hr />
+<a name="RPi2furldecode"></a>
+<a name="robo12"></a><h2>urldecode</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre>       This function decodes the url compatible string to a normal string.
+</pre>
+<p class="item_name">OUTPUT</p>
+<pre>       - Urldecoded String
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="line_number">36 </span>sub <strong>urldecode</strong> <span class="sign">{</span>
+<span class="line_number">37 </span>        my <span class="sign">$</span>s <span class="sign">=</span> shift<span class="sign">;</span>
+<span class="line_number">38 </span>        <span class="sign">$</span>s <span class="sign">=</span><span class="sign">~</span> s<span class="sign">/</span><span class="sign">\</span><span class="sign">%</span><span class="sign">(</span><span class="sign">[</span>A<span class="sign">-</span>Fa<span class="sign">-</span>f0<span class="sign">-</span>9<span class="sign">]</span><span class="sign">{</span>2<span class="sign">}</span><span class="sign">)</span><span class="sign">/</span>pack<span class="sign">(</span><span class="squote">'C'</span><span class="sign">,</span> hex<span class="sign">(</span><span class="sign">$</span>1<span class="sign">)</span><span class="sign">)</span><span class="sign">/</span>seg<span class="sign">;</span>
+<span class="line_number">39 </span>        <span class="keyword">return</span> <span class="sign">$</span>s<span class="sign">;</span>
+<span class="line_number">40 </span><span class="sign">}</span>
+</pre>
+
+<hr />
+<a name="RPi2furlencode"></a>
+<a name="robo13"></a><h2>urlencode</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre>       This function encodes the string to an url compatible string.
+</pre>
+<p class="item_name">OUTPUT</p>
+<pre>       - Urlencoded String
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="line_number">21 </span>sub <strong>urlencode</strong> <span class="sign">{</span>
+<span class="line_number">22 </span>        my <span class="sign">$</span>s <span class="sign">=</span> shift<span class="sign">;</span>
+<span class="line_number">23 </span>        <span class="sign">$</span>s <span class="sign">=</span><span class="sign">~</span> s<span class="sign">/</span><span class="sign">(</span><span class="sign">[</span><span class="sign">^</span>A<span class="sign">-</span>Za<span class="sign">-</span>z0<span class="sign">-</span>9<span class="sign">]</span><span class="sign">)</span><span class="sign">/</span>sprintf<span class="sign">(</span><span class="quote">"%%%02X"</span><span class="sign">,</span> ord<span class="sign">(</span><span class="sign">$</span>1<span class="sign">)</span><span class="sign">)</span><span class="sign">/</span>seg<span class="sign">;</span>
+<span class="line_number">24 </span>        <span class="keyword">return</span> <span class="sign">$</span>s<span class="sign">;</span>
+<span class="line_number">25 </span><span class="sign">}</span>
+</pre>
+
+</div> <!-- content -->
+<div id="footer">
+<p>Generated from ./../IntelliRack/RPi/utils/IMDBparser.pm with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.41 on Sun Feb 03 2013 19:00:08
+</p>
+</div> <!-- footer -->

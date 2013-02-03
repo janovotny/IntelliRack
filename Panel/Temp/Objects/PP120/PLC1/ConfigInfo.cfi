@@ -4,14 +4,13 @@
   <TaskClass Name="Cyclic#1" />
   <TaskClass Name="Cyclic#2">
     <Task Name="handler" Disable="false" Source="handler" Language="ANSIC">
-      <File Path="C:\Users\florian\Google Drive\Schule\Projekt\Software\own\Panel\Logical\handler\handler.typ" />
-      <File Path="C:\Users\florian\Google Drive\Schule\Projekt\Software\own\Panel\Logical\handler\handler.var" />
+      <File Path="C:\Users\florian\Google Drive\Schule\Projekt\Software\own\IntelliRack\Panel\Logical\handler\handler.var" />
     </Task>
   </TaskClass>
   <TaskClass Name="Cyclic#3">
     <Task Name="FTP" Disable="false" Source="FTP.FTP" Language="IEC">
-      <File Path="C:\Users\florian\Google Drive\Schule\Projekt\Software\own\Panel\Logical\FTP\FTP\FTP.typ" />
-      <File Path="C:\Users\florian\Google Drive\Schule\Projekt\Software\own\Panel\Logical\FTP\FTP\FTP.var" />
+      <File Path="C:\Users\florian\Google Drive\Schule\Projekt\Software\own\IntelliRack\Panel\Logical\FTP\FTP\FTP.typ" />
+      <File Path="C:\Users\florian\Google Drive\Schule\Projekt\Software\own\IntelliRack\Panel\Logical\FTP\FTP\FTP.var" />
     </Task>
   </TaskClass>
   <TaskClass Name="Cyclic#4" />

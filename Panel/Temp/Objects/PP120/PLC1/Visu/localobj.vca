@@ -45,14 +45,15 @@
   <Symbol Name="\DPV\POBJ" Index="0" Type="DP" RefString="Source[global].Variable[DataSource.GetPage]" />
   <Symbol Name="\DPV\POBJ" Index="1" Type="DP" RefString="Source[global].Variable[DataSource.SetPage]" />
   <Symbol Name="\DPV\POBJ" Index="2" Type="DP" RefString="Source[global].Variable[DataSource.Strings]" />
-  <Symbol Name="\DPV\POBJ" Index="3" Type="DP" RefString="Source[global].Variable[DataSource.Action]" />
-  <Symbol Name="\DPV\POBJ" Index="4" Type="DP" RefString="Source[global].Variable[DataSource.Search]" />
-  <Symbol Name="\DPV\POBJ" Index="5" Type="DP" RefString="Source[global].Variable[DataSource.Selection]" />
-  <Symbol Name="\DPV\POBJ" Index="6" Type="DP" RefString="Source[global].Variable[DataSource.Limit]" />
-  <Symbol Name="\DPV\POBJ" Index="7" Type="DP" RefString="Source[global].Variable[Internal.Display.Brightness]" />
-  <Symbol Name="\DPV\POBJ" Index="8" Type="DP" RefString="Source[global].Variable[Internal.Display.Contrast]" />
-  <Symbol Name="\DPV\POBJ" Index="9" Type="DP" RefString="Source[global].Variable[Internal.Temperature.CPU]" />
-  <Symbol Name="\DPV\POBJ" Index="10" Type="DP" RefString="Source[global].Variable[Internal.Temperature.Room]" />
+  <Symbol Name="\DPV\POBJ" Index="3" Type="DP" RefString="Source[global].Variable[DataSource.Strings[0]]" />
+  <Symbol Name="\DPV\POBJ" Index="4" Type="DP" RefString="Source[global].Variable[DataSource.Action]" />
+  <Symbol Name="\DPV\POBJ" Index="5" Type="DP" RefString="Source[global].Variable[DataSource.Search]" />
+  <Symbol Name="\DPV\POBJ" Index="6" Type="DP" RefString="Source[global].Variable[DataSource.Selection]" />
+  <Symbol Name="\DPV\POBJ" Index="7" Type="DP" RefString="Source[global].Variable[DataSource.Limit]" />
+  <Symbol Name="\DPV\POBJ" Index="8" Type="DP" RefString="Source[global].Variable[Internal.Display.Brightness]" />
+  <Symbol Name="\DPV\POBJ" Index="9" Type="DP" RefString="Source[global].Variable[Internal.Display.Contrast]" />
+  <Symbol Name="\DPV\POBJ" Index="10" Type="DP" RefString="Source[global].Variable[Internal.Temperature.CPU]" />
+  <Symbol Name="\DPV\POBJ" Index="11" Type="DP" RefString="Source[global].Variable[Internal.Temperature.Room]" />
   <Symbol Name="Source[global].UnitGroup[Length]" Index="3221225472" Type="UG" RefString="Source[global].UnitGroup[Length]" />
   <Symbol Name="Source[global].UnitGroup[Length].Unit[$OneToOne]" Index="3221225480" Type="UNIT" RefString="Source[global].UnitGroup[Length].Unit[$OneToOne]" />
   <Symbol Name="Source[global].UnitGroup[Mass]" Index="3221225473" Type="UG" RefString="Source[global].UnitGroup[Mass]" />
@@ -264,12 +265,13 @@
   <Symbol Name="\Projects\Visu\Forms\POBJ" Index="0" Type="PAGE" RefString="Source[local].Page[PleaseWait]" />
   <Symbol Name="\Projects\Visu\Forms\POBJ" Index="1" Type="PAGE" RefString="Source[local].Page[Home]" />
   <Symbol Name="\Projects\Visu\Forms\POBJ" Index="2" Type="PAGE" RefString="Source[local].Page[Lib]" />
+  <Symbol Name="\Projects\Visu\Forms\POBJ" Index="3" Type="PAGE" RefString="Source[local].Page[Title]" />
+  <Symbol Name="\Projects\Visu\Forms\POBJ" Index="4" Type="PAGE" RefString="Source[local].Page[InfoIG]" />
   <Symbol Name="\Projects\Visu\TextGroupBase\Buttons_PageTexts" Index="14" Type="TG" RefString="Source[local].TextGroup[Buttons_PageTexts]" />
   <Symbol Name="\Projects\Visu\TextGroupBase\HeaderBar" Index="12" Type="TG" RefString="Source[local].TextGroup[HeaderBar]" />
   <Symbol Name="\Projects\Visu\TextGroupBase\InstantMessages" Index="10" Type="TG" RefString="Source[local].TextGroup[InstantMessages]" />
   <Symbol Name="\Projects\Visu\TextGroupBase\PageNames" Index="13" Type="TG" RefString="Source[local].TextGroup[PageNames]" />
   <Symbol Name="\Projects\Visu\TextGroupBase\Languages" Index="0" Type="TG" RefString="Source[local].TextGroup[Languages]" />
-  <Symbol Name="\Projects\Visu\Forms\POBJ" Index="3" Type="PAGE" RefString="Source[local].Page[Page_1]" />
   <Symbol Name="Source[local].Driver[DisplayCx55]" Index="1073741824" Type="DRV" RefString="Source[local].Driver[DisplayCx55]" />
   <Symbol Name="Source[local].Driver[HampshireTouch]" Index="1073741825" Type="DRV" RefString="Source[local].Driver[HampshireTouch]" />
   <Symbol Name="Source[local].KS[default]" Index="1073741824" Type="KS" RefString="Source[local].KS[default]" />
@@ -294,47 +296,56 @@
   <Symbol Name="Source[local].VirtualKey[home]" Index="1073741828" Type="VKEY" RefString="Source[local].VirtualKey[home]" />
   <Symbol Name="Source[local].VirtualKey[Next]" Index="1073741829" Type="VKEY" RefString="Source[local].VirtualKey[Next]" />
   <Symbol Name="Source[local].Page[Lib].Layer[Default]" Index="1073741826" Type="LAY" RefString="Source[local].Page[Lib].Layer[Default]" />
-  <Symbol Name="Source[local].Layer[msgBox].Control[txtHeader]" Index="1073741835" Type="CTRL" RefString="Source[local].Layer[msgBox].Control[txtHeader]" />
-  <Symbol Name="Source[local].Layer[msgBox].Control[shpBody]" Index="1073741836" Type="CTRL" RefString="Source[local].Layer[msgBox].Control[shpBody]" />
-  <Symbol Name="Source[local].Layer[msgBox].Control[bmpInfoLevel]" Index="1073741837" Type="CTRL" RefString="Source[local].Layer[msgBox].Control[bmpInfoLevel]" />
-  <Symbol Name="Source[local].Layer[msgBox].Control[txtContent]" Index="1073741838" Type="CTRL" RefString="Source[local].Layer[msgBox].Control[txtContent]" />
-  <Symbol Name="Source[local].Layer[msgBox].Control[cmdOK]" Index="1073741839" Type="CTRL" RefString="Source[local].Layer[msgBox].Control[cmdOK]" />
-  <Symbol Name="Source[local].Layer[msgBox].Control[cmdAbort]" Index="1073741840" Type="CTRL" RefString="Source[local].Layer[msgBox].Control[cmdAbort]" />
-  <Symbol Name="Source[local].Layer[msgBox].Control[txtHelp]" Index="1073741841" Type="CTRL" RefString="Source[local].Layer[msgBox].Control[txtHelp]" />
-  <Symbol Name="Source[local].Layer[msgBox]" Index="1073741827" Type="LAY" RefString="Source[local].Layer[msgBox]" />
-  <Symbol Name="Source[local].Layer[globalArea].Control[bmpAreaUpside]" Index="1073741842" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[bmpAreaUpside]" />
-  <Symbol Name="Source[local].Layer[globalArea].Control[bmpAreaDownside]" Index="1073741843" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[bmpAreaDownside]" />
-  <Symbol Name="Source[local].Layer[globalArea].Control[shpUpFrame]" Index="1073741844" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[shpUpFrame]" />
-  <Symbol Name="Source[local].Layer[globalArea].Control[txtHeaderText]" Index="1073741845" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[txtHeaderText]" />
-  <Symbol Name="Source[local].Layer[globalArea].Control[txtPageName]" Index="1073741846" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[txtPageName]" />
-  <Symbol Name="Source[local].Layer[globalArea].Control[shpLowFrame]" Index="1073741847" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[shpLowFrame]" />
-  <Symbol Name="Source[local].Layer[globalArea].Control[shpLeftFrame]" Index="1073741848" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[shpLeftFrame]" />
-  <Symbol Name="Source[local].Layer[globalArea].Control[shpRightFrame]" Index="1073741849" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[shpRightFrame]" />
-  <Symbol Name="Source[local].Layer[globalArea].Control[lineLeftArea]" Index="1073741850" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[lineLeftArea]" />
-  <Symbol Name="Source[local].Layer[globalArea].Control[lineTopArea]" Index="1073741851" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[lineTopArea]" />
-  <Symbol Name="Source[local].Layer[globalArea].Control[cmdSetupPage]" Index="1073741852" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[cmdSetupPage]" />
-  <Symbol Name="Source[local].Layer[globalArea].Control[cmdServicePage]" Index="1073741853" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[cmdServicePage]" />
-  <Symbol Name="Source[local].Layer[globalArea].Control[cmdTrendPage]" Index="1073741854" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[cmdTrendPage]" />
-  <Symbol Name="Source[local].Layer[globalArea].Control[cmdAlarmPage]" Index="1073741855" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[cmdAlarmPage]" />
-  <Symbol Name="Source[local].Layer[globalArea].Control[hspotSdmPage]" Index="1073741856" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[hspotSdmPage]" />
-  <Symbol Name="Source[local].Layer[globalArea]" Index="1073741828" Type="LAY" RefString="Source[local].Layer[globalArea]" />
-  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[bmpAreaUpside]" Index="1073741857" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[bmpAreaUpside]" />
-  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[bmpAreaDownside]" Index="1073741858" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[bmpAreaDownside]" />
-  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[shpLowFrame]" Index="1073741859" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[shpLowFrame]" />
-  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[shpLeftFrame]" Index="1073741860" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[shpLeftFrame]" />
-  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[cmdSetupPage]" Index="1073741861" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[cmdSetupPage]" />
-  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[cmdServicePage]" Index="1073741862" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[cmdServicePage]" />
-  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[cmdTrendPage]" Index="1073741863" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[cmdTrendPage]" />
-  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[cmdAlarmPage]" Index="1073741864" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[cmdAlarmPage]" />
-  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[txtPageName]" Index="1073741865" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[txtPageName]" />
-  <Symbol Name="Source[local].Layer[globalAreaSDM]" Index="1073741829" Type="LAY" RefString="Source[local].Layer[globalAreaSDM]" />
-  <Symbol Name="Source[local].Page[Page_1].Layer[Default]" Index="1073741830" Type="LAY" RefString="Source[local].Page[Page_1].Layer[Default]" />
+  <Symbol Name="Source[local].Page[Title].Layer[Default].Control[Text_1]" Index="1073741835" Type="CTRL" RefString="Source[local].Page[Title].Layer[Default].Control[Text_1]" />
+  <Symbol Name="Source[local].Page[Title].Layer[Default].Control[Button_3]" Index="1073741836" Type="CTRL" RefString="Source[local].Page[Title].Layer[Default].Control[Button_3]" />
+  <Symbol Name="Source[local].Page[Title].Layer[Default].Control[Button_4]" Index="1073741837" Type="CTRL" RefString="Source[local].Page[Title].Layer[Default].Control[Button_4]" />
+  <Symbol Name="Source[local].Page[Title].Layer[Default]" Index="1073741827" Type="LAY" RefString="Source[local].Page[Title].Layer[Default]" />
+  <Symbol Name="Source[local].Page[InfoIG].Layer[Default].Control[Button_2]" Index="1073741838" Type="CTRL" RefString="Source[local].Page[InfoIG].Layer[Default].Control[Button_2]" />
+  <Symbol Name="Source[local].Page[InfoIG].Layer[Default].Control[Button_3]" Index="1073741839" Type="CTRL" RefString="Source[local].Page[InfoIG].Layer[Default].Control[Button_3]" />
+  <Symbol Name="Source[local].Page[InfoIG].Layer[Default].Control[Listbox_2]" Index="1073741840" Type="CTRL" RefString="Source[local].Page[InfoIG].Layer[Default].Control[Listbox_2]" />
+  <Symbol Name="Source[local].Page[InfoIG].Layer[Default]" Index="1073741828" Type="LAY" RefString="Source[local].Page[InfoIG].Layer[Default]" />
+  <Symbol Name="Source[local].Layer[msgBox].Control[txtHeader]" Index="1073741841" Type="CTRL" RefString="Source[local].Layer[msgBox].Control[txtHeader]" />
+  <Symbol Name="Source[local].Layer[msgBox].Control[shpBody]" Index="1073741842" Type="CTRL" RefString="Source[local].Layer[msgBox].Control[shpBody]" />
+  <Symbol Name="Source[local].Layer[msgBox].Control[bmpInfoLevel]" Index="1073741843" Type="CTRL" RefString="Source[local].Layer[msgBox].Control[bmpInfoLevel]" />
+  <Symbol Name="Source[local].Layer[msgBox].Control[txtContent]" Index="1073741844" Type="CTRL" RefString="Source[local].Layer[msgBox].Control[txtContent]" />
+  <Symbol Name="Source[local].Layer[msgBox].Control[cmdOK]" Index="1073741845" Type="CTRL" RefString="Source[local].Layer[msgBox].Control[cmdOK]" />
+  <Symbol Name="Source[local].Layer[msgBox].Control[cmdAbort]" Index="1073741846" Type="CTRL" RefString="Source[local].Layer[msgBox].Control[cmdAbort]" />
+  <Symbol Name="Source[local].Layer[msgBox].Control[txtHelp]" Index="1073741847" Type="CTRL" RefString="Source[local].Layer[msgBox].Control[txtHelp]" />
+  <Symbol Name="Source[local].Layer[msgBox]" Index="1073741829" Type="LAY" RefString="Source[local].Layer[msgBox]" />
+  <Symbol Name="Source[local].Layer[globalArea].Control[bmpAreaUpside]" Index="1073741848" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[bmpAreaUpside]" />
+  <Symbol Name="Source[local].Layer[globalArea].Control[bmpAreaDownside]" Index="1073741849" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[bmpAreaDownside]" />
+  <Symbol Name="Source[local].Layer[globalArea].Control[shpUpFrame]" Index="1073741850" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[shpUpFrame]" />
+  <Symbol Name="Source[local].Layer[globalArea].Control[txtHeaderText]" Index="1073741851" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[txtHeaderText]" />
+  <Symbol Name="Source[local].Layer[globalArea].Control[txtPageName]" Index="1073741852" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[txtPageName]" />
+  <Symbol Name="Source[local].Layer[globalArea].Control[shpLowFrame]" Index="1073741853" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[shpLowFrame]" />
+  <Symbol Name="Source[local].Layer[globalArea].Control[shpLeftFrame]" Index="1073741854" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[shpLeftFrame]" />
+  <Symbol Name="Source[local].Layer[globalArea].Control[shpRightFrame]" Index="1073741855" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[shpRightFrame]" />
+  <Symbol Name="Source[local].Layer[globalArea].Control[lineLeftArea]" Index="1073741856" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[lineLeftArea]" />
+  <Symbol Name="Source[local].Layer[globalArea].Control[lineTopArea]" Index="1073741857" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[lineTopArea]" />
+  <Symbol Name="Source[local].Layer[globalArea].Control[cmdSetupPage]" Index="1073741858" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[cmdSetupPage]" />
+  <Symbol Name="Source[local].Layer[globalArea].Control[cmdServicePage]" Index="1073741859" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[cmdServicePage]" />
+  <Symbol Name="Source[local].Layer[globalArea].Control[cmdTrendPage]" Index="1073741860" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[cmdTrendPage]" />
+  <Symbol Name="Source[local].Layer[globalArea].Control[cmdAlarmPage]" Index="1073741861" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[cmdAlarmPage]" />
+  <Symbol Name="Source[local].Layer[globalArea].Control[hspotSdmPage]" Index="1073741862" Type="CTRL" RefString="Source[local].Layer[globalArea].Control[hspotSdmPage]" />
+  <Symbol Name="Source[local].Layer[globalArea]" Index="1073741830" Type="LAY" RefString="Source[local].Layer[globalArea]" />
+  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[bmpAreaUpside]" Index="1073741863" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[bmpAreaUpside]" />
+  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[bmpAreaDownside]" Index="1073741864" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[bmpAreaDownside]" />
+  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[shpLowFrame]" Index="1073741865" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[shpLowFrame]" />
+  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[shpLeftFrame]" Index="1073741866" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[shpLeftFrame]" />
+  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[cmdSetupPage]" Index="1073741867" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[cmdSetupPage]" />
+  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[cmdServicePage]" Index="1073741868" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[cmdServicePage]" />
+  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[cmdTrendPage]" Index="1073741869" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[cmdTrendPage]" />
+  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[cmdAlarmPage]" Index="1073741870" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[cmdAlarmPage]" />
+  <Symbol Name="Source[local].Layer[globalAreaSDM].Control[txtPageName]" Index="1073741871" Type="CTRL" RefString="Source[local].Layer[globalAreaSDM].Control[txtPageName]" />
+  <Symbol Name="Source[local].Layer[globalAreaSDM]" Index="1073741831" Type="LAY" RefString="Source[local].Layer[globalAreaSDM]" />
   <Symbol Name="Source[local].Page[PleaseWait].Layer[Default].TextGroup[Embedded]" Index="1073741825" Type="TG" RefString="Source[local].Page[PleaseWait].Layer[Default].TextGroup[Embedded]" />
   <Symbol Name="Source[local].Page[Home].Layer[Default].TextGroup[Embedded]" Index="1073741826" Type="TG" RefString="Source[local].Page[Home].Layer[Default].TextGroup[Embedded]" />
   <Symbol Name="Source[local].Page[Lib].Layer[Default].TextGroup[Embedded]" Index="1073741827" Type="TG" RefString="Source[local].Page[Lib].Layer[Default].TextGroup[Embedded]" />
+  <Symbol Name="Source[local].Page[Title].Layer[Default].TextGroup[Embedded]" Index="1073741828" Type="TG" RefString="Source[local].Page[Title].Layer[Default].TextGroup[Embedded]" />
+  <Symbol Name="Source[local].Page[InfoIG].Layer[Default].TextGroup[Embedded]" Index="1073741829" Type="TG" RefString="Source[local].Page[InfoIG].Layer[Default].TextGroup[Embedded]" />
   <Symbol Name="Source[local].TextGroup[HeaderBar].Snippet[DateTime]" Index="1073741824" Type="SNP" RefString="Source[local].TextGroup[HeaderBar].Snippet[DateTime]" />
   <Symbol Name="Source[local].TextGroup[InstantMessages].Snippet[WaterTemp]" Index="1073741825" Type="SNP" RefString="Source[local].TextGroup[InstantMessages].Snippet[WaterTemp]" />
-  <Symbol Name="Source[local].Layer[msgBox].TextGroup[Embedded]" Index="1073741828" Type="TG" RefString="Source[local].Layer[msgBox].TextGroup[Embedded]" />
+  <Symbol Name="Source[local].Layer[msgBox].TextGroup[Embedded]" Index="1073741830" Type="TG" RefString="Source[local].Layer[msgBox].TextGroup[Embedded]" />
   <Symbol Name="Source[local].StyleSheet[Default]" Index="1073741824" Type="SS" RefString="Source[local].StyleSheet[Default]" />
   <Symbol Name="Source[local].VirtualKey[AlarmAcknowledge]" Index="1073741830" Type="VKEY" RefString="Source[local].VirtualKey[AlarmAcknowledge]" />
   <Symbol Name="Source[local].VirtualKey[AlarmDown]" Index="1073741831" Type="VKEY" RefString="Source[local].VirtualKey[AlarmDown]" />
@@ -486,22 +497,22 @@
   <Symbol Name="Source[local].VirtualKey[TP_SelectionMode]" Index="1073741977" Type="VKEY" RefString="Source[local].VirtualKey[TP_SelectionMode]" />
   <Symbol Name="Source[local].TouchPad[NavigationPad_hor]" Index="1073741824" Type="OVL" RefString="Source[local].TouchPad[NavigationPad_hor]" />
   <Symbol Name="Source[local].TouchPad[NavigationPad_ver]" Index="1073741825" Type="OVL" RefString="Source[local].TouchPad[NavigationPad_ver]" />
-  <Symbol Name="Source[local].TouchPad[NumPad].Control[TouchPadEdit_1]" Index="1073741866" Type="CTRL" RefString="Source[local].TouchPad[NumPad].Control[TouchPadEdit_1]" />
+  <Symbol Name="Source[local].TouchPad[NumPad].Control[TouchPadEdit_1]" Index="1073741872" Type="CTRL" RefString="Source[local].TouchPad[NumPad].Control[TouchPadEdit_1]" />
   <Symbol Name="Source[local].TouchPad[NumPad]" Index="1073741826" Type="OVL" RefString="Source[local].TouchPad[NumPad]" />
-  <Symbol Name="Source[local].TouchPad[AlphaPad_QVGA].Control[TouchPadEdit_1]" Index="1073741867" Type="CTRL" RefString="Source[local].TouchPad[AlphaPad_QVGA].Control[TouchPadEdit_1]" />
+  <Symbol Name="Source[local].TouchPad[AlphaPad_QVGA].Control[TouchPadEdit_1]" Index="1073741873" Type="CTRL" RefString="Source[local].TouchPad[AlphaPad_QVGA].Control[TouchPadEdit_1]" />
   <Symbol Name="Source[local].TouchPad[AlphaPad_QVGA]" Index="1073741827" Type="OVL" RefString="Source[local].TouchPad[AlphaPad_QVGA]" />
   <Symbol Name="Source[local].Runtime[Visu]" Index="1073741824" Type="RTM" RefString="Source[local].Runtime[Visu]" />
   <Symbol Name="Source[local].TrendDataConfiguration[TrendData]" Index="1073741824" Type="TDC" RefString="Source[local].TrendDataConfiguration[TrendData]" />
   <Symbol Name="Source[local].TrendData[CPUTemperature]" Index="1073741824" Type="TRD" RefString="Source[local].TrendData[CPUTemperature]" />
   <Symbol Name="Source[local].TrendData[ROOMTemperature]" Index="1073741825" Type="TRD" RefString="Source[local].TrendData[ROOMTemperature]" />
   <Symbol Name="Source[local].Trend[Trend_Temperature]" Index="1073741824" Type="TRE" RefString="Source[local].Trend[Trend_Temperature]" />
-  <Symbol Name="Source[local].Trend[Trend_Temperature].Control[TrendGrid_1]" Index="1073741868" Type="CTRL" RefString="Source[local].Trend[Trend_Temperature].Control[TrendGrid_1]" />
-  <Symbol Name="Source[local].Trend[Trend_Temperature].Control[TrendScaleContainer_1]" Index="1073741869" Type="CTRL" RefString="Source[local].Trend[Trend_Temperature].Control[TrendScaleContainer_1]" />
-  <Symbol Name="Source[local].Trend[Trend_Temperature].Control[TrendScaleContainer_2]" Index="1073741870" Type="CTRL" RefString="Source[local].Trend[Trend_Temperature].Control[TrendScaleContainer_2]" />
-  <Symbol Name="Source[local].Trend[Trend_Temperature].Control[TrendTimeScale_1]" Index="1073741871" Type="CTRL" RefString="Source[local].Trend[Trend_Temperature].Control[TrendTimeScale_1]" />
-  <Symbol Name="Source[local].Trend[Trend_Temperature].Control[TrendValueScale_1]" Index="1073741872" Type="CTRL" RefString="Source[local].Trend[Trend_Temperature].Control[TrendValueScale_1]" />
-  <Symbol Name="Source[local].Trend[Trend_Temperature].Control[TrendCurveActTemp]" Index="1073741873" Type="CTRL" RefString="Source[local].Trend[Trend_Temperature].Control[TrendCurveActTemp]" />
-  <Symbol Name="Source[local].Trend[Trend_Temperature].Control[TrendCurveCpuTemp]" Index="1073741874" Type="CTRL" RefString="Source[local].Trend[Trend_Temperature].Control[TrendCurveCpuTemp]" />
+  <Symbol Name="Source[local].Trend[Trend_Temperature].Control[TrendGrid_1]" Index="1073741874" Type="CTRL" RefString="Source[local].Trend[Trend_Temperature].Control[TrendGrid_1]" />
+  <Symbol Name="Source[local].Trend[Trend_Temperature].Control[TrendScaleContainer_1]" Index="1073741875" Type="CTRL" RefString="Source[local].Trend[Trend_Temperature].Control[TrendScaleContainer_1]" />
+  <Symbol Name="Source[local].Trend[Trend_Temperature].Control[TrendScaleContainer_2]" Index="1073741876" Type="CTRL" RefString="Source[local].Trend[Trend_Temperature].Control[TrendScaleContainer_2]" />
+  <Symbol Name="Source[local].Trend[Trend_Temperature].Control[TrendTimeScale_1]" Index="1073741877" Type="CTRL" RefString="Source[local].Trend[Trend_Temperature].Control[TrendTimeScale_1]" />
+  <Symbol Name="Source[local].Trend[Trend_Temperature].Control[TrendValueScale_1]" Index="1073741878" Type="CTRL" RefString="Source[local].Trend[Trend_Temperature].Control[TrendValueScale_1]" />
+  <Symbol Name="Source[local].Trend[Trend_Temperature].Control[TrendCurveActTemp]" Index="1073741879" Type="CTRL" RefString="Source[local].Trend[Trend_Temperature].Control[TrendCurveActTemp]" />
+  <Symbol Name="Source[local].Trend[Trend_Temperature].Control[TrendCurveCpuTemp]" Index="1073741880" Type="CTRL" RefString="Source[local].Trend[Trend_Temperature].Control[TrendCurveCpuTemp]" />
   <Symbol Name="Source[local].StyleGroup[0x00000400].StyleClass[Default]" Index="1073741829" Type="REF" RefString="Source[local].StyleGroup[0x00000400].StyleClass[Default]" />
   <Symbol Name="Source[local].StyleGroup[0x00001001].StyleClass[Default]" Index="1073741830" Type="REF" RefString="Source[local].StyleGroup[0x00001001].StyleClass[Default]" />
   <Symbol Name="Source[local].StyleGroup[0x00001002].StyleClass[BackwardButton]" Index="1073741831" Type="REF" RefString="Source[local].StyleGroup[0x00001002].StyleClass[BackwardButton]" />
@@ -561,6 +572,10 @@
   <Symbol Name="Source[local].StyleGroup[0x0000101F].StyleClass[SliderBallVertical]" Index="1073741885" Type="REF" RefString="Source[local].StyleGroup[0x0000101F].StyleClass[SliderBallVertical]" />
   <Symbol Name="Source[local].StyleGroup[0x0000101F].StyleClass[SliderArrowVertical]" Index="1073741886" Type="REF" RefString="Source[local].StyleGroup[0x0000101F].StyleClass[SliderArrowVertical]" />
   <Symbol Name="Source[local].StyleGroup[0x00001020].StyleClass[Default]" Index="1073741887" Type="REF" RefString="Source[local].StyleGroup[0x00001020].StyleClass[Default]" />
+  <Symbol Name="\Projects\Visu\Layers\TitleDefault\VKeys\Common" Index="1073741828" Type="VKEY" RefString="Source[local].VirtualKey[home]#\Projects\Visu\Layers\TitleDefault\VKeys\Common" />
+  <Symbol Name="\Projects\Visu\Layers\TitleDefault\VKeys\Common" Index="1073741829" Type="VKEY" RefString="Source[local].VirtualKey[Next]#\Projects\Visu\Layers\TitleDefault\VKeys\Common" />
+  <Symbol Name="\Projects\Visu\Layers\InfoIGDefault\VKeys\Common" Index="1073741828" Type="VKEY" RefString="Source[local].VirtualKey[home]#\Projects\Visu\Layers\InfoIGDefault\VKeys\Common" />
+  <Symbol Name="\Projects\Visu\Layers\InfoIGDefault\VKeys\Common" Index="1073741829" Type="VKEY" RefString="Source[local].VirtualKey[Next]#\Projects\Visu\Layers\InfoIGDefault\VKeys\Common" />
   <Symbol Name="\Projects\Visu\Layers\globalArea\VKeys\Common" Index="1073741961" Type="VKEY" RefString="Source[local].VirtualKey[pageAlarm]#\Projects\Visu\Layers\globalArea\VKeys\Common" />
   <Symbol Name="\Projects\Visu\Layers\globalArea\VKeys\Common" Index="1073741962" Type="VKEY" RefString="Source[local].VirtualKey[pageHome]#\Projects\Visu\Layers\globalArea\VKeys\Common" />
   <Symbol Name="\Projects\Visu\Layers\globalArea\VKeys\Common" Index="1073741963" Type="VKEY" RefString="Source[local].VirtualKey[pageSDM]#\Projects\Visu\Layers\globalArea\VKeys\Common" />
@@ -574,21 +589,25 @@
   <Symbol Name="\Projects\Visu\Language\en\TextGroups\POBJ" Index="1073741825" Type="TG" RefString="Source[local].Page[PleaseWait].Layer[Default].TextGroup[Embedded].Language[en]" />
   <Symbol Name="\Projects\Visu\Language\en\TextGroups\POBJ" Index="1073741826" Type="TG" RefString="Source[local].Page[Home].Layer[Default].TextGroup[Embedded].Language[en]" />
   <Symbol Name="\Projects\Visu\Language\en\TextGroups\POBJ" Index="1073741827" Type="TG" RefString="Source[local].Page[Lib].Layer[Default].TextGroup[Embedded].Language[en]" />
+  <Symbol Name="\Projects\Visu\Language\en\TextGroups\POBJ" Index="1073741828" Type="TG" RefString="Source[local].Page[Title].Layer[Default].TextGroup[Embedded].Language[en]" />
+  <Symbol Name="\Projects\Visu\Language\en\TextGroups\POBJ" Index="1073741829" Type="TG" RefString="Source[local].Page[InfoIG].Layer[Default].TextGroup[Embedded].Language[en]" />
   <Symbol Name="\Projects\Visu\Language\en\TextGroups\POBJ" Index="14" Type="TG" RefString="Source[local].TextGroup[Buttons_PageTexts].Language[en]" />
   <Symbol Name="\Projects\Visu\Language\en\TextGroups\POBJ" Index="12" Type="TG" RefString="Source[local].TextGroup[HeaderBar].Language[en]" />
   <Symbol Name="\Projects\Visu\Language\en\TextGroups\POBJ" Index="10" Type="TG" RefString="Source[local].TextGroup[InstantMessages].Language[en]" />
   <Symbol Name="\Projects\Visu\Language\en\TextGroups\POBJ" Index="13" Type="TG" RefString="Source[local].TextGroup[PageNames].Language[en]" />
   <Symbol Name="\Projects\Visu\Language\en\TextGroups\POBJ" Index="0" Type="TG" RefString="Source[local].TextGroup[Languages].Language[en]" />
-  <Symbol Name="\Projects\Visu\Language\en\TextGroups\POBJ" Index="1073741828" Type="TG" RefString="Source[local].Layer[msgBox].TextGroup[Embedded].Language[en]" />
+  <Symbol Name="\Projects\Visu\Language\en\TextGroups\POBJ" Index="1073741830" Type="TG" RefString="Source[local].Layer[msgBox].TextGroup[Embedded].Language[en]" />
   <Symbol Name="\Projects\Visu\Language\de\TextGroups\POBJ" Index="1073741825" Type="TG" RefString="Source[local].Page[PleaseWait].Layer[Default].TextGroup[Embedded].Language[de]" />
   <Symbol Name="\Projects\Visu\Language\de\TextGroups\POBJ" Index="1073741826" Type="TG" RefString="Source[local].Page[Home].Layer[Default].TextGroup[Embedded].Language[de]" />
   <Symbol Name="\Projects\Visu\Language\de\TextGroups\POBJ" Index="1073741827" Type="TG" RefString="Source[local].Page[Lib].Layer[Default].TextGroup[Embedded].Language[de]" />
+  <Symbol Name="\Projects\Visu\Language\de\TextGroups\POBJ" Index="1073741828" Type="TG" RefString="Source[local].Page[Title].Layer[Default].TextGroup[Embedded].Language[de]" />
+  <Symbol Name="\Projects\Visu\Language\de\TextGroups\POBJ" Index="1073741829" Type="TG" RefString="Source[local].Page[InfoIG].Layer[Default].TextGroup[Embedded].Language[de]" />
   <Symbol Name="\Projects\Visu\Language\de\TextGroups\POBJ" Index="14" Type="TG" RefString="Source[local].TextGroup[Buttons_PageTexts].Language[de]" />
   <Symbol Name="\Projects\Visu\Language\de\TextGroups\POBJ" Index="12" Type="TG" RefString="Source[local].TextGroup[HeaderBar].Language[de]" />
   <Symbol Name="\Projects\Visu\Language\de\TextGroups\POBJ" Index="10" Type="TG" RefString="Source[local].TextGroup[InstantMessages].Language[de]" />
   <Symbol Name="\Projects\Visu\Language\de\TextGroups\POBJ" Index="13" Type="TG" RefString="Source[local].TextGroup[PageNames].Language[de]" />
   <Symbol Name="\Projects\Visu\Language\de\TextGroups\POBJ" Index="0" Type="TG" RefString="Source[local].TextGroup[Languages].Language[de]" />
-  <Symbol Name="\Projects\Visu\Language\de\TextGroups\POBJ" Index="1073741828" Type="TG" RefString="Source[local].Layer[msgBox].TextGroup[Embedded].Language[de]" />
+  <Symbol Name="\Projects\Visu\Language\de\TextGroups\POBJ" Index="1073741830" Type="TG" RefString="Source[local].Layer[msgBox].TextGroup[Embedded].Language[de]" />
   <Symbol Name="\Projects\Visu\StyleSheets\Default\0x00000400" Index="1073741829" Type="SC" RefString="Source[local].StyleGroup[0x00000400].StyleClass[Default.Default]" />
   <Symbol Name="\Projects\Visu\StyleSheets\Default\0x00001001" Index="1073741830" Type="SC" RefString="Source[local].StyleGroup[0x00001001].StyleClass[Default.Default]" />
   <Symbol Name="\Projects\Visu\StyleSheets\Default\0x00001002" Index="1073741831" Type="SC" RefString="Source[local].StyleGroup[0x00001002].StyleClass[Default.BackwardButton]" />

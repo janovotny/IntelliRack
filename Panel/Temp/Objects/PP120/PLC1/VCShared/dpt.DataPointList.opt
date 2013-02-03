@@ -1,6 +1,6 @@
 <BuildOptions>
   <BuildOption>
-    <SourceFile Value="C:\Users\florian\Google Drive\Schule\Projekt\Software\own\Panel\Physical\PP120\PLC1\Cpu.sw" />
+    <SourceFile Value="C:\Users\florian\Google Drive\Schule\Projekt\Software\own\IntelliRack\Panel\Physical\PP120\PLC1\Cpu.sw" />
     <Query Value="/ns:SwConfiguration/ns:TaskClass/*$$Name,Source" />
     <Xml>
       <Task Name="handler" Source="handler.prg" />

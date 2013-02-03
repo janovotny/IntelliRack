@@ -137,6 +137,8 @@
     <Source File="Pages\Lib.page"/>
     <Source File="Pages\Title.page"/>
     <Source File="Pages\InfoIG.page"/>
+    <Source File="Pages\about.page"/>
+    <Source File="Pages\Settings.page"/>
     <Source File="Layers\msgBox.layer"/>
     <Source File="Layers\globalArea.layer"/>
     <Source File="Layers\globalAreaSDM.layer"/>

@@ -9,8 +9,8 @@ all: failsafe doc $(OBJS)
 
 failsafe: .git/HEAD
 	git add .
-	git commit -a -m"build" || :
-	git checkout makebuild
+	git commit -a -m"build" 
+	git checkout makebuild || git checkout -b makebuild
 	git checkout c53430c1bd
 	git merge --ff master
 	rm -rf doc

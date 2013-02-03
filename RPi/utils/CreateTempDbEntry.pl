@@ -156,4 +156,4 @@ open(my $img ,">0.jpg");
 
 print $img $req;
 print $fh $db_entry;
-
+system "ffmpeg -y -i 0.jpg -vf scale=-1:200 0.png; rm 0.jpg"

@@ -5,8 +5,8 @@
     <IECNamingConvention>true</IECNamingConvention>
     <IecKeywordsAsStructureMembers>false</IecKeywordsAsStructureMembers>
     <IecExtendedConstants>true</IecExtendedConstants>
-    <ProjectLogicalDirectory>C:\Users\florian\Google Drive\Schule\Projekt\Software\own\Panel\Logical\</ProjectLogicalDirectory>
-    <ProjectTempDirectory>C:\Users\florian\Google Drive\Schule\Projekt\Software\own\Panel\Temp\</ProjectTempDirectory>
+    <ProjectLogicalDirectory>C:\Users\florian\Google Drive\Schule\Projekt\Software\own\IntelliRack\Panel\Logical\</ProjectLogicalDirectory>
+    <ProjectTempDirectory>C:\Users\florian\Google Drive\Schule\Projekt\Software\own\IntelliRack\Panel\Temp\</ProjectTempDirectory>
     <ASVersion>3.0.90.22 SP04</ASVersion>
     <Edition>Standard</Edition>
     <CrossReference>false</CrossReference>

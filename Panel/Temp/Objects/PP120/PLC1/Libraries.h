@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _LIBRARIES_20130113144959_
-#define _LIBRARIES_20130113144959_
+#ifndef _LIBRARIES_20130203184910_
+#define _LIBRARIES_20130203184910_
 
 __asm__(".section \".plc\"");
 
@@ -12,6 +12,7 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsTime/astime.typ\\\" scope \\\"
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsARCfg/AsARCfg.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/FileIO/FileIO.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsTCP/AsTCP.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/visapi/Visapi.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/Operator/operator.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/Runtime/runtime.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsTime/astime.fun\\\" scope \\\"global\\\"\\n\"");
@@ -20,11 +21,13 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/asstring/asstring.fun\\\" scope 
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsARCfg/AsARCfg.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/FileIO/FileIO.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsTCP/AsTCP.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/visapi/Visapi.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/Runtime/runtime.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsTime/astime.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsARCfg/AsARCfg.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/FileIO/FileIO.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsTCP/AsTCP.var\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/visapi/Visapi.var\\\" scope \\\"global\\\"\\n\"");
 
 /* Exported library functions and function blocks */
 #ifdef _OPERATOR_EXPORT
@@ -558,9 +561,80 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsTCP/AsTCP.var\\\" scope \\\"gl
 	__asm__(".ascii\"plcexport \\\"TcpRecv\\\" FUB\\n\"");
 	__asm__(".ascii\"plcexport \\\"TcpIoctl\\\" FUB\\n\"");
 #endif
+#ifdef _VISAPI_EXPORT
+	__asm__(".ascii\"plcexport \\\"VA_Attach\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_BlitBitmap\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_Configure\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_CopyScreenRect\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_DelAlarmHistory\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_GetActiveAlarmCount\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_GetAlarmCount\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_Detach\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_DrawBitmap\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_Ellipse\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_ExchangeFont\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_ExtractKeyMatrix\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_FreeBitmap\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_GetActAlarmList\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_GetAlCurPos\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_GetAlarmList\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_GetBrightness\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_GetCalStatus\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_GetContrast\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_GetDisplayInfo\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_GetExAlarmList\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_GetKeyMatrix\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_GetPaletteColor\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_GetPanelStatus\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_GetTextByTextGroup\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_GetTouchAction\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_LangIsAvailable\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_Line\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_LoadBitmap\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_NGetAlCurPos\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_NGetCalStatus\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_NGetContrast\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_NGetPaletteColor\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_Quit\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_QuitAlarms\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_Rect\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_Redraw\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_Saccess\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_SaveSettings\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_SetBacklight\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_SetBrightness\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_SetClipRegion\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_SetContrast\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_SetPaletteColor\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_SetUserParam\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_Setup\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_SetupX\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_Shutdown\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_Srelease\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_StartProject\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_StartVisuByName\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_StartTouchCal\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_StopProject\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_Textout\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_TimeSynchronize\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_wcAlarmGetList\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_wcGetActAlarmList\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_wcGetExAlarmList\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_wcGetTextByTextGroup\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_wcTextout\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_GetActualLang\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_ClearTouchEventBuffer\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_RegisterClient\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_StartProcess\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_TerminateProcess\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_GetProcessExitCode\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_SetProcessZOrder\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_SetVisualizationZOrder\\\" FUN\\n\"");
+	__asm__(".ascii\"plcexport \\\"VA_RunJScript\\\" FUN\\n\"");
+#endif
 
 __asm__(".previous");
 
 
-#endif /* _LIBRARIES_20130113144959_ */
+#endif /* _LIBRARIES_20130203184910_ */
 

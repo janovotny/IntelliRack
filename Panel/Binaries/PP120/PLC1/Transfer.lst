@@ -4,7 +4,9 @@
   <OperatingSystem Version="V3.08"/>
   <Hardware Target="SG4"/>
   <Operation Delete="FTP.br"/>
+  <Operation Delete="handler.br"/>
   <Operation Delete="Visu.br"/>
+  <Operation Delete="visvc.br"/>
   <Operation Delete="vccshape.br"/>
   <Operation Delete="vccline.br"/>
   <Operation Delete="vcchspot.br"/>
@@ -53,6 +55,7 @@
   <Operation Download="Operator.br" Memory="UserROM"/>
   <Operation Download="Runtime.br" Memory="UserROM"/>
   <Operation Download="asstring.br" Memory="UserROM"/>
+  <Operation Download="visapi.br" Memory="UserROM"/>
   <Operation Download="ashw.br" Memory="UserROM"/>
   <Operation Download="dataobj.br" Memory="UserROM"/>
   <Operation Download="FileIO.br" Memory="UserROM"/>
@@ -88,6 +91,7 @@
   <Operation Download="vcchspot.br" Memory="UserROM"/>
   <Operation Download="vccline.br" Memory="UserROM"/>
   <Operation Download="vccshape.br" Memory="UserROM"/>
+  <Operation Download="visvc.br" Memory="UserROM"/>
   <Operation Download="Visu.br" Memory="UserROM"/>
   <Operation Download="handler.br" Memory="UserROM"/>
   <Operation Download="FTP.br" Memory="UserROM"/>

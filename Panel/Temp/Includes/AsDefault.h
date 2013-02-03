@@ -15,6 +15,7 @@ extern "C"
 	#include <AsARCfg.h>
 	#include <FileIO.h>
 	#include <AsTCP.h>
+	#include <visapi.h>
 #ifdef __cplusplus
 };
 #endif

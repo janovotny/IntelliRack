@@ -18,11 +18,13 @@
 /Logical/Libraries/AsTCP/AsTCP.var
 /Logical/Libraries/AsTCP/AsTCP.typ
 /Logical/Libraries/AsTCP/AsTCP.fun
+/Logical/Libraries/visapi/Visapi.typ
+/Logical/Libraries/visapi/Visapi.fun
+/Logical/Libraries/visapi/Visapi.var
 /Logical/FTP/FTP/FTP.st
 /Logical/FTP/FTP/FTP.typ
 /Logical/FTP/FTP/FTP.var
 /Logical/handler/handlerCyclic.c
-/Logical/handler/handler.typ
 /Logical/handler/handler.var
 /Logical/Visu/VCObject.vc
 /Physical/PP120/PLC1/sysconf.syc

@@ -18,7 +18,9 @@
 \Logical\Libraries\AsTCP\AsTCP.var
 \Logical\Libraries\AsTCP\AsTCP.typ
 \Logical\Libraries\AsTCP\AsTCP.fun
+\Logical\Libraries\visapi\Visapi.typ
+\Logical\Libraries\visapi\Visapi.fun
+\Logical\Libraries\visapi\Visapi.var
 \Logical\FTP\FTP\FTP.typ
 \Logical\FTP\FTP\FTP.var
-\Logical\handler\handler.typ
 \Logical\handler\handler.var

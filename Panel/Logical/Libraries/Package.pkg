@@ -10,5 +10,6 @@
     <Object Type="Library" Language="Binary" Description="The AsARCfg library supports reading and">AsARCfg</Object>
     <Object Type="Library" Language="Binary" Description="The FileIO library provides function blo">FileIO</Object>
     <Object Type="Library" Language="Binary" Description="This library contains FBKs for exchangin">AsTCP</Object>
+    <Object Type="Library" Language="Binary" Description="The Visapi library provides support to access and control visualizations at runtime.">visapi</Object>
   </Objects>
 </Package>
