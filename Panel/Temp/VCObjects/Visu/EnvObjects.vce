@@ -2,36 +2,34 @@
 <?AutomationStudio Version="3.0.90.22 SP04"?>
 <EnvironmentSettings xmlns="http://br-automation.co.at/AS/VC/Project">
   <Visual_Components_Frames>
-    <Property Name="ActiveFrame" Value="8"/>
+    <Property Name="ActiveFrame" Value="0"/>
     <Property Name="SaveFrameLimit" Value="4"/>
     <Property Name="ShowCmd" Value="3"/>
     <Frame>
       <Property Name="ActiveView" Value="0"/>
       <Property Name="FrameMinPtX" Value="-1"/>
       <Property Name="FrameMinPtY" Value="-1"/>
-      <Property Name="ParentObjectName" Value="Settings"/>
-      <Property Name="ParentObjectType" Value="Page"/>
+      <Property Name="ParentObjectName" Value="NumPad"/>
+      <Property Name="ParentObjectType" Value="TouchPad"/>
       <Property Name="ShowCmd" Value="1"/>
-      <Property Name="WndPosBottom" Value="368"/>
-      <Property Name="WndPosLeft" Value="75"/>
-      <Property Name="WndPosRight" Value="707"/>
-      <Property Name="WndPosTop" Value="75"/>
+      <Property Name="WndPosBottom" Value="514"/>
+      <Property Name="WndPosLeft" Value="25"/>
+      <Property Name="WndPosRight" Value="1053"/>
+      <Property Name="WndPosTop" Value="25"/>
       <Views>
         <View>
-          <Property Name="ID" Value="32"/>
+          <Property Name="ID" Value="0"/>
           <Property Name="Scalecx" Value="4"/>
           <Property Name="Scalecy" Value="4"/>
           <Property Name="ScrollPositionX" Value="0"/>
           <Property Name="ScrollPositionY" Value="0"/>
         </View>
         <View>
-          <Property Name="ID" Value="536870912"/>
-        </View>
-        <View>
-          <Property Name="ID" Value="16384"/>
-        </View>
-        <View>
-          <Property Name="ID" Value="262144"/>
+          <Property Name="ID" Value="0"/>
+          <Property Name="Scalecx" Value="4"/>
+          <Property Name="Scalecy" Value="4"/>
+          <Property Name="ScrollPositionX" Value="0"/>
+          <Property Name="ScrollPositionY" Value="0"/>
         </View>
       </Views>
     </Frame>
@@ -39,89 +37,83 @@
       <Property Name="ActiveView" Value="0"/>
       <Property Name="FrameMinPtX" Value="-1"/>
       <Property Name="FrameMinPtY" Value="-1"/>
-      <Property Name="ParentObjectName" Value="about"/>
-      <Property Name="ParentObjectType" Value="Page"/>
-      <Property Name="ShowCmd" Value="3"/>
-      <Property Name="WndPosBottom" Value="673"/>
+      <Property Name="ParentObjectName" Value="NavigationPad_ver"/>
+      <Property Name="ParentObjectType" Value="TouchPad"/>
+      <Property Name="ShowCmd" Value="1"/>
+      <Property Name="WndPosBottom" Value="489"/>
+      <Property Name="WndPosLeft" Value="0"/>
+      <Property Name="WndPosRight" Value="1028"/>
+      <Property Name="WndPosTop" Value="0"/>
+      <Views>
+        <View>
+          <Property Name="ID" Value="0"/>
+          <Property Name="Scalecx" Value="4"/>
+          <Property Name="Scalecy" Value="4"/>
+          <Property Name="ScrollPositionX" Value="0"/>
+          <Property Name="ScrollPositionY" Value="0"/>
+        </View>
+        <View>
+          <Property Name="ID" Value="0"/>
+          <Property Name="Scalecx" Value="4"/>
+          <Property Name="Scalecy" Value="4"/>
+          <Property Name="ScrollPositionX" Value="0"/>
+          <Property Name="ScrollPositionY" Value="0"/>
+        </View>
+      </Views>
+    </Frame>
+    <Frame>
+      <Property Name="ActiveView" Value="0"/>
+      <Property Name="FrameMinPtX" Value="-1"/>
+      <Property Name="FrameMinPtY" Value="-1"/>
+      <Property Name="ParentObjectName" Value="NavigationPad_hor"/>
+      <Property Name="ParentObjectType" Value="TouchPad"/>
+      <Property Name="ShowCmd" Value="1"/>
+      <Property Name="WndPosBottom" Value="714"/>
+      <Property Name="WndPosLeft" Value="225"/>
+      <Property Name="WndPosRight" Value="1253"/>
+      <Property Name="WndPosTop" Value="225"/>
+      <Views>
+        <View>
+          <Property Name="ID" Value="0"/>
+          <Property Name="Scalecx" Value="4"/>
+          <Property Name="Scalecy" Value="4"/>
+          <Property Name="ScrollPositionX" Value="0"/>
+          <Property Name="ScrollPositionY" Value="0"/>
+        </View>
+        <View>
+          <Property Name="ID" Value="0"/>
+          <Property Name="Scalecx" Value="4"/>
+          <Property Name="Scalecy" Value="4"/>
+          <Property Name="ScrollPositionX" Value="0"/>
+          <Property Name="ScrollPositionY" Value="0"/>
+        </View>
+      </Views>
+    </Frame>
+    <Frame>
+      <Property Name="ActiveView" Value="0"/>
+      <Property Name="FrameMinPtX" Value="-1"/>
+      <Property Name="FrameMinPtY" Value="-1"/>
+      <Property Name="ParentObjectName" Value="AlphaPad_QVGA"/>
+      <Property Name="ParentObjectType" Value="TouchPad"/>
+      <Property Name="ShowCmd" Value="1"/>
+      <Property Name="WndPosBottom" Value="689"/>
       <Property Name="WndPosLeft" Value="200"/>
-      <Property Name="WndPosRight" Value="332"/>
+      <Property Name="WndPosRight" Value="1228"/>
       <Property Name="WndPosTop" Value="200"/>
       <Views>
         <View>
-          <Property Name="ID" Value="32"/>
+          <Property Name="ID" Value="0"/>
           <Property Name="Scalecx" Value="4"/>
           <Property Name="Scalecy" Value="4"/>
           <Property Name="ScrollPositionX" Value="0"/>
           <Property Name="ScrollPositionY" Value="0"/>
         </View>
         <View>
-          <Property Name="ID" Value="536870912"/>
-        </View>
-        <View>
-          <Property Name="ID" Value="16384"/>
-        </View>
-        <View>
-          <Property Name="ID" Value="262144"/>
-        </View>
-      </Views>
-    </Frame>
-    <Frame>
-      <Property Name="ActiveView" Value="0"/>
-      <Property Name="FrameMinPtX" Value="-1"/>
-      <Property Name="FrameMinPtY" Value="-1"/>
-      <Property Name="ParentObjectName" Value="Title"/>
-      <Property Name="ParentObjectType" Value="Page"/>
-      <Property Name="ShowCmd" Value="1"/>
-      <Property Name="WndPosBottom" Value="648"/>
-      <Property Name="WndPosLeft" Value="175"/>
-      <Property Name="WndPosRight" Value="307"/>
-      <Property Name="WndPosTop" Value="175"/>
-      <Views>
-        <View>
-          <Property Name="ID" Value="32"/>
+          <Property Name="ID" Value="0"/>
           <Property Name="Scalecx" Value="4"/>
           <Property Name="Scalecy" Value="4"/>
           <Property Name="ScrollPositionX" Value="0"/>
           <Property Name="ScrollPositionY" Value="0"/>
-        </View>
-        <View>
-          <Property Name="ID" Value="536870912"/>
-        </View>
-        <View>
-          <Property Name="ID" Value="16384"/>
-        </View>
-        <View>
-          <Property Name="ID" Value="262144"/>
-        </View>
-      </Views>
-    </Frame>
-    <Frame>
-      <Property Name="ActiveView" Value="0"/>
-      <Property Name="FrameMinPtX" Value="-1"/>
-      <Property Name="FrameMinPtY" Value="-1"/>
-      <Property Name="ParentObjectName" Value="PleaseWait"/>
-      <Property Name="ParentObjectType" Value="Page"/>
-      <Property Name="ShowCmd" Value="1"/>
-      <Property Name="WndPosBottom" Value="623"/>
-      <Property Name="WndPosLeft" Value="150"/>
-      <Property Name="WndPosRight" Value="282"/>
-      <Property Name="WndPosTop" Value="150"/>
-      <Views>
-        <View>
-          <Property Name="ID" Value="32"/>
-          <Property Name="Scalecx" Value="4"/>
-          <Property Name="Scalecy" Value="4"/>
-          <Property Name="ScrollPositionX" Value="0"/>
-          <Property Name="ScrollPositionY" Value="0"/>
-        </View>
-        <View>
-          <Property Name="ID" Value="536870912"/>
-        </View>
-        <View>
-          <Property Name="ID" Value="16384"/>
-        </View>
-        <View>
-          <Property Name="ID" Value="262144"/>
         </View>
       </Views>
     </Frame>

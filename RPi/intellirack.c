@@ -16,7 +16,7 @@ enum panel_pages{
 };
 
 enum panel_actions{
-	HOME, LIB, PLACE, SET, ABOUT, SELECT, CONFIRM_TITLE, CONFIRM_INFORMATIONS 
+	HOME, LIB, PLACE, SET, ABOUT, SELECT, CONFIRM_TITLE, CONFIRM_INFORMATIONS, CONFIRM_DISK_IN_DRIVE 
 };
 
 struct {
@@ -136,12 +136,11 @@ int main(){
 					write_outputs("SetPage","9");
 			break;
 			case SELECT:
-				//get selection
-				write_outputs("action","-1");
+				//Analyse selection
+				write_outputs("action","-1");	
 				write_outputs("SetPage","3");
 			break;
 			case CONFIRM_TITLE:
-				system("eject -t");
 				write_outputs("action","-1");
 				write_outputs("SetPage","4");
 			break;
@@ -149,6 +148,12 @@ int main(){
 				//get|place dvd then back to menu
 				write_outputs("action","-1");
 				write_outputs("SetPage","0");
+			break;
+			case CONFIRM_DISK_IN_DRIVE:
+				system("eject -t");
+				//Analyse disk
+				write_outputs("action","-1");
+				write_outputs("SetPage","3");
 			break;
 		}
 	}	
