@@ -97,23 +97,28 @@
 <span class="line_number">136 </span>                                        <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"9"</span><span class="sign">)</span><span class="sign">;</span>
 <span class="line_number">137 </span>                        <span class="keyword">break</span><span class="sign">;</span>
 <span class="line_number">138 </span>                        <span class="keyword">case</span> SELECT<span class="sign">:</span>
-<span class="line_number">139 </span>                                <span class="comment">//get selection</span>
-<span class="line_number">140 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"action"</span><span class="sign">,</span><span class="quote">"-1"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">139 </span>                                <span class="comment">//Analyse selection</span>
+<span class="line_number">140 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"action"</span><span class="sign">,</span><span class="quote">"-1"</span><span class="sign">)</span><span class="sign">;</span>   
 <span class="line_number">141 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"3"</span><span class="sign">)</span><span class="sign">;</span>
 <span class="line_number">142 </span>                        <span class="keyword">break</span><span class="sign">;</span>
 <span class="line_number">143 </span>                        <span class="keyword">case</span> CONFIRM_TITLE<span class="sign">:</span>
-<span class="line_number">144 </span>                                system<span class="sign">(</span><span class="quote">"eject -t"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">145 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"action"</span><span class="sign">,</span><span class="quote">"-1"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">146 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"4"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">147 </span>                        <span class="keyword">break</span><span class="sign">;</span>
-<span class="line_number">148 </span>                        <span class="keyword">case</span> CONFIRM_INFORMATIONS<span class="sign">:</span>
-<span class="line_number">149 </span>                                <span class="comment">//get|place dvd then back to menu</span>
-<span class="line_number">150 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"action"</span><span class="sign">,</span><span class="quote">"-1"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">151 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">152 </span>                        <span class="keyword">break</span><span class="sign">;</span>
-<span class="line_number">153 </span>                <span class="sign">}</span>
-<span class="line_number">154 </span>        <span class="sign">}</span>       
-<span class="line_number">155 </span><span class="sign">}</span>
+<span class="line_number">144 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"action"</span><span class="sign">,</span><span class="quote">"-1"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">145 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"4"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">146 </span>                        <span class="keyword">break</span><span class="sign">;</span>
+<span class="line_number">147 </span>                        <span class="keyword">case</span> CONFIRM_INFORMATIONS<span class="sign">:</span>
+<span class="line_number">148 </span>                                <span class="comment">//get|place dvd then back to menu</span>
+<span class="line_number">149 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"action"</span><span class="sign">,</span><span class="quote">"-1"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">150 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">151 </span>                        <span class="keyword">break</span><span class="sign">;</span>
+<span class="line_number">152 </span>                        <span class="keyword">case</span> CONFIRM_DISK_IN_DRIVE<span class="sign">:</span>
+<span class="line_number">153 </span>                                system<span class="sign">(</span><span class="quote">"eject -t"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">154 </span>                                <span class="comment">//Analyse disk</span>
+<span class="line_number">155 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"action"</span><span class="sign">,</span><span class="quote">"-1"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">156 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"3"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">157 </span>                        <span class="keyword">break</span><span class="sign">;</span>
+<span class="line_number">158 </span>                <span class="sign">}</span>
+<span class="line_number">159 </span>        <span class="sign">}</span>       
+<span class="line_number">160 </span><span class="sign">}</span>
 </pre>
 
 <hr />
@@ -182,6 +187,6 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./../IntelliRack/RPi/intellirack.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.41 on Sun Feb 03 2013 22:13:57
+<p>Generated from ./../IntelliRack/RPi/intellirack.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.41 on Mon Feb 04 2013 05:40:31
 </p>
 </div> <!-- footer -->

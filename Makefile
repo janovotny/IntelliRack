@@ -4,7 +4,7 @@ LDFLAGS=-lm
 OBJS=$(patsubst %.c,%.o,$(wildcard *.c))
 SUB=RPi
 
-all: failsafe doc $(OBJS)
+all: doc failsafe $(OBJS)
 	$(foreach var,$(SUB),cd $(var)&&make;)
 
 failsafe: .git/HEAD
