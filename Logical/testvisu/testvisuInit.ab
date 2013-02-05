@@ -1,0 +1,6 @@
+PROGRAM _INIT
+(* init program *)
+
+first := 0
+END_PROGRAM
+

@@ -1,0 +1,139 @@
+PROGRAM _CYCLIC
+(* cyclic program *)
+
+if detail1 = 0 then
+	detail1focus := 2
+else if detail2 = 0 then
+	detail1focus := 2
+else if detail3 = 0 then
+	detail1focus := 2
+else if detail4 = 0 then
+	detail1focus := 2
+else
+	detail1focus := 0
+	detail2focus := 0
+	detail3focus := 0
+	detail4focus := 0
+endif
+
+if ready <> 1 then
+	VC_HANDLE = VA_Setup(1, "visu")
+
+	if	VC_HANDLE <> 0 then
+		ready = 1
+	endif
+endif
+
+loop idx :=	1 to 5 do
+
+	statusDatapoint[idx].statTouchpad			:=	bit_tst(ctrlWord[idx], 12)
+	statusDatapoint[idx].statPressLocked	:=	bit_tst(ctrlWord[idx], 13)
+	statusDatapoint[idx].statFocus				:=	bit_tst(ctrlWord[idx], 14)
+	statusDatapoint[idx].statEdit					:=	bit_tst(ctrlWord[idx], 15)
+
+endloop
+if currentPage <> 0 then
+	CASE	achsenwahl of
+		action 1:
+			if statusDatapoint[5].statFocus = 0 then
+				statusDatapoint[1].ctrlHide = 1
+
+				achsenwahl :=	2
+			endif
+		endaction
+
+		action 2:
+
+			if VA_Saccess(1, VC_HANDLE)= 0 then
+
+				VA_GetTouchAction(1, VC_HANDLE, 0, UDINT(ADR(touch2)))
+
+				if (touch2.status = 1) and (touch2.x > 255) and (touch2.x < 385) and (touch2.y > 420) and (detail1 = 1) and (detail2 = 1) and (detail3 = 1) and (detail4 = 1)then
+					statusDatapoint[1].ctrlHide = 0
+
+					achsenwahl := 3
+				endif
+
+				VA_Srelease(1, VC_HANDLE)
+			endif
+		endaction
+
+		action 3:
+
+			if ready = 1 then
+				if VA_Saccess(1, VC_HANDLE)= 0 then
+
+					VA_GetTouchAction(1, VC_HANDLE, 0, UDINT(ADR(touch2)))
+
+					if touch2.status = 1 then
+						if (touch2.x > 255) and (touch2.x < 385) and (touch2.y > 420) then
+							idxbmp	:=	0
+						else if (touch2.x > 255) and (touch2.x < 385) and (touch2.y > 380) then
+							idxbmp	:=	1
+						else if (touch2.x > 255) and (touch2.x < 385) and (touch2.y > 340) then
+							idxbmp	:=	2
+						else if (touch2.x > 255) and (touch2.x < 385) and (touch2.y > 300) then
+							idxbmp	:=	3
+						else if (touch2.x > 255) and (touch2.x < 385) and (touch2.y > 260) then
+							idxbmp	:=	4
+						else
+							idxbmp	:=	0
+						endif
+					else if touch2.status = 2 then
+						if (touch2.x > 255) and (touch2.x < 385) and (touch2.y > 420) then
+							changePage	:=	12
+							achsenwahl	:=	1
+						else if (touch2.x > 255) and (touch2.x < 385) and (touch2.y > 380) then
+							changePage	:=	6
+							achsenwahl	:=	1
+						else if (touch2.x > 255) and (touch2.x < 385) and (touch2.y > 340) then
+							changePage	:=	7
+							achsenwahl	:=	1
+						else if (touch2.x > 255) and (touch2.x < 385) and (touch2.y > 300) then
+							changePage	:=	3
+							achsenwahl	:=	1
+						else if (touch2.x > 255) and (touch2.x < 385) and (touch2.y > 260) then
+							changePage	:=	4
+							achsenwahl	:=	1
+						endif
+					endif
+
+					VA_Srelease(1, VC_HANDLE)
+
+				endif
+			endif
+		endaction
+	endcase
+endif
+
+loop idx := 1 to 5 do
+
+	if statusDatapoint[idx].ctrlFocus = 1 then
+		ctrlWord[idx]	:=	bit_set(ctrlWord[idx], 3)
+	else if statusDatapoint[idx].ctrlFocus = 0 then
+		ctrlWord[idx]	:=	bit_clr(ctrlWord[idx], 3)
+	endif
+
+	if statusDatapoint[idx].ctrlLock = 1 then
+		ctrlWord[idx]	:=	bit_set(ctrlWord[idx], 1)
+	else if statusDatapoint[idx].ctrlLock = 0 then
+		ctrlWord[idx]	:=	bit_clr(ctrlWord[idx], 1)
+	endif
+
+	if statusDatapoint[idx].ctrlHide = 1 then
+		ctrlWord[idx]	:=	bit_set(ctrlWord[idx], 0)
+	else if statusDatapoint[idx].ctrlHide = 0 then
+		ctrlWord[idx]	:=	bit_clr(ctrlWord[idx], 0)
+	endif
+
+	if statusDatapoint[idx].ctrlTouchpad = 1 then
+		ctrlWord[idx]	:=	bit_set(ctrlWord[idx], 2)
+	else if statusDatapoint[idx].ctrlTouchpad = 0 then
+		ctrlWord[idx]	:=	bit_clr(ctrlWord[idx], 2)
+	endif
+endloop
+
+;Damit die Visualisierung da Passwort ausführen kann
+password.levelDatapoint
+END_PROGRAM
+

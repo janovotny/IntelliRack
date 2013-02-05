@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="2.4"?>
+<Layer xmlns="http://br-automation.co.at/AS/VC/Project" Name="lHotSpots">
+  <Property Name="BackColor" Value="252"/>
+  <Property Name="Description" Value=""/>
+  <Property Name="Height" Value="480"/>
+  <Property Name="Left" Value="0"/>
+  <Property Name="StatusDatapoint" Value="None"/>
+  <Property Name="Top" Value="0"/>
+  <Property Name="Width" Value="640"/>
+  <TextGroup>
+    <TextLayer LanguageId="en"/>
+    <TextLayer LanguageId="de"/>
+    <TextLayer LanguageId="da-DK"/>
+    <TextLayer LanguageId="de-DE"/>
+    <TextLayer LanguageId="en-GB"/>
+    <TextLayer LanguageId="it-IT"/>
+    <TextLayer LanguageId="no-NO"/>
+    <TextLayer LanguageId="sv-SE"/>
+    <IndexMap/>
+  </TextGroup>
+  <Controls>
+    <Control ClassId="0x00001005" Name="Bitmap_1">
+      <Property Name="BackColor" Value="252"/>
+      <Property Name="Bitmap" Value="Source[local].Bitmap[Ansicht_Achsen]"/>
+      <Property Name="BitmapSource" Value="SingleBitmap"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="330"/>
+      <Property Name="IndexDatapoint" Value="None"/>
+      <Property Name="Left" Value="50"/>
+      <Property Name="SimulationValue" Value="0"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Bitmap]"/>
+      <Property Name="Top" Value="75"/>
+      <Property Name="Width" Value="360"/>
+    </Control>
+    <Control ClassId="0x00001003" Name="HotSpot_1">
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="50"/>
+      <Property Name="KeyMatrixOffset" Value="None"/>
+      <Property Name="Left" Value="155"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[HotSpot]"/>
+      <Property Name="Top" Value="240"/>
+      <Property Name="VirtualKey" Value="Source[local].VirtualKey[kChP_22]"/>
+      <Property Name="Width" Value="95"/>
+    </Control>
+    <Control ClassId="0x00001003" Name="HotSpot_2">
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="145"/>
+      <Property Name="KeyMatrixOffset" Value="None"/>
+      <Property Name="Left" Value="120"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[HotSpot]"/>
+      <Property Name="Top" Value="80"/>
+      <Property Name="VirtualKey" Value="Source[local].VirtualKey[kChP_23]"/>
+      <Property Name="Width" Value="110"/>
+    </Control>
+    <Control ClassId="0x00001003" Name="HotSpot_3">
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="55"/>
+      <Property Name="KeyMatrixOffset" Value="None"/>
+      <Property Name="Left" Value="245"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[HotSpot]"/>
+      <Property Name="Top" Value="80"/>
+      <Property Name="VirtualKey" Value="Source[local].VirtualKey[kChP_24]"/>
+      <Property Name="Width" Value="120"/>
+    </Control>
+    <Control ClassId="0x00001003" Name="HotSpot_5">
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="75"/>
+      <Property Name="KeyMatrixOffset" Value="None"/>
+      <Property Name="Left" Value="155"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[HotSpot]"/>
+      <Property Name="Top" Value="300"/>
+      <Property Name="VirtualKey" Value="Source[local].VirtualKey[kChP_21]"/>
+      <Property Name="Width" Value="120"/>
+    </Control>
+  </Controls>
+  <KeyMapping/>
+</Layer>

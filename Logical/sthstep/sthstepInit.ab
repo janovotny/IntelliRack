@@ -1,0 +1,54 @@
+PROGRAM _INIT
+(* init program *)
+inc(TaskNr)
+
+speedJogOptions[1]	:=	25
+speedJogOptions[2]	:=	15
+speedJogOptions[3]	:=	10
+
+refPoint[1]	:=	1152
+refPoint[2]	:=	-1733
+refPoint[3]	:=	-59
+
+zeroPoint[2]	:=	4000
+
+loop idxDrive:= 1 to 3 do
+
+	referenceUsed[idxDrive]	:= FALSE
+
+	sStepper[idxDrive]			:= sTEP_INIT
+	referenceSet[idxDrive]	:= 0
+	driveActive[idxDrive]		:= 0					; Nicht aktivieren bis alle Daten vorhanden sind
+	movePos[idxDrive]				:= 0					; Automatisches Fahren deaktivieren
+	modeReference[idxDrive]	:= -128
+
+	; Init control word
+	; -----------------
+
+	stStepperControl[idxDrive].switchOn					:= 0
+	stStepperControl[idxDrive].enbleVoltage			:= 1
+	stStepperControl[idxDrive].quickStop				:= 1
+	stStepperControl[idxDrive].enableOperation	:= 0
+	stStepperControl[idxDrive].faultReset				:= 0
+	stStepperControl[idxDrive].rMotorIdent			:= 0
+	stStepperControl[idxDrive].rResetWarning		:= 0
+
+
+	;========================================
+	;	Step Umrechnung
+	;========================================
+
+	gearZ1[idxDrive]									:= 15				; Getriebe Zähnezahl Antrieb
+	gearZ2[idxDrive]									:= 40				; Getriebe Zähnezahl Abtrieb
+	gearSlope[idxDrive]								:= 2.0			; Steigung Gewindestange
+	driveStepPerRevolution[idxDrive]	:= 200			; Steps per drive turning
+	microStepPerDriveStep[idxDrive] 	:= 256			; Microsteps of X20 stepper module
+
+	referencePositionMM[idxDrive]			:= real(initPosition[idxDrive]) / 1000			; Resulting (wire length / 2) at reference position
+
+	gearFactor[idxDrive]									:=  (real(driveStepPerRevolution[idxDrive]) * real(microStepPerDriveStep[idxDrive]) * real(gearZ2[idxDrive]) ) / (real(gearZ1[idxDrive])* real(gearSlope[idxDrive]))
+	referencePositionMicroStep[idxDrive]	:= dint(real(referencePositionMM[idxDrive]) * gearFactor[idxDrive])
+
+endloop
+END_PROGRAM
+

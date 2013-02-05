@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="2.4"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="DateTimeFormats">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="1"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="87328" Value="%m/%d/%Y %H:%M:%S"/>
+    <Text ID="87329" Value="%H:%M:%S"/>
+    <Text ID="87330" Value="%H:%M"/>
+  </TextLayer>
+  <TextLayer LanguageId="de">
+    <Text ID="87328" Value="%d.%m.%Y %H:%M:%S"/>
+    <Text ID="87329" Value="%H:%M:%S"/>
+    <Text ID="87330" Value="%H:%M"/>
+  </TextLayer>
+  <TextLayer LanguageId="da-DK">
+    <Text ID="87328" Value=""/>
+    <Text ID="87329" Value=""/>
+    <Text ID="87330" Value=""/>
+  </TextLayer>
+  <TextLayer LanguageId="de-DE">
+    <Text ID="87328" Value=""/>
+    <Text ID="87329" Value=""/>
+    <Text ID="87330" Value=""/>
+  </TextLayer>
+  <TextLayer LanguageId="en-GB">
+    <Text ID="87328" Value=""/>
+    <Text ID="87329" Value=""/>
+    <Text ID="87330" Value=""/>
+  </TextLayer>
+  <TextLayer LanguageId="it-IT">
+    <Text ID="87328" Value=""/>
+    <Text ID="87329" Value=""/>
+    <Text ID="87330" Value=""/>
+  </TextLayer>
+  <TextLayer LanguageId="no-NO">
+    <Text ID="87328" Value=""/>
+    <Text ID="87329" Value=""/>
+    <Text ID="87330" Value=""/>
+  </TextLayer>
+  <TextLayer LanguageId="sv-SE">
+    <Text ID="87328" Value=""/>
+    <Text ID="87329" Value=""/>
+    <Text ID="87330" Value=""/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="87328" Value="0"/>
+    <Index ID="87329" Value="1"/>
+    <Index ID="87330" Value="2"/>
+  </IndexMap>
+</TextGroup>

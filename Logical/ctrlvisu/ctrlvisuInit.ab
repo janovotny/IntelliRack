@@ -1,0 +1,16 @@
+PROGRAM _INIT
+(* init program *)
+
+achsenwahl := 1
+
+detail1 := 1
+detail2 := 1
+detail3 := 1
+detail4 := 1
+
+detail1focus := 0
+detail2focus := 0
+detail3focus := 0
+detail4focus := 0
+END_PROGRAM
+

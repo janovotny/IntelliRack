@@ -1,0 +1,26 @@
+PROGRAM _INIT
+(* init program *)
+
+test 						:= 0
+x1 							:= 400
+y1 							:= 235
+x_position_old 	:= x1
+y_position_old 	:= y1
+
+;Startposition der From
+position_x 			:= 400
+position_y 			:= 235
+
+;Parameter für Begrenzungen vom Zeichen
+x_start 				:= 0
+x_stop					:= 480
+y_start					:= 0
+y_stop					:= 480
+
+;Paramter für Form der aktuellen Position
+heigth					:=	20
+width						:=	20
+fill						:=	0
+color						:=	0
+END_PROGRAM
+

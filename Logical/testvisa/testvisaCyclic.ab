@@ -1,0 +1,32 @@
+PROGRAM _CYCLIC
+(* cyclic program *)
+
+(* cyclic program *)
+
+if (ready <> 1) then
+	VC_HANDLE = VA_Setup(1, "visu")
+
+	if	VC_HANDLE <> 0 then
+		ready := 1
+		if VA_Saccess(1, VC_HANDLE)= 0 then
+			VA_Redraw(1, VC_HANDLE)
+			VA_Srelease(1, VC_HANDLE)
+		endif
+	endif
+endif
+
+if (ready = 1) then
+	if VA_Saccess(1, VC_HANDLE)= 0 then
+
+		VA_Rect(1, VC_HANDLE, UINT(touch2.x-40), UINT(touch2.y-40), 80, 80, 15, 15)
+
+		VA_GetTouchAction(1, VC_HANDLE, 0, UDINT(ADR(touch2)))
+
+		VA_Rect(1, VC_HANDLE, UINT(touch2.x-40), UINT(touch2.y-40), 80, 80, UINT((touch2.x/6.4) + (touch2.y/4.8)), UINT((touch2.x/6.4) + (touch2.y/4.8)))
+
+		VA_Srelease(1, VC_HANDLE)
+
+	endif
+endif
+END_PROGRAM
+

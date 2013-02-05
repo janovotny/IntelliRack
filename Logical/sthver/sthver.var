@@ -1,0 +1,3 @@
+VAR
+	szVersion	:ARRAY [0..79] OF SINT;	
+END_VAR

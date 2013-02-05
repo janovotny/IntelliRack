@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.20 SP02"?>
+<Project xmlns="http://br-automation.co.at/AS/VC/Project">
+  <Property Name="Backlight" Value="False" />
+  <Property Name="BacklightIgnoreFirst" Value="False" />
+  <Property Name="BeepKey" Value="False" />
+  <Property Name="BeepTouch" Value="False" />
+  <Property Name="ColorMode" Value="8Bit" />
+  <Property Name="ConnectionErrorPage" Value="None" />
+  <Property Name="DefaultKeyLevelNumeric" Value="None" />
+  <Property Name="DefaultKeyLevelString" Value="None" />
+  <Property Name="DefaultLanguage" Value="de" />
+  <Property Name="DefaultPage" Value="Source[local].Page[Page_2]" />
+  <Property Name="DefaultStyleSheet" Value="Source[local].StyleSheet[Color]" />
+  <Property Name="FontAntialiasing" Value="Off" />
+  <Property Name="KeyLevelChangeDatapoint" Value="None" />
+  <Property Name="KeyLevelCurrentDatapoint" Value="None" />
+  <Property Name="KeyMatrix" Value="None" />
+  <Property Name="KeyRepeatDelay" Value="300" />
+  <Property Name="KeyRepeatRate" Value="50" />
+  <Property Name="LEDMatrix" Value="None" />
+  <Property Name="LanguageChangeDatapoint" Value="None" />
+  <Property Name="LanguageCurrentDatapoint" Value="None" />
+  <Property Name="LifeSignDatapoint" Value="None" />
+  <Property Name="ManualStart" Value="False" />
+  <Property Name="PageChangeDatapoint" Value="Source[global].Variable[Local.ctrlvisu.changePage]" />
+  <Property Name="PageCurrentDatapoint" Value="Source[global].Variable[Local.currentPage]" />
+  <Property Name="ScreenSaver_Activate" Value="False" />
+  <Property Name="TextLengthOverrunBackColor" Value="None" />
+  <Property Name="TextLengthOverrunCut" Value="False" />
+  <Property Name="TextLengthOverrunForeColor" Value="None" />
+  <Property Name="TouchPadCancel" Value="Default" />
+  <Property Name="VCCVersion" Value="7" />
+  <SourceFiles>
+    <Source File="TextGroups\TextGroup_1.txtgrp" />
+    <Source File="Fonts\DefaultFont.fninfo" />
+    <Source File="Fonts\Arial9px.fninfo" />
+    <Source File="Fonts\Arial9pxBold.fninfo" />
+    <Source File="Fonts\Arial10pxBold.fninfo" />
+    <Source File="Fonts\Arial12px.fninfo" />
+    <Source File="Fonts\Arial9pxValue.fninfo" />
+    <Source File="Bitmaps\AlphaPadQVGA1.bminfo" />
+    <Source File="Bitmaps\AlphaPadQVGA2.bminfo" />
+    <Source File="Bitmaps\AlphaPadQVGA3.bminfo" />
+    <Source File="Bitmaps\AlphaPadVGA_pressed.bminfo" />
+    <Source File="Bitmaps\AlphaPadQVGA2_pressed.bminfo" />
+    <Source File="Bitmaps\AlphaPadQVGA3_pressed.bminfo" />
+    <Source File="Bitmaps\AlphaPadQVGA1_pressed.bminfo" />
+    <Source File="Bitmaps\AlphaPadVGA.bminfo" />
+    <Source File="Bitmaps\NumPad_pressed.bminfo" />
+    <Source File="Bitmaps\NumPad.bminfo" />
+    <Source File="Bitmaps\AcknowledgeReset.bminfo" />
+    <Source File="Bitmaps\AlarmActive.bminfo" />
+    <Source File="Bitmaps\AlarmBypassOFF.bminfo" />
+    <Source File="Bitmaps\AlarmBypassON.bminfo" />
+    <Source File="Bitmaps\AlarmInactive.bminfo" />
+    <Source File="Bitmaps\AlarmLatched.bminfo" />
+    <Source File="Bitmaps\AlarmNotQuit.bminfo" />
+    <Source File="Bitmaps\AlarmQuit.bminfo" />
+    <Source File="Bitmaps\Reset.bminfo" />
+    <Source File="Bitmaps\ResetAcknowledge.bminfo" />
+    <Source File="Bitmaps\Triggered.bminfo" />
+    <Source File="Bitmaps\ListPadHor.bminfo" />
+    <Source File="Bitmaps\ListPadHor_pressed.bminfo" />
+    <Source File="Bitmaps\ListPadVer.bminfo" />
+    <Source File="Bitmaps\ListPadVer_pressed.bminfo" />
+    <Source File="Bitmaps\backward_active.bminfo" />
+    <Source File="Bitmaps\backward_pressed.bminfo" />
+    <Source File="Bitmaps\global_area_active.bminfo" />
+    <Source File="Bitmaps\global_area_pressed.bminfo" />
+    <Source File="Bitmaps\forward_active.bminfo" />
+    <Source File="Bitmaps\forward_pressed.bminfo" />
+    <Source File="Bitmaps\control_button_active.bminfo" />
+    <Source File="Bitmaps\control_button_pressed.bminfo" />
+    <Source File="Bitmaps\right_active.bminfo" />
+    <Source File="Bitmaps\right_pressed.bminfo" />
+    <Source File="Bitmaps\left_active.bminfo" />
+    <Source File="Bitmaps\left_pressed.bminfo" />
+    <Source File="Bitmaps\up_active.bminfo" />
+    <Source File="Bitmaps\up_pressed.bminfo" />
+    <Source File="Bitmaps\down_active.bminfo" />
+    <Source File="Bitmaps\down_pressed.bminfo" />
+    <Source File="Bitmaps\multi_up_active.bminfo" />
+    <Source File="Bitmaps\multi_up_pressed.bminfo" />
+    <Source File="Bitmaps\multi_down_active.bminfo" />
+    <Source File="Bitmaps\multi_down_pressed.bminfo" />
+    <Source File="Bitmaps\ProgressBorder.bminfo" />
+    <Source File="Bitmaps\down_active_control.bminfo" />
+    <Source File="Bitmaps\down_pressed_control.bminfo" />
+    <Source File="Bitmaps\up_active_control.bminfo" />
+    <Source File="Bitmaps\global_area_gradient_upside.bminfo" />
+    <Source File="Bitmaps\global_area_gradient_downside.bminfo" />
+    <Source File="Bitmaps\frame_header.bminfo" />
+    <Source File="Bitmaps\up_pressed_control.bminfo" />
+    <Source File="Bitmaps\EditPadVGA.bminfo" />
+    <Source File="Bitmaps\EditPadVGA_pressed.bminfo" />
+    <Source File="Bitmaps\Ansicht_Titelseite.bminfo" />
+    <Source File="Bitmaps\Ansicht_Achsen.bminfo" />
+    <Source File="Bitmaps\Uhrzeigersinn.bminfo" />
+    <Source File="Bitmaps\Gegenuhrzeigersinn.bminfo" />
+    <Source File="Bitmaps\pfeil_links.bminfo" />
+    <Source File="Bitmaps\pfeil_oben.bminfo" />
+    <Source File="Bitmaps\pfeil_rechts.bminfo" />
+    <Source File="Bitmaps\pfeil_unten.bminfo" />
+    <Source File="Bitmaps\pfeile_auseinander.bminfo" />
+    <Source File="Bitmaps\pfeile_gegeneinander.bminfo" />
+    <Source File="Bitmaps\Nozag.bminfo" />
+    <Source File="Bitmaps\BWZ_Logo.bminfo" />
+    <Source File="Bitmaps\Kunz2.bminfo" />
+    <Source File="Bitmaps\Logo.bminfo" />
+    <Source File="Bitmaps\muller_martini.bminfo" />
+    <Source File="Bitmaps\br.bminfo" />
+    <Source File="Bitmaps\maxonlogo.bminfo" />
+    <Source File="Bitmaps\pfeil_k_l.bminfo" />
+    <Source File="Bitmaps\pfeil_k_r.bminfo" />
+    <Source File="Bitmaps\image005.bminfo" />
+    <Source File="Bitmaps\image007.bminfo" />
+    <Source File="Bitmaps\Outlook.bminfo" />
+    <Source File="Bitmaps\Outlook2.bminfo" />
+    <Source File="Bitmaps\Dropdown_own.bminfo" />
+    <Source File="Bitmaps\Dropdown_Greifer.bminfo" />
+    <Source File="Bitmaps\Dropdown_1Gelenk.bminfo" />
+    <Source File="Bitmaps\Dropdown_2Gelenk.bminfo" />
+    <Source File="Bitmaps\Dropdown_Drehtisch.bminfo" />
+    <Source File="BitmapGroups\AlphaPadQVGA.bmgrp" />
+    <Source File="BitmapGroups\NumPad.bmgrp" />
+    <Source File="BitmapGroups\AlphaPad.bmgrp" />
+    <Source File="BitmapGroups\AlarmEvent.bmgrp" />
+    <Source File="BitmapGroups\AlarmState.bmgrp" />
+    <Source File="BitmapGroups\BypassState.bmgrp" />
+    <Source File="BitmapGroups\AcknowledgeState.bmgrp" />
+    <Source File="BitmapGroups\NavigationPad.bmgrp" />
+    <Source File="BitmapGroups\Borders.bmgrp" />
+    <Source File="BitmapGroups\BitmapGroup_1.bmgrp" />
+    <Source File="Pages\p_0_InitPage.page" />
+    <Source File="Pages\p_21_Drehtisch.page" />
+    <Source File="Pages\p_22_1_Gelenk.page" />
+    <Source File="Pages\p_23_2_Gelenk.page" />
+    <Source File="Pages\p_24_Greifer.page" />
+    <Source File="Pages\p_90_Sponsoren.page" />
+    <Source File="Pages\p_80_Options.page" />
+    <Source File="Pages\p_1_Experimentiermodus.page" />
+    <Source File="Pages\p_81_Drehtisch.page" />
+    <Source File="Pages\p_84_Greifer.page" />
+    <Source File="Pages\p_82_Gelenk1.page" />
+    <Source File="Pages\p_83_Gelenk2.page" />
+    <Source File="Pages\p_20_Gelenkwahl.page" />
+    <Source File="Pages\p_85_Allgemein.page" />
+    <Source File="Pages\Page_1.page" />
+    <Source File="Pages\Page_2.page" />
+    <Source File="Layers\lBottom.layer" />
+    <Source File="Layers\lOptions.layer" />
+    <Source File="Layers\lOptions_Text_1.layer" />
+    <Source File="Layers\lHotSpots.layer" />
+    <Source File="StyleSheets\Gray.vcs" />
+    <Source File="StyleSheets\Color.vcs" />
+    <Source File="Borders\Raised.bdr" />
+    <Source File="Borders\Sunken.bdr" />
+    <Source File="Borders\Etched.bdr" />
+    <Source File="Borders\Bump.bdr" />
+    <Source File="Borders\SunkenOuter.bdr" />
+    <Source File="Borders\RaisedInner.bdr" />
+    <Source File="Borders\Flat_black.bdr" />
+    <Source File="Borders\Flat_grey.bdr" />
+    <Source File="Borders\BackwardActive.bdr" />
+    <Source File="Borders\BackwardPressed.bdr" />
+    <Source File="Borders\ControlActive.bdr" />
+    <Source File="Borders\ControlPressed.bdr" />
+    <Source File="Borders\DownActiveControl.bdr" />
+    <Source File="Borders\DownPressedControl.bdr" />
+    <Source File="Borders\ForwardActive.bdr" />
+    <Source File="Borders\ForwardPressed.bdr" />
+    <Source File="Borders\GlobalAreaActive.bdr" />
+    <Source File="Borders\GlobalAreaPressed.bdr" />
+    <Source File="Borders\MultiScrollDownActive.bdr" />
+    <Source File="Borders\MultiScrollDownPressed.bdr" />
+    <Source File="Borders\MultiScrollUpActive.bdr" />
+    <Source File="Borders\MultiScrollUpPressed.bdr" />
+    <Source File="Borders\ProgressBarBorder.bdr" />
+    <Source File="Borders\ScrollDownActive.bdr" />
+    <Source File="Borders\ScrollDownPressed.bdr" />
+    <Source File="Borders\ScrollUpActive.bdr" />
+    <Source File="Borders\ScrollUpPressed.bdr" />
+    <Source File="Borders\ScrollLeftActive.bdr" />
+    <Source File="Borders\ScrollLeftPressed.bdr" />
+    <Source File="Borders\ScrollRightActive.bdr" />
+    <Source File="Borders\ScrollRightPressed.bdr" />
+    <Source File="Borders\UpActiveControl.bdr" />
+    <Source File="Borders\UpPressedControl.bdr" />
+    <Source File="Borders\FrameHeader.bdr" />
+    <Source File="TouchPads\NumPad.tpr" />
+    <Source File="TouchPads\AlphaPadQVGA.tpr" />
+    <Source File="TouchPads\AlphaPad.tpr" />
+    <Source File="TouchPads\NavigationPad_ver.tpr" />
+    <Source File="TouchPads\NavigationPad_hor.tpr" />
+    <Source File="TouchPads\EditPad.tpr" />
+    <Source File="Trends\TrendData.tdc" />
+    <Source File="VirtualKeys.vcvk" />
+    <Source File="Palette.vcr" />
+  </SourceFiles>
+</Project>

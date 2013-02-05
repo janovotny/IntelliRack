@@ -1,0 +1,12 @@
+PROGRAM _CYCLIC
+(* cyclic program *)
+
+loop	idxDrive	:=	1	to	3	do
+	if	(moveToPointRef[idxDrive]=TRUE) or (moveToPointRefAll=TRUE) then
+		movePointRef[idxDrive]	:=	1
+	else
+		movePointRef[idxDrive]	:=	0
+	endif
+endloop
+END_PROGRAM
+

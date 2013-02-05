@@ -1,0 +1,15 @@
+VAR
+	AsIOAccWrite_0	:AsIOAccWrite;	
+	valueHaltestrom	:ARRAY [0..3] OF UDINT;	
+	status	:UINT;	
+	SL1	:UDINT;	
+	valueNennstrom	:ARRAY [0..3] OF UDINT;	
+	valueMaximalstrom	:ARRAY [0..3] OF UDINT;	
+	valueAcc	:ARRAY [0..3] OF UINT;	
+	valueDec	:ARRAY [0..3] OF UINT;	
+	valueMaxSpeed	:UINT;	
+	DatObjRead_0	:DatObjRead;	
+	valueasyncpos	:UDINT;	
+	DatObjRead_1	:DatObjRead;	
+	AsIOAccRead_0	:AsIOAccRead;	
+END_VAR

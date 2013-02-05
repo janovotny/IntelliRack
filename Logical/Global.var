@@ -1,0 +1,16 @@
+VAR
+	Inp	:tInp;	
+	PeriodDurationPWM01PWM02	:UINT;	
+	PulseWidthCurrentPWM01	:INT;	
+	TaskNr	:UINT;	
+	currentPage	:UINT;	
+	movePointRef	:ARRAY [0..3] OF BOOL;	
+	moveStepperNegative	:ARRAY [0..3] OF BOOL;	
+	moveStepperPositive	:ARRAY [0..3] OF BOOL;	
+	movesteppos	:DINT;	
+	rPointReached	:BOOL;	
+	stStepperControl	:ARRAY [0..3] OF tStepperControl;	
+	stStepperIfIn	:ARRAY [0..3] OF tStepperIfIn;	
+	stStepperIfOut	:ARRAY [0..3] OF tStepperIfOut;	
+	stStepperStatus	:ARRAY [0..3] OF tStepperStatus;	
+END_VAR

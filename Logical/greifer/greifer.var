@@ -1,0 +1,5 @@
+VAR
+	moveGreiferPositive	:BOOL;	
+	moveGreiferNegative	:BOOL;	
+	greifer	:greiferParameter;	
+END_VAR

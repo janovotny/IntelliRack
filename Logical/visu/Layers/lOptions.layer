@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="2.4"?>
+<Layer xmlns="http://br-automation.co.at/AS/VC/Project" Name="lOptions">
+  <Property Name="BackColor" Value="252"/>
+  <Property Name="Description" Value=""/>
+  <Property Name="Height" Value="480"/>
+  <Property Name="Left" Value="0"/>
+  <Property Name="StatusDatapoint" Value="None"/>
+  <Property Name="Top" Value="0"/>
+  <Property Name="Width" Value="640"/>
+  <TextGroup>
+    <TextLayer LanguageId="en">
+      <Text ID="517578" Value="Speed"/>
+      <Text ID="517580" Value=""/>
+      <Text ID="517587" Value=""/>
+      <Text ID="517589" Value=""/>
+      <Text ID="517752" Value=""/>
+    </TextLayer>
+    <TextLayer LanguageId="de">
+      <Text ID="517578" Value="Drehtisch"/>
+      <Text ID="517580" Value="1. Gelenk"/>
+      <Text ID="517587" Value="Greifer"/>
+      <Text ID="517589" Value="2. Gelenk"/>
+      <Text ID="517752" Value="Allgemein"/>
+    </TextLayer>
+    <TextLayer LanguageId="da-DK">
+      <Text ID="517578" Value=""/>
+      <Text ID="517580" Value=""/>
+      <Text ID="517587" Value=""/>
+      <Text ID="517589" Value=""/>
+      <Text ID="517752" Value=""/>
+    </TextLayer>
+    <TextLayer LanguageId="de-DE">
+      <Text ID="517578" Value="Drehtisch"/>
+      <Text ID="517580" Value="1. Gelenk"/>
+      <Text ID="517587" Value="Greifer"/>
+      <Text ID="517589" Value="2. Gelenk"/>
+      <Text ID="517752" Value=""/>
+    </TextLayer>
+    <TextLayer LanguageId="en-GB">
+      <Text ID="517578" Value=""/>
+      <Text ID="517580" Value=""/>
+      <Text ID="517587" Value=""/>
+      <Text ID="517589" Value=""/>
+      <Text ID="517752" Value=""/>
+    </TextLayer>
+    <TextLayer LanguageId="it-IT">
+      <Text ID="517578" Value=""/>
+      <Text ID="517580" Value=""/>
+      <Text ID="517587" Value=""/>
+      <Text ID="517589" Value=""/>
+      <Text ID="517752" Value=""/>
+    </TextLayer>
+    <TextLayer LanguageId="no-NO">
+      <Text ID="517578" Value=""/>
+      <Text ID="517580" Value=""/>
+      <Text ID="517587" Value=""/>
+      <Text ID="517589" Value=""/>
+      <Text ID="517752" Value=""/>
+    </TextLayer>
+    <TextLayer LanguageId="sv-SE">
+      <Text ID="517578" Value=""/>
+      <Text ID="517580" Value=""/>
+      <Text ID="517587" Value=""/>
+      <Text ID="517589" Value=""/>
+      <Text ID="517752" Value=""/>
+    </TextLayer>
+    <IndexMap>
+      <Index ID="517578" Value="0"/>
+      <Index ID="517580" Value="2"/>
+      <Index ID="517587" Value="4"/>
+      <Index ID="517589" Value="6"/>
+      <Index ID="517752" Value="8"/>
+    </IndexMap>
+  </TextGroup>
+  <Controls>
+    <Control ClassId="0x00001002" Name="bDrehtisch">
+      <Property Name="AlignmentHorizontal" Value="Center"/>
+      <Property Name="BitmapIndexDatapoint" Value="None"/>
+      <Property Name="BitmapSource" Value="None"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="50"/>
+      <Property Name="KeyMatrixOffset" Value="None"/>
+      <Property Name="Left" Value="20"/>
+      <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
+      <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[BasicButton]"/>
+      <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+      <Property Name="TextIndex" Value="0"/>
+      <Property Name="TextIndexDatapoint" Value="None"/>
+      <Property Name="TextSimulationValue" Value="0"/>
+      <Property Name="TextSource" Value="SingleText"/>
+      <Property Name="Top" Value="140"/>
+      <Property Name="VirtualKey" Value="Source[local].VirtualKey[kChP_81]"/>
+      <Property Name="Width" Value="80"/>
+    </Control>
+    <Control ClassId="0x00001002" Name="bGelenk1">
+      <Property Name="AlignmentHorizontal" Value="Center"/>
+      <Property Name="BitmapIndexDatapoint" Value="None"/>
+      <Property Name="BitmapSource" Value="None"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="50"/>
+      <Property Name="KeyMatrixOffset" Value="None"/>
+      <Property Name="Left" Value="20"/>
+      <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
+      <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[BasicButton]"/>
+      <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+      <Property Name="TextIndex" Value="2"/>
+      <Property Name="TextIndexDatapoint" Value="None"/>
+      <Property Name="TextSimulationValue" Value="0"/>
+      <Property Name="TextSource" Value="SingleText"/>
+      <Property Name="Top" Value="190"/>
+      <Property Name="VirtualKey" Value="Source[local].VirtualKey[kChP_82]"/>
+      <Property Name="Width" Value="80"/>
+    </Control>
+    <Control ClassId="0x00001002" Name="bGreifer">
+      <Property Name="AlignmentHorizontal" Value="Center"/>
+      <Property Name="BitmapIndexDatapoint" Value="None"/>
+      <Property Name="BitmapSource" Value="None"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="50"/>
+      <Property Name="KeyMatrixOffset" Value="None"/>
+      <Property Name="Left" Value="20"/>
+      <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
+      <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[BasicButton]"/>
+      <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+      <Property Name="TextIndex" Value="4"/>
+      <Property Name="TextIndexDatapoint" Value="None"/>
+      <Property Name="TextSimulationValue" Value="0"/>
+      <Property Name="TextSource" Value="SingleText"/>
+      <Property Name="Top" Value="290"/>
+      <Property Name="VirtualKey" Value="Source[local].VirtualKey[kChP_84]"/>
+      <Property Name="Width" Value="80"/>
+    </Control>
+    <Control ClassId="0x00001002" Name="bGelenk2">
+      <Property Name="AlignmentHorizontal" Value="Center"/>
+      <Property Name="BitmapIndexDatapoint" Value="None"/>
+      <Property Name="BitmapSource" Value="None"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="50"/>
+      <Property Name="KeyMatrixOffset" Value="None"/>
+      <Property Name="Left" Value="20"/>
+      <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
+      <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[BasicButton]"/>
+      <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+      <Property Name="TextIndex" Value="6"/>
+      <Property Name="TextIndexDatapoint" Value="None"/>
+      <Property Name="TextSimulationValue" Value="0"/>
+      <Property Name="TextSource" Value="SingleText"/>
+      <Property Name="Top" Value="240"/>
+      <Property Name="VirtualKey" Value="Source[local].VirtualKey[kChP_83]"/>
+      <Property Name="Width" Value="80"/>
+    </Control>
+    <Control ClassId="0x00001002" Name="Button_1">
+      <Property Name="AlignmentHorizontal" Value="Center"/>
+      <Property Name="BitmapIndexDatapoint" Value="None"/>
+      <Property Name="BitmapSource" Value="None"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="50"/>
+      <Property Name="KeyMatrixOffset" Value="None"/>
+      <Property Name="Left" Value="20"/>
+      <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
+      <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[BasicButton]"/>
+      <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+      <Property Name="TextIndex" Value="8"/>
+      <Property Name="TextIndexDatapoint" Value="None"/>
+      <Property Name="TextSimulationValue" Value="0"/>
+      <Property Name="TextSource" Value="SingleText"/>
+      <Property Name="Top" Value="90"/>
+      <Property Name="VirtualKey" Value="Source[local].VirtualKey[kChP_85]"/>
+      <Property Name="Width" Value="80"/>
+    </Control>
+    <Control ClassId="0x00001002" Name="Button_3">
+      <Property Name="BitmapIndexDatapoint" Value="None"/>
+      <Property Name="BitmapSource" Value="None"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Height" Value="50"/>
+      <Property Name="KeyMatrixOffset" Value="None"/>
+      <Property Name="Left" Value="20"/>
+      <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
+      <Property Name="PressedBorder" Value="Source[local].Border[ControlActive]"/>
+      <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[BasicButton]"/>
+      <Property Name="TextIndexDatapoint" Value="None"/>
+      <Property Name="TextSimulationValue" Value="0"/>
+      <Property Name="TextSource" Value="None"/>
+      <Property Name="Top" Value="41"/>
+      <Property Name="VirtualKey" Value="None"/>
+      <Property Name="Width" Value="80"/>
+    </Control>
+  </Controls>
+  <KeyMapping/>
+</Layer>

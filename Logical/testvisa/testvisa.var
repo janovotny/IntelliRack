@@ -1,0 +1,5 @@
+VAR
+	ready	:BOOL;	
+	VC_HANDLE	:UDINT;	
+	touch2	:TouchAction;	
+END_VAR

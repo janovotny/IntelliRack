@@ -1,0 +1,26 @@
+VAR
+	statusDatapoint	:ARRAY [0..5] OF ctrlStatusDatapoint;	
+	ctrlWord	:ARRAY [0..5] OF UINT;	
+	lock	:BOOL;	
+	hide	:BOOL;	
+	touchpad	:BOOL;	
+	focus	:BOOL;	
+	idx	:UINT;	
+	achsenwahl	:UINT;	
+	ready	:BOOL;	
+	VC_HANDLE	:UDINT;	
+	test	:BOOL;	
+	touch2	:TouchAction;	
+	changePage	:UINT;	
+	idxbmp	:UINT;	
+	password	:ctrlPassword;	
+	durchgang1	:BOOL;	
+	detail4	:UINT;	
+	detail1	:UINT;	
+	detail2	:UINT;	
+	detail3	:UINT;	
+	detail1focus	:UINT;	
+	detail2focus	:UINT;	
+	detail3focus	:UINT;	
+	detail4focus	:UINT;	
+END_VAR

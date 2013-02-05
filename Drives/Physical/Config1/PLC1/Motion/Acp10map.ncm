@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.90.22 SP04?>
+<NcMapping NcSwId="acp10">
+  <NcObject Name="SDC_IF1.ST1.Axis1" ModuleAddress="SDC_IF1.ST1" InterfaceType="SDC" Type="ncAXIS" Channel="1" Disabled="FALSE" ModuleDisabled="FALSE" />
+  <NcObject Name="SDC_IF1.ST2.Axis1" ModuleAddress="SDC_IF1.ST2" InterfaceType="SDC" Type="ncAXIS" Channel="1" Disabled="FALSE" ModuleDisabled="FALSE" />
+</NcMapping>

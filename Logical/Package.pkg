@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.80.25?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Global.typ</Object>
+    <Object Type="File">Global.var</Object>
+    <Object Type="Program" Language="IEC">test</Object>
+    <Object Type="Program" Language="IEC">sthstep</Object>
+    <Object Type="Program" Language="IEC">greifer</Object>
+    <Object Type="Program" Language="IEC">ctrlvisu</Object>
+    <Object Type="Program" Language="IEC">stepmove</Object>
+    <Object Type="Program" Language="IEC">testvisu</Object>
+    <Object Type="Program" Language="IEC">testvisa</Object>
+    <Object Type="Program" Language="IEC">a_soption</Object>
+    <Object Type="Program" Language="ANSIC" Description="Ermitteln der Softwareversion aus xy.pgp">sthver</Object>
+    <Object Type="DataObject" Language="Vc" Description="Visualization">visu</Object>
+    <Object Type="Package">Libraries</Object>
+  </Objects>
+</Package>
