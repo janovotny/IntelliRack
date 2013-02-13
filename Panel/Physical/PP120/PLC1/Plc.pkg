@@ -24,6 +24,6 @@
     </CpuModule>
   </CpuModules>
   <Communication>
-    <OnlineConfiguration Name="4PP120.0571-21_1" DeviceType="TCPIP" DeviceParameters="/IF=tcpip /LOPO=11159 /SA=88" ConnectionParameters="/RT=1000 /DAIP=192.168.0.102 /REPO=11159 /ANSL=1" Description="" UserName="florian" />
+    <OnlineConfiguration Name="4PP120.0571-21_1" DeviceType="TCPIP" DeviceParameters="/IF=tcpip /LOPO=11159 /SA=24" ConnectionParameters="/RT=1000 /DAIP=192.168.0.102 /REPO=11159 /ANSL=1" Description="" UserName="florian" />
   </Communication>
 </PLC>

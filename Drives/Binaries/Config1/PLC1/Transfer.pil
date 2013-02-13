@@ -1,0 +1,17 @@
+Connection "/IF=tcpip /LOPO=11159 /SA=1", "/RT=1000 /DAIP=192.168.0.101 /REPO=11159 /ANSL=1"
+Diagnose
+DeleteMemory ROM
+Coldstart
+Download: ".\System\x20cp1485V30.BR", "ROM"
+Coldstart
+Download: ".\ashwd.br", "SYSROM"
+Download: ".\asfw.br", "SYSROM"
+Download: ".\arconfig.br", "SYSROM"
+Download: ".\sysconf.br", "SYSROM"
+Warmstart
+Download: ".\iomap.br", "ROM"
+Download: ".\Operator.br", "ROM"
+Download: ".\Runtime.br", "ROM"
+Download: ".\asstring.br", "ROM"
+Download: ".\AsTime.br", "ROM"
+Download: ".\drvman.br", "ROM"

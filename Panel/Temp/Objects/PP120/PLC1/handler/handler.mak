@@ -16,11 +16,12 @@ $(AS_CPU_PATH)/handler/a.out: \
 
 $(AS_CPU_PATH)/handler/handlerCyclic.o: \
 	$(AS_PROJECT_PATH)/Logical/handler/handlerCyclic.c \
-	FORCE 
+	$(AS_PROJECT_PATH)/Logical/Libraries/visapi/Visapi.fun \
+	$(AS_PROJECT_PATH)/Logical/Global.var \
+	$(AS_PROJECT_PATH)/Logical/Global.typ \
+	$(AS_PROJECT_PATH)/Logical/handler/handler.var \
+	$(AS_PROJECT_PATH)/Logical/Libraries/visapi/Visapi.typ
 	@"$(AS_BIN_PATH)/BR.AS.CCompiler.exe" "$(AS_PROJECT_PATH)/Logical/handler/handlerCyclic.c" -o "$(AS_CPU_PATH)/handler/handlerCyclic.o"  -T SG4  -B V3.08 -G V4.1.2  -s handler -t "$(AS_TEMP_PATH)" -I "$(AS_PROJECT_PATH)/Logical/handler" "$(AS_TEMP_PATH)/Includes/handler" "$(AS_TEMP_PATH)/Includes" -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -g -nostartfiles -Wall -include "$(AS_CPU_PATH)/Libraries.h" -x c -P "$(AS_PROJECT_PATH)/" -secret "$(AS_PROJECT_PATH)_br.as.ccompiler.exe"
 
 -include $(AS_CPU_PATH)/Force.mak 
 
-
-
-FORCE:

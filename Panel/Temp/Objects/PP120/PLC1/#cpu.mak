@@ -30,7 +30,7 @@ $(AS_BINARIES_PATH)/$(AS_CONFIGURATION)/$(AS_PLC)/Transfer.lst: \
 	$(AS_CPU_PATH)/Visu.br \
 	$(AS_CPU_PATH)/iomap.br \
 	$(AS_PROJECT_PATH)/Physical/PP120/PLC1/Cpu.sw
-	@"$(AS_BIN_PATH)/BR.AS.FinalizeBuild.exe" "$(AS_PROJECT_PATH)/Panel.apj" -t "$(AS_TEMP_PATH)" -o "$(AS_BINARIES_PATH)" -c "$(AS_CONFIGURATION)" -i "D:/BrAutomation/AS30090" -S PLC1  -pil   -C "/RT=1000 /DAIP=192.168.0.102 /REPO=11159 /ANSL=1" -D "/IF=tcpip /LOPO=11159 /SA=88"
+	@"$(AS_BIN_PATH)/BR.AS.FinalizeBuild.exe" "$(AS_PROJECT_PATH)/Panel.apj" -t "$(AS_TEMP_PATH)" -o "$(AS_BINARIES_PATH)" -c "$(AS_CONFIGURATION)" -i "D:/BrAutomation/AS30090" -S PLC1  -pil   -C "/RT=1000 /DAIP=192.168.0.102 /REPO=11159 /ANSL=1" -D "/IF=tcpip /LOPO=11159 /SA=24"
 
 #nothing to do (just call module make files)
 

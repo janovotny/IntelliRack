@@ -7,11 +7,11 @@
  ********************************************************************
  * Global variables of project Drives
  ********************************************************************)
-
 VAR
-
-END_VAR
-
-VAR CONSTANT
-
+	Drive : ARRAY[0..3] OF stDrive;
+	EnableACP2 : BOOL;
+	CloseGriper : BOOL;
+	OpenGriper : BOOL;
+	EnableACP1 : BOOL;
+	EnableCDRom : BOOL;
 END_VAR

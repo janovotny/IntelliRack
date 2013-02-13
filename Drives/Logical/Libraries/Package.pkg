@@ -11,5 +11,7 @@
     <Object Type="Library" Language="Binary" Description="ACOPOS Parameters">Acp10par</Object>
     <Object Type="Library" Language="Binary" Description="Global NC functions">NcGlobal</Object>
     <Object Type="Library" Language="Binary" Description="The AsString Library contains FBKs for m">asstring</Object>
+    <Object Type="Library" Language="Binary" Description="This library provides read and write access to non-cyclic I/O data points.">AsIOAcc</Object>
+    <Object Type="Library" Language="Binary" Description="The AsIO library makes it possible to determine the states and values of a data point and carry out forcing operations.">AsIO</Object>
   </Objects>
 </Package>

@@ -1,11 +1,11 @@
-Connection "/IF=tcpip /LOPO=11159 /SA=88", "/RT=1000 /DAIP=192.168.0.102 /REPO=11159 /ANSL=1"
+Connection "/IF=tcpip /LOPO=11159 /SA=24", "/RT=1000 /DAIP=192.168.0.102 /REPO=11159 /ANSL=1"
 Diagnose
 DeleteMemory ROM
 Coldstart
 Download: ".\System\PP100V30.BR", "ROM"
 Coldstart
-Download: ".\asfw.br", "SYSROM"
 Download: ".\ashwd.br", "SYSROM"
+Download: ".\asfw.br", "SYSROM"
 Download: ".\arconfig.br", "SYSROM"
 Download: ".\sysconf.br", "SYSROM"
 Warmstart
@@ -48,11 +48,11 @@ Download: ".\vcfntttf.br", "ROM"
 Download: ".\vcdsloc.br", "ROM"
 Download: ".\vccovl.br", "ROM"
 Download: ".\vcctext.br", "ROM"
-Download: ".\AsTCP.br", "ROM"
-Download: ".\vcchspot.br", "ROM"
-Download: ".\vccline.br", "ROM"
-Download: ".\vccshape.br", "ROM"
 Download: ".\visvc.br", "ROM"
+Download: ".\vcchspot.br", "ROM"
+Download: ".\vccshape.br", "ROM"
+Download: ".\vccline.br", "ROM"
+Download: ".\AsTCP.br", "ROM"
 Download: ".\Visu.br", "ROM"
 Download: ".\handler.br", "ROM"
 Download: ".\FTP.br", "ROM"

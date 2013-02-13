@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.90.22 SP04?>
+<LibraryInfos>
+  <Library Name="Acp10man" IsDeployed="false" IsStatic="false" />
+  <Library Name="Acp10par" IsDeployed="false" IsStatic="false" />
+  <Library Name="Acp10sdc" IsDeployed="false" IsStatic="false" />
+  <Library Name="AsIecCon" IsDeployed="false" IsStatic="false" />
+  <Library Name="AsIO" IsDeployed="false" IsStatic="false" />
+  <Library Name="AsIOAcc" IsDeployed="false" IsStatic="false" />
+  <Library Name="asstring" IsDeployed="true" IsStatic="false" />
+  <Library Name="AsTime" IsDeployed="true" IsStatic="false" />
+  <Library Name="NcGlobal" IsDeployed="false" IsStatic="false" />
+  <Library Name="Operator" IsDeployed="true" IsStatic="false" />
+  <Library Name="Runtime" IsDeployed="true" IsStatic="false" />
+</LibraryInfos>

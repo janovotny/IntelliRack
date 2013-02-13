@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0?>
+<Transfer xmlns="http://br-automation.co.at/AS/Transfer">
+  <OperatingSystem Version="V3.08"/>
+  <Hardware Target="SG4"/>
+  <Operation Delete="AsTime.br"/>
+  <Operation Download="ashwd.br" Memory="SystemROM"/>
+  <Operation Download="asfw.br" Memory="SystemROM"/>
+  <Operation Download="arconfig.br" Memory="SystemROM"/>
+  <Operation Download="sysconf.br" Memory="SystemROM"/>
+  <Operation Restart="warm"/>
+  <Operation Download="iomap.br" Memory="UserROM"/>
+  <Operation Download="Operator.br" Memory="UserROM"/>
+  <Operation Download="Runtime.br" Memory="UserROM"/>
+  <Operation Download="asstring.br" Memory="UserROM"/>
+  <Operation Download="AsTime.br" Memory="UserROM"/>
+  <Operation Download="drvman.br" Memory="UserROM"/>
+</Transfer>

@@ -31,7 +31,7 @@ export WIN32_AS_INSTALL_PATH := D:\\BrAutomation\\AS30090
 
 ProjectMakeFile:
 
-	@"$(AS_BIN_PATH)/BR.AS.AnalyseProject.exe" "$(AS_PROJECT_PATH)/Panel.apj" -t "$(AS_TEMP_PATH)" -c "$(AS_CONFIGURATION)" -o "$(AS_BINARIES_PATH)"   -sfas -buildMode "Build"
+	@"$(AS_BIN_PATH)/BR.AS.AnalyseProject.exe" "$(AS_PROJECT_PATH)/Panel.apj" -t "$(AS_TEMP_PATH)" -c "$(AS_CONFIGURATION)" -o "$(AS_BINARIES_PATH)"   -sfas -buildMode "BuildAndTransfer"
 
 	@$(AS_GNU_BIN_PATH)/mingw32-make.exe -r -f 'C:/Users/florian/Google Drive/Schule/Projekt/Software/own/IntelliRack/Panel/Temp/Objects/$(AS_CONFIGURATION)/PLC1/#cpu.mak' -k
 

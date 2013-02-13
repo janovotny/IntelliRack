@@ -24,14 +24,14 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li><a href="#robo2">IntelliRack</a></li>
-<li><a href="#robo10">main</a></li>
-<li><a href="#robo12">read_inputs</a></li>
-<li><a href="#robo17">write_outputs</a></li>
+<li><a href="#robo3">IntelliRack</a></li>
+<li><a href="#robo12">main</a></li>
+<li><a href="#robo14">read_inputs</a></li>
+<li><a href="#robo19">write_outputs</a></li>
 </ul>
 <hr />
 <a name="RPi2fIntelliRack"></a>
-<a name="robo2"></a><h2>IntelliRack</h2>
+<a name="robo3"></a><h2>IntelliRack</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_modules.html#robo_top_of_doc">Modules</a> ]</p>
 <p class="item_name">NAME</p>
@@ -43,150 +43,161 @@
 
 <hr />
 <a name="RPi2fmain"></a>
-<a name="robo10"></a><h2>main</h2>
+<a name="robo12"></a><h2>main</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre>       Main function with cyclic calls.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="line_number"> 92 </span><span class="keyword">int</span> <strong>main</strong><span class="sign">(</span><span class="sign">)</span><span class="sign">{</span>
-<span class="line_number"> 93 </span>        <span class="keyword">char</span> read_search<span class="sign">=</span>0<span class="sign">;</span>
-<span class="line_number"> 94 </span>        <span class="keyword">char</span> write_db<span class="sign">=</span>0<span class="sign">;</span>
-<span class="line_number"> 95 </span>        intellidata<span class="sign">.</span>panel<span class="sign">=</span><span class="sign">-</span>2<span class="sign">;</span>
-<span class="line_number"> 96 </span>        intellidata<span class="sign">.</span>searchstring<span class="sign">[</span>0<span class="sign">]</span><span class="sign">=</span>0<span class="sign">;</span>
-<span class="line_number"> 97 </span>        
-<span class="line_number"> 98 </span>        <span class="comment">//Wait for connection</span>
-<span class="line_number"> 99 </span>        <span class="keyword">while</span><span class="sign">(</span>intellidata<span class="sign">.</span>panel<span class="sign">=</span><span class="sign">=</span><span class="sign">-</span>2<span class="sign">)</span><a href="#robo12">read_inputs</a><span class="sign">(</span><span class="sign">)</span><span class="sign">;</span>      
-<span class="line_number">100 </span>        printf<span class="sign">(</span><span class="quote">"[Connected]\n"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">101 </span>        
-<span class="line_number">102 </span>        <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"action"</span><span class="sign">,</span><span class="quote">"-1"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">103 </span>        <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"1"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">104 </span>        
-<span class="line_number">105 </span>        <span class="keyword">while</span><span class="sign">(</span>1<span class="sign">)</span><span class="sign">{</span>
-<span class="line_number">106 </span>                <a href="#robo12">read_inputs</a><span class="sign">(</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">107 </span>
-<span class="line_number">108 </span>                <span class="keyword">if</span><span class="sign">(</span>read_search<span class="sign">)</span><span class="sign">{</span>
-<span class="line_number">109 </span>                        <span class="comment">//Not implemented yet</span>
-<span class="line_number">110 </span>                <span class="sign">}</span>
-<span class="line_number">111 </span>
-<span class="line_number">112 </span>                <span class="keyword">switch</span><span class="sign">(</span>intellidata<span class="sign">.</span>panel<span class="sign">)</span><span class="sign">{</span>
-<span class="line_number">113 </span>                        <span class="keyword">case</span> HOME<span class="sign">:</span>
-<span class="line_number">114 </span>                                system<span class="sign">(</span><span class="quote">"eject -t"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">115 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"action"</span><span class="sign">,</span><span class="quote">"-1"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">116 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"1"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">117 </span>                                read_search<span class="sign">=</span>0<span class="sign">;</span>
-<span class="line_number">118 </span>                        <span class="keyword">break</span><span class="sign">;</span>
-<span class="line_number">119 </span>                        <span class="keyword">case</span> LIB<span class="sign">:</span>
-<span class="line_number">120 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"action"</span><span class="sign">,</span><span class="quote">"-1"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">121 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"2"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">122 </span>                        <span class="keyword">break</span><span class="sign">;</span>
-<span class="line_number">123 </span>                        <span class="keyword">case</span> PLACE<span class="sign">:</span>
-<span class="line_number">124 </span>                                <span class="keyword">if</span><span class="sign">(</span><a href="./intelli-drive_c.html#robo13">secure_position</a><span class="sign">(</span><span class="sign">)</span><span class="sign">)</span><span class="sign">{</span>
-<span class="line_number">125 </span>                                        system<span class="sign">(</span><span class="quote">"eject"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">126 </span>                                        <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"action"</span><span class="sign">,</span><span class="quote">"-1"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">127 </span>                                        <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"5"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">128 </span>                                <span class="sign">}</span>
-<span class="line_number">129 </span>                        <span class="keyword">break</span><span class="sign">;</span>
-<span class="line_number">130 </span>                        <span class="keyword">case</span> SET<span class="sign">:</span>
-<span class="line_number">131 </span>                                        <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"action"</span><span class="sign">,</span><span class="quote">"-1"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">132 </span>                                        <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"8"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">133 </span>                        <span class="keyword">break</span><span class="sign">;</span>
-<span class="line_number">134 </span>                        <span class="keyword">case</span> ABOUT<span class="sign">:</span>
-<span class="line_number">135 </span>                                        <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"action"</span><span class="sign">,</span><span class="quote">"-1"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">136 </span>                                        <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"9"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">137 </span>                        <span class="keyword">break</span><span class="sign">;</span>
-<span class="line_number">138 </span>                        <span class="keyword">case</span> SELECT<span class="sign">:</span>
-<span class="line_number">139 </span>                                <span class="comment">//Analyse selection</span>
-<span class="line_number">140 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"action"</span><span class="sign">,</span><span class="quote">"-1"</span><span class="sign">)</span><span class="sign">;</span>   
-<span class="line_number">141 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"3"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">142 </span>                        <span class="keyword">break</span><span class="sign">;</span>
-<span class="line_number">143 </span>                        <span class="keyword">case</span> CONFIRM_TITLE<span class="sign">:</span>
-<span class="line_number">144 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"action"</span><span class="sign">,</span><span class="quote">"-1"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">145 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"4"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">146 </span>                        <span class="keyword">break</span><span class="sign">;</span>
-<span class="line_number">147 </span>                        <span class="keyword">case</span> CONFIRM_INFORMATIONS<span class="sign">:</span>
-<span class="line_number">148 </span>                                <span class="comment">//get|place dvd then back to menu</span>
-<span class="line_number">149 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"action"</span><span class="sign">,</span><span class="quote">"-1"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">150 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">151 </span>                        <span class="keyword">break</span><span class="sign">;</span>
-<span class="line_number">152 </span>                        <span class="keyword">case</span> CONFIRM_DISK_IN_DRIVE<span class="sign">:</span>
-<span class="line_number">153 </span>                                system<span class="sign">(</span><span class="quote">"eject -t"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">154 </span>                                <span class="comment">//Analyse disk</span>
-<span class="line_number">155 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"action"</span><span class="sign">,</span><span class="quote">"-1"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">156 </span>                                <a href="#robo17">write_outputs</a><span class="sign">(</span><span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"3"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">157 </span>                        <span class="keyword">break</span><span class="sign">;</span>
-<span class="line_number">158 </span>                <span class="sign">}</span>
-<span class="line_number">159 </span>        <span class="sign">}</span>       
-<span class="line_number">160 </span><span class="sign">}</span>
+<pre class="source"><span class="line_number">101 </span><span class="keyword">int</span> <strong>main</strong><span class="sign">(</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">102 </span>        <span class="keyword">char</span> read_search<span class="sign">=</span>0<span class="sign">;</span>
+<span class="line_number">103 </span>        <span class="keyword">char</span> write_db<span class="sign">=</span>0<span class="sign">;</span>
+<span class="line_number">104 </span>        intellidata<span class="sign">.</span>panel<span class="sign">=</span><span class="sign">-</span>2<span class="sign">;</span>
+<span class="line_number">105 </span>        intellidata<span class="sign">.</span>searchstring<span class="sign">[</span>0<span class="sign">]</span><span class="sign">=</span>0<span class="sign">;</span>
+<span class="line_number">106 </span>        
+<span class="line_number">107 </span>        <span class="comment">//Wait for connection</span>
+<span class="line_number">108 </span>        printf<span class="sign">(</span><span class="quote">"[Booting]\n"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">109 </span>        <span class="keyword">while</span><span class="sign">(</span>intellidata<span class="sign">.</span>panel<span class="sign">=</span><span class="sign">=</span><span class="sign">-</span>2<span class="sign">)</span><a href="#robo14">read_inputs</a><span class="sign">(</span>PANEL_READ<span class="sign">,</span> <span class="quote">"Action"</span><span class="sign">)</span><span class="sign">;</span>  
+<span class="line_number">110 </span>        printf<span class="sign">(</span><span class="quote">"[Connected]\n"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">111 </span>        
+<span class="line_number">112 </span>        <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"Action"</span><span class="sign">,</span> <span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">113 </span>        <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"SetPage"</span><span class="sign">,</span> <span class="quote">"1"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">114 </span>        
+<span class="line_number">115 </span>        <span class="keyword">while</span><span class="sign">(</span>1<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">116 </span>                <a href="#robo14">read_inputs</a><span class="sign">(</span>PANEL_READ<span class="sign">,</span> <span class="quote">"Action"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">117 </span>
+<span class="line_number">118 </span>                <span class="keyword">if</span><span class="sign">(</span>read_search<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">119 </span>                        <span class="comment">//Not implemented yet</span>
+<span class="line_number">120 </span>                <span class="sign">}</span>
+<span class="line_number">121 </span>
+<span class="line_number">122 </span>                <span class="keyword">switch</span><span class="sign">(</span>intellidata<span class="sign">.</span>panel<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">123 </span>                        <span class="keyword">case</span> HOME<span class="sign">:</span>
+<span class="line_number">124 </span>                                system<span class="sign">(</span><span class="quote">"eject /dev/sr0 -tq"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">125 </span>                                <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"Action"</span><span class="sign">,</span><span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">126 </span>                                <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"1"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">127 </span>                                read_search<span class="sign">=</span>0<span class="sign">;</span>
+<span class="line_number">128 </span>                        <span class="keyword">break</span><span class="sign">;</span>
+<span class="line_number">129 </span>                        <span class="keyword">case</span> LIB<span class="sign">:</span>
+<span class="line_number">130 </span>                                <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"Action"</span><span class="sign">,</span><span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">131 </span>                                <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"2"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">132 </span>                        <span class="keyword">break</span><span class="sign">;</span>
+<span class="line_number">133 </span>                        <span class="keyword">case</span> PLACE<span class="sign">:</span>
+<span class="line_number">134 </span>                                <span class="keyword">if</span><span class="sign">(</span><a href="./intelli-drive_c.html#robo15">secure_position</a><span class="sign">(</span><span class="sign">)</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">135 </span>                                        system<span class="sign">(</span><span class="quote">"eject /dev/sr0"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">136 </span>                                        <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"Action"</span><span class="sign">,</span><span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">137 </span>                                        <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"5"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">138 </span>                                <span class="sign">}</span>
+<span class="line_number">139 </span>                        <span class="keyword">break</span><span class="sign">;</span>
+<span class="line_number">140 </span>                        <span class="keyword">case</span> SET<span class="sign">:</span>
+<span class="line_number">141 </span>                                        <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"Action"</span><span class="sign">,</span><span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">142 </span>                                        <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"8"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">143 </span>                        <span class="keyword">break</span><span class="sign">;</span>
+<span class="line_number">144 </span>                        <span class="keyword">case</span> ABOUT<span class="sign">:</span>
+<span class="line_number">145 </span>                                        <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"Action"</span><span class="sign">,</span><span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">146 </span>                                        <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"9"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">147 </span>                        <span class="keyword">break</span><span class="sign">;</span>
+<span class="line_number">148 </span>                        <span class="keyword">case</span> SELECT<span class="sign">:</span>
+<span class="line_number">149 </span>                                <span class="comment">//Analyse selection</span>
+<span class="line_number">150 </span>                                <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"Action"</span><span class="sign">,</span><span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>       
+<span class="line_number">151 </span>                                <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"3"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">152 </span>                        <span class="keyword">break</span><span class="sign">;</span>
+<span class="line_number">153 </span>                        <span class="keyword">case</span> CONFIRM_TITLE<span class="sign">:</span>
+<span class="line_number">154 </span>                                <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"Action"</span><span class="sign">,</span><span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">155 </span>                                <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"4"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">156 </span>                        <span class="keyword">break</span><span class="sign">;</span>
+<span class="line_number">157 </span>                        <span class="keyword">case</span> CONFIRM_INFORMATIONS<span class="sign">:</span>
+<span class="line_number">158 </span>                                <span class="comment">//get|place dvd then back to menu</span>
+<span class="line_number">159 </span>                                <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"Action"</span><span class="sign">,</span><span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">160 </span>                                <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"1"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">161 </span>                        <span class="keyword">break</span><span class="sign">;</span>
+<span class="line_number">162 </span>                        <span class="keyword">case</span> CONFIRM_DISK_IN_DRIVE<span class="sign">:</span>
+<span class="line_number">163 </span>                                system<span class="sign">(</span><span class="quote">"eject /dev/sr0 -tq"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">164 </span>                                <span class="keyword">char</span> name<span class="sign">[</span>1024<span class="sign">]</span><span class="sign">=</span><span class="sign">{</span>0<span class="sign">}</span><span class="sign">;</span>
+<span class="line_number">165 </span>                                <a href="./intelli-utils_c.html#robo16">system_out</a><span class="sign">(</span><span class="quote">"./<a href="./intelli-utils_c.html#robo5">utils</a>/disk_analytic.sh"</span><span class="sign">)</span>
+<span class="line_number">166 </span>                                <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"Action"</span><span class="sign">,</span><span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">167 </span>                                <a href="#robo19">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"3"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">168 </span>                        <span class="keyword">break</span><span class="sign">;</span>
+<span class="line_number">169 </span>                <span class="sign">}</span>
+<span class="line_number">170 </span>        <span class="sign">}</span>       
+<span class="line_number">171 </span><span class="sign">}</span>
 </pre>
 
 <hr />
 <a name="RPi2fread5finputs"></a>
-<a name="robo12"></a><h2>read_inputs</h2>
+<a name="robo14"></a><h2>read_inputs</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre>       Function reads panel input.
+<pre>       Function reads input.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="line_number">35 </span><span class="keyword">void</span> <strong>read_inputs</strong><span class="sign">(</span><span class="sign">)</span><span class="sign">{</span>
+<pre class="source"><span class="line_number">35 </span><span class="keyword">void</span> <strong>read_inputs</strong><span class="sign">(</span><span class="keyword">char</span> <span class="sign">*</span>source<span class="sign">,</span> <span class="keyword">char</span> <span class="sign">*</span>variable<span class="sign">)</span><span class="sign">{</span>
 <span class="line_number">36 </span>        <span class="keyword">int</span> panel<span class="sign">,</span> com<span class="sign">;</span>
 <span class="line_number">37 </span>        <span class="keyword">char</span> query<span class="sign">[</span>1024<span class="sign">]</span><span class="sign">;</span>
 <span class="line_number">38 </span>        FILE<span class="sign">*</span> tmp<span class="sign">;</span>
 <span class="line_number">39 </span>        
-<span class="line_number">40 </span>        sprintf<span class="sign">(</span>query<span class="sign">,</span> PANEL_READ<span class="sign">,</span> <span class="quote">"action"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">40 </span>        sprintf<span class="sign">(</span>query<span class="sign">,</span> source<span class="sign">,</span> variable<span class="sign">)</span><span class="sign">;</span>
 <span class="line_number">41 </span>        
-<span class="line_number">42 </span>        tmp<span class="sign">=</span><a href="./intelli-utils_c.html#robo14">system_out</a><span class="sign">(</span>query<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">42 </span>        tmp<span class="sign">=</span><a href="./intelli-utils_c.html#robo16">system_out</a><span class="sign">(</span>query<span class="sign">)</span><span class="sign">;</span>
 <span class="line_number">43 </span>        <span class="keyword">if</span><span class="sign">(</span>EOF<span class="sign">=</span><span class="sign">=</span>fscanf<span class="sign">(</span>tmp<span class="sign">,</span> <span class="quote">"%i"</span><span class="sign">,</span> <span class="sign">&amp;</span>panel<span class="sign">)</span><span class="sign">)</span>panel<span class="sign">=</span><span class="sign">-</span>2<span class="sign">;</span>
 <span class="line_number">44 </span>        fclose<span class="sign">(</span>tmp<span class="sign">)</span><span class="sign">;</span>
 <span class="line_number">45 </span>
-<span class="line_number">46 </span>        tmp<span class="sign">=</span><a href="./intelli-utils_c.html#robo14">system_out</a><span class="sign">(</span><span class="quote">"touch /tmp/irin; cat /tmp/irin"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">47 </span>        <span class="keyword">if</span><span class="sign">(</span>EOF<span class="sign">=</span><span class="sign">=</span>fscanf<span class="sign">(</span>tmp<span class="sign">,</span> <span class="quote">"%i"</span><span class="sign">,</span> <span class="sign">&amp;</span>com<span class="sign">)</span><span class="sign">)</span>com<span class="sign">=</span><span class="sign">-</span>2<span class="sign">;</span>
-<span class="line_number">48 </span>        fclose<span class="sign">(</span>tmp<span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">49 </span>
-<span class="line_number">50 </span>        <span class="keyword">if</span><span class="sign">(</span>panel<span class="sign">&gt;</span><span class="sign">=</span>0<span class="sign">)</span><span class="sign">{</span>
-<span class="line_number">51 </span>                intellidata<span class="sign">.</span>panel<span class="sign">=</span>panel<span class="sign">;</span>
-<span class="line_number">52 </span>        <span class="sign">}</span> <span class="keyword">else</span> <span class="keyword">if</span><span class="sign">(</span>com<span class="sign">&gt;</span><span class="sign">=</span>0<span class="sign">)</span><span class="sign">{</span>
-<span class="line_number">53 </span>                intellidata<span class="sign">.</span>panel<span class="sign">=</span>com<span class="sign">;</span>
-<span class="line_number">54 </span>        <span class="sign">}</span> <span class="keyword">else</span> <span class="sign">{</span>
-<span class="line_number">55 </span>                intellidata<span class="sign">.</span>panel<span class="sign">=</span>panel<span class="sign">;</span>
-<span class="line_number">56 </span>        <span class="sign">}</span>
-<span class="line_number">57 </span>
-<span class="line_number">58 </span>        <span class="keyword">return</span><span class="sign">;</span>
-<span class="line_number">59 </span><span class="sign">}</span>
+<span class="line_number">46 </span>        sprintf<span class="sign">(</span>query<span class="sign">,</span> <span class="quote">"/tmp/%s"</span><span class="sign">,</span> variable<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">47 </span>
+<span class="line_number">48 </span>        tmp<span class="sign">=</span>fopen<span class="sign">(</span>query<span class="sign">,</span> <span class="quote">"ab+"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">49 </span>        <span class="keyword">if</span><span class="sign">(</span>EOF<span class="sign">=</span><span class="sign">=</span>fscanf<span class="sign">(</span>tmp<span class="sign">,</span> <span class="quote">"%i"</span><span class="sign">,</span> <span class="sign">&amp;</span>com<span class="sign">)</span><span class="sign">)</span>com<span class="sign">=</span><span class="sign">-</span>2<span class="sign">;</span>
+<span class="line_number">50 </span>        fclose<span class="sign">(</span>tmp<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">51 </span>
+<span class="line_number">52 </span>        <span class="keyword">if</span><span class="sign">(</span>strcmp<span class="sign">(</span>source<span class="sign">,</span> PANEL_READ<span class="sign">)</span><span class="sign">=</span><span class="sign">=</span>0<span class="sign">)</span>
+<span class="line_number">53 </span>        <span class="sign">{</span>
+<span class="line_number">54 </span>                printf<span class="sign">(</span><span class="quote">"Read %i from Panelvariable %s\n"</span><span class="sign">,</span>panel<span class="sign">,</span> variable<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">55 </span>                printf<span class="sign">(</span><span class="quote">"Read %i from Textfile %s\n"</span><span class="sign">,</span> com<span class="sign">,</span> query<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">56 </span>                <span class="keyword">if</span><span class="sign">(</span>panel<span class="sign">&gt;</span><span class="sign">=</span>0<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">57 </span>                        intellidata<span class="sign">.</span>panel<span class="sign">=</span>panel<span class="sign">;</span>
+<span class="line_number">58 </span>                <span class="sign">}</span> <span class="keyword">else</span> <span class="keyword">if</span><span class="sign">(</span>com<span class="sign">&gt;</span><span class="sign">=</span>0<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">59 </span>                        intellidata<span class="sign">.</span>panel<span class="sign">=</span>com<span class="sign">;</span>
+<span class="line_number">60 </span>                <span class="sign">}</span> <span class="keyword">else</span> <span class="sign">{</span>
+<span class="line_number">61 </span>                        intellidata<span class="sign">.</span>panel<span class="sign">=</span>panel<span class="sign">;</span>
+<span class="line_number">62 </span>                <span class="sign">}</span>
+<span class="line_number">63 </span>        <span class="sign">}</span> <span class="keyword">else</span> <span class="sign">{</span>
+<span class="line_number">64 </span>                printf<span class="sign">(</span><span class="quote">"Read %i from Drivevariable %s\n"</span><span class="sign">,</span>panel<span class="sign">,</span> variable<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">65 </span>                printf<span class="sign">(</span><span class="quote">"Read %i from Textfile %s\n"</span><span class="sign">,</span> com<span class="sign">,</span> query<span class="sign">)</span><span class="sign">;</span>               
+<span class="line_number">66 </span>        <span class="sign">}</span>
+<span class="line_number">67 </span>        <span class="keyword">return</span><span class="sign">;</span>
+<span class="line_number">68 </span><span class="sign">}</span>
 </pre>
 
 <hr />
 <a name="RPi2fwrite5foutputs"></a>
-<a name="robo17"></a><h2>write_outputs</h2>
+<a name="robo19"></a><h2>write_outputs</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre>       Function writes the data to the panel and the <a href="./intelli-drive_c.html#robo0">drive</a>.
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="line_number">68 </span><span class="keyword">void</span> <strong>write_outputs</strong><span class="sign">(</span><span class="keyword">char</span><span class="sign">*</span> variable<span class="sign">,</span> <span class="keyword">char</span><span class="sign">*</span> value<span class="sign">)</span><span class="sign">{</span>
-<span class="line_number">69 </span>        <span class="keyword">static</span> <span class="keyword">int</span> panel<span class="sign">;</span>
-<span class="line_number">70 </span>        <span class="keyword">char</span> query<span class="sign">[</span>1024<span class="sign">]</span><span class="sign">;</span>
-<span class="line_number">71 </span>        FILE<span class="sign">*</span> tmp<span class="sign">;</span>
-<span class="line_number">72 </span>        
-<span class="line_number">73 </span>        sprintf<span class="sign">(</span>query<span class="sign">,</span> PANEL_WRITE<span class="sign">,</span> variable<span class="sign">,</span> value<span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">74 </span>        
-<span class="line_number">75 </span>        tmp<span class="sign">=</span><a href="./intelli-utils_c.html#robo14">system_out</a><span class="sign">(</span>query<span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">76 </span>        fclose<span class="sign">(</span>tmp<span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">77 </span>        
-<span class="line_number">78 </span>        sprintf<span class="sign">(</span>query<span class="sign">,</span> <span class="quote">"/tmp/%s"</span><span class="sign">,</span> variable<span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">79 </span>        tmp<span class="sign">=</span>fopen<span class="sign">(</span>query<span class="sign">,</span> <span class="quote">"w"</span><span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">80 </span>        fputs<span class="sign">(</span>value<span class="sign">,</span> tmp<span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">81 </span>        fclose<span class="sign">(</span>tmp<span class="sign">)</span><span class="sign">;</span>
-<span class="line_number">82 </span>
-<span class="line_number">83 </span>        <span class="keyword">return</span><span class="sign">;</span>
-<span class="line_number">84 </span><span class="sign">}</span>
+<pre class="source"><span class="line_number">77 </span><span class="keyword">void</span> <strong>write_outputs</strong><span class="sign">(</span><span class="keyword">char</span> <span class="sign">*</span>destination<span class="sign">,</span> <span class="keyword">char</span><span class="sign">*</span> variable<span class="sign">,</span> <span class="keyword">char</span><span class="sign">*</span> value<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">78 </span>        <span class="keyword">static</span> <span class="keyword">int</span> panel<span class="sign">;</span>
+<span class="line_number">79 </span>        <span class="keyword">char</span> query<span class="sign">[</span>1024<span class="sign">]</span><span class="sign">;</span>
+<span class="line_number">80 </span>        FILE<span class="sign">*</span> tmp<span class="sign">;</span>
+<span class="line_number">81 </span>        
+<span class="line_number">82 </span>        sprintf<span class="sign">(</span>query<span class="sign">,</span> destination<span class="sign">,</span> variable<span class="sign">,</span> value<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">83 </span>        
+<span class="line_number">84 </span>        tmp<span class="sign">=</span><a href="./intelli-utils_c.html#robo16">system_out</a><span class="sign">(</span>query<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">85 </span>        fclose<span class="sign">(</span>tmp<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">86 </span>        
+<span class="line_number">87 </span>        sprintf<span class="sign">(</span>query<span class="sign">,</span> <span class="quote">"/tmp/%s"</span><span class="sign">,</span> variable<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">88 </span>        tmp<span class="sign">=</span>fopen<span class="sign">(</span>query<span class="sign">,</span> <span class="quote">"w"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">89 </span>        fputs<span class="sign">(</span>value<span class="sign">,</span> tmp<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">90 </span>        fclose<span class="sign">(</span>tmp<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">91 </span>
+<span class="line_number">92 </span>        <span class="keyword">return</span><span class="sign">;</span>
+<span class="line_number">93 </span><span class="sign">}</span>
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./../IntelliRack/RPi/intellirack.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.41 on Mon Feb 04 2013 05:40:31
+<p>Generated from ./../IntelliRack/RPi/intellirack.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.41 on Wed Feb 13 2013 19:51:47
 </p>
 </div> <!-- footer -->

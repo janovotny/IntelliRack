@@ -26,9 +26,9 @@
 /****f* Panel/load_image
 * FUNCTION
 * 	Function loads image from file and display it on screen.
+*	Disabled by now because B&R uses a non standardized image format
 * SOURCE
-*/ 
-
+*/
 void load_image(){
 	static int handle;
 	if(handle == 0){
@@ -51,7 +51,7 @@ void load_image(){
 				case 2:
 					state.va_freebitmap = VA_FreeBitmap(1, handle, &pBitmap); //Delete picture from memory
 					if(state.va_freebitmap == 0){
-						state.bmpcase++;
+					state.bmpcase++;
 					}
 				case 3:
 					state.va_srelease = VA_Srelease(1, handle);
@@ -78,14 +78,14 @@ void _CYCLIC handlerCyclic(void)
 	Selection=Selection;
 	Search[0]=Search[0];
 	
-	if(Action!=-1)SetPage=0;
+	if(Action!=0)SetPage=0;
 	
 	for(i=0;i<42;i++){
 		Strings[i][0]=Strings[i][0];
 	}
 	
 	if(GetPage==3){
-		load_image();
+//		load_image();
 	} else {
 		state.bmpcase=0;
 	}

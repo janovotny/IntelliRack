@@ -8,11 +8,6 @@
  ********************************************************************
  * Local variables of program handler
  ********************************************************************)
-
 VAR
-
-END_VAR
-
-VAR CONSTANT
-
+	pBitmap : REFERENCE TO sVCBitmap;
 END_VAR

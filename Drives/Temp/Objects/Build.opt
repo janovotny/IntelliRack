@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.90.22 SP04?>
+<BuildOptions>
+  <Project>
+    <IECNamingConvention>true</IECNamingConvention>
+    <IecKeywordsAsStructureMembers>false</IecKeywordsAsStructureMembers>
+    <IecExtendedConstants>true</IecExtendedConstants>
+    <ProjectLogicalDirectory>C:\Users\florian\Google Drive\Schule\Projekt\Software\own\IntelliRack\Drives\Logical\</ProjectLogicalDirectory>
+    <ProjectTempDirectory>C:\Users\florian\Google Drive\Schule\Projekt\Software\own\IntelliRack\Drives\Temp\</ProjectTempDirectory>
+    <ASVersion>3.0.90.22 SP04</ASVersion>
+    <Edition>Standard</Edition>
+    <CrossReference>false</CrossReference>
+    <ActiveConfiguration>Config1</ActiveConfiguration>
+    <CreateAnsiCDeclarations>false</CreateAnsiCDeclarations>
+    <GccVersion>V4.1.2</GccVersion>
+  </Project>
+  <Config Name="Config1">
+    <Target>SG4</Target>
+    <PermanentAnalogMemory>0</PermanentAnalogMemory>
+    <PermanentDigitalMemory>0</PermanentDigitalMemory>
+    <GccVersion>V4.1.2</GccVersion>
+    <SaveSourceOnTarget>false</SaveSourceOnTarget>
+    <ActivateSdm>false</ActivateSdm>
+    <WebServer>false</WebServer>
+  </Config>
+  <CiR />
+</BuildOptions>

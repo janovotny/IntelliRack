@@ -1,0 +1,1 @@
+drvman	"$(AS_CPU_PATH)/drvman/drvman.ox" -o "$(AS_CPU_PATH)/drvman.br" -v V1.00.0 -f "$(AS_CPU_PATH)/Global.ofs" -T SG4  -B V3.08 -extConstants -r Cyclic2 -p 2 -s drvman --$$$newFormat$$$

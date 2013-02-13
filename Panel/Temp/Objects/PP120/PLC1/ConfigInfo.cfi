@@ -4,6 +4,7 @@
   <TaskClass Name="Cyclic#1" />
   <TaskClass Name="Cyclic#2">
     <Task Name="handler" Disable="false" Source="handler" Language="ANSIC">
+      <File Path="C:\Users\florian\Google Drive\Schule\Projekt\Software\own\IntelliRack\Panel\Logical\handler\handler.typ" />
       <File Path="C:\Users\florian\Google Drive\Schule\Projekt\Software\own\IntelliRack\Panel\Logical\handler\handler.var" />
     </Task>
   </TaskClass>

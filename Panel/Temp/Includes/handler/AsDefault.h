@@ -3,5 +3,6 @@
 #include "../AsDefault.h"
 #include <bur/plctypes.h>
 #include <bur/plc.h>
+#include <handlerTYP.h>
 #include <handlerVAR.h>
 #endif

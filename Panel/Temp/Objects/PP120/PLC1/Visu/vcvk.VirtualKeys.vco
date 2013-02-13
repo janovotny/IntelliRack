@@ -2658,6 +2658,8 @@
       <Object Name="Source[local].VirtualKey[about]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[about]" />
       <Object Name="Source[local].VirtualKey[home]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[home]" />
       <Object Name="Source[local].VirtualKey[Next]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[Next]" />
+      <Object Name="Source[local].VirtualKey[DiskOk]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[DiskOk]" />
+      <Object Name="Source[local].VirtualKey[calib]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[calib]" />
     </Folder>
   </Folder>
 </Intermediate>

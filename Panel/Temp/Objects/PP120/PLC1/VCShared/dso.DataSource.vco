@@ -8,7 +8,7 @@
           <Reference Name="DriverID" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <Reference Name="TextGroup" Type="TG">None</Reference>
           <UInt32 Name="PVCount">8</UInt32>
-          <UInt32 Name="ImageSize">4440</UInt32>
+          <UInt32 Name="ImageSize">4434</UInt32>
           <Table Name="Variables" Cols="5">
             <TableHeader>
               <Column Name="PVID" />
@@ -55,17 +55,17 @@
             </Group>
             <Group Name="Action">
               <UInt16 Name="ID">4</UInt16>
-              <UInt16 Name="PVType">5</UInt16>
+              <UInt16 Name="PVType">3</UInt16>
               <UInt32 Name="PVOffset">4347</UInt32>
               <UInt32 Name="PVDim">1</UInt32>
               <Double Name="PVMinVal">0</Double>
-              <Double Name="PVMaxVal">4294967295</Double>
+              <Double Name="PVMaxVal">65535</Double>
               <Int32 Name="Offset">35</Int32>
             </Group>
             <Group Name="Search">
               <UInt16 Name="ID">5</UInt16>
               <UInt16 Name="PVType">8</UInt16>
-              <UInt32 Name="PVOffset">4351</UInt32>
+              <UInt32 Name="PVOffset">4349</UInt32>
               <UInt32 Name="PVDim">1</UInt32>
               <Double Name="PVMinVal">0</Double>
               <Double Name="PVMaxVal">0</Double>
@@ -73,20 +73,20 @@
             </Group>
             <Group Name="Selection">
               <UInt16 Name="ID">6</UInt16>
-              <UInt16 Name="PVType">5</UInt16>
-              <UInt32 Name="PVOffset">4432</UInt32>
+              <UInt16 Name="PVType">3</UInt16>
+              <UInt32 Name="PVOffset">4430</UInt32>
               <UInt32 Name="PVDim">1</UInt32>
               <Double Name="PVMinVal">0</Double>
-              <Double Name="PVMaxVal">4294967295</Double>
+              <Double Name="PVMaxVal">65535</Double>
               <Int32 Name="Offset">49</Int32>
             </Group>
             <Group Name="Limit">
               <UInt16 Name="ID">7</UInt16>
-              <UInt16 Name="PVType">5</UInt16>
-              <UInt32 Name="PVOffset">4436</UInt32>
+              <UInt16 Name="PVType">3</UInt16>
+              <UInt32 Name="PVOffset">4432</UInt32>
               <UInt32 Name="PVDim">1</UInt32>
               <Double Name="PVMinVal">0</Double>
-              <Double Name="PVMaxVal">4294967295</Double>
+              <Double Name="PVMaxVal">65535</Double>
               <Int32 Name="Offset">59</Int32>
             </Group>
           </Table>

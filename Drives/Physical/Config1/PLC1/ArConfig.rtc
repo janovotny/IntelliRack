@@ -108,37 +108,26 @@
     </Selector>
   </Module>
   <Module ID="IF3" Hardware="X20CP1485 (Pwl)">
-    <Selector ID="Operation" Value="EPL-V2">
-      <Parameter ID="MtuSize" Value="300" />
-      <Group ID="PL2">
-        <Parameter ID="ActivatePowerlink" Value="1" />
-        <Parameter ID="CycleTime" Value="2000" />
-        <Parameter ID="MuxPrescaler" Value="8" />
-        <Selector ID="Mode" Value="MN">
-          <Group ID="Advanced">
-            <Selector ID="NodeDefinition" Value="Software" />
-            <Parameter ID="AsyncTimeout" Value="25" />
-            <Parameter ID="TransferOnlyActive" Value="off" />
-            <Parameter ID="OutputJustInTime" Value="off" />
-            <Parameter ID="EplNatSubnet" Value="192.168.101.0" />
-          </Group>
-          <Group ID="IOBus">
-            <Parameter ID="BusCycleTrigger" Value="auto" />
-            <Parameter ID="OutputCycleTrigger" Value="auto" />
-          </Group>
-          <Group ID="Channels" />
-        </Selector>
-      </Group>
+    <Selector ID="Operation" Value="EthOnly">
+      <Parameter ID="BaudRate" Value="102" />
       <Group ID="Ethernet">
-        <Selector ID="EthernetMode" Value="Manual">
+        <Parameter ID="ActivateEthernet" Value="3" />
+        <Selector ID="EthernetMode" Value="DHCPServer">
           <Parameter ID="InternetAddress" />
           <Parameter ID="SubnetMask" Value="255.0.0.0" />
+          <Group ID="DHCP Configuration" />
         </Selector>
       </Group>
       <Group ID="INA">
         <Parameter ID="ActivateIna" Value="0" />
         <Parameter ID="InaPort" Value="11159" />
         <Parameter ID="InaNodeNumber" Value="1" />
+      </Group>
+      <Group ID="SNMP">
+        <Parameter ID="ActivateSnmp" Value="2" />
+      </Group>
+      <Group ID="Modbus">
+        <Selector ID="ActivateModbus" Value="0" />
       </Group>
     </Selector>
   </Module>
@@ -158,18 +147,6 @@
         <Parameter ID="OutputCycleTrigger" Value="auto" />
       </Group>
     </Group>
-  </Module>
-  <Module ID="IF6.ST1" Hardware="X20DI9372">
-    <Selector ID="FunctionModel" Value="Standard">
-      <Group ID="General">
-        <Parameter ID="Supervision" Value="on" />
-        <Parameter ID="InputFilter" Value="10" />
-        <Parameter ID="DigitalInputsPacked" Value="off" />
-      </Group>
-      <Group ID="Simulation">
-        <Parameter ID="SimSlave" />
-      </Group>
-    </Selector>
   </Module>
   <Module ID="IF6.ST2" Hardware="X20DO9322">
     <Selector ID="FunctionModel" Value="Standard">
@@ -195,99 +172,100 @@
       </Group>
     </Selector>
   </Module>
-  <Module ID="IF6.ST4" Hardware="80SD100XD.C044-01">
+  <Module ID="IF6.ST1" Hardware="X20DI4371">
     <Selector ID="FunctionModel" Value="Standard">
       <Group ID="General">
         <Parameter ID="Supervision" Value="on" />
-        <Selector ID="SDCInformation" Value="off">
-          <Parameter ID="LifeCntSupported" Value="no" />
-          <Group ID="DeliveryValue">
-            <Parameter ID="DeliveryValue" Value="1" />
-          </Group>
-          <Group ID="MicrostepResolution">
-            <Parameter ID="MicrostepResolution" Value="5 Bit" />
-          </Group>
-        </Selector>
+        <Parameter ID="InputFilter" Value="10" />
       </Group>
-      <Group ID="MotorConfiguration">
-        <Parameter ID="Threshold01" Value="65535" />
-        <Parameter ID="Threshold02" Value="65535" />
-        <Parameter ID="MotorSettlingTime01" Value="10" />
-        <Parameter ID="MotorSettlingTime02" Value="10" />
-      </Group>
-      <Group ID="CurrentConfiguration01">
-        <Parameter ID="HoldingCurrent01" Value="0" />
-        <Parameter ID="RatedCurrent01" Value="0" />
-        <Parameter ID="MaximumCurrent01" Value="0" />
-      </Group>
-      <Group ID="CurrentConfiguration02">
-        <Parameter ID="HoldingCurrent02" Value="0" />
-        <Parameter ID="RatedCurrent02" Value="0" />
-        <Parameter ID="MaximumCurrent02" Value="0" />
-      </Group>
-      <Group ID="EncoderConfiguration">
-        <Selector ID="SensorlessMode" Value="off">
-          <Group ID="ABRConfiguration01">
-            <Parameter ID="Visible01" Value="disabled" />
-            <Parameter ID="ReferenceEnable01" Value="enabledrising" />
-            <Parameter ID="ReferenceMode01" Value="latch" />
-            <Parameter ID="BrokenWireDetection01" Value="off" />
-          </Group>
-          <Group ID="ABRConfiguration02">
-            <Parameter ID="Visible02" Value="disabled" />
-            <Parameter ID="ReferenceEnable02" Value="enabledrising" />
-            <Parameter ID="ReferenceMode02" Value="latch" />
-            <Parameter ID="BrokenWireDetection02" Value="off" />
-          </Group>
-        </Selector>
+      <Group ID="Simulation">
+        <Parameter ID="SimSlave" />
       </Group>
     </Selector>
   </Module>
   <Module ID="IF6.ST5" Hardware="80SD100XD.C044-01">
-    <Selector ID="FunctionModel" Value="Standard">
+    <Selector ID="FunctionModel" Value="Ramp">
       <Group ID="General">
         <Parameter ID="Supervision" Value="on" />
-        <Selector ID="SDCInformation" Value="off">
-          <Parameter ID="LifeCntSupported" Value="no" />
-          <Group ID="DeliveryValue">
-            <Parameter ID="DeliveryValue" Value="1" />
-          </Group>
-          <Group ID="MicrostepResolution">
-            <Parameter ID="MicrostepResolution" Value="5 Bit" />
-          </Group>
-        </Selector>
-      </Group>
-      <Group ID="MotorConfiguration">
-        <Parameter ID="Threshold01" Value="65535" />
-        <Parameter ID="Threshold02" Value="65535" />
-        <Parameter ID="MotorSettlingTime01" Value="10" />
-        <Parameter ID="MotorSettlingTime02" Value="10" />
       </Group>
       <Group ID="CurrentConfiguration01">
-        <Parameter ID="HoldingCurrent01" Value="0" />
-        <Parameter ID="RatedCurrent01" Value="0" />
-        <Parameter ID="MaximumCurrent01" Value="0" />
+        <Parameter ID="HoldingCurrent01" Value="10" />
+        <Parameter ID="RatedCurrent01" Value="30" />
+        <Parameter ID="MaximumCurrent01" Value="35" />
       </Group>
       <Group ID="CurrentConfiguration02">
-        <Parameter ID="HoldingCurrent02" Value="0" />
-        <Parameter ID="RatedCurrent02" Value="0" />
-        <Parameter ID="MaximumCurrent02" Value="0" />
+        <Parameter ID="HoldingCurrent02" Value="10" />
+        <Parameter ID="RatedCurrent02" Value="30" />
+        <Parameter ID="MaximumCurrent02" Value="35" />
       </Group>
-      <Group ID="EncoderConfiguration">
-        <Selector ID="SensorlessMode" Value="off">
-          <Group ID="ABRConfiguration01">
-            <Parameter ID="Visible01" Value="disabled" />
-            <Parameter ID="ReferenceEnable01" Value="disabled" />
-            <Parameter ID="ReferenceMode01" Value="latch" />
-            <Parameter ID="BrokenWireDetection01" Value="off" />
-          </Group>
-          <Group ID="ABRConfiguration02">
-            <Parameter ID="Visible02" Value="disabled" />
-            <Parameter ID="ReferenceEnable02" Value="disabled" />
-            <Parameter ID="ReferenceMode02" Value="latch" />
-            <Parameter ID="BrokenWireDetection02" Value="AB" />
-          </Group>
-        </Selector>
+      <Group ID="FullStepThreshold">
+        <Parameter ID="FullStepThreshold01_conf" Value="0" />
+        <Parameter ID="FullStepThreshold02_conf" Value="0" />
+      </Group>
+      <Group ID="Referencing Configuration">
+        <Selector ID="RefConfig01_selector" Value="unconditional" />
+        <Selector ID="RefConfig02_selector" Value="unconditional" />
+      </Group>
+      <Group ID="MPGenConfiguration">
+        <Parameter ID="MaxSpeed01pos_conf" Value="4000" />
+        <Parameter ID="MaxSpeed02pos_conf" Value="4005" />
+        <Parameter ID="MaxAcc01_conf" Value="1000" />
+        <Parameter ID="MaxDec01_conf" Value="1000" />
+        <Parameter ID="MaxAcc02_conf" Value="1000" />
+        <Parameter ID="MaxDec02_conf" Value="1000" />
+        <Parameter ID="RevLoop01_conf" Value="0" />
+        <Parameter ID="RevLoop02_conf" Value="0" />
+        <Parameter ID="FixedPos01a_conf" Value="0" />
+        <Parameter ID="FixedPos01b_conf" Value="0" />
+        <Parameter ID="FixedPos02a_conf" Value="0" />
+        <Parameter ID="FixedPos02b_conf" Value="0" />
+        <Parameter ID="RefSpeed01_conf" Value="1000" />
+        <Parameter ID="RefSpeed02_conf" Value="1000" />
+        <Parameter ID="JoltTime01_conf" Value="0" />
+        <Parameter ID="JoltTime02_conf" Value="0" />
+      </Group>
+    </Selector>
+  </Module>
+  <Module ID="IF6.ST4" Hardware="80SD100XD.C044-01">
+    <Selector ID="FunctionModel" Value="Ramp">
+      <Group ID="General">
+        <Parameter ID="Supervision" Value="on" />
+      </Group>
+      <Group ID="CurrentConfiguration01">
+        <Parameter ID="HoldingCurrent01" Value="10" />
+        <Parameter ID="RatedCurrent01" Value="30" />
+        <Parameter ID="MaximumCurrent01" Value="35" />
+      </Group>
+      <Group ID="CurrentConfiguration02">
+        <Parameter ID="HoldingCurrent02" Value="10" />
+        <Parameter ID="RatedCurrent02" Value="30" />
+        <Parameter ID="MaximumCurrent02" Value="35" />
+      </Group>
+      <Group ID="FullStepThreshold">
+        <Parameter ID="FullStepThreshold01_conf" Value="0" />
+        <Parameter ID="FullStepThreshold02_conf" Value="0" />
+      </Group>
+      <Group ID="Referencing Configuration">
+        <Selector ID="RefConfig01_selector" Value="unconditional" />
+        <Selector ID="RefConfig02_selector" Value="unconditional" />
+      </Group>
+      <Group ID="MPGenConfiguration">
+        <Parameter ID="MaxSpeed01pos_conf" Value="4000" />
+        <Parameter ID="MaxSpeed02pos_conf" Value="4000" />
+        <Parameter ID="MaxAcc01_conf" Value="1000" />
+        <Parameter ID="MaxDec01_conf" Value="1000" />
+        <Parameter ID="MaxAcc02_conf" Value="1000" />
+        <Parameter ID="MaxDec02_conf" Value="1000" />
+        <Parameter ID="RevLoop01_conf" Value="0" />
+        <Parameter ID="RevLoop02_conf" Value="0" />
+        <Parameter ID="FixedPos01a_conf" Value="0" />
+        <Parameter ID="FixedPos01b_conf" Value="0" />
+        <Parameter ID="FixedPos02a_conf" Value="0" />
+        <Parameter ID="FixedPos02b_conf" Value="0" />
+        <Parameter ID="RefSpeed01_conf" Value="500" />
+        <Parameter ID="RefSpeed02_conf" Value="500" />
+        <Parameter ID="JoltTime01_conf" Value="0" />
+        <Parameter ID="JoltTime02_conf" Value="0" />
       </Group>
     </Selector>
   </Module>

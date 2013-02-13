@@ -72,10 +72,8 @@ FILE* system_out(char *command){
 	
 	int sout1;
 	fpos_t pos;
-	char buffer [L_tmpnam];	
+	char buffer[]="sysout.stdout";	
 	FILE* tmp_file;
-
-	tmp_file=tmpfile();
 
 	fflush(stdout);
 
@@ -93,7 +91,7 @@ FILE* system_out(char *command){
 	fsetpos(stdout, &pos);
 	
 	fflush(stdout);
-	getc(stdin);
+
 	rewind(tmp_file);
 	return tmp_file;
 }

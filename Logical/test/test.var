@@ -1,5 +1,0 @@
-VAR
-	idxDrive	:DINT;	
-	moveToPointRef	:ARRAY [0..3] OF BOOL;	
-	moveToPointRefAll	:BOOL;	
-END_VAR

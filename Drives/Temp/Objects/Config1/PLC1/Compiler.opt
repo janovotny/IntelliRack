@@ -1,0 +1,1 @@
+drvman	 -T SG4  -B V3.08 -G V4.1.2  -s drvman -t "$(AS_TEMP_PATH)" -I "$(AS_PROJECT_PATH)/Logical/drvman" "$(AS_TEMP_PATH)/Includes/drvman" "$(AS_TEMP_PATH)/Includes" -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -g -nostartfiles -Wall -include "$(AS_CPU_PATH)/Libraries.h" --$$$newFormat$$$

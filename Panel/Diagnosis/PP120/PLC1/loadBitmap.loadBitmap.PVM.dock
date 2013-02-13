@@ -1,0 +1,15 @@
+WATCH Ver=2.00 PLCName=PLC1 CPUName=CPU TaskName=loadBitmap 
+Position X=0 Y=0 Width=0 Height=0 TabWidth Name=150 Type=0 Scope=0 Force=0 Index=0 ASCIIString=0
+                                    name                                     type force                                                            value level type len format place expand specs
+                           stepBmpAction                                    USINT    0 "                                                               1"    0    5    1   10    1    0         
+                                  handle                                    UDINT    0 "                                                        61376052"    0    7    1   10    1    0         
+                                   state                 LibVisapi5_ST_state_type    0 "                                                               *"    0   24    1    0    1    1         
+                             va_srelease                                     UINT    0 "                                                               0"    1    6    1   10    0    0         
+                              va_saccess                                     UINT    0 "                                                               0"    1    6    1   10    0    0         
+                           va_loadbitmap                                     UINT    0 "                                                            7197"    1    6    1   10    0    0         
+                           va_blitbitmap                                     UINT    0 "                                                               0"    1    6    1   10    0    0         
+                           va_freebitmap                                     UINT    0 "                                                               0"    1    6    1   10    0    0         
+                               va_attach                                     UINT    0 "                                                               0"    1    6    1   10    0    0         
+                               va_detach                                     UINT    0 "                                                               0"    1    6    1   10    0    0         
+                               va_redraw                                     UINT    0 "                                                               0"    1    6    1   10    0    0         
+                                 bmpcase                                     UINT    0 "                                                               0"    1    6    1   10    0    0         

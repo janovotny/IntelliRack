@@ -9,10 +9,9 @@
     <Object Type="File" Description="Runtime configuration file">ArConfig.rtc</Object>
     <Object Type="File" Description="CPU system configuration">sysconf.br</Object>
     <Object Type="File" Description="CPU system configuration">sysconf.syc</Object>
-    <Object Type="Package">Motion</Object>
   </Objects>
   <CpuModules>
-    <CpuModule LocalVariablesMemory="MemoryPool" GeneratePPCode="false" HasNcOperatingSystem="true" Target="SG4" ModuleID="CP1485" ClassID="X20CP1485" GccVersion="V4.1.2">
+    <CpuModule LocalVariablesMemory="MemoryPool" GeneratePPCode="false" HasNcOperatingSystem="true" Target="SG4" ModuleID="CP1485" ClassID="X20CP1485" GccVersion="V4.1.2" OnlineConfigurationName="X20CP1485">
       <DefaultTargetMemory Tasks="UserROM" Libraries="UserROM" DataObjects="UserROM" />
       <DefaultTaskClass Name="Cyclic4" />
       <IO DefaultTaskClass="Automatic" ArConfigDataModule="false" ArConfigDataModulePath="$(AS_CPU_PATH)\AS\CfgData.br" IoMapDataModule="false" IoMapDataModulePath="$(AS_CPU_PATH)\AS\IomData.br" />
@@ -23,5 +22,7 @@
       <OPC />
     </CpuModule>
   </CpuModules>
-  <Communication />
+  <Communication>
+    <OnlineConfiguration Name="X20CP1485" DeviceType="TCPIP" DeviceParameters="/IF=tcpip /LOPO=11159 /SA=1" ConnectionParameters="/RT=1000 /DAIP=192.168.0.101 /REPO=11159 /ANSL=1" Description="" />
+  </Communication>
 </PLC>

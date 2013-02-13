@@ -8,10 +8,10 @@
   <File Name="vccshape.br" />
   <File Name="vcclbox.br" />
   <File Name="vccstr.br" />
+  <File Name="vcchspot.br" />
   <File Name="vccovl.br" />
   <File Name="vccbmp.br" />
   <File Name="vccline.br" />
-  <File Name="vcchspot.br" />
   <File Name="vcrt.br" />
   <File Name="vcbclass.br" />
   <File Name="vcgclass.br" />

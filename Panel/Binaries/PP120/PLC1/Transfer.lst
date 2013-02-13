@@ -6,11 +6,11 @@
   <Operation Delete="FTP.br"/>
   <Operation Delete="handler.br"/>
   <Operation Delete="Visu.br"/>
-  <Operation Delete="visvc.br"/>
-  <Operation Delete="vccshape.br"/>
-  <Operation Delete="vccline.br"/>
-  <Operation Delete="vcchspot.br"/>
   <Operation Delete="AsTCP.br"/>
+  <Operation Delete="vccline.br"/>
+  <Operation Delete="vccshape.br"/>
+  <Operation Delete="vcchspot.br"/>
+  <Operation Delete="visvc.br"/>
   <Operation Delete="vcctext.br"/>
   <Operation Delete="vccovl.br"/>
   <Operation Delete="vcdsloc.br"/>
@@ -43,8 +43,8 @@
   <Operation Delete="dataobj.br"/>
   <Operation Delete="ashw.br"/>
   <Operation Delete="vcpdcx55.br"/>
-  <Operation Download="asfw.br" Memory="SystemROM"/>
   <Operation Download="ashwd.br" Memory="SystemROM"/>
+  <Operation Download="asfw.br" Memory="SystemROM"/>
   <Operation Download="arconfig.br" Memory="SystemROM"/>
   <Operation Download="sysconf.br" Memory="SystemROM"/>
   <Operation Restart="warm"/>
@@ -87,11 +87,11 @@
   <Operation Download="vcdsloc.br" Memory="UserROM"/>
   <Operation Download="vccovl.br" Memory="UserROM"/>
   <Operation Download="vcctext.br" Memory="UserROM"/>
-  <Operation Download="AsTCP.br" Memory="UserROM"/>
-  <Operation Download="vcchspot.br" Memory="UserROM"/>
-  <Operation Download="vccline.br" Memory="UserROM"/>
-  <Operation Download="vccshape.br" Memory="UserROM"/>
   <Operation Download="visvc.br" Memory="UserROM"/>
+  <Operation Download="vcchspot.br" Memory="UserROM"/>
+  <Operation Download="vccshape.br" Memory="UserROM"/>
+  <Operation Download="vccline.br" Memory="UserROM"/>
+  <Operation Download="AsTCP.br" Memory="UserROM"/>
   <Operation Download="Visu.br" Memory="UserROM"/>
   <Operation Download="handler.br" Memory="UserROM"/>
   <Operation Download="FTP.br" Memory="UserROM"/>

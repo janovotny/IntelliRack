@@ -7,7 +7,34 @@
  ********************************************************************
  * IO mapping file
  ********************************************************************)
-
 VAR_CONFIG
-
+	Drive[0].SetPos AT %QD.IF6.ST4.AbsPos01;
+	Drive[0].Ctrl AT %QW.IF6.ST4.MpGenControl01;
+	Drive[0].Mode AT %QB.IF6.ST4.MpGenMode01;
+	Drive[0].Brake AT %QX.IF6.ST4.MpGenBrake01;
+	Drive[0].Status AT %IW.IF6.ST4.MpGenStatus01;
+	Drive[0].GetPos AT %ID.IF6.ST4.AbsPos01ActVal;
+	Drive[1].SetPos AT %QD.IF6.ST4.AbsPos02;
+	Drive[1].Ctrl AT %QW.IF6.ST4.MpGenControl02;
+	Drive[1].Mode AT %QB.IF6.ST4.MpGenMode02;
+	Drive[1].Brake AT %QX.IF6.ST4.MpGenBrake02;
+	Drive[1].GetPos AT %ID.IF6.ST4.AbsPos02ActVal;
+	Drive[1].Status AT %IW.IF6.ST4.MpGenStatus02;
+	CloseGriper AT %QX.IF6.ST2.DigitalOutput01;
+	OpenGriper AT %QX.IF6.ST2.DigitalOutput02;
+	EnableACP1 AT %QX.IF6.ST2.DigitalOutput03;
+	EnableACP2 AT %QX.IF6.ST2.DigitalOutput04;
+	EnableCDRom AT %QX.IF6.ST2.DigitalOutput05;
+	Drive[2].SetPos AT %QD.IF6.ST5.AbsPos01;
+	Drive[2].Ctrl AT %QW.IF6.ST5.MpGenControl01;
+	Drive[2].Mode AT %QB.IF6.ST5.MpGenMode01;
+	Drive[2].Brake AT %QX.IF6.ST5.MpGenBrake01;
+	Drive[2].GetPos AT %ID.IF6.ST5.AbsPos01ActVal;
+	Drive[2].Status AT %IW.IF6.ST5.MpGenStatus01;
+	Drive[3].SetPos AT %QD.IF6.ST5.AbsPos02;
+	Drive[3].Ctrl AT %QW.IF6.ST5.MpGenControl02;
+	Drive[3].Mode AT %QB.IF6.ST5.MpGenMode02;
+	Drive[3].Brake AT %QX.IF6.ST5.MpGenBrake02;
+	Drive[3].GetPos AT %ID.IF6.ST5.AbsPos02ActVal;
+	Drive[3].Status AT %IW.IF6.ST5.MpGenStatus02;
 END_VAR

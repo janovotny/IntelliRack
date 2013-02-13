@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.90.22 SP04?>
+<Library Description="The AsIO library makes it possible to determine the states and values of a data point and carry out forcing operations." xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>AsIO.var</File>
+    <File>AsIO.fun</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="runtime" />
+  </Dependencies>
+</Library>

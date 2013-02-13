@@ -13,7 +13,7 @@
 * FUNCTION
 * 	This module provides multiple functions for communicating with drives.
 *
-*****
+*****/
 
 /****f* RPi/secure_position
 * FUNCTION
@@ -24,7 +24,7 @@
 */ 
  int secure_position(){
 	 //Not implemented yet
-	return 0;
+	return 1;
 }
 /*****/ 
 

@@ -37,6 +37,7 @@
 /Logical/FTP/FTP
 /Logical/FTP
 /Logical/handler/handlerCyclic.c
+/Logical/handler/handler.typ
 /Logical/handler/handler.var
 /Logical/handler
 /Logical/Visu/VCObject.vc

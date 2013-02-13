@@ -1,2 +1,3 @@
 handler	 -T SG4  -B V3.08 -G V4.1.2  -s handler -t "$(AS_TEMP_PATH)" -I "$(AS_PROJECT_PATH)/Logical/handler" "$(AS_TEMP_PATH)/Includes/handler" "$(AS_TEMP_PATH)/Includes" -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -g -nostartfiles -Wall -include "$(AS_CPU_PATH)/Libraries.h" --$$$newFormat$$$
 FTP	 -T SG4  -G V4.1.2  -s FTP.FTP -t "$(AS_TEMP_PATH)" -pointers -extComments -extBitAccess -extConstants -D _SG4 -l "$(AS_PROJECT_PATH)/Logical/FTP/FTP/FTP.typ" "$(AS_PROJECT_PATH)/Logical/FTP/FTP/FTP.var" --$$$newFormat$$$
+loadBitmap	 -T SG4  -G V4.1.2  -s LibVisapi5_ST.loadBitmap -t "$(AS_TEMP_PATH)" -pointers -extComments -extBitAccess -extConstants -D _SG4 -l "$(AS_PROJECT_PATH)/Logical/LibVisapi5_ST/loadBitmap/loadBitmap.var" --$$$newFormat$$$

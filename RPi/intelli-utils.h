@@ -5,7 +5,10 @@ char* dvd_name();
 
 FILE* system_out(char *command);
 
-#define PANEL_READ "http://192.168.0.101/goforms/ReadWrite?read=1&variable=%s"
-#define PANEL_WRITE "http://192.168.0.101/goforms/ReadWrite?write=1&variable=%s&value=%s"
+#define PANEL_READ "./utils/ReadPanelPV.sh %s"
+#define PANEL_WRITE "./utils/WritePanelPV.sh %s %s"
+
+#define DRIVE_READ "./utils/ReadPanelPV.sh %s"
+#define DRIVE_WRITE "./utils/WritePanelPV.sh %s %s"
 
 #endif

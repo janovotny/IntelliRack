@@ -157,7 +157,10 @@ PAGE_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Pages/PleaseWait.page \
 	$(AS_PROJECT_PATH)/Logical/Visu/Pages/Home.page \
 	$(AS_PROJECT_PATH)/Logical/Visu/Pages/Lib.page \
 	$(AS_PROJECT_PATH)/Logical/Visu/Pages/Title.page \
-	$(AS_PROJECT_PATH)/Logical/Visu/Pages/InfoIG.page 
+	$(AS_PROJECT_PATH)/Logical/Visu/Pages/InfoIG.page \
+	$(AS_PROJECT_PATH)/Logical/Visu/Pages/about.page \
+	$(AS_PROJECT_PATH)/Logical/Visu/Pages/Settings.page \
+	$(AS_PROJECT_PATH)/Logical/Visu/Pages/insertDisk.page 
 
 LAYER_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Layers/msgBox.layer \
 	$(AS_PROJECT_PATH)/Logical/Visu/Layers/globalArea.layer \
@@ -256,6 +259,18 @@ $(TEMP_PATH_Visu)/page.Title.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/Title.pa
 
 
 $(TEMP_PATH_Visu)/page.InfoIG.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/InfoIG.page $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 3950
+
+
+$(TEMP_PATH_Visu)/page.about.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/about.page $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 3950
+
+
+$(TEMP_PATH_Visu)/page.Settings.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/Settings.page $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 3950
+
+
+$(TEMP_PATH_Visu)/page.insertDisk.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/insertDisk.page $(VC_LANGUAGES_Visu)
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 3950
 
 

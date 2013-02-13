@@ -1,2 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<breakpoints />
+<breakpoints>
+  <breakpoint>
+    <status>Y</status>
+    <file>Logical/drvman/drvman.c</file>
+    <position>119</position>
+    <condition></condition>
+    <module>drvman</module>
+  </breakpoint>
+  <breakpoint>
+    <status>Y</status>
+    <file>Logical/drvman/drvman.c</file>
+    <position>112</position>
+    <condition></condition>
+    <module>drvman</module>
+  </breakpoint>
+  <breakpoint>
+    <status>Y</status>
+    <file>Logical/drvman/drvman.c</file>
+    <position>101</position>
+    <condition></condition>
+    <module>drvman</module>
+  </breakpoint>
+  <breakpoint>
+    <status>Y</status>
+    <file>Logical/drvman/drvman.c</file>
+    <position>126</position>
+    <condition></condition>
+    <module>drvman</module>
+  </breakpoint>
+</breakpoints>
