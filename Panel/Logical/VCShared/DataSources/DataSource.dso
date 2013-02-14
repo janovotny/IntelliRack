@@ -44,6 +44,16 @@
         <Property Name="UserID" Value="None"/>
         <Property Name="VCType" Value="STRING"/>
       </DataPoint>
+      <DataPoint Name="Strings[1]">
+        <Property Name="ConnectedBySharedResource" Value="False"/>
+        <Property Name="ConnectingVisus" Value="Visu"/>
+        <Property Name="Description" Value=""/>
+        <Property Name="PLCType" Value="STRING"/>
+        <Property Name="StringLength" Value="42"/>
+        <Property Name="UpdateTime" Value="Default"/>
+        <Property Name="UserID" Value="None"/>
+        <Property Name="VCType" Value="STRING"/>
+      </DataPoint>
     </DataPoint>
     <DataPoint Name="Action">
       <Property Name="ConnectedBySharedResource" Value="False"/>
@@ -78,6 +88,15 @@
       <Property Name="ConnectingVisus" Value="Visu"/>
       <Property Name="Description" Value=""/>
       <Property Name="PLCType" Value="UINT"/>
+      <Property Name="UpdateTime" Value="Default"/>
+      <Property Name="UserID" Value="None"/>
+      <Property Name="VCType" Value="INTEGER"/>
+    </DataPoint>
+    <DataPoint Name="Edit">
+      <Property Name="ConnectedBySharedResource" Value="False"/>
+      <Property Name="ConnectingVisus" Value="Visu"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="PLCType" Value="USINT"/>
       <Property Name="UpdateTime" Value="Default"/>
       <Property Name="UserID" Value="None"/>
       <Property Name="VCType" Value="INTEGER"/>

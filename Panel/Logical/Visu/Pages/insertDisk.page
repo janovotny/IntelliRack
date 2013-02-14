@@ -86,17 +86,20 @@
           <Property Name="Width" Value="80"/>
         </Control>
         <Control ClassId="0x00001004" Name="Text_1">
+          <Property Name="AlignmentHorizontal" Value="Center"/>
+          <Property Name="AlignmentVertical" Value="Center"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
+          <Property Name="Font" Value="Source[local].Font[Button]"/>
           <Property Name="Height" Value="30"/>
-          <Property Name="Left" Value="10"/>
+          <Property Name="Left" Value="0"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
           <Property Name="TextIndexOffset" Value="4"/>
           <Property Name="TextSource" Value="SingleText"/>
           <Property Name="Top" Value="80"/>
-          <Property Name="Width" Value="300"/>
+          <Property Name="Width" Value="320"/>
         </Control>
       </Controls>
       <KeyMapping>

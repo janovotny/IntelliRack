@@ -26,7 +26,7 @@
 /****f* Panel/load_image
 * FUNCTION
 * 	Function loads image from file and display it on screen.
-*	Disabled by now because B&R uses a non standardized image format
+*	Disabled by now because B&R uses a unusual image format
 * SOURCE
 */
 void load_image(){
@@ -78,7 +78,10 @@ void _CYCLIC handlerCyclic(void)
 	Selection=Selection;
 	Search[0]=Search[0];
 	
-	if(Action!=0)SetPage=0;
+	if(Action!=0){
+		Edit=1;
+		SetPage=0;
+	}
 	
 	for(i=0;i<42;i++){
 		Strings[i][0]=Strings[i][0];

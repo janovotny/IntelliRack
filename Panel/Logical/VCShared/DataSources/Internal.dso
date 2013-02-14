@@ -30,6 +30,7 @@
       </DataPoint>
       <DataPoint Name="BackLight">
         <Property Name="ConnectedBySharedResource" Value="False"/>
+        <Property Name="ConnectingVisus" Value="Visu"/>
         <Property Name="Description" Value="0 = backlight off / 1 = backlight on"/>
         <Property Name="PLCType" Value="USINT"/>
         <Property Name="UpdateTime" Value="Default"/>
@@ -42,6 +43,7 @@
       <Property Name="FolderType" Value="Struct"/>
       <DataPoint Name="IPAddress">
         <Property Name="ConnectedBySharedResource" Value="False"/>
+        <Property Name="ConnectingVisus" Value="Visu"/>
         <Property Name="Description" Value="IP-Address"/>
         <Property Name="PLCType" Value="STRING"/>
         <Property Name="StringLength" Value="65535"/>

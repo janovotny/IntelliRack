@@ -111,7 +111,7 @@
           <Property Name="SingleTouchSelection" Value="True"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextDatapoint" Value="Source[global].Variable[DataSource.Strings]"/>
-          <Property Name="TextIndexOffset" Value="0"/>
+          <Property Name="TextIndexOffset" Value="1"/>
           <Property Name="TextSource" Value="MultipleStrings"/>
           <Property Name="Top" Value="0"/>
           <Property Name="Width" Value="320"/>

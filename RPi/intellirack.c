@@ -162,7 +162,16 @@ int main(){
 			case CONFIRM_DISK_IN_DRIVE:
 				system("eject /dev/sr0 -tq");
 				char name[1024]={0};
-				system_out("./utils/disk_analytic.sh")
+
+				FILE* tmp;
+				sprintf(name, "./utils/disk_analytic.sh \"%s\"", dvd_name());
+				tmp=system_out(name);
+				fread(name, 1024, 1, tmp);
+				fclose(tmp);
+				while((tmp=fopen(name,"r"))==NULL)
+				send_disc_data(tmp);
+				close(tmp);
+
 				write_outputs(PANEL_WRITE, "Action","0");
 				write_outputs(PANEL_WRITE, "SetPage","3");
 			break;
