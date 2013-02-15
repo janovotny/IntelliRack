@@ -26,6 +26,9 @@ my $temp;
 
 open(my $fh, '>', 'NonConfirmedEntry');
 
+#print Dumper($movie{'item'}[0]);
+$temp=$movie{'item'}[0];
+%movie=%$temp;
 
 #title
 if($movie{'title'}){
@@ -215,4 +218,3 @@ $req=$req->content;
 open(my $img ,">0.jpg");
 
 print $img $req;
-system "ffmpeg -y -i 0.jpg -vf scale=-1:200 0.png; rm 0.jpg"
