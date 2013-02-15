@@ -91,17 +91,17 @@ sub ducky_search($){
 	if($req=~/www\.imdb\.com/){
 		$req=~s/title\?/tt/ig;
 		$req=~s/^.*(tt[0-9]+).*$/$1/;
-		#print "Found imdb id: ".$req."\n";
+		#~ print "Found imdb id: ".$req."\n";
 
 		while($fail_counter<3){
 			$fail_counter++;
-			($ret=$browser->get("http://imdbapi.org/?type=xml&plot=full&episode=0&id=".$req)) and $fail_counter=4;
-			#print "http://imdbapi.org/?type=xml&plot=full&episode=0&id=".$req;
+			($ret=$browser->get("http://imdbapi.org/?type=xml&plot=full&episode=0&ids=".$req)) and $fail_counter=4;
+			#~ print "http://imdbapi.org/?type=xml&plot=full&episode=0&id=".$req;
 			$ret=$ret->content;
 		}
 	}
 	if($fail_counter!=4){ 
-		#print "\nFAILED TO LOAD DATA\n";
+		#~ print "\nFAILED TO LOAD DATA\n";
 		return -1;
 	}
 	return $ret;
