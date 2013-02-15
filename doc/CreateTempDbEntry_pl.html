@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="./robodoc.css" type="text/css" />
+<title>./../IntelliRack/RPi/utils/CreateTempDbEntry.pl</title>
+<!-- Source: ./../IntelliRack/RPi/utils/CreateTempDbEntry.pl -->
+<!-- Generated with ROBODoc Version 4.99.38 (May  2 2009) -->
+</head>
+<body>
+<div id="logo">
+<a name="robo_top_of_doc"></a>
+</div> <!-- logo -->
+<div id="navigation">
+<a class="menuitem" href="./toc_index.html#top">Table of Contents</a>
+<a class="menuitem" href="./robo_sourcefiles.html#top">Sourcefiles</a>
+<a class="menuitem" href="./masterindex.html#top">Index</a>
+<a class="menuitem" href="./robo_functions.html#top">Functions</a>
+<a class="menuitem" href="./robo_modules.html#top">Modules</a>
+</div> <!-- navigation -->
+<div id="content">
+<h3>TABLE OF CONTENTS</h3>
+<ul>
+<li><a href="#robo0">CreateTempDbEntry</a></li>
+</ul>
+<hr />
+<a name="RPi2fCreateTempDbEntry"></a>
+<a name="robo0"></a><h2>CreateTempDbEntry</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_modules.html#robo_top_of_doc">Modules</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>       <strong>CreateTempDbEntry</strong> -- Functions to order movie data 
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>       This module analyses and interpretes the data fetched by <a href="./IMDBparser_pm.html#robo11">find_movie</a>.
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="line_number"> 10 </span>use Data<span class="sign">:</span><span class="sign">:</span>Dumper<span class="sign">;</span>
+<span class="line_number"> 11 </span>use IMDBparser<span class="sign">;</span>
+<span class="line_number"> 12 </span>use warnings<span class="sign">;</span>
+<span class="line_number"> 13 </span>
+<span class="line_number"> 14 </span>my <span class="sign">$</span>db_entry<span class="sign">=</span><span class="quote">""</span><span class="sign">;</span>
+<span class="line_number"> 15 </span><span class="sign">#</span>my <span class="sign">$</span>ETX<span class="sign">=</span>chr<span class="sign">(</span>0x3<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number"> 16 </span><span class="sign">#</span>my <span class="sign">$</span>EOT<span class="sign">=</span>chr<span class="sign">(</span>0x4<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number"> 17 </span><span class="sign">#</span>my <span class="sign">$</span>ACK<span class="sign">=</span>chr<span class="sign">(</span>0x6<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number"> 18 </span>
+<span class="line_number"> 19 </span>my <span class="sign">$</span>ETX<span class="sign">=</span><span class="quote">"; "</span><span class="sign">;</span>
+<span class="line_number"> 20 </span>my <span class="sign">$</span>EOT<span class="sign">=</span><span class="quote">"\n"</span><span class="sign">;</span>
+<span class="line_number"> 21 </span>my <span class="sign">$</span>ACK<span class="sign">=</span><span class="quote">"\0"</span><span class="sign">;</span>
+<span class="line_number"> 22 </span>
+<span class="line_number"> 23 </span>my <span class="sign">$</span>movie_ref<span class="sign">=</span><span class="sign">(</span>IR<span class="sign">:</span><span class="sign">:</span>IMDB<span class="sign">:</span><span class="sign">:</span>Parser<span class="sign">:</span><span class="sign">:</span><a href="./IMDBparser_pm.html#robo11">find_movie</a><span class="sign">(</span><span class="sign">$</span>ARGV<span class="sign">[</span>0<span class="sign">]</span><span class="sign">)</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number"> 24 </span>my <span class="sign">%</span>movie<span class="sign">=</span><span class="sign">%</span><span class="sign">$</span>movie_ref<span class="sign">;</span>
+<span class="line_number"> 25 </span>my <span class="sign">$</span>temp<span class="sign">;</span>
+<span class="line_number"> 26 </span>
+<span class="line_number"> 27 </span>open<span class="sign">(</span>my <span class="sign">$</span>fh<span class="sign">,</span> <span class="squote">'&gt;'</span><span class="sign">,</span> <span class="squote">'NonConfirmedEntry'</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number"> 28 </span>
+<span class="line_number"> 29 </span>
+<span class="line_number"> 30 </span><span class="sign">#</span>title
+<span class="line_number"> 31 </span><span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'title'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number"> 32 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'title'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number"> 33 </span><span class="sign">}</span> <span class="keyword">else</span> <span class="sign">{</span>
+<span class="line_number"> 34 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>ARGV<span class="sign">[</span>0<span class="sign">]</span><span class="sign">;</span>
+<span class="line_number"> 35 </span><span class="sign">}</span>
+<span class="line_number"> 36 </span><span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number"> 37 </span>
+<span class="line_number"> 38 </span><span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="quote">"Title: "</span><span class="sign">;</span>
+<span class="line_number"> 39 </span><span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'title'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number"> 40 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'title'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number"> 41 </span><span class="sign">}</span> <span class="keyword">else</span> <span class="sign">{</span>
+<span class="line_number"> 42 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>ARGV<span class="sign">[</span>0<span class="sign">]</span><span class="sign">;</span>
+<span class="line_number"> 43 </span><span class="sign">}</span>
+<span class="line_number"> 44 </span><span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number"> 45 </span>
+<span class="line_number"> 46 </span><span class="sign">#</span>actors
+<span class="line_number"> 47 </span><span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'actors'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number"> 48 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="quote">"Actors: "</span><span class="sign">;</span>
+<span class="line_number"> 49 </span>        <span class="sign">$</span>temp<span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'actors'</span><span class="sign">}</span><span class="sign">{</span><span class="squote">'item'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number"> 50 </span>        foreach<span class="sign">(</span><span class="sign">@</span><span class="sign">$</span>temp<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number"> 51 </span>                <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>_<span class="sign">.</span><span class="sign">$</span>ETX<span class="sign">;</span>     
+<span class="line_number"> 52 </span>        <span class="sign">}</span>
+<span class="line_number"> 53 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number"> 54 </span><span class="sign">}</span>
+<span class="line_number"> 55 </span>
+<span class="line_number"> 56 </span><span class="sign">#</span>also_known_as
+<span class="line_number"> 57 </span><span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'also_known_as'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number"> 58 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="quote">"Also known as: "</span><span class="sign">;</span>
+<span class="line_number"> 59 </span>        <span class="sign">$</span>temp<span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'also_known_as'</span><span class="sign">}</span><span class="sign">{</span><span class="squote">'item'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number"> 60 </span>        foreach<span class="sign">(</span><span class="sign">@</span><span class="sign">$</span>temp<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number"> 61 </span>                <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>_<span class="sign">.</span><span class="sign">$</span>ETX<span class="sign">;</span>     
+<span class="line_number"> 62 </span>        <span class="sign">}</span>
+<span class="line_number"> 63 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number"> 64 </span><span class="sign">}</span>
+<span class="line_number"> 65 </span>
+<span class="line_number"> 66 </span><span class="sign">#</span>country
+<span class="line_number"> 67 </span><span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'country'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number"> 68 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="quote">"Country: "</span><span class="sign">;</span>
+<span class="line_number"> 69 </span>        <span class="sign">$</span>temp<span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'country'</span><span class="sign">}</span><span class="sign">{</span><span class="squote">'item'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number"> 70 </span>        foreach<span class="sign">(</span><span class="sign">@</span><span class="sign">$</span>temp<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number"> 71 </span>                <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>_<span class="sign">.</span><span class="sign">$</span>ETX<span class="sign">;</span>     
+<span class="line_number"> 72 </span>        <span class="sign">}</span>
+<span class="line_number"> 73 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number"> 74 </span><span class="sign">}</span>
+<span class="line_number"> 75 </span>
+<span class="line_number"> 76 </span><span class="sign">#</span>directors
+<span class="line_number"> 77 </span><span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'directors'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number"> 78 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="quote">"Directors: "</span><span class="sign">;</span>
+<span class="line_number"> 79 </span>        <span class="sign">$</span>temp<span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'directors'</span><span class="sign">}</span><span class="sign">{</span><span class="squote">'item'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number"> 80 </span>        foreach<span class="sign">(</span><span class="sign">@</span><span class="sign">$</span>temp<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number"> 81 </span>                <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>_<span class="sign">.</span><span class="sign">$</span>ETX<span class="sign">;</span>     
+<span class="line_number"> 82 </span>        <span class="sign">}</span>
+<span class="line_number"> 83 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number"> 84 </span><span class="sign">}</span>
+<span class="line_number"> 85 </span>
+<span class="line_number"> 86 </span><span class="sign">#</span>episodes
+<span class="line_number"> 87 </span><span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'episodes'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number"> 88 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="quote">"Episodes: "</span><span class="sign">;</span>
+<span class="line_number"> 89 </span>        <span class="sign">$</span>temp<span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'episodes'</span><span class="sign">}</span><span class="sign">{</span><span class="squote">'item'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number"> 90 </span>        foreach<span class="sign">(</span><span class="sign">@</span><span class="sign">$</span>temp<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number"> 91 </span>                <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>_<span class="sign">.</span><span class="sign">$</span>ETX<span class="sign">;</span>     
+<span class="line_number"> 92 </span>        <span class="sign">}</span>
+<span class="line_number"> 93 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number"> 94 </span><span class="sign">}</span>
+<span class="line_number"> 95 </span>
+<span class="line_number"> 96 </span><span class="sign">#</span>film_locations
+<span class="line_number"> 97 </span><span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'film_locations'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number"> 98 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="quote">"Locations: "</span><span class="sign">;</span>
+<span class="line_number"> 99 </span>        <span class="sign">$</span>temp<span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'film_locations'</span><span class="sign">}</span><span class="sign">{</span><span class="squote">'item'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number">100 </span>        foreach<span class="sign">(</span><span class="sign">@</span><span class="sign">$</span>temp<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">101 </span>                <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>_<span class="sign">.</span><span class="sign">$</span>ETX<span class="sign">;</span>     
+<span class="line_number">102 </span>        <span class="sign">}</span>
+<span class="line_number">103 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number">104 </span><span class="sign">}</span>
+<span class="line_number">105 </span>
+<span class="line_number">106 </span><span class="sign">#</span>genres
+<span class="line_number">107 </span><span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'genres'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">108 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="quote">"Genres: "</span><span class="sign">;</span>
+<span class="line_number">109 </span>        <span class="sign">$</span>temp<span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'genres'</span><span class="sign">}</span><span class="sign">{</span><span class="squote">'item'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number">110 </span>        foreach<span class="sign">(</span><span class="sign">@</span><span class="sign">$</span>temp<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">111 </span>                <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>_<span class="sign">.</span><span class="sign">$</span>ETX<span class="sign">;</span>     
+<span class="line_number">112 </span>        <span class="sign">}</span>
+<span class="line_number">113 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number">114 </span><span class="sign">}</span>
+<span class="line_number">115 </span>
+<span class="line_number">116 </span><span class="sign">#</span>imdb_id
+<span class="line_number">117 </span><span class="keyword">#if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'imdb_id'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">118 </span><span class="sign">#</span>       <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'imdb_id'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number">119 </span><span class="sign">#</span><span class="sign">}</span>
+<span class="line_number">120 </span><span class="sign">#</span><span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number">121 </span>
+<span class="line_number">122 </span><span class="sign">#</span>imdb_url
+<span class="line_number">123 </span><span class="keyword">#if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'imdb_url'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">124 </span><span class="sign">#</span>       <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'imdb_url'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number">125 </span><span class="sign">#</span><span class="sign">}</span>
+<span class="line_number">126 </span><span class="sign">#</span><span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number">127 </span>
+<span class="line_number">128 </span><span class="sign">#</span>language
+<span class="line_number">129 </span><span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'language'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">130 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="quote">"Language: "</span><span class="sign">;</span>        
+<span class="line_number">131 </span>        <span class="sign">$</span>temp<span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'language'</span><span class="sign">}</span><span class="sign">{</span><span class="squote">'item'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number">132 </span>        foreach<span class="sign">(</span><span class="sign">@</span><span class="sign">$</span>temp<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">133 </span>                <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>_<span class="sign">.</span><span class="sign">$</span>ETX<span class="sign">;</span>     
+<span class="line_number">134 </span>        <span class="sign">}</span>
+<span class="line_number">135 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number">136 </span><span class="sign">}</span>
+<span class="line_number">137 </span><span class="sign">#</span>plot
+<span class="line_number">138 </span><span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'plot'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">139 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="quote">"Plot: "</span><span class="sign">;</span>
+<span class="line_number">140 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'plot'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number">141 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number">142 </span><span class="sign">}</span>
+<span class="line_number">143 </span>
+<span class="line_number">144 </span><span class="sign">#</span>poster
+<span class="line_number">145 </span><span class="keyword">#if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'poster'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">146 </span><span class="sign">#</span>       <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'poster'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number">147 </span><span class="sign">#</span>       <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number">148 </span><span class="sign">#</span><span class="sign">}</span>
+<span class="line_number">149 </span>
+<span class="line_number">150 </span><span class="sign">#</span>rated
+<span class="line_number">151 </span><span class="keyword">#if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'rated'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">152 </span><span class="sign">#</span>       <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'rated'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number">153 </span><span class="sign">#</span>       <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number">154 </span><span class="sign">#</span><span class="sign">}</span>
+<span class="line_number">155 </span>
+<span class="line_number">156 </span><span class="sign">#</span>rating
+<span class="line_number">157 </span><span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'rating'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">158 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="quote">"IMDB-Rating: "</span><span class="sign">;</span>
+<span class="line_number">159 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'rating'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number">160 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number">161 </span><span class="sign">}</span>
+<span class="line_number">162 </span>
+<span class="line_number">163 </span><span class="sign">#</span>release_date
+<span class="line_number">164 </span><span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'release_date'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">165 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="quote">"Release date: "</span><span class="sign">;</span>
+<span class="line_number">166 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'release_date'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number">167 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number">168 </span><span class="sign">}</span>
+<span class="line_number">169 </span>
+<span class="line_number">170 </span><span class="sign">#</span>runtime
+<span class="line_number">171 </span><span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'runtime'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">172 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="quote">"Runtime: "</span><span class="sign">;</span>
+<span class="line_number">173 </span>        <span class="sign">$</span>temp<span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'runtime'</span><span class="sign">}</span><span class="sign">{</span><span class="squote">'item'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number">174 </span>        <span class="keyword">for</span><span class="sign">(</span><span class="sign">@</span><span class="sign">$</span>temp<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">175 </span>                <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>_<span class="sign">.</span><span class="sign">$</span>ETX<span class="sign">;</span>
+<span class="line_number">176 </span>        <span class="sign">}</span>
+<span class="line_number">177 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number">178 </span><span class="sign">}</span>
+<span class="line_number">179 </span>
+<span class="line_number">180 </span><span class="sign">#</span>type
+<span class="line_number">181 </span><span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'type'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">182 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="quote">"Type: "</span><span class="sign">;</span>
+<span class="line_number">183 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'type'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number">184 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number">185 </span><span class="sign">}</span>
+<span class="line_number">186 </span>
+<span class="line_number">187 </span><span class="sign">#</span>writers
+<span class="line_number">188 </span><span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'writers'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">189 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="quote">"Writer: "</span><span class="sign">;</span>
+<span class="line_number">190 </span>        <span class="sign">$</span>temp<span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'writers'</span><span class="sign">}</span><span class="sign">{</span><span class="squote">'item'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number">191 </span>        foreach<span class="sign">(</span><span class="sign">@</span><span class="sign">$</span>temp<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">192 </span>                <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>_<span class="sign">.</span><span class="sign">$</span>ETX<span class="sign">;</span>     
+<span class="line_number">193 </span>        <span class="sign">}</span>
+<span class="line_number">194 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number">195 </span><span class="sign">}</span>
+<span class="line_number">196 </span>
+<span class="line_number">197 </span><span class="sign">#</span>year
+<span class="line_number">198 </span><span class="keyword">if</span><span class="sign">(</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'year'</span><span class="sign">}</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">199 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="quote">"Year: "</span><span class="sign">;</span>
+<span class="line_number">200 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>movie<span class="sign">{</span><span class="squote">'year'</span><span class="sign">}</span><span class="sign">;</span>
+<span class="line_number">201 </span>        <span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>EOT<span class="sign">;</span>
+<span class="line_number">202 </span><span class="sign">}</span>
+<span class="line_number">203 </span>
+<span class="line_number">204 </span><span class="sign">$</span>db_entry<span class="sign">.</span><span class="sign">=</span><span class="sign">$</span>ACK<span class="sign">;</span>
+<span class="line_number">205 </span>print <span class="sign">$</span>fh <span class="sign">$</span>db_entry<span class="sign">;</span>
+</pre>
+
+</div> <!-- content -->
+<div id="footer">
+<p>Generated from ./../IntelliRack/RPi/utils/CreateTempDbEntry.pl with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.38 on Fri Feb 15 2013 18:27:44
+</p>
+</div> <!-- footer -->

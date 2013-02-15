@@ -24,36 +24,40 @@
 */ 
  char* dvd_name(){
 	FILE *filehandle = NULL;
-	static char title[56]={0};
+	static char title[256]={0};
 	char *dvd_device="/dev/sr0";
 
-	int  i;
+	int i=40, fail_ctu=0;
+
+try_open_disc:
+	fail_ctu++;
 
 	if (! (filehandle = fopen(dvd_device, "r"))) {
 		fprintf(stderr, "Couldn't open %s for title\n", dvd_device);
-		strcpy(title, "unknown");
+		strcpy(title, "unknown\0");
+if(fail_ctu<100)goto try_open_disc;
+	} else {
+		if ( fseek(filehandle, 32808, SEEK_SET )) {
+			fprintf(stderr, "Couldn't seek in %s for title\n", dvd_device);
+			strcpy(title, "unknown\0");
+			fclose (filehandle);
+if(fail_ctu<100)goto try_open_disc;
+		} else {
+			if ( 32 != (i = fread(title, 1, 32, filehandle)) ) {
+				fprintf(stderr, "Couldn't read enough bytes for title.\n");
+				strcpy(title, "unknown\0");
+				fclose (filehandle);
+if(fail_ctu<100)goto try_open_disc;
+			}
+		}
+		fclose (filehandle);
 	}
 
-	if ( fseek(filehandle, 32808, SEEK_SET )) {
-		fclose(filehandle);
-		fprintf(stderr, "Couldn't seek in %s for title\n", dvd_device);
-		strcpy(title, "unknown");
-	}
-
-	if ( 32 != (i = fread(title, 1, 32, filehandle)) ) {
-		fclose(filehandle);
-		fprintf(stderr, "Couldn't read enough bytes for title.\n");
-		strcpy(title, "unknown");
-	}
-
-	fclose (filehandle);
 
 	title[32] = '\0';
 	while(i-- > 2)
-	if(title[i] == ' ') title[i] = '\0';
+	if(title[i] == ' '||title[i] == '\n') title[i] = '\0';
 
-	printf("%s", title);
-	
 	return title;
 }
 /*****/ 
@@ -70,10 +74,12 @@
 */
 FILE* system_out(char *command){
 	
-	int sout1;
+	int sout1,i;
 	fpos_t pos;
 	char buffer[]="sysout.stdout";	
 	FILE* tmp_file;
+	
+	fprintf(stdout, "%s\n", command);
 
 	fflush(stdout);
 

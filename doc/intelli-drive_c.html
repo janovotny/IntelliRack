@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="./robodoc.css" type="text/css" />
 <title>./../IntelliRack/RPi/intelli-drive.c</title>
 <!-- Source: ./../IntelliRack/RPi/intelli-drive.c -->
-<!-- Generated with ROBODoc Version 4.99.41 (Feb  6 2011) -->
+<!-- Generated with ROBODoc Version 4.99.38 (May  2 2009) -->
 </head>
 <body>
 <div id="logo">
@@ -24,13 +24,15 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li><a href="#robo0">drive</a></li>
-<li><a href="#robo13">position</a></li>
-<li><a href="#robo15">secure_position</a></li>
+<li><a href="#robo1">drive</a></li>
+<li><a href="#robo7">drive_position</a></li>
+<li><a href="#robo12">get_disc</a></li>
+<li><a href="#robo17">secure_position</a></li>
+<li><a href="#robo18">set_disc</a></li>
 </ul>
 <hr />
 <a name="RPi2fdrive"></a>
-<a name="robo0"></a><h2>drive</h2>
+<a name="robo1"></a><h2>drive</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_modules.html#robo_top_of_doc">Modules</a> ]</p>
 <p class="item_name">NAME</p>
@@ -41,33 +43,57 @@
 </pre>
 
 <hr />
-<a name="RPi2fposition"></a>
-<a name="robo13"></a><h2>position</h2>
+<a name="RPi2fdrive5fposition"></a>
+<a name="robo7"></a><h2>drive_position</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre>       This function tells the drives to move to a specifig <strong>position</strong>.
+<pre>       This function tells the drives to move to a specifig position.
 </pre>
 <p class="item_name">OUTPUT</p>
-<pre>       - Returns 1 if the <strong>position</strong> is reached otherwise 0
+<pre>       - Returns 1 if the position is reached otherwise 0
 </pre>
 <p class="item_name">SOURCE</p>
-<pre class="source"><span class="line_number">38 </span> <span class="keyword">int</span> drive_position<span class="sign">(</span><span class="keyword">int</span> pos<span class="sign">)</span><span class="sign">{</span>
+<pre class="source"><span class="line_number">38 </span> <span class="keyword">int</span> <strong>drive_position</strong><span class="sign">(</span><span class="keyword">long</span> xpos<span class="sign">,</span> <span class="keyword">long</span> ypos<span class="sign">)</span><span class="sign">{</span>
 <span class="line_number">39 </span>         <span class="comment">//Not implemented yet</span>
 <span class="line_number">40 </span>        <span class="keyword">return</span> 0<span class="sign">;</span>
 <span class="line_number">41 </span><span class="sign">}</span>
 </pre>
 
 <hr />
-<a name="RPi2fsecure5fposition"></a>
-<a name="robo15"></a><h2>secure_position</h2>
+<a name="RPi2fget5fdisc"></a>
+<a name="robo12"></a><h2>get_disc</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">FUNCTION</p>
-<pre>       This function tells the drives to move into a secure <a href="#robo13">position</a>.
+<pre>       This function tells the drives to move to a specifig position.
 </pre>
 <p class="item_name">OUTPUT</p>
-<pre>       - Returns 1 if the secure <a href="#robo13">position</a> is reached otherwise 0
+<pre>       - Returns 1 if the position is reached otherwise 0
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="line_number">53 </span> <span class="keyword">int</span> <strong>get_disc</strong><span class="sign">(</span><span class="keyword">int</span> pos<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">54 </span>        <span class="comment">//Not implemented yet</span>
+<span class="line_number">55 </span>        <span class="keyword">char</span> update_index<span class="sign">[</span>1024<span class="sign">]</span><span class="sign">;</span>
+<span class="line_number">56 </span>        
+<span class="line_number">57 </span>        fprintf<span class="sign">(</span>stderr<span class="sign">,</span> <span class="quote">"Get disc from %i\n"</span><span class="sign">,</span> pos<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">58 </span>
+<span class="line_number">59 </span>        sprintf<span class="sign">(</span>update_index<span class="sign">,</span> <span class="quote">"sed '/^%i:/d' ./storage"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">60 </span>        system<span class="sign">(</span>update_index<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">61 </span>        <span class="keyword">return</span> 0<span class="sign">;</span>
+<span class="line_number">62 </span><span class="sign">}</span>
+</pre>
+
+<hr />
+<a name="RPi2fsecure5fposition"></a>
+<a name="robo17"></a><h2>secure_position</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre>       This function tells the drives to move into a secure position.
+</pre>
+<p class="item_name">OUTPUT</p>
+<pre>       - Returns 1 if the secure position is reached otherwise 0
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="line_number">25 </span> <span class="keyword">int</span> <strong>secure_position</strong><span class="sign">(</span><span class="sign">)</span><span class="sign">{</span>
@@ -76,8 +102,38 @@
 <span class="line_number">28 </span><span class="sign">}</span>
 </pre>
 
+<hr />
+<a name="RPi2fset5fdisc"></a>
+<a name="robo18"></a><h2>set_disc</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">FUNCTION</p>
+<pre>       This function tells the drives to move to a specifig position.
+</pre>
+<p class="item_name">OUTPUT</p>
+<pre>       - Returns 1 if the position is reached otherwise 0
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="line_number">74 </span><span class="keyword">int</span> <strong>set_disc</strong><span class="sign">(</span><span class="keyword">char</span><span class="sign">*</span> filepath<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">75 </span>        <span class="comment">//Not implemented yet</span>
+<span class="line_number">76 </span>        FILE<span class="sign">*</span> FilePtr<span class="sign">;</span>
+<span class="line_number">77 </span>        <span class="keyword">int</span> next_free_place<span class="sign">=</span>0<span class="sign">;</span>
+<span class="line_number">78 </span>        
+<span class="line_number">79 </span>        
+<span class="line_number">80 </span>        fprintf<span class="sign">(</span>stderr<span class="sign">,</span> <span class="quote">"Set disc with data %s\n"</span><span class="sign">,</span> filepath<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">81 </span>        FilePtr<span class="sign">=</span>fopen<span class="sign">(</span><span class="quote">"./storage"</span><span class="sign">,</span><span class="quote">"a"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">82 </span>        fprintf<span class="sign">(</span>FilePtr<span class="sign">,</span><span class="quote">"%i:%s\n"</span><span class="sign">,</span>next_free_place<span class="sign">,</span> filepath<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">83 </span>        fclose<span class="sign">(</span>FilePtr<span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">84 </span>
+<span class="line_number">85 </span>        <a href="./intellirack_c.html#robo22">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"Action"</span><span class="sign">,</span><span class="quote">"0"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">86 </span>        <a href="./intellirack_c.html#robo22">write_outputs</a><span class="sign">(</span>PANEL_WRITE<span class="sign">,</span> <span class="quote">"SetPage"</span><span class="sign">,</span><span class="quote">"1"</span><span class="sign">)</span><span class="sign">;</span>
+<span class="line_number">87 </span>
+<span class="line_number">88 </span>        <span class="keyword">return</span> 0<span class="sign">;</span>
+<span class="line_number">89 </span><span class="sign">}</span>
+</pre>
+
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./../IntelliRack/RPi/intelli-drive.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.41 on Wed Feb 13 2013 19:51:47
+<p>Generated from ./../IntelliRack/RPi/intelli-drive.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.38 on Fri Feb 15 2013 18:27:44
 </p>
 </div> <!-- footer -->

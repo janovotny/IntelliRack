@@ -52,7 +52,9 @@ sub find_movie($){
 
 	my $search_string=$_[0];	
 	my $xml_data=ducky_search($search_string);
-
+	if($xml_data==-1){
+		return -1;
+	}
 	if(length($xml_data) > 0){
 		return XMLin($xml_data, ForceArray=>['item']);
 	}
@@ -89,16 +91,19 @@ sub ducky_search($){
 	if($req=~/www\.imdb\.com/){
 		$req=~s/title\?/tt/ig;
 		$req=~s/^.*(tt[0-9]+).*$/$1/;
-		print "Found imdb id: ".$req."\n";
+		#print "Found imdb id: ".$req."\n";
 
 		while($fail_counter<3){
 			$fail_counter++;
 			($ret=$browser->get("http://imdbapi.org/?type=xml&plot=full&episode=0&id=".$req)) and $fail_counter=4;
 			#print "http://imdbapi.org/?type=xml&plot=full&episode=0&id=".$req;
+			$ret=$ret->content;
 		}
 	}
-	$ret=$ret->content;
-	if($fail_counter!=4){ print "\nFAILED TO LOAD DATA\n"; exit -1; }
+	if($fail_counter!=4){ 
+		#print "\nFAILED TO LOAD DATA\n";
+		return -1;
+	}
 	return $ret;
 }
 #*****

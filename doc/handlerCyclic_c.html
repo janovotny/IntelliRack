@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="./robodoc.css" type="text/css" />
 <title>./../IntelliRack/Panel/Logical/handler/handlerCyclic.c</title>
 <!-- Source: ./../IntelliRack/Panel/Logical/handler/handlerCyclic.c -->
-<!-- Generated with ROBODoc Version 4.99.41 (Feb  6 2011) -->
+<!-- Generated with ROBODoc Version 4.99.38 (May  2 2009) -->
 </head>
 <body>
 <div id="logo">
@@ -24,13 +24,13 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li><a href="#robo4">Panelhandler</a></li>
-<li><a href="#robo10">handlerCyclic</a></li>
-<li><a href="#robo11">load_image</a></li>
+<li><a href="#robo5">Panelhandler</a></li>
+<li><a href="#robo13">handlerCyclic</a></li>
+<li><a href="#robo14">load_image</a></li>
 </ul>
 <hr />
 <a name="Panel2fPanelhandler"></a>
-<a name="robo4"></a><h2>Panelhandler</h2>
+<a name="robo5"></a><h2>Panelhandler</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_modules.html#robo_top_of_doc">Modules</a> ]</p>
 <p class="item_name">NAME</p>
@@ -42,7 +42,7 @@
 
 <hr />
 <a name="Panel2fhandlerCyclic"></a>
-<a name="robo10"></a><h2>handlerCyclic</h2>
+<a name="robo13"></a><h2>handlerCyclic</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">FUNCTION</p>
@@ -59,28 +59,31 @@
 <span class="line_number">78 </span>        Selection<span class="sign">=</span>Selection<span class="sign">;</span>
 <span class="line_number">79 </span>        Search<span class="sign">[</span>0<span class="sign">]</span><span class="sign">=</span>Search<span class="sign">[</span>0<span class="sign">]</span><span class="sign">;</span>
 <span class="line_number">80 </span>        
-<span class="line_number">81 </span>        <span class="keyword">if</span><span class="sign">(</span>Action<span class="sign">!</span><span class="sign">=</span>0<span class="sign">)</span>SetPage<span class="sign">=</span>0<span class="sign">;</span>
-<span class="line_number">82 </span>        
-<span class="line_number">83 </span>        <span class="keyword">for</span><span class="sign">(</span>i<span class="sign">=</span>0<span class="sign">;</span>i<span class="sign">&lt;</span>42<span class="sign">;</span>i<span class="sign">+</span><span class="sign">+</span><span class="sign">)</span><span class="sign">{</span>
-<span class="line_number">84 </span>                Strings<span class="sign">[</span>i<span class="sign">]</span><span class="sign">[</span>0<span class="sign">]</span><span class="sign">=</span>Strings<span class="sign">[</span>i<span class="sign">]</span><span class="sign">[</span>0<span class="sign">]</span><span class="sign">;</span>
-<span class="line_number">85 </span>        <span class="sign">}</span>
-<span class="line_number">86 </span>        
-<span class="line_number">87 </span>        <span class="keyword">if</span><span class="sign">(</span>GetPage<span class="sign">=</span><span class="sign">=</span>3<span class="sign">)</span><span class="sign">{</span>
-<span class="line_number">88 </span><span class="comment">//              <a href="#robo11">load_image</a>();</span>
-<span class="line_number">89 </span>        <span class="sign">}</span> <span class="keyword">else</span> <span class="sign">{</span>
-<span class="line_number">90 </span>                state<span class="sign">.</span>bmpcase<span class="sign">=</span>0<span class="sign">;</span>
-<span class="line_number">91 </span>        <span class="sign">}</span>
-<span class="line_number">92 </span><span class="sign">}</span>
+<span class="line_number">81 </span>        <span class="keyword">if</span><span class="sign">(</span>Action<span class="sign">!</span><span class="sign">=</span>0<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">82 </span>                Edit<span class="sign">=</span>1<span class="sign">;</span>
+<span class="line_number">83 </span>                SetPage<span class="sign">=</span>0<span class="sign">;</span>
+<span class="line_number">84 </span>        <span class="sign">}</span>
+<span class="line_number">85 </span>        
+<span class="line_number">86 </span>        <span class="keyword">for</span><span class="sign">(</span>i<span class="sign">=</span>0<span class="sign">;</span>i<span class="sign">&lt;</span>42<span class="sign">;</span>i<span class="sign">+</span><span class="sign">+</span><span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">87 </span>                Strings<span class="sign">[</span>i<span class="sign">]</span><span class="sign">[</span>0<span class="sign">]</span><span class="sign">=</span>Strings<span class="sign">[</span>i<span class="sign">]</span><span class="sign">[</span>0<span class="sign">]</span><span class="sign">;</span>
+<span class="line_number">88 </span>        <span class="sign">}</span>
+<span class="line_number">89 </span>        
+<span class="line_number">90 </span>        <span class="keyword">if</span><span class="sign">(</span>GetPage<span class="sign">=</span><span class="sign">=</span>3<span class="sign">)</span><span class="sign">{</span>
+<span class="line_number">91 </span><span class="comment">//              <a href="#robo14">load_image</a>();</span>
+<span class="line_number">92 </span>        <span class="sign">}</span> <span class="keyword">else</span> <span class="sign">{</span>
+<span class="line_number">93 </span>                state<span class="sign">.</span>bmpcase<span class="sign">=</span>0<span class="sign">;</span>
+<span class="line_number">94 </span>        <span class="sign">}</span>
+<span class="line_number">95 </span><span class="sign">}</span>
 </pre>
 
 <hr />
 <a name="Panel2fload5fimage"></a>
-<a name="robo11"></a><h2>load_image</h2>
+<a name="robo14"></a><h2>load_image</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">FUNCTION</p>
 <pre>       Function loads image from file and display it on screen.
-       Disabled by now because B&amp;R uses a non standardized image format
+       Disabled by now because B&amp;R uses a unusual image format
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="line_number">32 </span><span class="keyword">void</span> <strong>load_image</strong><span class="sign">(</span><span class="sign">)</span><span class="sign">{</span>
@@ -119,6 +122,6 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./../IntelliRack/Panel/Logical/handler/handlerCyclic.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.41 on Wed Feb 13 2013 19:51:47
+<p>Generated from ./../IntelliRack/Panel/Logical/handler/handlerCyclic.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.38 on Fri Feb 15 2013 18:27:44
 </p>
 </div> <!-- footer -->
