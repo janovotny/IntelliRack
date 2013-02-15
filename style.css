@@ -2,3 +2,19 @@ body{
 	font-family: Verdana, Helvetica, Arial;
 	font-size: 14pt;
 }
+
+span.title{
+	font-weight: bold;
+	font-size: 16pt;
+}
+
+img{
+	position:fixed;
+	float: left;
+}
+
+div.movie{
+	padding: 4px;
+	margin-left: 250px;
+	border: 1px solid #A0A0A0;
+}
