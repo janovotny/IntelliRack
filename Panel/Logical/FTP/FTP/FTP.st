@@ -22,7 +22,6 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 
-
 	CASE Network.Data.Step OF
 		
 		0:	IF Network.Command.bCfgSetFTPServer = 1 THEN

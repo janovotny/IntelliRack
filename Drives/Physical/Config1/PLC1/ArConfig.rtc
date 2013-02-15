@@ -199,16 +199,16 @@
         <Parameter ID="MaximumCurrent02" Value="35" />
       </Group>
       <Group ID="FullStepThreshold">
-        <Parameter ID="FullStepThreshold01_conf" Value="0" />
-        <Parameter ID="FullStepThreshold02_conf" Value="0" />
+        <Parameter ID="FullStepThreshold01_conf" Value="2000" />
+        <Parameter ID="FullStepThreshold02_conf" Value="2000" />
       </Group>
       <Group ID="Referencing Configuration">
         <Selector ID="RefConfig01_selector" Value="unconditional" />
         <Selector ID="RefConfig02_selector" Value="unconditional" />
       </Group>
       <Group ID="MPGenConfiguration">
-        <Parameter ID="MaxSpeed01pos_conf" Value="4000" />
-        <Parameter ID="MaxSpeed02pos_conf" Value="4005" />
+        <Parameter ID="MaxSpeed01pos_conf" Value="5000" />
+        <Parameter ID="MaxSpeed02pos_conf" Value="5000" />
         <Parameter ID="MaxAcc01_conf" Value="1000" />
         <Parameter ID="MaxDec01_conf" Value="1000" />
         <Parameter ID="MaxAcc02_conf" Value="1000" />
@@ -242,7 +242,7 @@
         <Parameter ID="MaximumCurrent02" Value="35" />
       </Group>
       <Group ID="FullStepThreshold">
-        <Parameter ID="FullStepThreshold01_conf" Value="0" />
+        <Parameter ID="FullStepThreshold01_conf" Value="3000" />
         <Parameter ID="FullStepThreshold02_conf" Value="0" />
       </Group>
       <Group ID="Referencing Configuration">
@@ -250,8 +250,8 @@
         <Selector ID="RefConfig02_selector" Value="unconditional" />
       </Group>
       <Group ID="MPGenConfiguration">
-        <Parameter ID="MaxSpeed01pos_conf" Value="4000" />
-        <Parameter ID="MaxSpeed02pos_conf" Value="4000" />
+        <Parameter ID="MaxSpeed01pos_conf" Value="6000" />
+        <Parameter ID="MaxSpeed02pos_conf" Value="6000" />
         <Parameter ID="MaxAcc01_conf" Value="1000" />
         <Parameter ID="MaxDec01_conf" Value="1000" />
         <Parameter ID="MaxAcc02_conf" Value="1000" />
@@ -262,8 +262,8 @@
         <Parameter ID="FixedPos01b_conf" Value="0" />
         <Parameter ID="FixedPos02a_conf" Value="0" />
         <Parameter ID="FixedPos02b_conf" Value="0" />
-        <Parameter ID="RefSpeed01_conf" Value="500" />
-        <Parameter ID="RefSpeed02_conf" Value="500" />
+        <Parameter ID="RefSpeed01_conf" Value="1000" />
+        <Parameter ID="RefSpeed02_conf" Value="1000" />
         <Parameter ID="JoltTime01_conf" Value="0" />
         <Parameter ID="JoltTime02_conf" Value="0" />
       </Group>

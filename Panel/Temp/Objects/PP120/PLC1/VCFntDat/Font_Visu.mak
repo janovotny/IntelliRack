@@ -39,6 +39,21 @@ VC_STATIC_OPTIONS_Visu='$(TEMP_PATH_Visu)/vcStaticOptions.xml'
 TTFFLAGS_Visu= -P '$(AS_PROJECT_PATH)' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo'
 
 #
+# Font ariblk
+#
+ifneq ($(VC_FONT_ariblk),1)
+VC_FONT_ariblk=1
+$(AS_CPU_PATH)/VcFntDat/ariblk.vco:$(AS_CPU_PATH)/VcFntDat/ariblk.vci
+	 $(VCC) -f '$<' -o '$@' $(TTFFLAGS_Visu) $(VCCFLAGS_Visu)
+
+$(AS_CPU_PATH)/VcFntDat/ariblk.ccf:$(AS_CPU_PATH)/VcFntDat/ariblk.vco
+	 $(LINK) '$^' -o '$@' -warningLevel2 -m ariblk.ttf -name Visu -profile 'False' -sfas
+
+$(AS_CPU_PATH)/ariblk.br:$(AS_CPU_PATH)/VcFntDat/ariblk.ccf
+	 $(MODGEN) -m $(VCLOD) -f '$<' -o '$@' -d vcgclass -v V1.00.0 -profile False -vc '$(VCOBJECT_Visu)' -b
+endif
+
+#
 # Font arialbd
 #
 ifneq ($(VC_FONT_arialbd),1)
@@ -68,4 +83,4 @@ $(AS_CPU_PATH)/arial.br:$(AS_CPU_PATH)/VcFntDat/arial.ccf
 	 $(MODGEN) -m $(VCLOD) -f '$<' -o '$@' -d vcgclass -v V1.00.0 -profile False -vc '$(VCOBJECT_Visu)' -b
 endif
 
-FONT_MODULES_Visu=$(TEMP_PATH_ROOT_Visu)/Objects/$(AS_CONFIGURATION)/$(AS_PLC)/arialbd.br $(TEMP_PATH_ROOT_Visu)/Objects/$(AS_CONFIGURATION)/$(AS_PLC)/arial.br 
+FONT_MODULES_Visu=$(TEMP_PATH_ROOT_Visu)/Objects/$(AS_CONFIGURATION)/$(AS_PLC)/ariblk.br $(TEMP_PATH_ROOT_Visu)/Objects/$(AS_CONFIGURATION)/$(AS_PLC)/arialbd.br $(TEMP_PATH_ROOT_Visu)/Objects/$(AS_CONFIGURATION)/$(AS_PLC)/arial.br 

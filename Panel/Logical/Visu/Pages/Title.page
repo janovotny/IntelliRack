@@ -159,14 +159,12 @@
           <Property Name="Description" Value=""/>
           <Property Name="VirtualKey_LED" Value="False"/>
           <KeyActions>
-            <KeyAction ClassId="0x00000161">
-              <Property Name="CompletionDatapoint" Value="None"/>
-              <Property Name="CompletionValue" Value="0"/>
+            <KeyAction ClassId="0x00000160">
               <Property Name="Description" Value=""/>
               <Property Name="Locking" Value="Never"/>
               <Property Name="Name" Value="Action_0"/>
-              <Property Name="SetValue" Value="6"/>
-              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Action]"/>
+              <Property Name="Page" Value="Source[local].Page[InfoIG]"/>
+              <Property Name="Target" Value="Page"/>
             </KeyAction>
           </KeyActions>
         </VirtualKey>

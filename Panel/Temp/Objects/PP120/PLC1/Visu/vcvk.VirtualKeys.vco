@@ -2660,6 +2660,13 @@
       <Object Name="Source[local].VirtualKey[Next]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[Next]" />
       <Object Name="Source[local].VirtualKey[DiskOk]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[DiskOk]" />
       <Object Name="Source[local].VirtualKey[calib]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[calib]" />
+      <Object Name="Source[local].VirtualKey[Edit]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[Edit]" />
+      <Object Name="Source[local].VirtualKey[blu]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[blu]" />
+      <Object Name="Source[local].VirtualKey[bld]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[bld]" />
+      <Object Name="Source[local].VirtualKey[bnu]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[bnu]" />
+      <Object Name="Source[local].VirtualKey[bnd]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[bnd]" />
+      <Object Name="Source[local].VirtualKey[cu]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[cu]" />
+      <Object Name="Source[local].VirtualKey[cd]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[cd]" />
     </Folder>
   </Folder>
 </Intermediate>

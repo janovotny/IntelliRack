@@ -1,4 +1,12 @@
 <Language Name="en" ID="0">
+  <LogicalFont Name="Font_1">
+    <Property Name="PhysicalFont" Value="ariblk" />
+    <Property Name="Width" Value="0" />
+    <Property Name="Height" Value="15" />
+    <Property Name="Index" Value="7" />
+    <Property Name="FontSize" Value="28" />
+    <Property Name="AntiAliasing" Value="False" />
+  </LogicalFont>
   <LogicalFont Name="Info">
     <Property Name="PhysicalFont" Value="arialbd" />
     <Property Name="Width" Value="0" />

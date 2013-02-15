@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1359913750_1_
-#define _BUR_1359913750_1_
+#ifndef _BUR_1360914607_1_
+#define _BUR_1360914607_1_
 
 #include <bur/plctypes.h>
 
@@ -13,6 +13,7 @@
 
 
 /* Variables */
+_GLOBAL unsigned short Edit;
 _GLOBAL struct LibVisapi5_ST_state_type state;
 _GLOBAL unsigned short Limit;
 _GLOBAL plcstring Search[81];
@@ -36,5 +37,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Global.var\\\" scope \\\"global\\\"\\n\"")
 __asm__(".previous");
 
 
-#endif /* _BUR_1359913750_1_ */
+#endif /* _BUR_1360914607_1_ */
 

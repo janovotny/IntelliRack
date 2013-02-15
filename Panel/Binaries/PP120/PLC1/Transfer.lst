@@ -6,6 +6,7 @@
   <Operation Delete="FTP.br"/>
   <Operation Delete="handler.br"/>
   <Operation Delete="Visu.br"/>
+  <Operation Delete="vccnum.br"/>
   <Operation Delete="AsTCP.br"/>
   <Operation Delete="vccline.br"/>
   <Operation Delete="vccshape.br"/>
@@ -34,6 +35,7 @@
   <Operation Delete="vcshared.br"/>
   <Operation Delete="arial.br"/>
   <Operation Delete="arialbd.br"/>
+  <Operation Delete="ariblk.br"/>
   <Operation Delete="Visu03.br"/>
   <Operation Delete="Visu02.br"/>
   <Operation Delete="Visu01.br"/>
@@ -64,6 +66,7 @@
   <Operation Download="Visu01.br" Memory="UserROM"/>
   <Operation Download="Visu02.br" Memory="UserROM"/>
   <Operation Download="Visu03.br" Memory="UserROM"/>
+  <Operation Download="ariblk.br" Memory="UserROM"/>
   <Operation Download="arialbd.br" Memory="UserROM"/>
   <Operation Download="arial.br" Memory="UserROM"/>
   <Operation Download="vcshared.br" Memory="UserROM"/>
@@ -92,6 +95,7 @@
   <Operation Download="vccshape.br" Memory="UserROM"/>
   <Operation Download="vccline.br" Memory="UserROM"/>
   <Operation Download="AsTCP.br" Memory="UserROM"/>
+  <Operation Download="vccnum.br" Memory="UserROM"/>
   <Operation Download="Visu.br" Memory="UserROM"/>
   <Operation Download="handler.br" Memory="UserROM"/>
   <Operation Download="FTP.br" Memory="UserROM"/>

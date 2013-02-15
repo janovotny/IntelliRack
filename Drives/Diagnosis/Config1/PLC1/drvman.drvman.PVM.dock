@@ -23,14 +23,14 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=150 Type=0 Scope=0 Force=0 Index
                                     Ctrl                                     UINT    3 "                                                           16399"    2    6    1   10    0    0         
                                     Mode                                     SINT    3 "                                                               0"    2    2    1   10    0    0         
                                    Brake                                     BOOL    3 "                                                           FALSE"    2    1    1    2    0    0         
-                                  GetPos                                     DINT    1 "                                                             -30"    2    4    1   10    0    0         
-                                  Status                                     UINT    1 "                                                             567"    2    6    1   10    0    0         
+                                  GetPos                                     DINT    1 "                                                            8072"    2    4    1   10    0    0         
+                                  Status                                     UINT    1 "                                                             695"    2    6    1   10    0    0         
                                     Case                                    USINT    0 "                                                               3"    2    5    1   10    0    0         
                                 Drive[3]                                  stDrive    0 "                                                               *"    1   24    1    0    0    1         
                                   SetPos                                     DINT    3 "                                                               0"    2    4    1   10    0    0         
                                     Ctrl                                     UINT    3 "                                                           16399"    2    6    1   10    0    0         
                                     Mode                                     SINT    3 "                                                               0"    2    2    1   10    0    0         
                                    Brake                                     BOOL    3 "                                                           FALSE"    2    1    1    2    0    0         
-                                  GetPos                                     DINT    1 "                                                              -4"    2    4    1   10    0    0         
-                                  Status                                     UINT    1 "                                                             567"    2    6    1   10    0    0         
+                                  GetPos                                     DINT    1 "                                                           14336"    2    4    1   10    0    0         
+                                  Status                                     UINT    1 "                                                             695"    2    6    1   10    0    0         
                                     Case                                    USINT    0 "                                                               3"    2    5    1   10    0    0         

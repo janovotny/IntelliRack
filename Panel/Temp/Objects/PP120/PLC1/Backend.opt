@@ -1,3 +1,2 @@
 handler	"$(AS_CPU_PATH)/handler/a.out" -o "$(AS_CPU_PATH)/handler/handler.ox" -T SG4 -r Cyclic2   -G V4.1.2  --$$$newFormat$$$
 FTP	"$(AS_CPU_PATH)/FTP/a.out" -o "$(AS_CPU_PATH)/FTP/FTP.ox" -T SG4 -r Cyclic3   -G V4.1.2  --$$$newFormat$$$
-loadBitmap	"$(AS_CPU_PATH)/loadBitmap/a.out" -o "$(AS_CPU_PATH)/loadBitmap/loadBitmap.ox" -T SG4 -r Cyclic2   -G V4.1.2  --$$$newFormat$$$

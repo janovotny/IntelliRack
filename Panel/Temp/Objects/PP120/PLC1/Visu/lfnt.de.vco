@@ -8,8 +8,17 @@
         <Byte Name="BidiMode">0</Byte>
         <Byte Name="Reserved">0</Byte>
         <UInt16 Name="Reserved">0</UInt16>
-        <UInt32 Name="LogFontTableEntries">7</UInt32>
+        <UInt32 Name="LogFontTableEntries">8</UInt32>
         <Group Name="LogFontTable">
+          <Symbol Name="Font_1" ID="0">
+            <String Name="PhysicalFontName" Encoding="ASCII">ariblk</String>
+            <Binary Name="FillData" Encoding="Base64">AAAAAAAAAAAAAAAAAAAAAAA=</Binary>
+            <UInt32 Name="DefaultWidth">0</UInt32>
+            <UInt32 Name="DefaultHeight">15</UInt32>
+            <UInt32 Name="FontSize">28</UInt32>
+            <UInt32 Name="Index">7</UInt32>
+            <UInt32 Name="AntiAliasing">0</UInt32>
+          </Symbol>
           <Symbol Name="Info" ID="0">
             <String Name="PhysicalFontName" Encoding="ASCII">arialbd</String>
             <Binary Name="FillData" Encoding="Base64">AAAAAAAAAAAAAAAAAAAAAA==</Binary>
@@ -78,6 +87,7 @@
     </Folder>
   </Folder>
   <Folder Name="LogFonts">
+    <Object Name="Font_1" ClsId="0x0" Version="0" TargetIndex="7" Type="FNT" RefString="Source[local].Font[Font_1]" />
     <Object Name="Info" ClsId="0x0" Version="0" TargetIndex="6" Type="FNT" RefString="Source[local].Font[Info]" />
     <Object Name="Status" ClsId="0x0" Version="0" TargetIndex="5" Type="FNT" RefString="Source[local].Font[Status]" />
     <Object Name="Html_SDM" ClsId="0x0" Version="0" TargetIndex="4" Type="FNT" RefString="Source[local].Font[Html_SDM]" />

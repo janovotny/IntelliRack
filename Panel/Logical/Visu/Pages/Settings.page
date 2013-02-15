@@ -28,7 +28,6 @@
           <Text ID="95140" Value="Backlight"/>
           <Text ID="95141" Value="Home"/>
           <Text ID="95143" Value="IP-Address:"/>
-          <Text ID="95144" Value=""/>
           <Text ID="95145" Value="Brightness"/>
           <Text ID="95146" Value="Contrast"/>
           <Text ID="95147" Value="Calibrate"/>
@@ -37,7 +36,6 @@
           <Text ID="95140" Value="Backlight"/>
           <Text ID="95141" Value="Hauptmenu"/>
           <Text ID="95143" Value="IP-Adresse:"/>
-          <Text ID="95144" Value=""/>
           <Text ID="95145" Value="Brightness"/>
           <Text ID="95146" Value="Contrast"/>
           <Text ID="95147" Value="Kalibrieren"/>
@@ -46,7 +44,6 @@
           <Index ID="95140" Value="12"/>
           <Index ID="95141" Value="13"/>
           <Index ID="95143" Value="15"/>
-          <Index ID="95144" Value="16"/>
           <Index ID="95145" Value="17"/>
           <Index ID="95146" Value="18"/>
           <Index ID="95147" Value="19"/>
@@ -69,7 +66,7 @@
           <Property Name="TextSimulationValue" Value="0"/>
           <Property Name="TextSource" Value="None"/>
           <Property Name="Top" Value="40"/>
-          <Property Name="VirtualKey" Value="Source[local].VirtualKey[calib]"/>
+          <Property Name="VirtualKey" Value="Source[local].VirtualKey[blu]"/>
           <Property Name="Width" Value="40"/>
         </Control>
         <Control ClassId="0x00001002" Name="Button_2">
@@ -88,7 +85,7 @@
           <Property Name="TextSimulationValue" Value="0"/>
           <Property Name="TextSource" Value="None"/>
           <Property Name="Top" Value="80"/>
-          <Property Name="VirtualKey" Value="Source[local].VirtualKey[calib]"/>
+          <Property Name="VirtualKey" Value="Source[local].VirtualKey[bld]"/>
           <Property Name="Width" Value="40"/>
         </Control>
         <Control ClassId="0x00001002" Name="Button_3">
@@ -107,7 +104,7 @@
           <Property Name="TextSimulationValue" Value="0"/>
           <Property Name="TextSource" Value="None"/>
           <Property Name="Top" Value="40"/>
-          <Property Name="VirtualKey" Value="Source[local].VirtualKey[calib]"/>
+          <Property Name="VirtualKey" Value="Source[local].VirtualKey[bnu]"/>
           <Property Name="Width" Value="40"/>
         </Control>
         <Control ClassId="0x00001002" Name="Button_4">
@@ -126,7 +123,7 @@
           <Property Name="TextSimulationValue" Value="0"/>
           <Property Name="TextSource" Value="None"/>
           <Property Name="Top" Value="80"/>
-          <Property Name="VirtualKey" Value="Source[local].VirtualKey[calib]"/>
+          <Property Name="VirtualKey" Value="Source[local].VirtualKey[bnd]"/>
           <Property Name="Width" Value="40"/>
         </Control>
         <Control ClassId="0x00001002" Name="Button_5">
@@ -145,7 +142,7 @@
           <Property Name="TextSimulationValue" Value="0"/>
           <Property Name="TextSource" Value="None"/>
           <Property Name="Top" Value="40"/>
-          <Property Name="VirtualKey" Value="Source[local].VirtualKey[calib]"/>
+          <Property Name="VirtualKey" Value="Source[local].VirtualKey[cu]"/>
           <Property Name="Width" Value="40"/>
         </Control>
         <Control ClassId="0x00001002" Name="Button_6">
@@ -164,7 +161,7 @@
           <Property Name="TextSimulationValue" Value="0"/>
           <Property Name="TextSource" Value="None"/>
           <Property Name="Top" Value="80"/>
-          <Property Name="VirtualKey" Value="Source[local].VirtualKey[calib]"/>
+          <Property Name="VirtualKey" Value="Source[local].VirtualKey[cd]"/>
           <Property Name="Width" Value="40"/>
         </Control>
         <Control ClassId="0x00001004" Name="Text_1">
@@ -251,7 +248,7 @@
           <Property Name="TextSimulationValue" Value="0"/>
           <Property Name="TextSource" Value="SingleText"/>
           <Property Name="Top" Value="180"/>
-          <Property Name="VirtualKey" Value="None"/>
+          <Property Name="VirtualKey" Value="Source[local].VirtualKey[home]"/>
           <Property Name="Width" Value="320"/>
         </Control>
         <Control ClassId="0x00001004" Name="Text_2">
@@ -373,8 +370,116 @@
               <Property Name="MinValue" Value="-32768"/>
               <Property Name="Name" Value="Action_0"/>
               <Property Name="Repeat" Value="True"/>
+              <Property Name="StepValue" Value="-1"/>
+              <Property Name="ValueDatapoint" Value="Source[global].Variable[Internal.Display.BackLight]"/>
+            </KeyAction>
+          </KeyActions>
+        </VirtualKey>
+        <VirtualKey Name="blu">
+          <Property Name="Description" Value=""/>
+          <Property Name="VirtualKey_LED" Value="False"/>
+          <KeyActions>
+            <KeyAction ClassId="0x00000162">
+              <Property Name="CompletionDatapoint" Value="None"/>
+              <Property Name="CompletionValue" Value="0"/>
+              <Property Name="Description" Value=""/>
+              <Property Name="Locking" Value="Never"/>
+              <Property Name="MaxValue" Value="32768"/>
+              <Property Name="MinValue" Value="-32768"/>
+              <Property Name="Name" Value="Action_0"/>
+              <Property Name="Repeat" Value="True"/>
               <Property Name="StepValue" Value="1"/>
               <Property Name="ValueDatapoint" Value="Source[global].Variable[Internal.Display.BackLight]"/>
+            </KeyAction>
+          </KeyActions>
+        </VirtualKey>
+        <VirtualKey Name="bld">
+          <Property Name="Description" Value=""/>
+          <Property Name="VirtualKey_LED" Value="False"/>
+          <KeyActions>
+            <KeyAction ClassId="0x00000162">
+              <Property Name="CompletionDatapoint" Value="None"/>
+              <Property Name="CompletionValue" Value="0"/>
+              <Property Name="Description" Value=""/>
+              <Property Name="Locking" Value="Never"/>
+              <Property Name="MaxValue" Value="32768"/>
+              <Property Name="MinValue" Value="-32768"/>
+              <Property Name="Name" Value="Action_0"/>
+              <Property Name="Repeat" Value="True"/>
+              <Property Name="StepValue" Value="-1"/>
+              <Property Name="ValueDatapoint" Value="Source[global].Variable[Internal.Display.BackLight]"/>
+            </KeyAction>
+          </KeyActions>
+        </VirtualKey>
+        <VirtualKey Name="bnu">
+          <Property Name="Description" Value=""/>
+          <Property Name="VirtualKey_LED" Value="False"/>
+          <KeyActions>
+            <KeyAction ClassId="0x00000162">
+              <Property Name="CompletionDatapoint" Value="None"/>
+              <Property Name="CompletionValue" Value="0"/>
+              <Property Name="Description" Value=""/>
+              <Property Name="Locking" Value="Never"/>
+              <Property Name="MaxValue" Value="32768"/>
+              <Property Name="MinValue" Value="-32768"/>
+              <Property Name="Name" Value="Action_0"/>
+              <Property Name="Repeat" Value="True"/>
+              <Property Name="StepValue" Value="1"/>
+              <Property Name="ValueDatapoint" Value="Source[global].Variable[Internal.Display.Brightness]"/>
+            </KeyAction>
+          </KeyActions>
+        </VirtualKey>
+        <VirtualKey Name="bnd">
+          <Property Name="Description" Value=""/>
+          <Property Name="VirtualKey_LED" Value="False"/>
+          <KeyActions>
+            <KeyAction ClassId="0x00000162">
+              <Property Name="CompletionDatapoint" Value="None"/>
+              <Property Name="CompletionValue" Value="0"/>
+              <Property Name="Description" Value=""/>
+              <Property Name="Locking" Value="Never"/>
+              <Property Name="MaxValue" Value="32768"/>
+              <Property Name="MinValue" Value="-32768"/>
+              <Property Name="Name" Value="Action_0"/>
+              <Property Name="Repeat" Value="True"/>
+              <Property Name="StepValue" Value="-1"/>
+              <Property Name="ValueDatapoint" Value="Source[global].Variable[Internal.Display.Brightness]"/>
+            </KeyAction>
+          </KeyActions>
+        </VirtualKey>
+        <VirtualKey Name="cu">
+          <Property Name="Description" Value=""/>
+          <Property Name="VirtualKey_LED" Value="False"/>
+          <KeyActions>
+            <KeyAction ClassId="0x00000162">
+              <Property Name="CompletionDatapoint" Value="None"/>
+              <Property Name="CompletionValue" Value="0"/>
+              <Property Name="Description" Value=""/>
+              <Property Name="Locking" Value="Never"/>
+              <Property Name="MaxValue" Value="32768"/>
+              <Property Name="MinValue" Value="-32768"/>
+              <Property Name="Name" Value="Action_0"/>
+              <Property Name="Repeat" Value="True"/>
+              <Property Name="StepValue" Value="1"/>
+              <Property Name="ValueDatapoint" Value="Source[global].Variable[Internal.Display.Contrast]"/>
+            </KeyAction>
+          </KeyActions>
+        </VirtualKey>
+        <VirtualKey Name="cd">
+          <Property Name="Description" Value=""/>
+          <Property Name="VirtualKey_LED" Value="False"/>
+          <KeyActions>
+            <KeyAction ClassId="0x00000162">
+              <Property Name="CompletionDatapoint" Value="None"/>
+              <Property Name="CompletionValue" Value="0"/>
+              <Property Name="Description" Value=""/>
+              <Property Name="Locking" Value="Never"/>
+              <Property Name="MaxValue" Value="32768"/>
+              <Property Name="MinValue" Value="-32768"/>
+              <Property Name="Name" Value="Action_0"/>
+              <Property Name="Repeat" Value="True"/>
+              <Property Name="StepValue" Value="-1"/>
+              <Property Name="ValueDatapoint" Value="Source[global].Variable[Internal.Display.Contrast]"/>
             </KeyAction>
           </KeyActions>
         </VirtualKey>

@@ -354,7 +354,7 @@
               <Double Name="SetValue">22</Double>
               <Double Name="ResetValue">0</Double>
               <Double Name="CompletionValue">0</Double>
-              <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.SetPage]</Reference>
+              <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.Action]</Reference>
               <UInt32 Name="CompletionDatapoint">4294967295</UInt32>
               <Byte Name="Mode">0</Byte>
               <Byte Name="Reserved">0</Byte>

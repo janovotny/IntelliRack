@@ -69,7 +69,8 @@ FNINFO_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Fonts/Button.fninfo \
 	$(AS_PROJECT_PATH)/Logical/Visu/Fonts/Html_SDM.fninfo \
 	$(AS_PROJECT_PATH)/Logical/Visu/Fonts/Info.fninfo \
 	$(AS_PROJECT_PATH)/Logical/Visu/Fonts/Input.fninfo \
-	$(AS_PROJECT_PATH)/Logical/Visu/Fonts/Status.fninfo 
+	$(AS_PROJECT_PATH)/Logical/Visu/Fonts/Status.fninfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Fonts/Font_1.fninfo 
 
 BMINFO_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_AcknowledgeReset.bminfo \
 	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Active.bminfo \
@@ -141,7 +142,8 @@ BMINFO_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_AcknowledgeRes
 	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPadQVGA_Layer3.bminfo \
 	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPadQVGA_Layer3_pressed.bminfo \
 	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/checkbox_small_gray.bminfo \
-	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/pp420.bminfo 
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/pp420.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_1.bminfo 
 
 BMGRP_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/GlobalArea.bmgrp \
 	$(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/AlarmAcknowledgeState.bmgrp \
@@ -160,7 +162,8 @@ PAGE_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Pages/PleaseWait.page \
 	$(AS_PROJECT_PATH)/Logical/Visu/Pages/InfoIG.page \
 	$(AS_PROJECT_PATH)/Logical/Visu/Pages/about.page \
 	$(AS_PROJECT_PATH)/Logical/Visu/Pages/Settings.page \
-	$(AS_PROJECT_PATH)/Logical/Visu/Pages/insertDisk.page 
+	$(AS_PROJECT_PATH)/Logical/Visu/Pages/insertDisk.page \
+	$(AS_PROJECT_PATH)/Logical/Visu/Pages/Page_1.page 
 
 LAYER_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Layers/msgBox.layer \
 	$(AS_PROJECT_PATH)/Logical/Visu/Layers/globalArea.layer \
@@ -271,6 +274,10 @@ $(TEMP_PATH_Visu)/page.Settings.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/Setti
 
 
 $(TEMP_PATH_Visu)/page.insertDisk.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/insertDisk.page $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 3950
+
+
+$(TEMP_PATH_Visu)/page.Page_1.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/Page_1.page $(VC_LANGUAGES_Visu)
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 3950
 
 
@@ -704,6 +711,10 @@ $(TEMP_PATH_Visu)/bminfo.checkbox_small_gray.vco: $(AS_PROJECT_PATH)/Logical/Vis
 
 
 $(TEMP_PATH_Visu)/bminfo.pp420.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/pp420.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/pp420.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 3950
+
+
+$(TEMP_PATH_Visu)/bminfo.Bitmap_1.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_1.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_1.png
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 3950
 
 

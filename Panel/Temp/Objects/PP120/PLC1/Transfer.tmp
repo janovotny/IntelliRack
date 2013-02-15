@@ -30,6 +30,8 @@
     </Mod>
     <Mod Name="Visu03" Img="Binary.ico" Stat="Equal" Act="Ignore">
     </Mod>
+    <Mod Name="ariblk" Img="Binary.ico" Stat="Equal" Act="Ignore">
+    </Mod>
     <Mod Name="arialbd" Img="Binary.ico" Stat="Equal" Act="Ignore">
     </Mod>
     <Mod Name="arial" Img="Binary.ico" Stat="Equal" Act="Ignore">
@@ -79,6 +81,8 @@
     <Mod Name="vccshape" Img="Binary.ico" Stat="Equal" Act="Ignore">
     </Mod>
     <Mod Name="vccline" Img="Binary.ico" Stat="Equal" Act="Ignore">
+    </Mod>
+    <Mod Name="vccnum" Img="Binary.ico" Stat="Equal" Act="Ignore">
     </Mod>
   </Cat>
   <Cat Name="Libary Objects" Img="Libraries.ico">

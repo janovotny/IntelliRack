@@ -16,5 +16,5 @@ VAR
 	Search : STRING[80];
 	Limit : UINT;
 	state : LibVisapi5_ST_state_type; (*State variables of VISAPI commands*)
-	Edit : USINT;
+	Edit : UINT;
 END_VAR

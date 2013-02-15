@@ -8,9 +8,10 @@
   <File Name="vccshape.br" />
   <File Name="vcclbox.br" />
   <File Name="vccstr.br" />
-  <File Name="vcchspot.br" />
-  <File Name="vccovl.br" />
   <File Name="vccbmp.br" />
+  <File Name="vcchspot.br" />
+  <File Name="vccnum.br" />
+  <File Name="vccovl.br" />
   <File Name="vccline.br" />
   <File Name="vcrt.br" />
   <File Name="vcbclass.br" />
@@ -31,6 +32,7 @@
   <File Name="Visu02.br" />
   <File Name="Visu01.br" />
   <File Name="vcshared.br" />
+  <File Name="ariblk.br" />
   <File Name="arialbd.br" />
   <File Name="arial.br" />
 </VCFirmware>

@@ -164,15 +164,30 @@
             </Group>
           </Object>
           <Object Name="Text_1" ClsId="0x1004" Version="1" Type="CTRL" RefString="Source[local].Page[insertDisk].Layer[Default].Control[Text_1]">
-            <UInt32 Name="Left">10</UInt32>
+            <UInt32 Name="Left">0</UInt32>
             <UInt32 Name="Top">80</UInt32>
-            <UInt32 Name="Right">309</UInt32>
+            <UInt32 Name="Right">319</UInt32>
             <UInt32 Name="Bottom">109</UInt32>
             <UInt32 Name="IndexDatapoint">4294967295</UInt32>
             <UInt32 Name="ControlID">0</UInt32>
             <Reference Name="StyleClass" Type="SC">Source[local].StyleGroup[0x00001004].StyleClass[Default]</Reference>
-            <UInt16 Name="StyleTableSize">25</UInt16>
+            <UInt16 Name="StyleTableSize">43</UInt16>
             <UInt16 Name="Reserved">0</UInt16>
+            <Group Name="AlignmentHorizontal">
+              <UInt16 Name="Offset">21</UInt16>
+              <UInt16 Name="Size">1</UInt16>
+              <Byte Name="Data">1</Byte>
+            </Group>
+            <Group Name="AlignmentVertical">
+              <UInt16 Name="Offset">22</UInt16>
+              <UInt16 Name="Size">1</UInt16>
+              <Byte Name="Data">1</Byte>
+            </Group>
+            <Group Name="Font">
+              <UInt16 Name="Offset">24</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <Reference Name="Data" Type="FNT">Source[local].Font[Button]</Reference>
+            </Group>
             <Group Name="TextSource">
               <UInt16 Name="Offset">40</UInt16>
               <UInt16 Name="Size">1</UInt16>

@@ -10,10 +10,10 @@
           <Group Name="FixedVarMapTable">
             <UInt16 Name="Var0">10</UInt16>
             <UInt16 Name="Var1">11</UInt16>
-            <UInt16 Name="Var2">13</UInt16>
-            <UInt16 Name="Var3">14</UInt16>
-            <UInt16 Name="Var4">65535</UInt16>
-            <UInt16 Name="Var5">65535</UInt16>
+            <UInt16 Name="Var2">12</UInt16>
+            <UInt16 Name="Var3">16</UInt16>
+            <UInt16 Name="Var4">13</UInt16>
+            <UInt16 Name="Var5">14</UInt16>
             <UInt16 Name="Var6">65535</UInt16>
             <UInt16 Name="Var7">65535</UInt16>
             <UInt16 Name="Var8">65535</UInt16>

@@ -86,9 +86,12 @@
           <Property Name="ButtonsBitmapGroup" Value="None"/>
           <Property Name="ButtonsPressedBitmapGroup" Value="None"/>
           <Property Name="ButtonsSlider" Value="Always"/>
-          <Property Name="ButtonsWidth" Value="15"/>
+          <Property Name="ButtonsWidth" Value="40"/>
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
+          <Property Name="DisabledBackColor" Value="15"/>
+          <Property Name="DisabledForeColor" Value="0"/>
+          <Property Name="Font" Value="Source[local].Font[Button]"/>
           <Property Name="Height" Value="190"/>
           <Property Name="IndexDatapoint" Value="Source[global].Variable[DataSource.Selection]"/>
           <Property Name="Input" Value="True"/>
@@ -107,8 +110,13 @@
           <Property Name="OptionDatapoint" Value="None"/>
           <Property Name="RightBitmap" Value="None"/>
           <Property Name="RightTextGroup" Value="None"/>
+          <Property Name="SelectedBackColor" Value="7"/>
+          <Property Name="SelectedForeColor" Value="0"/>
           <Property Name="SimulationValue" Value="tzhfdgh"/>
           <Property Name="SingleTouchSelection" Value="True"/>
+          <Property Name="SliderBackColor" Value="15"/>
+          <Property Name="SliderForeColor" Value="15"/>
+          <Property Name="SpacingVertical" Value="2"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextDatapoint" Value="Source[global].Variable[DataSource.Strings]"/>
           <Property Name="TextIndexOffset" Value="1"/>
@@ -123,14 +131,12 @@
           <Property Name="Description" Value=""/>
           <Property Name="VirtualKey_LED" Value="False"/>
           <KeyActions>
-            <KeyAction ClassId="0x00000161">
-              <Property Name="CompletionDatapoint" Value="None"/>
-              <Property Name="CompletionValue" Value="0"/>
+            <KeyAction ClassId="0x00000160">
               <Property Name="Description" Value=""/>
               <Property Name="Locking" Value="Never"/>
               <Property Name="Name" Value="Action_0"/>
-              <Property Name="SetValue" Value="22"/>
-              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Action]"/>
+              <Property Name="Page" Value="Source[local].Page[Title]"/>
+              <Property Name="Target" Value="Page"/>
             </KeyAction>
           </KeyActions>
         </VirtualKey>
@@ -144,7 +150,7 @@
               <Property Name="Description" Value=""/>
               <Property Name="Locking" Value="Never"/>
               <Property Name="Name" Value="Action_0"/>
-              <Property Name="SetValue" Value="6"/>
+              <Property Name="SetValue" Value="7"/>
               <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Action]"/>
             </KeyAction>
           </KeyActions>

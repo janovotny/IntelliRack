@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _LIBRARIES_20130213112832_
-#define _LIBRARIES_20130213112832_
+#ifndef _LIBRARIES_20130215084820_
+#define _LIBRARIES_20130215084820_
 
 __asm__(".section \".plc\"");
 
@@ -636,5 +636,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/visapi/Visapi.var\\\" scope \\\"
 __asm__(".previous");
 
 
-#endif /* _LIBRARIES_20130213112832_ */
+#endif /* _LIBRARIES_20130215084820_ */
 

@@ -27,14 +27,20 @@
         <TextLayer LanguageId="en">
           <Text ID="95155" Value="Title:"/>
           <Text ID="95156" Value="Tags:"/>
+          <Text ID="95203" Value="Next"/>
+          <Text ID="95205" Value="Home"/>
         </TextLayer>
         <TextLayer LanguageId="de">
           <Text ID="95155" Value="Titel:"/>
           <Text ID="95156" Value="Tags:"/>
+          <Text ID="95203" Value="Weiter"/>
+          <Text ID="95205" Value="Zurück"/>
         </TextLayer>
         <IndexMap>
           <Index ID="95155" Value="0"/>
           <Index ID="95156" Value="1"/>
+          <Index ID="95203" Value="4"/>
+          <Index ID="95205" Value="6"/>
         </IndexMap>
       </TextGroup>
       <Controls>
@@ -90,6 +96,14 @@
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Height" Value="30"/>
+          <Property Name="Input" Value="True"/>
+          <Property Name="InputCancel" Value="Lost Focus"/>
+          <Property Name="InputConfirm" Value="Enter"/>
+          <Property Name="InputMode" Value="Auto"/>
+          <Property Name="InputNext" Value="Enter"/>
+          <Property Name="InputStart" Value="Any Key"/>
+          <Property Name="InputTabSize" Value="0"/>
+          <Property Name="InputTouchpad" Value="Source[local].TouchPad[AlphaPad_QVGA]"/>
           <Property Name="Left" Value="90"/>
           <Property Name="MaxChars" Value="30"/>
           <Property Name="SimulationValue" Value="0"/>
@@ -98,12 +112,93 @@
           <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Strings[1]]"/>
           <Property Name="Width" Value="200"/>
         </Control>
+        <Control ClassId="0x00001002" Name="Button_3">
+          <Property Name="BackColor" Value="7"/>
+          <Property Name="BitmapIndexDatapoint" Value="None"/>
+          <Property Name="BitmapSource" Value="None"/>
+          <Property Name="Border" Value="None"/>
+          <Property Name="ControlID" Value="0"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="Height" Value="30"/>
+          <Property Name="KeyMatrixOffset" Value="None"/>
+          <Property Name="Left" Value="230"/>
+          <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
+          <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
+          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+          <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+          <Property Name="TextIndex" Value="4"/>
+          <Property Name="TextIndexDatapoint" Value="None"/>
+          <Property Name="TextSimulationValue" Value="0"/>
+          <Property Name="TextSource" Value="SingleText"/>
+          <Property Name="Top" Value="200"/>
+          <Property Name="VirtualKey" Value="Source[local].VirtualKey[Next]"/>
+          <Property Name="Width" Value="80"/>
+        </Control>
+        <Control ClassId="0x00001002" Name="Button_4">
+          <Property Name="BackColor" Value="7"/>
+          <Property Name="BitmapIndexDatapoint" Value="None"/>
+          <Property Name="BitmapSource" Value="None"/>
+          <Property Name="Border" Value="None"/>
+          <Property Name="ControlID" Value="0"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="Height" Value="30"/>
+          <Property Name="KeyMatrixOffset" Value="None"/>
+          <Property Name="Left" Value="10"/>
+          <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
+          <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
+          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+          <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+          <Property Name="TextIndex" Value="6"/>
+          <Property Name="TextIndexDatapoint" Value="None"/>
+          <Property Name="TextSimulationValue" Value="0"/>
+          <Property Name="TextSource" Value="SingleText"/>
+          <Property Name="Top" Value="200"/>
+          <Property Name="VirtualKey" Value="Source[local].VirtualKey[home]"/>
+          <Property Name="Width" Value="80"/>
+        </Control>
       </Controls>
-      <KeyMapping/>
+      <KeyMapping>
+        <VirtualKey Name="home">
+          <Property Name="Description" Value=""/>
+          <Property Name="VirtualKey_LED" Value="False"/>
+          <KeyActions>
+            <KeyAction ClassId="0x00000161">
+              <Property Name="CompletionDatapoint" Value="None"/>
+              <Property Name="CompletionValue" Value="0"/>
+              <Property Name="Description" Value=""/>
+              <Property Name="Locking" Value="Never"/>
+              <Property Name="Name" Value="Action_0"/>
+              <Property Name="SetValue" Value="22"/>
+              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Action]"/>
+            </KeyAction>
+          </KeyActions>
+        </VirtualKey>
+        <VirtualKey Name="Next">
+          <Property Name="Description" Value=""/>
+          <Property Name="VirtualKey_LED" Value="False"/>
+          <KeyActions>
+            <KeyAction ClassId="0x00000161">
+              <Property Name="CompletionDatapoint" Value="None"/>
+              <Property Name="CompletionValue" Value="0"/>
+              <Property Name="Description" Value=""/>
+              <Property Name="Locking" Value="Never"/>
+              <Property Name="Name" Value="Action_0"/>
+              <Property Name="SetValue" Value="21"/>
+              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Action]"/>
+            </KeyAction>
+          </KeyActions>
+        </VirtualKey>
+      </KeyMapping>
     </Layer>
   </Layers>
   <MovementOrder>
     <MovementEntry Control="Source[embedded].Layer[Default].Control[String_1]">
+      <Property Name="Down" Value="Source[embedded].Layer[Default].Control[String_2]"/>
+      <Property Name="Left" Value="Source[embedded].Layer[Default].Control[String_2]"/>
+      <Property Name="Right" Value="Source[embedded].Layer[Default].Control[String_2]"/>
+      <Property Name="Up" Value="Source[embedded].Layer[Default].Control[String_2]"/>
+    </MovementEntry>
+    <MovementEntry Control="Source[embedded].Layer[Default].Control[String_2]">
       <Property Name="Down" Value="Source[embedded].Layer[Default].Control[String_1]"/>
       <Property Name="Left" Value="Source[embedded].Layer[Default].Control[String_1]"/>
       <Property Name="Right" Value="Source[embedded].Layer[Default].Control[String_1]"/>

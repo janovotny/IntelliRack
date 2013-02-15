@@ -76,15 +76,24 @@ void _CYCLIC handlerCyclic(void)
 	GetPage=GetPage;
 	Limit=Limit;
 	Selection=Selection;
-	Search[0]=Search[0];
+	
+	for(i=0;i<100;i++){
+		Search[i]=Search[i];
+	}
 	
 	if(Action!=0){
 		Edit=1;
 		SetPage=0;
+		Limit=0;
 	}
 	
 	for(i=0;i<42;i++){
 		Strings[i][0]=Strings[i][0];
+	}
+	
+	if(GetPage==1){
+		Strings[0][0]=0;
+		Strings[1][0]=0;	
 	}
 	
 	if(GetPage==3){

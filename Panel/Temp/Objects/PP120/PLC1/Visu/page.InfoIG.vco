@@ -171,7 +171,7 @@
             <UInt32 Name="MinValue">4294967295</UInt32>
             <UInt32 Name="MaxValue">4294967295</UInt32>
             <UInt32 Name="MinDatapoint">4294967295</UInt32>
-            <Int32 Name="TextIndexOffset">0</Int32>
+            <Int32 Name="TextIndexOffset">1</Int32>
             <UInt32 Name="TextGroup">4294967295</UInt32>
             <Reference Name="TextDatapoint" Type="DP">Source[global].Variable[DataSource.Strings]</Reference>
             <UInt32 Name="OptionDatapoint">4294967295</UInt32>
@@ -179,8 +179,28 @@
             <Reference Name="MaxDatapoint" Type="DP">Source[global].Variable[DataSource.Limit]</Reference>
             <UInt32 Name="ControlID">0</UInt32>
             <Reference Name="StyleClass" Type="SC">Source[local].StyleGroup[0x00001008].StyleClass[Default]</Reference>
-            <UInt16 Name="StyleTableSize">113</UInt16>
+            <UInt16 Name="StyleTableSize">175</UInt16>
             <UInt16 Name="Reserved">0</UInt16>
+            <Group Name="SelectedForeColor">
+              <UInt16 Name="Offset">24</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <UInt32 Name="Data">0</UInt32>
+            </Group>
+            <Group Name="SelectedBackColor">
+              <UInt16 Name="Offset">28</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <UInt32 Name="Data">7</UInt32>
+            </Group>
+            <Group Name="DisabledForeColor">
+              <UInt16 Name="Offset">36</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <UInt32 Name="Data">0</UInt32>
+            </Group>
+            <Group Name="DisabledBackColor">
+              <UInt16 Name="Offset">40</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <UInt32 Name="Data">15</UInt32>
+            </Group>
             <Group Name="LeftBitmap">
               <UInt16 Name="Offset">48</UInt16>
               <UInt16 Name="Size">4</UInt16>
@@ -226,6 +246,16 @@
               <UInt16 Name="Size">1</UInt16>
               <Byte Name="Data">1</Byte>
             </Group>
+            <Group Name="SpacingVertical">
+              <UInt16 Name="Offset">82</UInt16>
+              <UInt16 Name="Size">2</UInt16>
+              <UInt16 Name="Data">2</UInt16>
+            </Group>
+            <Group Name="Font">
+              <UInt16 Name="Offset">84</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <Reference Name="Data" Type="FNT">Source[local].Font[Button]</Reference>
+            </Group>
             <Group Name="Input">
               <UInt16 Name="Offset">94</UInt16>
               <UInt16 Name="Size">1</UInt16>
@@ -244,12 +274,22 @@
             <Group Name="ButtonsWidth">
               <UInt16 Name="Offset">104</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <UInt32 Name="Data">15</UInt32>
+              <UInt32 Name="Data">40</UInt32>
             </Group>
             <Group Name="ButtonsSlider">
               <UInt16 Name="Offset">108</UInt16>
               <UInt16 Name="Size">1</UInt16>
               <Byte Name="Data">1</Byte>
+            </Group>
+            <Group Name="SliderForeColor">
+              <UInt16 Name="Offset">116</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <UInt32 Name="Data">15</UInt32>
+            </Group>
+            <Group Name="SliderBackColor">
+              <UInt16 Name="Offset">120</UInt16>
+              <UInt16 Name="Size">4</UInt16>
+              <UInt32 Name="Data">15</UInt32>
             </Group>
             <Group Name="ButtonsBitmapGroup">
               <UInt16 Name="Offset">128</UInt16>
@@ -284,21 +324,16 @@
             </Group>
             <Group Name="KeyMapping">
               <UInt32 Name="KeyActionCount">1</UInt32>
-              <Int32 Name="ActionID">353</Int32>
-              <UInt32 Name="ActionDataSize">36</UInt32>
+              <UInt32 Name="ActionID">352</UInt32>
+              <UInt32 Name="ActionDataSize">8</UInt32>
               <Byte Name="Locking">0</Byte>
               <Byte Name="Reserved">0</Byte>
               <UInt16 Name="Reserved">0</UInt16>
               <UInt32 Name="LockingDatapoint">4294967295</UInt32>
               <UInt32 Name="LockingLevel">0</UInt32>
-              <Double Name="SetValue">22</Double>
-              <Double Name="ResetValue">0</Double>
-              <Double Name="CompletionValue">0</Double>
-              <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.Action]</Reference>
-              <UInt32 Name="CompletionDatapoint">4294967295</UInt32>
-              <Byte Name="Mode">0</Byte>
-              <Byte Name="Reserved">0</Byte>
-              <UInt16 Name="Reserved1">0</UInt16>
+              <Reference Name="Page" Type="PAGE">Source[local].Page[Title]</Reference>
+              <UInt16 Name="Target">2</UInt16>
+              <UInt16 Name="Reserved">0</UInt16>
             </Group>
           </Object>
           <Object Name="Next" ClsId="0x0" Version="1" Type="VKEY" RefString="Source[local].VirtualKey[Next]">
@@ -317,7 +352,7 @@
               <UInt16 Name="Reserved">0</UInt16>
               <UInt32 Name="LockingDatapoint">4294967295</UInt32>
               <UInt32 Name="LockingLevel">0</UInt32>
-              <Double Name="SetValue">6</Double>
+              <Double Name="SetValue">7</Double>
               <Double Name="ResetValue">0</Double>
               <Double Name="CompletionValue">0</Double>
               <Reference Name="ValueDatapoint" Type="DP">Source[global].Variable[DataSource.Action]</Reference>
