@@ -26,8 +26,7 @@ while(($line=fgets($filehandler))!==FALSE){
 	<img src="' . $img_src . '">
 		<table>
 			<tr>
-				<td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;</td>
-				<td><span class="title">' . $dvd_lines . '</span><div class="info"><br>';
+				<td style="padding-left: 20px;"><span class="title">' . $dvd_lines . '</span><div class="info"><br>';
 				
 				while(($dvd_lines=fgets($filehandler2))!==FALSE){
 
