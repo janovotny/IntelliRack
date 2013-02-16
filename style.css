@@ -9,12 +9,16 @@ span.title{
 }
 
 img{
-	position:fixed;
+	position: relative;
 	float: left;
 }
 
 div.movie{
-	padding: 4px;
-	margin-left: 250px;
+/*
+	position: relative;
+*/
+	padding: 10px;
+	margin: 15px; 	
 	border: 1px solid #A0A0A0;
+	overflow: hidden;
 }

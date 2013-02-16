@@ -5,7 +5,9 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	
+<h1>IntelliRack Webinterface</h1>
+
+
 <?php
 $filehandler=fopen("/var/www/IntelliRack/RPi/storage","r") or die("<script type='text/javascript'>window.location.reload()</script>");
 
@@ -16,12 +18,12 @@ while(($line=fgets($filehandler))!==FALSE){
 	$line_index = explode(":", $line, 2);
 	array_push($storage_index, $line_index);
 
-	$filehandler2=fopen("/var/www/IntelliRack/RPi/".$line_index[1], "r" );
+	$filehandler2=fopen("/var/www/IntelliRack/RPi/".str_replace("\n", "", $line_index[1]), "r" );
 	$img_src = "/IntelliRack/RPi/".implode(explode( "/", $line_index[1], -1), "/") . '/0.jpg';
 	$dvd_lines=fgets($filehandler2);
 	echo '
-	<img src="' . $img_src . '">
 	<div class="movie">
+	<img src="' . $img_src . '">
 		<table>
 			<tr>
 				<td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -38,12 +40,13 @@ while(($line=fgets($filehandler))!==FALSE){
 				echo'</div></td>
 			</tr>
 		</table>
-	</div>';
+	</div><br><br>';
 }
 
 fclose($filehandler);
 
 ?>
+
 
 </body>
 </html>
