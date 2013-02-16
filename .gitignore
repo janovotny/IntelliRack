@@ -1,3 +1,4 @@
 *.o
 *.bin
+RPi/webinterface/.git
 desktop.ini

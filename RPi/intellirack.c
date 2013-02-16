@@ -230,7 +230,7 @@ int main(){
 
 				fprintf(stderr,"Name: %s\nTitle: %s\nTags: %s\n",name, edited_title, tags);
 				FilePtr=fopen(name,"w");
-				fprintf(FilePtr, "%s\n%s\n",edited_title, tags);
+				fprintf(FilePtr, "%s\nTitle: %s\nTags: %s\n",edited_title,edited_title, tags);
 				fclose(FilePtr);
 				
 				write_outputs(PANEL_WRITE, "Action","0");

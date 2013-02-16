@@ -13,7 +13,7 @@ if [ -f $mdir/$subdir/$1 ]; then
 else
 	./CreateTempDbEntry.pl $1
 	mv NonConfirmedEntry $mdir/$subdir/$1
-	mv 0.png $mdir/$subdir/$1
+	mv 0.jpg $mdir/$subdir/$1 || cp default.jpg $mdir/$subdir/$1/0.jpg
 	echo $dir/$mdir/$subdir/$1
 fi
 
