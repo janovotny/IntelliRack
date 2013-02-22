@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1360746235_1_
-#define _BUR_1360746235_1_
+#ifndef _BUR_1361549150_2_
+#define _BUR_1361549150_2_
 
 #include <bur/plctypes.h>
 
@@ -13,12 +13,16 @@
 
 
 /* Variables */
+_GLOBAL signed long hPOSmm;
+_GLOBAL signed long vPOSmm;
 _GLOBAL plcbit EnableCDRom;
 _GLOBAL plcbit EnableACP1;
 _GLOBAL plcbit OpenGriper;
+_GLOBAL plcbit RefPosH;
+_GLOBAL plcbit RefPosV;
 _GLOBAL plcbit CloseGriper;
 _GLOBAL plcbit EnableACP2;
-_GLOBAL struct stDrive Drive[4];
+_GLOBAL struct tDrive Drive[4];
 
 
 
@@ -34,5 +38,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Global.var\\\" scope \\\"global\\\"\\n\"")
 __asm__(".previous");
 
 
-#endif /* _BUR_1360746235_1_ */
+#endif /* _BUR_1361549150_2_ */
 

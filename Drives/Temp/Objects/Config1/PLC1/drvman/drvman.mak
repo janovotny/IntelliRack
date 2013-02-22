@@ -17,6 +17,7 @@ $(AS_CPU_PATH)/drvman/a.out: \
 $(AS_CPU_PATH)/drvman/drvman.o: \
 	$(AS_PROJECT_PATH)/Logical/drvman/drvman.c \
 	$(AS_PROJECT_PATH)/Logical/Global.var \
+	$(AS_PROJECT_PATH)/Logical/drvman/drvman.var \
 	$(AS_PROJECT_PATH)/Logical/Global.typ
 	@"$(AS_BIN_PATH)/BR.AS.CCompiler.exe" "$(AS_PROJECT_PATH)/Logical/drvman/drvman.c" -o "$(AS_CPU_PATH)/drvman/drvman.o"  -T SG4  -B V3.08 -G V4.1.2  -s drvman -t "$(AS_TEMP_PATH)" -I "$(AS_PROJECT_PATH)/Logical/drvman" "$(AS_TEMP_PATH)/Includes/drvman" "$(AS_TEMP_PATH)/Includes" -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -g -nostartfiles -Wall -include "$(AS_CPU_PATH)/Libraries.h" -x c -P "$(AS_PROJECT_PATH)/" -secret "$(AS_PROJECT_PATH)_br.as.ccompiler.exe"
 

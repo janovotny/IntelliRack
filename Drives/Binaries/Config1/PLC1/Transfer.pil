@@ -1,4 +1,4 @@
-Connection "/IF=tcpip /LOPO=11159 /SA=1", "/RT=1000 /DAIP=192.168.0.101 /REPO=11159 /ANSL=1"
+Connection "/IF=tcpip /LOPO=11159 /SA=84", "/RT=1000 /DAIP=192.168.0.101 /REPO=11159 /ANSL=1"
 Diagnose
 DeleteMemory ROM
 Coldstart

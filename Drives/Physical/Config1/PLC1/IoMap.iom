@@ -37,4 +37,6 @@ VAR_CONFIG
 	Drive[3].Brake AT %QX.IF6.ST5.MpGenBrake02;
 	Drive[3].GetPos AT %ID.IF6.ST5.AbsPos02ActVal;
 	Drive[3].Status AT %IW.IF6.ST5.MpGenStatus02;
+	RefPosV AT %IX.IF6.ST1.DigitalInput02 INVERSE;
+	RefPosH AT %IX.IF6.ST1.DigitalInput01;
 END_VAR

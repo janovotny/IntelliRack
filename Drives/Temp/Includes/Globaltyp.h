@@ -1,21 +1,22 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1360655990_1_
-#define _BUR_1360655990_1_
+#ifndef _BUR_1361549150_1_
+#define _BUR_1361549150_1_
 
 #include <bur/plctypes.h>
 
 /* Datatypes and datatypes of function blocks */
-typedef struct stDrive
-{	signed long SetPos;
+typedef struct tDrive
+{	signed long ZeroOffset;
+	signed long SetPos;
 	unsigned short Ctrl;
 	signed char Mode;
 	plcbit Brake;
 	signed long GetPos;
 	unsigned short Status;
 	unsigned char Case;
-} stDrive;
+} tDrive;
 
 
 
@@ -32,5 +33,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Global.typ\\\" scope \\\"global\\\"\\n\"")
 __asm__(".previous");
 
 
-#endif /* _BUR_1360655990_1_ */
+#endif /* _BUR_1361549150_1_ */
 

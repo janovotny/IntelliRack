@@ -20,7 +20,7 @@
     </Mod>
     <Mod Name="asfw" Img="files\BR.ico" Stat="Equal" Act="Ignore" Res="Warm">
     </Mod>
-    <Mod Name="arconfig" Img="files\rtc.ico" Stat="Different" Act="Download" Res="Warm">
+    <Mod Name="arconfig" Img="files\rtc.ico" Stat="Equal" Act="Ignore" Res="Warm">
     </Mod>
     <Mod Name="sysconf" Img="files\BR.ico" Stat="Equal" Act="Ignore" Res="Warm">
     </Mod>

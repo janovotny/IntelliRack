@@ -9,7 +9,8 @@
  ********************************************************************)
 
 TYPE
-	stDrive : 	STRUCT 
+	tDrive : 	STRUCT 
+		ZeroOffset : DINT;
 		SetPos : DINT;
 		Ctrl : UINT;
 		Mode : SINT;

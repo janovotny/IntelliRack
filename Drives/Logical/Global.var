@@ -8,10 +8,14 @@
  * Global variables of project Drives
  ********************************************************************)
 VAR
-	Drive : ARRAY[0..3] OF stDrive;
+	Drive : ARRAY[0..3] OF tDrive;
 	EnableACP2 : BOOL;
 	CloseGriper : BOOL;
+	RefPosV : BOOL;
+	RefPosH : BOOL;
 	OpenGriper : BOOL;
 	EnableACP1 : BOOL;
 	EnableCDRom : BOOL;
+	vPOSmm : DINT := 0;
+	hPOSmm : DINT := 0;
 END_VAR

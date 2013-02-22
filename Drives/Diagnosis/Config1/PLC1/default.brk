@@ -1,30 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <breakpoints>
   <breakpoint>
-    <status>Y</status>
+    <status>N</status>
     <file>Logical/drvman/drvman.c</file>
-    <position>119</position>
+    <position>213</position>
     <condition></condition>
     <module>drvman</module>
   </breakpoint>
   <breakpoint>
-    <status>Y</status>
+    <status>N</status>
     <file>Logical/drvman/drvman.c</file>
-    <position>112</position>
+    <position>206</position>
     <condition></condition>
     <module>drvman</module>
   </breakpoint>
   <breakpoint>
-    <status>Y</status>
+    <status>N</status>
     <file>Logical/drvman/drvman.c</file>
-    <position>101</position>
+    <position>195</position>
     <condition></condition>
     <module>drvman</module>
   </breakpoint>
   <breakpoint>
-    <status>Y</status>
+    <status>N</status>
     <file>Logical/drvman/drvman.c</file>
-    <position>126</position>
+    <position>220</position>
     <condition></condition>
     <module>drvman</module>
   </breakpoint>

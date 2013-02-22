@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=3.0.90.22 SP04?>
+<?AutomationStudio Version=3.0.90.24 SP06?>
 <State Top="0" Left="0" Width="0" Height="0" WindowState="Normal" xmlns="http://br-automation.co.at/AS/State">
   <TreeView ID="ConfigurationTree" EditColumn="0" TopRow="0" HorizontalScrollOffset="0" SortedColumn="0">
     <Columns>
@@ -12,9 +12,7 @@
       <ExpandedNode Row="0" />
       <ExpandedNode Row="2" />
     </ExpandedNodes>
-    <SelectedNodes>
-      <SelectedNode Row="7" />
-    </SelectedNodes>
+    <SelectedNodes />
     <ZoomIndices />
   </TreeView>
 </State>

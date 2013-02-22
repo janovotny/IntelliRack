@@ -1,10 +1,21 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1360654256_4_
-#define _BUR_1360654256_4_
+#ifndef _BUR_1361549854_1_
+#define _BUR_1361549854_1_
 
 #include <bur/plctypes.h>
+
+/* Constants */
+#ifdef _REPLACE_CONST
+#else
+#endif
+
+
+/* Variables */
+_LOCAL unsigned long startref;
+_LOCAL signed short ReferenceOk;
+
 
 
 
@@ -19,5 +30,5 @@ __asm__(".ascii \"iecfile \\\"Logical/drvman/drvman.var\\\" scope \\\"local\\\"\
 __asm__(".previous");
 
 
-#endif /* _BUR_1360654256_4_ */
+#endif /* _BUR_1361549854_1_ */
 

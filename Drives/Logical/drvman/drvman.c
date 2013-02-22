@@ -13,6 +13,12 @@
 #include <AsDefault.h>
 #include <AsIOAcc.h>
 
+
+void _INIT _drvman(void){
+	startref=0;
+	ReferenceOk=0;
+}
+
 /****h* Drive/drvman
 * NAME
 * 	Drive -- Collection of functions for starting and configuring drives
@@ -35,6 +41,7 @@ enum Mode{
 #define ERR_ACK(ctrl) (ctrl^=(0x80))
 #define USE_ENC(ctrl) (ctrl|=(0x4000))
 
+#define MM_POS_STEPPER_POS_FACTOR (256)
 
 SW_ON_DISSABLED=0x2E0;
 RDY_S_ON=0x221;
@@ -58,6 +65,59 @@ char GET_STATUS(UINT reg, UINT stat){
 	return(tmp^stat)?0:1;
 }
 
+/****f* Drive/drvref
+* FUNCTION
+* 	This function references the drive
+* SOURCE
+*/ 
+int drvref(){
+	if(!startref){
+		if(RefPosV){
+			Drive[0].SetPos=1500;
+			Drive[0].Mode=2;
+			return 0;
+		}else if(RefPosH){
+			Drive[2].SetPos=-1500;
+			Drive[2].Mode=2;
+			Drive[3].SetPos=-1500;
+			Drive[3].Mode=2;
+			return 0;
+		} else {
+			startref=1;
+		}
+	}else{
+		Drive[0].Mode=0;
+		Drive[2].Mode=0;
+		Drive[3].Mode=0;
+
+		if(!RefPosV){
+			Drive[0].SetPos=-500;
+			Drive[0].Mode=2;
+			return 0;
+		}else{
+			Drive[0].Mode=0;
+			Drive[0].ZeroOffset=Drive[0].GetPos;
+		}
+
+		if(!RefPosH){
+			Drive[2].SetPos=500;
+			Drive[2].Mode=2;
+			Drive[3].SetPos=500;
+			Drive[3].Mode=2;
+		}else{
+			Drive[2].Mode=0;
+			Drive[2].ZeroOffset=Drive[2].GetPos;
+			Drive[3].Mode=0;
+			Drive[3].ZeroOffset=Drive[3].GetPos;
+		}
+		
+		return RefPosH&RefPosV;
+	}
+	return 0;
+}
+/*****/
+
+
 /****f* Drive/drvman
 * FUNCTION
 * 	This cyclicaly called function provides the state machine
@@ -71,6 +131,37 @@ void _CYCLIC drvman(void)
 	EnableACP2=1;
 	EnableCDRom=1;
 	
+	
+	//Use no-op mode when not set later
+	Drive[0].Mode=0;
+	Drive[2].Mode=0;
+	Drive[3].Mode=0;
+
+	
+	if(!ReferenceOk){
+		ReferenceOk=drvref();
+	}else{
+
+		if(((Drive[0].ZeroOffset+vPOSmm*MM_POS_STEPPER_POS_FACTOR)-Drive[0].GetPos)!=0)
+			Drive[0].Mode=SPEED_MODE;
+		else
+			Drive[0].Mode=0;
+		
+		if(((Drive[2].ZeroOffset+((-hPOSmm)*MM_POS_STEPPER_POS_FACTOR))-Drive[2].GetPos)!=0)
+			Drive[2].Mode=SPEED_MODE;
+		else
+			Drive[2].Mode=0;
+
+		if(((Drive[3].ZeroOffset+((-hPOSmm)*MM_POS_STEPPER_POS_FACTOR))-Drive[3].GetPos)!=0)
+			Drive[3].Mode=SPEED_MODE;
+		else
+			Drive[3].Mode=0;
+		
+		//Adjust speed depending on distance to move
+		Drive[0].SetPos=((((Drive[0].ZeroOffset+vPOSmm*MM_POS_STEPPER_POS_FACTOR)-Drive[0].GetPos)>=0)?10:-10)+((Drive[0].ZeroOffset+vPOSmm*MM_POS_STEPPER_POS_FACTOR)-Drive[0].GetPos);
+		Drive[3].SetPos=Drive[2].SetPos=((((Drive[2].ZeroOffset+((-hPOSmm)*MM_POS_STEPPER_POS_FACTOR))-Drive[2].GetPos)>=0)?10:-10)+(((Drive[2].ZeroOffset+((-hPOSmm)*MM_POS_STEPPER_POS_FACTOR))-Drive[2].GetPos)/2);
+
+	}
 	
 	if(Drive[2].Status&FAULT||Drive[3].Status&FAULT){
 		Drive[2].Case=Fault;		
@@ -91,6 +182,8 @@ void _CYCLIC drvman(void)
 		}	
 	}
 	Drive[3].Mode=Drive[2].Mode;
+	
+	
 	
 	for(i=0;i<4;i++){
 
@@ -137,6 +230,16 @@ void _CYCLIC drvman(void)
 				break;
 		}
 		USE_ENC(Drive[i].Ctrl);
+	}
+		
+	//Speedlimit
+	for(i=0;i<4;i++){
+		if(Drive[i].SetPos>1500){
+			Drive[i].SetPos=1500;
+		}
+		if(Drive[i].SetPos<-1500){
+			Drive[i].SetPos=-1500;
+		}
 	}
 }
 /*****/

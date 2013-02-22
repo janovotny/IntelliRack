@@ -8,11 +8,7 @@
  ********************************************************************
  * Local variables of program drvman
  ********************************************************************)
-
 VAR
-
-END_VAR
-
-VAR CONSTANT
-
+	ReferenceOk : INT;
+	startref : UDINT;
 END_VAR
