@@ -18,7 +18,7 @@ my $db_entry="";
 
 my $ETX="; ";
 my $EOT="\n";
-my $ACK="\0";
+#my $ACK="\0";
 
 my $movie_ref=(IR::IMDB::Parser::find_movie($ARGV[0]));
 my %movie=%$movie_ref;
@@ -204,7 +204,7 @@ if($movie{'year'}){
 	$db_entry.=$EOT;
 }
 
-$db_entry.=$ACK;
+#$db_entry.=$ACK;
 print $fh $db_entry;
 
 #*****
