@@ -31,10 +31,13 @@
           <Text ID="95118" Value=""/>
           <Text ID="95119" Value=""/>
           <Text ID="95120" Value=""/>
-          <Text ID="95121" Value=""/>
-          <Text ID="95122" Value=""/>
+          <Text ID="95121" Value="Peter Hochueli"/>
+          <Text ID="95122" Value="Beat Schmid"/>
           <Text ID="95149" Value=""/>
-          <Text ID="95150" Value=""/>
+          <Text ID="95150" Value="Pascal Rüegsegger"/>
+          <Text ID="95399" Value="InterCard AG"/>
+          <Text ID="95400" Value="Polymechaniker MM"/>
+          <Text ID="95402" Value="Patrick Eigensatz"/>
         </TextLayer>
         <TextLayer LanguageId="de">
           <Text ID="95116" Value="Projektarbeit 2012/13"/>
@@ -42,10 +45,13 @@
           <Text ID="95118" Value="BBBaden"/>
           <Text ID="95119" Value="Vielen Dank an die Sponsoren und Helfer:"/>
           <Text ID="95120" Value="Müller Martini"/>
-          <Text ID="95121" Value="Firma vom Tiz Vater"/>
-          <Text ID="95122" Value="Alufirma?"/>
+          <Text ID="95121" Value="Peter Hochueli"/>
+          <Text ID="95122" Value="Beat Schmid"/>
           <Text ID="95149" Value="Othmar Häfliger"/>
-          <Text ID="95150" Value="Alufirma?"/>
+          <Text ID="95150" Value="Pascal Rüegsegger"/>
+          <Text ID="95399" Value="InterCard AG"/>
+          <Text ID="95400" Value="Polymechaniker MM"/>
+          <Text ID="95402" Value="Patrick Eigensatz"/>
         </TextLayer>
         <IndexMap>
           <Index ID="95116" Value="0"/>
@@ -57,6 +63,9 @@
           <Index ID="95122" Value="6"/>
           <Index ID="95149" Value="7"/>
           <Index ID="95150" Value="8"/>
+          <Index ID="95399" Value="9"/>
+          <Index ID="95400" Value="10"/>
+          <Index ID="95402" Value="12"/>
         </IndexMap>
       </TextGroup>
       <Controls>
@@ -121,13 +130,13 @@
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Input]"/>
           <Property Name="Height" Value="20"/>
-          <Property Name="Left" Value="40"/>
+          <Property Name="Left" Value="30"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
           <Property Name="TextIndexOffset" Value="4"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="70"/>
+          <Property Name="Top" Value="80"/>
           <Property Name="Width" Value="80"/>
         </Control>
         <Control ClassId="0x00001004" Name="Text_6">
@@ -135,13 +144,13 @@
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Input]"/>
           <Property Name="Height" Value="20"/>
-          <Property Name="Left" Value="40"/>
+          <Property Name="Left" Value="30"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
           <Property Name="TextIndexOffset" Value="5"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="90"/>
+          <Property Name="Top" Value="100"/>
           <Property Name="Width" Value="120"/>
         </Control>
         <Control ClassId="0x00001004" Name="Text_7">
@@ -149,38 +158,38 @@
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Input]"/>
           <Property Name="Height" Value="20"/>
-          <Property Name="Left" Value="40"/>
+          <Property Name="Left" Value="170"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
           <Property Name="TextIndexOffset" Value="6"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="150"/>
+          <Property Name="Top" Value="120"/>
           <Property Name="Width" Value="120"/>
         </Control>
         <Control ClassId="0x00001003" Name="HotSpot_1">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
-          <Property Name="Height" Value="40"/>
+          <Property Name="Height" Value="240"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
           <Property Name="Left" Value="0"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
-          <Property Name="Top" Value="200"/>
+          <Property Name="Top" Value="0"/>
           <Property Name="VirtualKey" Value="Source[local].VirtualKey[home]"/>
-          <Property Name="Width" Value="110"/>
+          <Property Name="Width" Value="320"/>
         </Control>
         <Control ClassId="0x00001004" Name="Text_8">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Input]"/>
           <Property Name="Height" Value="20"/>
-          <Property Name="Left" Value="40"/>
+          <Property Name="Left" Value="30"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
           <Property Name="TextIndexOffset" Value="7"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="110"/>
+          <Property Name="Top" Value="120"/>
           <Property Name="Width" Value="120"/>
         </Control>
         <Control ClassId="0x00001004" Name="Text_9">
@@ -188,13 +197,55 @@
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Input]"/>
           <Property Name="Height" Value="20"/>
-          <Property Name="Left" Value="40"/>
+          <Property Name="Left" Value="30"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
           <Property Name="TextIndexOffset" Value="8"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="130"/>
+          <Property Name="Top" Value="140"/>
+          <Property Name="Width" Value="120"/>
+        </Control>
+        <Control ClassId="0x00001004" Name="Text_10">
+          <Property Name="ControlID" Value="0"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="Font" Value="Source[local].Font[Input]"/>
+          <Property Name="Height" Value="20"/>
+          <Property Name="Left" Value="170"/>
+          <Property Name="SimulationValue" Value=""/>
+          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+          <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+          <Property Name="TextIndexOffset" Value="9"/>
+          <Property Name="TextSource" Value="SingleText"/>
+          <Property Name="Top" Value="80"/>
+          <Property Name="Width" Value="130"/>
+        </Control>
+        <Control ClassId="0x00001004" Name="Text_11">
+          <Property Name="ControlID" Value="0"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="Font" Value="Source[local].Font[Input]"/>
+          <Property Name="Height" Value="20"/>
+          <Property Name="Left" Value="170"/>
+          <Property Name="SimulationValue" Value=""/>
+          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+          <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+          <Property Name="TextIndexOffset" Value="10"/>
+          <Property Name="TextSource" Value="SingleText"/>
+          <Property Name="Top" Value="100"/>
+          <Property Name="Width" Value="130"/>
+        </Control>
+        <Control ClassId="0x00001004" Name="Text_12">
+          <Property Name="ControlID" Value="0"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="Font" Value="Source[local].Font[Input]"/>
+          <Property Name="Height" Value="20"/>
+          <Property Name="Left" Value="170"/>
+          <Property Name="SimulationValue" Value=""/>
+          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+          <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+          <Property Name="TextIndexOffset" Value="12"/>
+          <Property Name="TextSource" Value="SingleText"/>
+          <Property Name="Top" Value="140"/>
           <Property Name="Width" Value="120"/>
         </Control>
       </Controls>
