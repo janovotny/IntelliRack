@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=3.0.90.22 SP04?>
+<?AutomationStudio Version=3.0.90.24 SP06?>
 <LibraryInfos>
   <Library Name="AsARCfg" IsDeployed="true" IsStatic="false" />
   <Library Name="AsIecCon" IsDeployed="true" IsStatic="false" />

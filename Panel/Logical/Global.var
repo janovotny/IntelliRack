@@ -15,6 +15,10 @@ VAR
 	Selection : UINT;
 	Search : STRING[80];
 	Limit : UINT;
+	OFF : USINT := 0;
 	state : LibVisapi5_ST_state_type; (*State variables of VISAPI commands*)
 	Edit : UINT;
+	VC_HANDLE : UDINT;
+	ready : DINT;
+	blnState : UDINT;
 END_VAR

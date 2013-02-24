@@ -42,6 +42,7 @@
 /Logical/handler
 /Logical/Visu/VCObject.vc
 /Logical/Visu
+/Logical/test
 /Physical/PP120/Hardware.hc
 /Physical/PP120/PLC1/Cpu.sw
 /Physical/PP120/PLC1/Cpu.per

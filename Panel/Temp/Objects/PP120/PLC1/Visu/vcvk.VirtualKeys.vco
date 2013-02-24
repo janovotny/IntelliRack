@@ -2667,6 +2667,7 @@
       <Object Name="Source[local].VirtualKey[bnd]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[bnd]" />
       <Object Name="Source[local].VirtualKey[cu]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[cu]" />
       <Object Name="Source[local].VirtualKey[cd]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[cd]" />
+      <Object Name="Source[local].VirtualKey[off]" ClsId="0x0" Version="1" TargetIndex="4294967295" Type="VKEY" RefString="Source[local].VirtualKey[off]" />
     </Folder>
   </Folder>
 </Intermediate>

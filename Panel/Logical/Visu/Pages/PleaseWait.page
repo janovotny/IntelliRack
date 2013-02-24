@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?AutomationStudio Version="3.0.90.22 SP04"?>
+<?AutomationStudio Version="3.0.90.24 SP06"?>
 <Page xmlns="http://br-automation.co.at/AS/VC/Project" Name="PleaseWait">
-  <Property Name="BackColor" Value="46"/>
+  <Property Name="BackColor" Value="48"/>
   <Property Name="Description" Value=""/>
   <Property Name="Height" Value="240"/>
   <Property Name="Index" Value="0"/>
@@ -39,16 +39,16 @@
         <Control ClassId="0x00001004" Name="Text_1">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
-          <Property Name="Font" Value="Source[local].Font[Header]"/>
-          <Property Name="Height" Value="90"/>
-          <Property Name="Left" Value="20"/>
+          <Property Name="Font" Value="Source[local].Font[Font_1]"/>
+          <Property Name="Height" Value="60"/>
+          <Property Name="Left" Value="40"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
           <Property Name="TextIndexOffset" Value="0"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="50"/>
-          <Property Name="Width" Value="290"/>
+          <Property Name="Top" Value="60"/>
+          <Property Name="Width" Value="260"/>
         </Control>
       </Controls>
       <KeyMapping/>

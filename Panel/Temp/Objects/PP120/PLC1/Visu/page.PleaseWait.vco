@@ -6,10 +6,10 @@
       <Folder Name="Controls">
         <Folder Name="POBJ">
           <Object Name="Text_1" ClsId="0x1004" Version="1" Type="CTRL" RefString="Source[local].Page[PleaseWait].Layer[Default].Control[Text_1]">
-            <UInt32 Name="Left">20</UInt32>
-            <UInt32 Name="Top">50</UInt32>
-            <UInt32 Name="Right">309</UInt32>
-            <UInt32 Name="Bottom">139</UInt32>
+            <UInt32 Name="Left">40</UInt32>
+            <UInt32 Name="Top">60</UInt32>
+            <UInt32 Name="Right">299</UInt32>
+            <UInt32 Name="Bottom">119</UInt32>
             <UInt32 Name="IndexDatapoint">4294967295</UInt32>
             <UInt32 Name="ControlID">0</UInt32>
             <Reference Name="StyleClass" Type="SC">Source[local].StyleGroup[0x00001004].StyleClass[Default]</Reference>
@@ -18,7 +18,7 @@
             <Group Name="Font">
               <UInt16 Name="Offset">24</UInt16>
               <UInt16 Name="Size">4</UInt16>
-              <Reference Name="Data" Type="FNT">Source[local].Font[Header]</Reference>
+              <Reference Name="Data" Type="FNT">Source[local].Font[Font_1]</Reference>
             </Group>
             <Group Name="TextSource">
               <UInt16 Name="Offset">40</UInt16>
@@ -143,7 +143,7 @@
           <Group Name="BackColor">
             <UInt16 Name="Offset">32</UInt16>
             <UInt16 Name="Size">4</UInt16>
-            <UInt32 Name="Data">46</UInt32>
+            <UInt32 Name="Data">48</UInt32>
           </Group>
           <Group Name="End Marker">
             <UInt16 Name="Offset">65535</UInt16>

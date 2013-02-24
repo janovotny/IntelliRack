@@ -146,9 +146,9 @@
             </Group>
           </Object>
           <Object Name="Text_5" ClsId="0x1004" Version="1" Type="CTRL" RefString="Source[local].Page[about].Layer[Default].Control[Text_5]">
-            <UInt32 Name="Left">70</UInt32>
+            <UInt32 Name="Left">40</UInt32>
             <UInt32 Name="Top">70</UInt32>
-            <UInt32 Name="Right">149</UInt32>
+            <UInt32 Name="Right">119</UInt32>
             <UInt32 Name="Bottom">89</UInt32>
             <UInt32 Name="IndexDatapoint">4294967295</UInt32>
             <UInt32 Name="ControlID">0</UInt32>
@@ -181,9 +181,9 @@
             </Group>
           </Object>
           <Object Name="Text_6" ClsId="0x1004" Version="1" Type="CTRL" RefString="Source[local].Page[about].Layer[Default].Control[Text_6]">
-            <UInt32 Name="Left">70</UInt32>
+            <UInt32 Name="Left">40</UInt32>
             <UInt32 Name="Top">90</UInt32>
-            <UInt32 Name="Right">189</UInt32>
+            <UInt32 Name="Right">159</UInt32>
             <UInt32 Name="Bottom">109</UInt32>
             <UInt32 Name="IndexDatapoint">4294967295</UInt32>
             <UInt32 Name="ControlID">0</UInt32>
@@ -216,9 +216,9 @@
             </Group>
           </Object>
           <Object Name="Text_7" ClsId="0x1004" Version="1" Type="CTRL" RefString="Source[local].Page[about].Layer[Default].Control[Text_7]">
-            <UInt32 Name="Left">70</UInt32>
+            <UInt32 Name="Left">40</UInt32>
             <UInt32 Name="Top">150</UInt32>
-            <UInt32 Name="Right">189</UInt32>
+            <UInt32 Name="Right">159</UInt32>
             <UInt32 Name="Bottom">169</UInt32>
             <UInt32 Name="IndexDatapoint">4294967295</UInt32>
             <UInt32 Name="ControlID">0</UInt32>
@@ -252,8 +252,8 @@
           </Object>
           <Object Name="HotSpot_1" ClsId="0x1003" Version="1" Type="CTRL" RefString="Source[local].Page[about].Layer[Default].Control[HotSpot_1]">
             <UInt32 Name="Left">0</UInt32>
-            <UInt32 Name="Top">0</UInt32>
-            <UInt32 Name="Right">319</UInt32>
+            <UInt32 Name="Top">200</UInt32>
+            <UInt32 Name="Right">109</UInt32>
             <UInt32 Name="Bottom">239</UInt32>
             <UInt16 Name="KeyMatrixOffset">65535</UInt16>
             <UInt16 Name="Reserved">0</UInt16>
@@ -268,9 +268,9 @@
             </Group>
           </Object>
           <Object Name="Text_8" ClsId="0x1004" Version="1" Type="CTRL" RefString="Source[local].Page[about].Layer[Default].Control[Text_8]">
-            <UInt32 Name="Left">70</UInt32>
+            <UInt32 Name="Left">40</UInt32>
             <UInt32 Name="Top">110</UInt32>
-            <UInt32 Name="Right">189</UInt32>
+            <UInt32 Name="Right">159</UInt32>
             <UInt32 Name="Bottom">129</UInt32>
             <UInt32 Name="IndexDatapoint">4294967295</UInt32>
             <UInt32 Name="ControlID">0</UInt32>
@@ -303,9 +303,9 @@
             </Group>
           </Object>
           <Object Name="Text_9" ClsId="0x1004" Version="1" Type="CTRL" RefString="Source[local].Page[about].Layer[Default].Control[Text_9]">
-            <UInt32 Name="Left">70</UInt32>
+            <UInt32 Name="Left">40</UInt32>
             <UInt32 Name="Top">130</UInt32>
-            <UInt32 Name="Right">189</UInt32>
+            <UInt32 Name="Right">159</UInt32>
             <UInt32 Name="Bottom">149</UInt32>
             <UInt32 Name="IndexDatapoint">4294967295</UInt32>
             <UInt32 Name="ControlID">0</UInt32>
@@ -639,7 +639,7 @@
           <Group Name="BackColor">
             <UInt16 Name="Offset">32</UInt16>
             <UInt16 Name="Size">4</UInt16>
-            <UInt32 Name="Data">160</UInt32>
+            <UInt32 Name="Data">118</UInt32>
           </Group>
           <Group Name="End Marker">
             <UInt16 Name="Offset">65535</UInt16>

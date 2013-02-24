@@ -23,6 +23,14 @@
 *
 *****/
 
+void _INIT handler(void){
+	OFF=0;
+	ready=0;
+	VC_HANDLE=0;
+	blnState=0;
+}
+
+
 /****f* Panel/load_image
 * FUNCTION
 * 	Function loads image from file and display it on screen.
@@ -92,8 +100,8 @@ void _CYCLIC handlerCyclic(void)
 	}
 	
 	if(GetPage==1){
-		Strings[0][0]=0;
-		Strings[1][0]=0;	
+		strcpy(Strings[0], "...Loading...");
+		Strings[1][0]=0;
 	}
 	
 	if(GetPage==3){
@@ -101,5 +109,26 @@ void _CYCLIC handlerCyclic(void)
 	} else {
 		state.bmpcase=0;
 	}
+	
+	if(OFF!=0){
+		Action=123;
+		
+		if (!ready)
+		{
+			VC_HANDLE = VA_Setup(1 , "Visu");
+			if (VC_HANDLE)
+				ready = 1;
+		}
+		if (ready)
+		{
+			if (!VA_Saccess(1,VC_HANDLE))
+			{
+				VA_SetBacklight(1,VC_HANDLE,blnState);
+				VA_Srelease(1,VC_HANDLE);
+			}
+		}
+
+	}
+	
 }
 /*****/

@@ -7,6 +7,7 @@
   <Operation Delete="handler.br"/>
   <Operation Delete="Visu.br"/>
   <Operation Delete="vccnum.br"/>
+  <Operation Delete="vccdt.br"/>
   <Operation Delete="AsTCP.br"/>
   <Operation Delete="vccline.br"/>
   <Operation Delete="vccshape.br"/>
@@ -95,6 +96,7 @@
   <Operation Download="vccshape.br" Memory="UserROM"/>
   <Operation Download="vccline.br" Memory="UserROM"/>
   <Operation Download="AsTCP.br" Memory="UserROM"/>
+  <Operation Download="vccdt.br" Memory="UserROM"/>
   <Operation Download="vccnum.br" Memory="UserROM"/>
   <Operation Download="Visu.br" Memory="UserROM"/>
   <Operation Download="handler.br" Memory="UserROM"/>

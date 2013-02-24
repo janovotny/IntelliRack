@@ -3,13 +3,13 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=150 Type=0 Scope=0 Force=0 Index
                                     name                                     type force                                                            value level type len format place expand specs
                                    Drive                             tDrive[0..3]    0 "                                                               *"    0   24    4    0    0    1         
                                 Drive[0]                                   tDrive    0 "                                                               *"    1   24    1    0    0    1         
-                              ZeroOffset                                     DINT    0 "                                                           -5390"    2    4    1   10    0    0         
-                                  SetPos                                     DINT    3 "                                                              10"    2    4    1   10    0    0         
-                                    Ctrl                                     UINT    3 "                                                           16399"    2    6    1   10    0    0         
-                                    Mode                                     SINT    3 "                                                               0"    2    2    1   10    0    0         
-                                   Brake                                     BOOL    3 "                                                           FALSE"    2    1    1    2    0    0         
-                                  GetPos                                     DINT    1 "                                                           -5390"    2    4    1   10    0    0         
-                                  Status                                     UINT    1 "                                                             567"    2    6    1   10    0    0         
+                              ZeroOffset                                     DINT    0 "                                                             -10"    2    4    1   10    0    0         
+                                  SetPos                                     DINT    0 "                                                              10"    2    4    1   10    0    0         
+                                    Ctrl                                     UINT    0 "                                                           16399"    2    6    1   10    0    0         
+                                    Mode                                     SINT    0 "                                                               0"    2    2    1   10    0    0         
+                                   Brake                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
+                                  GetPos                                     DINT    0 "                                                           55030"    2    4    1   10    0    0         
+                                  Status                                     UINT    0 "                                                             567"    2    6    1   10    0    0         
                                     Case                                    USINT    0 "                                                               3"    2    5    1   10    0    0         
                                 Drive[1]                                   tDrive    0 "                                                               *"    1   24    1    0    0    0         
                               ZeroOffset                                     DINT    0 "                                                               0"    2    4    1   10    0    0         
@@ -21,27 +21,27 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=150 Type=0 Scope=0 Force=0 Index
                                   Status                                     UINT    0 "                                                               0"    2    6    1   10    0    0         
                                     Case                                    USINT    0 "                                                               0"    2    5    1   10    0    0         
                                 Drive[2]                                   tDrive    0 "                                                               *"    1   24    1    0    0    1         
-                              ZeroOffset                                     DINT    0 "                                                            1448"    2    4    1   10    0    0         
-                                  SetPos                                     DINT    3 "                                                              10"    2    4    1   10    0    0         
-                                    Ctrl                                     UINT    3 "                                                           16399"    2    6    1   10    0    0         
-                                    Mode                                     SINT    3 "                                                               0"    2    2    1   10    0    0         
-                                   Brake                                     BOOL    3 "                                                           FALSE"    2    1    1    2    0    0         
-                                  GetPos                                     DINT    1 "                                                            1448"    2    4    1   10    0    0         
-                                  Status                                     UINT    1 "                                                             567"    2    6    1   10    0    0         
+                              ZeroOffset                                     DINT    0 "                                                             678"    2    4    1   10    0    0         
+                                  SetPos                                     DINT    0 "                                                              10"    2    4    1   10    0    0         
+                                    Ctrl                                     UINT    0 "                                                           16399"    2    6    1   10    0    0         
+                                    Mode                                     SINT    0 "                                                               0"    2    2    1   10    0    0         
+                                   Brake                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
+                                  GetPos                                     DINT    0 "                                                          -24922"    2    4    1   10    0    0         
+                                  Status                                     UINT    0 "                                                             567"    2    6    1   10    0    0         
                                     Case                                    USINT    0 "                                                               3"    2    5    1   10    0    0         
                                 Drive[3]                                   tDrive    0 "                                                               *"    1   24    1    0    0    1         
-                              ZeroOffset                                     DINT    0 "                                                            1444"    2    4    1   10    0    0         
-                                  SetPos                                     DINT    3 "                                                              10"    2    4    1   10    0    0         
-                                    Ctrl                                     UINT    3 "                                                           16399"    2    6    1   10    0    0         
-                                    Mode                                     SINT    3 "                                                               0"    2    2    1   10    0    0         
-                                   Brake                                     BOOL    3 "                                                           FALSE"    2    1    1    2    0    0         
-                                  GetPos                                     DINT    1 "                                                           -2048"    2    4    1   10    0    0         
-                                  Status                                     UINT    1 "                                                             567"    2    6    1   10    0    0         
+                              ZeroOffset                                     DINT    0 "                                                             684"    2    4    1   10    0    0         
+                                  SetPos                                     DINT    0 "                                                              10"    2    4    1   10    0    0         
+                                    Ctrl                                     UINT    0 "                                                           16399"    2    6    1   10    0    0         
+                                    Mode                                     SINT    0 "                                                               0"    2    2    1   10    0    0         
+                                   Brake                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
+                                  GetPos                                     DINT    0 "                                                          -24352"    2    4    1   10    0    0         
+                                  Status                                     UINT    0 "                                                             567"    2    6    1   10    0    0         
                                     Case                                    USINT    0 "                                                               3"    2    5    1   10    0    0         
-                              ZeroOffset                                     DINT    0 "                                                            1444"    2    4    1   10    0    0         
+                              ZeroOffset                                     DINT    0 "                                                             684"    2    4    1   10    0    0         
                                 startref                                    UDINT    0 "                                                               1"    0    7    1   10    1    0         
-                                 RefPosV                                     BOOL    1 "                                                           FALSE"    0    1    1    2    0    0         
-                                 RefPosH                                     BOOL    1 "                                                           FALSE"    0    1    1    2    0    0         
+                                 RefPosV                                     BOOL    0 "                                                           FALSE"    0    1    1    2    0    0         
+                                 RefPosH                                     BOOL    0 "                                                           FALSE"    0    1    1    2    0    0         
                              ReferenceOk                                      INT    0 "                                                               1"    0    3    1   10    1    0         
-                                  vPOSmm                                     DINT    0 "                                                               0"    0    4    1   10    0    0         
-                                  hPOSmm                                     DINT    0 "                                                               0"    0    4    1   10    0    0         
+                                  vPOSmm                                     DINT    0 "                                                             215"    0    4    1   10    0    0         
+                                  hPOSmm                                     DINT    0 "                                                             100"    0    4    1   10    0    0         

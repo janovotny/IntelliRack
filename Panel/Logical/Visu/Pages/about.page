@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?AutomationStudio Version="3.0.90.22 SP04"?>
+<?AutomationStudio Version="3.0.90.24 SP06"?>
 <Page xmlns="http://br-automation.co.at/AS/VC/Project" Name="about">
-  <Property Name="BackColor" Value="160"/>
+  <Property Name="BackColor" Value="118"/>
   <Property Name="Description" Value=""/>
   <Property Name="Height" Value="240"/>
   <Property Name="Index" Value="9"/>
@@ -121,7 +121,7 @@
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Input]"/>
           <Property Name="Height" Value="20"/>
-          <Property Name="Left" Value="70"/>
+          <Property Name="Left" Value="40"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
@@ -135,7 +135,7 @@
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Input]"/>
           <Property Name="Height" Value="20"/>
-          <Property Name="Left" Value="70"/>
+          <Property Name="Left" Value="40"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
@@ -149,7 +149,7 @@
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Input]"/>
           <Property Name="Height" Value="20"/>
-          <Property Name="Left" Value="70"/>
+          <Property Name="Left" Value="40"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
@@ -161,20 +161,20 @@
         <Control ClassId="0x00001003" Name="HotSpot_1">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
-          <Property Name="Height" Value="240"/>
+          <Property Name="Height" Value="40"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
           <Property Name="Left" Value="0"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
-          <Property Name="Top" Value="0"/>
+          <Property Name="Top" Value="200"/>
           <Property Name="VirtualKey" Value="Source[local].VirtualKey[home]"/>
-          <Property Name="Width" Value="320"/>
+          <Property Name="Width" Value="110"/>
         </Control>
         <Control ClassId="0x00001004" Name="Text_8">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Input]"/>
           <Property Name="Height" Value="20"/>
-          <Property Name="Left" Value="70"/>
+          <Property Name="Left" Value="40"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
@@ -188,7 +188,7 @@
           <Property Name="Description" Value=""/>
           <Property Name="Font" Value="Source[local].Font[Input]"/>
           <Property Name="Height" Value="20"/>
-          <Property Name="Left" Value="70"/>
+          <Property Name="Left" Value="40"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>

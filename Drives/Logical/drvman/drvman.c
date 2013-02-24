@@ -159,7 +159,8 @@ void _CYCLIC drvman(void)
 		
 		//Adjust speed depending on distance to move
 		Drive[0].SetPos=((((Drive[0].ZeroOffset+vPOSmm*MM_POS_STEPPER_POS_FACTOR)-Drive[0].GetPos)>=0)?10:-10)+((Drive[0].ZeroOffset+vPOSmm*MM_POS_STEPPER_POS_FACTOR)-Drive[0].GetPos);
-		Drive[3].SetPos=Drive[2].SetPos=((((Drive[2].ZeroOffset+((-hPOSmm)*MM_POS_STEPPER_POS_FACTOR))-Drive[2].GetPos)>=0)?10:-10)+(((Drive[2].ZeroOffset+((-hPOSmm)*MM_POS_STEPPER_POS_FACTOR))-Drive[2].GetPos)/2);
+		Drive[2].SetPos=((((Drive[2].ZeroOffset+((-hPOSmm)*MM_POS_STEPPER_POS_FACTOR))-Drive[2].GetPos)>=0)?10:-10)+(((Drive[2].ZeroOffset+((-hPOSmm)*MM_POS_STEPPER_POS_FACTOR))-Drive[2].GetPos)/2);
+		Drive[3].SetPos=((((Drive[3].ZeroOffset+((-hPOSmm)*MM_POS_STEPPER_POS_FACTOR))-Drive[3].GetPos)>=0)?10:-10)+(((Drive[3].ZeroOffset+((-hPOSmm)*MM_POS_STEPPER_POS_FACTOR))-Drive[3].GetPos)/2);
 
 	}
 	
@@ -190,7 +191,7 @@ void _CYCLIC drvman(void)
 		if(Drive[i].Status&FAULT){
 			Drive[i].Case=Fault;
 		}
-
+		//Bring drives in op mode
 		switch(Drive[i].Case){
 			default:
 			case Fault:
@@ -229,6 +230,7 @@ void _CYCLIC drvman(void)
 				}
 				break;
 		}
+		//Use motor encoder instead of stepcounter
 		USE_ENC(Drive[i].Ctrl);
 	}
 		
@@ -243,72 +245,3 @@ void _CYCLIC drvman(void)
 	}
 }
 /*****/
-
-
-
-
-
-/*
-PROGRAM _INIT
-(* init program *)
-
-;Prozent von 3A
-
-valueHaltestrom[1] 		:= 70
-valueNennstrom[1]			:= 90
-valueMaximalstrom[1]	:= 100
-
-;Prozent von 6A
-valueHaltestrom[2]		:= 50
-valueNennstrom[2]			:= 50
-valueMaximalstrom[2]	:= 50
-
-valueHaltestrom[3]		:= 50
-valueNennstrom[3]			:= 50
-valueMaximalstrom[3]	:= 50
-
-;Beschleunigung
-valueAcc[1]						:= 3
-valueAcc[2]						:= 1
-valueAcc[3]						:= 1
-
-;Bremsen
-valueDec[1]						:= 3
-valueDec[2]						:= 1
-valueDec[3]						:= 1
-
-valueMaxSpeed					:= 700
-END_PROGRAM
-
-PROGRAM _CYCLIC
-(* cyclic program *)
-
-
-	AsIOAccWrite(1, UDINT(ADR("SL1.SS1.IF2.ST16.IF1.ST3")), UDINT(ADR("ConfigOutput03a")), valueHaltestrom[1], status)
-	AsIOAccWrite(1, UDINT(ADR("SL1.SS1.IF2.ST16.IF1.ST3")), UDINT(ADR("ConfigOutput04a")), valueNennstrom[1], status)
-	AsIOAccWrite(1, UDINT(ADR("SL1.SS1.IF2.ST16.IF1.ST3")), UDINT(ADR("ConfigOutput05a")), valueMaximalstrom[1], status)
-
-	AsIOAccWrite(1, UDINT(ADR("SL1.SS1.IF2.ST16.IF1.ST6")), UDINT(ADR("ConfigOutput03")), valueHaltestrom[2], status)
-	AsIOAccWrite(1, UDINT(ADR("SL1.SS1.IF2.ST16.IF1.ST6")), UDINT(ADR("ConfigOutput04")), valueNennstrom[2], status)
-	AsIOAccWrite(1, UDINT(ADR("SL1.SS1.IF2.ST16.IF1.ST6")), UDINT(ADR("ConfigOutput05")), valueMaximalstrom[2], status)
-
-	AsIOAccWrite(1, UDINT(ADR("SL1.SS1.IF2.ST16.IF1.ST6")), UDINT(ADR("ConfigOutput06")), valueHaltestrom[3], status)
-	AsIOAccWrite(1, UDINT(ADR("SL1.SS1.IF2.ST16.IF1.ST6")), UDINT(ADR("ConfigOutput07")), valueNennstrom[3], status)
-	AsIOAccWrite(1, UDINT(ADR("SL1.SS1.IF2.ST16.IF1.ST6")), UDINT(ADR("ConfigOutput08")), valueMaximalstrom[3], status)
-
-	AsIOAccWrite(1, UDINT(ADR("SL1.SS1.IF2.ST16.IF1.ST3")), UDINT(ADR("MaxAcc01")), (valueAcc[1]*5), status)
-	AsIOAccWrite(1, UDINT(ADR("SL1.SS1.IF2.ST16.IF1.ST3")), UDINT(ADR("MaxDec01")), (valueDec[1]*5), status)
-
-	AsIOAccWrite(1, UDINT(ADR("SL1.SS1.IF2.ST16.IF1.ST3")), UDINT(ADR("MaxSpeed01pos")), (valueMaxSpeed), status)
-
-	AsIOAccRead(1, UDINT(ADR("SL1.SS1.IF2.ST16.IF1.ST3")), UDINT(ADR("AbsPos1ActValAcyclic")), status, valueasyncpos)
-
-
-	;AsIOAccWrite(1, UDINT(ADR("SL1.SS1.IF2.ST16.IF1.ST6")), UDINT(ADR("ConfigOutput08")), valueMaximalstrom[3], status)
-	;AsIOAccWrite(1, UDINT(ADR("SL1.SS1.IF2.ST16.IF1.ST6")), UDINT(ADR("ConfigOutput08")), valueMaximalstrom[3], status)
-
-	;AsIOAccWrite(1, UDINT(ADR("SL1.SS1.IF2.ST16.IF1.ST6")), UDINT(ADR("ConfigOutput08")), valueMaximalstrom[3], status)
-	;AsIOAccWrite(1, UDINT(ADR("SL1.SS1.IF2.ST16.IF1.ST6")), UDINT(ADR("ConfigOutput08")), valueMaximalstrom[3], status)
-END_PROGRAM
-
-*/

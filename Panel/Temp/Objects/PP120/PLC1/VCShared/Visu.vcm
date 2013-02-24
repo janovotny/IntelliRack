@@ -51,6 +51,11 @@
       <Property Name="Version" Value="01.00" />
       <Property Name="Platform" Value="Platform.x86.Generic" />
     </Module>
+    <Module>
+      <Property Name="Name" Value="vccdt.br" />
+      <Property Name="Version" Value="01.00" />
+      <Property Name="Platform" Value="Platform.x86.Generic" />
+    </Module>
   </Controls>
   <Core>
     <Module>

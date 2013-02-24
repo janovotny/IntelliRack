@@ -61,7 +61,8 @@ TXTGRP_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/Buttons_PageTexts
 	$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/HeaderBar.txtgrp \
 	$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/InstantMessages.txtgrp \
 	$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/PageNames.txtgrp \
-	$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/Languages.txtgrp 
+	$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/Languages.txtgrp \
+	$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/DateTimeFormats.txtgrp 
 
 FNINFO_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Fonts/Button.fninfo \
 	$(AS_PROJECT_PATH)/Logical/Visu/Fonts/Default.fninfo \
@@ -143,7 +144,8 @@ BMINFO_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_AcknowledgeRes
 	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPadQVGA_Layer3_pressed.bminfo \
 	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/checkbox_small_gray.bminfo \
 	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/pp420.bminfo \
-	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_1.bminfo 
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_1.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/OnOff.bminfo 
 
 BMGRP_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/GlobalArea.bmgrp \
 	$(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/AlarmAcknowledgeState.bmgrp \
@@ -375,6 +377,10 @@ $(TEMP_PATH_Visu)/txtgrp.PageNames.vco: $(AS_PROJECT_PATH)/Logical/Visu/TextGrou
 
 
 $(TEMP_PATH_Visu)/txtgrp.Languages.vco: $(AS_PROJECT_PATH)/Logical/Visu/TextGroups/Languages.txtgrp $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 3950
+
+
+$(TEMP_PATH_Visu)/txtgrp.DateTimeFormats.vco: $(AS_PROJECT_PATH)/Logical/Visu/TextGroups/DateTimeFormats.txtgrp $(VC_LANGUAGES_Visu)
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 3950
 
 
@@ -715,6 +721,10 @@ $(TEMP_PATH_Visu)/bminfo.pp420.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/pp42
 
 
 $(TEMP_PATH_Visu)/bminfo.Bitmap_1.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_1.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_1.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 3950
+
+
+$(TEMP_PATH_Visu)/bminfo.OnOff.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/OnOff.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/OnOff.png
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 3950
 
 

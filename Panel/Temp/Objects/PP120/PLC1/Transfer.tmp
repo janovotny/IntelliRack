@@ -2,7 +2,7 @@
 <?AutomationStudio Version=3.0?>
 <Transfer xmlns="http://br-automation.co.at/AS/Transfer">
   <Cat Name="Cyclic #2" Img="Cyclic.ico">
-    <Mod Name="handler" Img="Task.ico" Stat="Different" Act="Download" Vars="Init">
+    <Mod Name="handler" Img="Task.ico" Stat="Equal" Act="Ignore" Vars="Init">
     </Mod>
   </Cat>
   <Cat Name="Cyclic #3" Img="Cyclic.ico">
@@ -81,6 +81,8 @@
     <Mod Name="vccshape" Img="Binary.ico" Stat="Equal" Act="Ignore">
     </Mod>
     <Mod Name="vccline" Img="Binary.ico" Stat="Equal" Act="Ignore">
+    </Mod>
+    <Mod Name="vccdt" Img="Binary.ico" Stat="Equal" Act="Ignore">
     </Mod>
     <Mod Name="vccnum" Img="Binary.ico" Stat="Equal" Act="Ignore">
     </Mod>

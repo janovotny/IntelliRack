@@ -13,6 +13,7 @@
   <File Name="vccnum.br" />
   <File Name="vccovl.br" />
   <File Name="vccline.br" />
+  <File Name="vccdt.br" />
   <File Name="vcrt.br" />
   <File Name="vcbclass.br" />
   <File Name="vcgclass.br" />

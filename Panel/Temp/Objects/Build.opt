@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=3.0.90.22 SP04?>
+<?AutomationStudio Version=3.0.90.24 SP06?>
 <BuildOptions>
   <Project>
     <IECNamingConvention>true</IECNamingConvention>
@@ -7,7 +7,7 @@
     <IecExtendedConstants>true</IecExtendedConstants>
     <ProjectLogicalDirectory>C:\Users\florian\Google Drive\Schule\Projekt\Software\own\IntelliRack\Panel\Logical\</ProjectLogicalDirectory>
     <ProjectTempDirectory>C:\Users\florian\Google Drive\Schule\Projekt\Software\own\IntelliRack\Panel\Temp\</ProjectTempDirectory>
-    <ASVersion>3.0.90.22 SP04</ASVersion>
+    <ASVersion>3.0.90.24 SP06</ASVersion>
     <Edition>Standard</Edition>
     <CrossReference>false</CrossReference>
     <ActiveConfiguration>PP120</ActiveConfiguration>

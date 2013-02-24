@@ -3,28 +3,28 @@
   <breakpoint>
     <status>N</status>
     <file>Logical/drvman/drvman.c</file>
-    <position>213</position>
+    <position>214</position>
     <condition></condition>
     <module>drvman</module>
   </breakpoint>
   <breakpoint>
     <status>N</status>
     <file>Logical/drvman/drvman.c</file>
-    <position>206</position>
+    <position>207</position>
     <condition></condition>
     <module>drvman</module>
   </breakpoint>
   <breakpoint>
     <status>N</status>
     <file>Logical/drvman/drvman.c</file>
-    <position>195</position>
+    <position>196</position>
     <condition></condition>
     <module>drvman</module>
   </breakpoint>
   <breakpoint>
     <status>N</status>
     <file>Logical/drvman/drvman.c</file>
-    <position>220</position>
+    <position>221</position>
     <condition></condition>
     <module>drvman</module>
   </breakpoint>

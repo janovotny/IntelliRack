@@ -7,8 +7,8 @@
         <Object Name="DataSource" ClsId="0x200" Version="1" Type="DS" RefString="Source[global].DataSource[DataSource]">
           <Reference Name="DriverID" Type="DS">Source[global].DataSource[DataSource]</Reference>
           <Reference Name="TextGroup" Type="TG">None</Reference>
-          <UInt32 Name="PVCount">10</UInt32>
-          <UInt32 Name="ImageSize">4479</UInt32>
+          <UInt32 Name="PVCount">11</UInt32>
+          <UInt32 Name="ImageSize">4480</UInt32>
           <Table Name="Variables" Cols="5">
             <TableHeader>
               <Column Name="PVID" />
@@ -107,8 +107,17 @@
               <Double Name="PVMaxVal">65535</Double>
               <Int32 Name="Offset">76</Int32>
             </Group>
+            <Group Name="OFF">
+              <UInt16 Name="ID">10</UInt16>
+              <UInt16 Name="PVType">1</UInt16>
+              <UInt32 Name="PVOffset">4479</UInt32>
+              <UInt32 Name="PVDim">1</UInt32>
+              <Double Name="PVMinVal">0</Double>
+              <Double Name="PVMaxVal">255</Double>
+              <Int32 Name="Offset">81</Int32>
+            </Group>
           </Table>
-          <Binary Name="Name" Encoding="Base64">R2V0UGFnZQBTZXRQYWdlAFN0cmluZ3MAU3RyaW5nc1swXQBTdHJpbmdzWzFdAEFjdGlvbgBTZWFyY2gAU2VsZWN0aW9uAExpbWl0AEVkaXQA</Binary>
+          <Binary Name="Name" Encoding="Base64">R2V0UGFnZQBTZXRQYWdlAFN0cmluZ3MAU3RyaW5nc1swXQBTdHJpbmdzWzFdAEFjdGlvbgBTZWFyY2gAU2VsZWN0aW9uAExpbWl0AEVkaXQAT0ZGAA==</Binary>
         </Object>
       </Folder>
     </Folder>
